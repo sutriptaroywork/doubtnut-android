@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dimen_4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff5e7">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/image_bg"
+            android:layout_width="58dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            app:cardCornerRadius="@dimen/dimen_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/voucherLayout"
+                android:layout_width="58dp"
+                android:layout_height="67dp"
+                android:background="#005d74"
+                app:layout_constraintBottom_toBottomOf="@id/image_bg"
+                app:layout_constraintEnd_toEndOf="@id/image_bg"
+                app:layout_constraintStart_toStartOf="@id/image_bg"
+                app:layout_constraintTop_toTopOf="@id/image_bg">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="48dp"
+                    android:layout_height="49dp"
+                    android:layout_margin="2dp"
+                    android:elevation="@dimen/dimen_1dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_launcher1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginEnd="12dp"
+            android:elevation="@dimen/dimen_2dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image_bg"
+            app:layout_constraintTop_toTopOf="@id/image_bg"
+            app:layout_constraintEnd_toStartOf="@id/expired_text"
+            tools:text="Swiggy Vouchers Swiggy Vouchers Swiggy Vouchers"
+            tools:textColor="#f7881f" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:elevation="@dimen/dimen_2dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            tools:text="50Rs gift voucher" />
+
+        <TextView
+            android:id="@+id/expiry_on_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:elevation="@dimen/dimen_1dp"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="5sp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@id/subtitle"
+            app:layout_constraintTop_toBottomOf="@id/subtitle"
+            tools:text="Expires on : 19 Oct 2022" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_17dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:background="@color/white"
+            android:paddingStart="@dimen/dimen_8dp"
+            android:paddingTop="@dimen/dimen_6dp"
+            android:paddingEnd="@dimen/dimen_8dp"
+            android:paddingBottom="@dimen/dimen_6dp"
+            app:layout_constraintTop_toBottomOf="@id/expiry_on_text">
+
+            <TextView
+                android:id="@+id/coupon_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/dimen_1dp"
+                android:fontFamily="@font/lato_black"
+                android:lineSpacingExtra="2sp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="FEFEJFNEDFEDKLDLKFEJF" />
+
+            <TextView
+                android:id="@+id/tvCopyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/dimen_1dp"
+                android:padding="2dp"
+                android:fontFamily="@font/lato"
+                android:lineSpacingExtra="2sp"
+                android:textColor="#eb532c"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Copy code" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="layout_coupon, expiry_on_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_14dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:elevation="@dimen/dimen_1dp"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier"
+            tools:text="Redeem Now" />
+
+        <View
+            android:id="@+id/expired_filter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.35"
+            android:background="@color/white"
+            android:elevation="12dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/expired_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:elevation="@dimen/dimen_6dp"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="1sp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            tools:text="Expired"
+            tools:textColor="@color/black"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

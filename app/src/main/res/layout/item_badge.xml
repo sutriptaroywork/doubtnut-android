@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <import type="android.view.View" />
+
+        <variable
+            name="badge"
+            type="com.doubtnutapp.gamification.badgesscreen.model.Badge" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewBadges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="120dp">
+
+            <ImageView
+                android:id="@+id/badgeImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                app:imageurl="@{badge.isAchieved ? badge.imageUrl : badge.blurImage}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholder="@{@drawable/circle_test_question_attempted}" />
+
+            <ImageView
+                android:id="@+id/badgeImageOverlay"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:visibility="@{badge.isAchieved ? View.GONE : View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_badge_lock" />
+
+            <TextView
+                android:id="@+id/badgeTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato"
+                android:maxLines="4"
+                android:text="@{badge.description}"
+                android:textColor="#17181f"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/badgeShare"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/badgeImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="dfgfgdfgdfgdfgdfdddddddfffdgdddfdgdddngvdkfgnkdsgnsdkgnkndskgkdgkd dngvdkfgnkdsgnsdkgnkndskgkdgkd" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/badgeShare"
+                style="@style/FlatButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/bg_whatsappsharebutton"
+                android:backgroundTint="@color/whatsapp_login_color"
+                android:drawableStart="@drawable/ic_whatsapp_white"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/lato"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingStart="16dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="5dp"
+                android:text="@string/text_share_with_frnds"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="@{badge.isAchieved &amp;&amp; badge.own ? View.VISIBLE : View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/badgeTitle"
+                app:layout_constraintTop_toBottomOf="@+id/badgeTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

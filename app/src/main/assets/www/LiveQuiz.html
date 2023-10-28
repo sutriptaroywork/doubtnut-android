@@ -1,0 +1,56 @@
+<title>LiveClassQuiz</title>
+<meta charset=UTF-8>
+<meta content="width=device-width,height=device-height,initial-scale=1,user-scalable=0"
+      name=viewport>
+<link href=livequizstyle.css rel=stylesheet>
+<script src=https://code.jquery.com/jquery-1.11.0.min.js></script>
+<script type=text/x-mathjax-config>MathJax.Hub.Config({
+      messageStyle: "none",
+      showProcessingMessages: false,
+      tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] },
+      asciimath2jax: { delimiters: [['`','`'], ['$','$']] },
+      "fast-preview": {
+        Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+        color: "inherit!important",
+        updateTime: 30, updateDelay: 6,
+        messageStyle: "none",
+        disabled: false
+      }, CommonHTML: {
+        linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+    });
+</script>
+<script>
+    document.onreadystatechange=function(){"complete"==document.readyState?(document.getElementById("main").style.display="block",document.getElementById("loader").style.display="none"):(document.getElementById("main").style.display="none",document.getElementById("loader").style.display="block")}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=AM_CHTML"></script>
+<script>
+    function showQuestionData(i,t,o,a,e,n){var s;s=MathJax.Hub.queue,MathJax.Hub.processSectionDelay=0,window.renderOptions=function(i){s.Push(["Typeset",MathJax.Hub,"option"+optionVal])};$("#questionList");$("#questionList").append(["</div>",'<div class="question">','<p id="question">',"</p>","</div>",'<div class="list">','<div id="question-1">',"</div>","</div>"]);if("SINGLE"===o){var u='<div id="div'+t+'" class="option-column"><li>';u+='<input id="option'+t+'" type="radio" name="options"  onClick="option('+t+')">',u+='<label for="option'+t+'" class="option" id="color'+t+'"><input type="checkbox" class="radio" disabled>'+i+"</label>";var d=[u+="</li></div>"];$("#question-1").append(d)}MathJax.Hub.queue.Push(["Typeset",MathJax.Hub])}!function(){var t=MathJax.Hub.queue;MathJax.Hub.processSectionDelay=0,window.UpdateQuestionData=function(i){t.Push(["Typeset",MathJax.Hub,"questionData"])}}()
+</script>
+<script>
+    function callFromActivity(){return document.getElementById("optionInputType").value}!function(){var t=MathJax.Hub.queue;MathJax.Hub.processSectionDelay=0,window.UpdateQuestionNumber=function(e){t.Push(["Typeset",MathJax.Hub,"questionNumber"])}}()
+</script>
+<script>
+    function showQuestion(e){var n=document.getElementById("question"),t=document.createElement("div");t.innerHTML=e,n.appendChild(t),document.getElementById("question").innerHtml=e,window.UpdateQuestion(e)}!function(){var n=MathJax.Hub.queue;MathJax.Hub.processSectionDelay=0,window.UpdateQuestion=function(e){n.Push(["Typeset",MathJax.Hub,"question"])}}()
+</script>
+<script>
+    function onQuizSubmit(e){var n=JSON.parse(e);for(i=0;i<n.length;i++)document.getElementById("color"+i).style.background=n[i]}
+</script>
+<script>function submitQuiz(){Android.submitQuiz()}</script>
+<script>function skipForMockTest(){Android.skipForMockTest()}</script>
+<script>
+    function option(t){Android.option(t)}function text(){var t=document.getElementById("searchTxt").value;Android.InputText(t)}
+</script>
+<script>function optioncheckbox(o){Android.optioncheckbox(o)}</script>
+<div class=contain>
+    <div id=main>
+        <form class=questionForm data-question=1 id=q1>
+            <div id=questionList></div>
+        </form>
+    </div>
+    <div id=loader>
+        <div id=abc><img src=https://d10lpgp6xz60nq.cloudfront.net/loading.gif
+                         style="width:30%;margin:0 auto"></div>
+    </div>
+</div>

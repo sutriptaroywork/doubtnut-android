@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grid_bottom_sheet_background"
+    android:clipToPadding="false">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_heading"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="4.9sp"
+        android:lines="1"
+        android:textColor="@color/black_two"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_heading"
+        app:layout_constraintEnd_toStartOf="@+id/iv_close"
+        app:layout_constraintStart_toEndOf="@+id/iv_heading"
+        app:layout_constraintTop_toTopOf="@+id/iv_heading"
+        tools:text="Meri Rank kaise decide hoti hai?" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_close"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="10dp"
+        android:padding="8dp"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_heading"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/view_footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_heading"
+        tools:listitem="@layout/item_help" />
+
+    <View
+        android:id="@+id/view_footer"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#f1fcfc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_play"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/black"
+        android:src="@drawable/ic_play_arrow_black_24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/view_footer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_footer"
+        app:shapeAppearance="@style/CircularImageView"
+        app:tint="@color/white"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_play_video"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_play"
+        app:layout_constraintEnd_toStartOf="@+id/btn_action"
+        app:layout_constraintStart_toEndOf="@+id/iv_play"
+        app:layout_constraintTop_toTopOf="@+id/iv_play"
+        tools:text="Rank kaise badhayei?"
+        tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_action"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:lineSpacingExtra="4.9sp"
+        android:minWidth="135dp"
+        android:minHeight="36dp"
+        android:paddingHorizontal="8dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/orange_eb532c"
+        app:cornerRadius="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_play"
+        app:layout_constraintEnd_toEndOf="@+id/view_footer"
+        app:layout_constraintTop_toTopOf="@+id/iv_play"
+        tools:text="Attempt Test" />
+</androidx.constraintlayout.widget.ConstraintLayout>

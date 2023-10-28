@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="gamePointsData"
+            type="com.doubtnutapp.gamification.gamepoints.model.GamePointsDataModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pointsEarnedCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/pointsEarnedImage"
+                android:layout_width="22dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="4dp"
+                android:padding="3dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                app:layout_constraintEnd_toStartOf="@+id/textView16"
+                app:layout_constraintTop_toTopOf="@+id/textView16"
+                app:srcCompat="@drawable/ic_points_badge_24dp"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/pointsbadge"
+                android:layout_width="22dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="36dp"
+                android:padding="3dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView18"
+                app:layout_constraintStart_toEndOf="@+id/divider5"
+                app:layout_constraintTop_toTopOf="@+id/textView18"
+                app:srcCompat="@drawable/ic_points_badge_24dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="36dp"
+                android:maxWidth="120dp"
+                android:text="@{String.valueOf(gamePointsData.dailyPoint)}"
+                android:textColor="@color/purple"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/divider5"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="50" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/today_s_point"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView16"
+                app:layout_constraintStart_toStartOf="@+id/pointsEarnedImage"
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="12dp"
+                android:maxWidth="120dp"
+                android:text="@{String.valueOf(gamePointsData.points)}"
+                android:textColor="@color/purple"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/pointsbadge"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="350" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_points"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView18"
+                app:layout_constraintStart_toStartOf="@+id/pointsbadge"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/pointsbadge" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/badgeProgressView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pointsEarnedCard">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/levelStartImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:background="@drawable/ic_bg_badge_85dp"
+                android:clickable="false"
+                android:fontFamily="@font/lato"
+                android:padding="4dp"
+                android:text="@{String.valueOf(gamePointsData.currentLvl)}"
+                android:textColor="#541488"
+                android:textSize="16sp"
+                app:layout_constraintDimensionRatio="1:1.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="12" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/levelEndImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/ic_bg_badge_85dp"
+                android:clickable="false"
+                android:fontFamily="@font/lato"
+                android:text="@{String.valueOf(gamePointsData.nextLvl)}"
+                android:textColor="#541488"
+                android:textSize="16sp"
+                app:layout_constraintDimensionRatio="1:1.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:text="122" />
+
+            <TextView
+                android:id="@+id/levelStartTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:gravity="center"
+                android:text="@{@string/gamePointsData(String.valueOf(gamePointsData.currentLvlPoints))}"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/levelStartImage"
+                tools:text="2 Points" />
+
+
+            <TextView
+                android:id="@+id/levelEndTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:text="@{@string/gamePointsData(String.valueOf(gamePointsData.nextLvlPoints))}"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/levelEndImage"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="100 Points" />
+
+            <ProgressBar
+                android:id="@+id/progressBar4"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="11dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:progressDrawable="@drawable/progress_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/levelEndImage"
+                app:layout_constraintEnd_toStartOf="@+id/levelEndImage"
+                app:layout_constraintStart_toEndOf="@+id/levelStartImage"
+                app:layout_constraintTop_toTopOf="@+id/levelEndImage"
+                tools:progress="50" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+

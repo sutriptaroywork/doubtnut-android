@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="#44000000">
+
+    <TextView
+        android:id="@+id/tvStreamError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="Error occurred in live stream"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/profileContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@color/grey_feed" />
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            android:fontFamily="@font/lato"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:text="Naman Dwivedi" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:background="#ea532e"
+        android:fontFamily="@font/lato"
+        android:paddingHorizontal="@dimen/dimen_8dp"
+        android:paddingVertical="2dp"
+        android:text="LIVE"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileContainer" />
+
+    <TextView
+        android:id="@+id/tvLiveCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:background="#44ffffff"
+        android:drawableLeft="@drawable/ic_viewer_white"
+        android:drawablePadding="@dimen/dimen_8dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLive"
+        app:layout_constraintLeft_toRightOf="@+id/tvLive"
+        app:layout_constraintTop_toTopOf="@+id/tvLive"
+        tools:text="300" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLive"
+        tools:text="Importance of Grammar in Essay writing." />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:background="#16cb9a"
+        android:paddingHorizontal="@dimen/dimen_8dp"
+        android:paddingVertical="@dimen/dimen_4dp"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+        tools:text="₹ 100" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentsRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginRight="90dp"
+        android:layout_marginBottom="@dimen/dimen_12dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddComment"
+        tools:listitem="@layout/item_live_stream_comment" />
+
+    <EditText
+        android:id="@+id/tvAddComment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_8dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        android:background="@drawable/bg_comment_chatbubble_translucent"
+        android:fontFamily="@font/lato"
+        android:hint="Comment"
+        android:paddingVertical="@dimen/dimen_12dp"
+        android:paddingLeft="@dimen/dimen_12dp"
+        android:textColor="#ffffff"
+        android:textColorHint="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnAddComment"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_8dp"
+        android:padding="@dimen/dimen_8dp"
+        android:src="@drawable/send"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAddComment"
+        app:layout_constraintRight_toRightOf="@+id/tvAddComment"
+        app:layout_constraintTop_toTopOf="@+id/tvAddComment" />
+
+    <ImageView
+        android:id="@+id/overflowMenu"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="@dimen/dimen_4dp"
+        android:src="@drawable/ic_overflowmenu_white"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAddComment"
+        app:layout_constraintLeft_toRightOf="@+id/tvAddComment"
+        app:layout_constraintTop_toTopOf="@+id/tvAddComment" />
+
+    <LinearLayout
+        android:id="@+id/streamEndContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Live Video ended\nThank you"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginHorizontal="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:background="@drawable/rounded_corners_5c38f5"
+            android:fontFamily="@font/lato"
+            android:text="Share"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

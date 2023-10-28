@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/blockUser"
+        android:enabled="true"
+        android:title="@string/block_user"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/faq"
+        android:enabled="true"
+        android:title="@string/faqs"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/muteNotification"
+        android:enabled="true"
+        android:title="@string/sg_mute_notification"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/copyProfileLink"
+        android:enabled="true"
+        android:title="@string/sg_copy_profile_link"
+        app:showAsAction="never" />
+</menu>

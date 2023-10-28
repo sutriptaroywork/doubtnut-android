@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingRight="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_ias_applied_filter_tags"
+        android:orientation="horizontal"
+        android:paddingRight="4dp">
+
+        <TextView
+            android:id="@+id/tvAppliedFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="16"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:text="filter"
+            android:textColor="@color/warm_grey"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/removeFilter"
+            android:layout_width="@dimen/dimen_12dp"
+            android:layout_height="@dimen/dimen_12dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_cross" />
+    </LinearLayout>
+</FrameLayout>

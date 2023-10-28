@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/createPostHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_fceed1"
+        android:paddingHorizontal="@dimen/dimen_16dp"
+        android:paddingVertical="@dimen/dimen_10dp">
+
+        <ImageView
+            android:id="@+id/ivCreateLogo"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:background="@drawable/circle_yellow_f8a700"
+            android:padding="@dimen/dimen_10dp"
+            android:src="@drawable/ic_course_plus"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvCreateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_12dp"
+            android:text="@string/create"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_16dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/ivCreateLogo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_12dp"
+            android:text="@string/create_on_feed"
+            android:textColor="#777777"
+            android:textSize="@dimen/dimen_12dp"
+            app:layout_constraintLeft_toRightOf="@+id/ivCreateLogo"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreateLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/createPostOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dimen_12dp"
+        android:paddingVertical="@dimen/dimen_12dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutCreatePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivCreatePost"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_create_post_feed" />
+
+            <TextView
+                android:id="@+id/tvCreatePost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivCreatePost"
+                android:layout_centerHorizontal="true"
+                android:text="Create posts"
+                android:textColor="@color/grey_504949"
+                android:textSize="@dimen/dimen_12dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutCreateStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivCreateStory"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_create_story_feed" />
+
+            <TextView
+                android:id="@+id/tvCreateStory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivCreateStory"
+                android:layout_centerHorizontal="true"
+                android:text="Create story"
+                android:textColor="@color/grey_504949"
+                android:textSize="@dimen/dimen_12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutCreateStudyGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivCreateStudyGroup"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_feed_create_study_group" />
+
+            <TextView
+                android:id="@+id/tvCreateStudyGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivCreateStudyGroup"
+                android:layout_centerHorizontal="true"
+                android:text="Create groups"
+                android:textColor="@color/grey_504949"
+                android:textSize="@dimen/dimen_12dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layoutUnban"
+        layout="@layout/layout_feed_ban_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layoutUnbanInReview"
+        layout="@layout/layout_feed_unban_in_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layoutUnbanRejected"
+        layout="@layout/layout_feed_unban_rejected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvCommunityGuidelines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/bg_community_guidelines"
+        android:drawablePadding="@dimen/dimen_16dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/dimen_20dp"
+        android:paddingVertical="@dimen/dimen_16dp"
+        android:text="Read Doubtnut’s Community Guidelines"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:drawableEndCompat="@drawable/ic_arrow_point_to_right" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_4dp"
+        android:background="@color/grey_feed"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postTypesContainer" />
+
+</LinearLayout>
+
+
+

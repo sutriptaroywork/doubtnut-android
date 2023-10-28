@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_capsule_yellow_solid"
+    tools:viewBindingIgnore="true"
+    android:layout_margin="@dimen/dimen_20dp"
+    tools:context=".newglobalsearch.ui.InAppSearchCloseDialog"
+    android:paddingLeft="@dimen/dimen_20dp"
+    android:paddingRight="@dimen/dimen_20dp"
+    android:paddingTop="@dimen/dimen_10dp"
+    android:paddingBottom="@dimen/dimen_24dp">
+
+    <ImageView
+        android:id="@+id/btnCloseDiscount"
+        android:layout_width="@dimen/dimen_20dp"
+        android:layout_height="@dimen/dimen_20dp"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/ic_close_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTitleDiscount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="Kya soch rahe hain?"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/Black"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCloseDiscount" />
+
+
+
+    <TextView
+        android:id="@+id/tvSubTitleDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato_bold"
+        android:textStyle="bold"
+        android:textColor="@color/Black"
+        android:text="Abhi transaction complete karein aur payein"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleDiscount" />
+
+    <TextView
+        android:id="@+id/tvDiscountPayment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato_bold"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubTitleDiscount" />
+
+    <LinearLayout
+        android:id="@+id/ll_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDiscountPayment" >
+
+        <TextView
+            android:id="@+id/tvNewPrice"
+            android:background="@drawable/bg_capsule_blue_0050ff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/lato_bold"
+            android:textStyle="bold"
+            android:text="New Price"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tvNewAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/purple"
+            android:textSize="50sp" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tvOldAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/lato_bold"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/Black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_price" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_valid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOldAmount" >
+
+        <TextView
+            android:id="@+id/tvValidOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/lato"
+            android:text="Valid Only for Next"
+            android:textColor="@color/purple"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tvtime"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tvValidOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:textStyle="bold"
+            android:textColor="@color/tomato"
+            android:textSize="21sp"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinueWithDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/tomato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_valid"
+        android:textColor="@color/white"
+        android:text="Continue With Discount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

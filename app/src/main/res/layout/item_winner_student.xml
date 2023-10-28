@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="student"
+            type="com.doubtnutapp.data.remote.models.Student" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewWinnerStudent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:imageurl="@{student.profileImage}"
+            tools:srcCompat="@tools:sample/avatars[13]" />
+
+        <TextView
+            android:id="@+id/textViewWinnerStudentName"
+            style="@style/TextAppearance.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{student.studentUsername}"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewWinnerStudent"
+            app:layout_constraintStart_toStartOf="@+id/imageViewWinnerStudent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewWinnerStudent"
+            tools:text="TextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

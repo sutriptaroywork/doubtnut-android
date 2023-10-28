@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fee7ab"
+    android:layout_height="160dp">
+
+
+    <ImageView
+        android:id="@+id/ivBadge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/daily_prize_icon_badge"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tvBadgeLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#333333"
+        app:layout_constraintStart_toEndOf="@+id/ivBadge"
+        app:layout_constraintTop_toTopOf="@+id/ivBadge"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        tools:text="Level 5"/>
+
+    <TextView
+        android:id="@+id/tvBadgeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        app:layout_constraintTop_toBottomOf="@+id/tvBadgeLevel"
+        app:layout_constraintStart_toEndOf="@+id/ivBadge"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        tools:text="DoubtMaster"/>
+
+    <TextView
+        android:id="@+id/tvPointsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#333333"
+        app:layout_constraintStart_toEndOf="@+id/ivBadge"
+        app:layout_constraintTop_toBottomOf="@+id/tvBadgeName"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        tools:text="500 Doubts Solved"/>
+
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="1.5dp"
+        android:layout_height="95.5dp"
+        app:layout_constraintStart_toEndOf="@id/tvPointsCount"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#997a5e">
+    </View>
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/dimen_40dp"
+        android:elevation="@dimen/dimen_10dp"
+        app:shapeAppearanceOverlay="@style/CircularImageView"
+        android:src="@drawable/ic_daily_goal_profile"
+        app:layout_constraintStart_toEndOf="@+id/viewSeparator"
+        app:layout_constraintTop_toTopOf="@+id/ivBorder"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBorder"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivBorder"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/dimen_40dp"
+        app:shapeAppearanceOverlay="@style/CircularImageView"
+        app:layout_constraintStart_toEndOf="@+id/viewSeparator"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tvPointsRemaining"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Solve 19 more to earn a new badge"
+        android:fontFamily="@font/lato_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/dimen_13sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="#66000000">
+    </TextView>
+
+
+    <ImageView
+        android:id="@+id/ivProfileStar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="@+id/ivProfile"
+        app:layout_constraintEnd_toEndOf="@+id/ivProfile"
+        android:layout_marginTop="-10dp"
+        android:elevation="@dimen/dimen_10dp"
+        android:layout_marginEnd="-10dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

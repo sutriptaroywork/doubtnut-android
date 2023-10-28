@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="5dp"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:foreground="@drawable/selectable_item_background"
+        android:padding="16dp"
+        android:src="@drawable/ic_arrow_back_black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/clSearchView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/clSearchView"
+        app:tint="#303030"
+        tools:ignore="UnusedAttribute"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSearchView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/bg_capsule_search_library"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="14dp">
+
+        <com.doubtnutapp.widgets.typewriter.TypeWriterTextView
+            android:id="@+id/globalSearch"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_search_grey"
+            android:drawableEnd="@drawable/ic_voice_search"
+            android:drawablePadding="5dp"
+            android:drawableTint="#808080"
+            android:elevation="0dp"
+            android:ellipsize="end"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="start|center"
+            android:maxLines="1"
+            android:outlineProvider="none"
+            android:paddingStart="8dp"
+            android:text="@string/search_for_subjects_books_topics_or_pdfs"
+            android:textAllCaps="false"
+            android:textColor="#8D8D8D"
+            android:textSize="13sp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry,UnusedAttribute" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

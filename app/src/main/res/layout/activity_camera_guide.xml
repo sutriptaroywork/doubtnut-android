@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_50">
+
+    <RelativeLayout
+        android:id="@+id/constraintLayoutCameraGuide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:behavior_hideable="true">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:stateListAnimator="@animator/active_raise">
+
+            <ImageView
+                android:id="@+id/iv_close_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="14dp"
+                android:padding="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="?attr/homeAsUpIndicator"
+                android:tint="@color/black"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/howtousedoubtnut"
+                android:textColor="#2f2f2f"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="38dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/demo_video_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout_titleBar"
+            android:background="@color/white_50"
+            android:backgroundTint="@color/white"
+            android:elevation="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_titleBar"
+
+            >
+
+            <FrameLayout
+                android:id="@+id/videoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/white_50"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_50" />
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/playerView_cameraGuide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:resize_mode="fill" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonSkipAd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/black_70"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/skip"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_exoPlayer_ad"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="-5dp"
+                    android:max="100"
+                    android:theme="@style/Widget.Doubnut.AdProgress"
+                    android:visibility="gone"
+                    tools:progress="50"
+                    tools:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/textViewAdTime"
+                    style="@style/TextAppearance.Subtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/black_70"
+                    android:minEms="3"
+                    android:padding="2dp"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    tools:text="Ad: "
+                    tools:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_exoPlayer_buffering"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/fakeBufferingPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    tools:text="100%" />
+
+            </FrameLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <WebView
+            android:id="@+id/webViewGuide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/demo_video_card"
+            android:layout_marginBottom="30dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarWebview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/demo_video_card"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/askDoubt"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_below="@+id/webViewGuide"
+        android:background="#ea532c"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="6dp"
+        android:foreground="?android:selectableItemBackground"
+        android:orientation="horizontal"
+        app:layout_anchor="@+id/constraintLayoutCameraGuide"
+        app:layout_anchorGravity="bottom|center">
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ask_question"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView13"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_icon_24_px"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

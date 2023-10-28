@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:minHeight="100dp"
+    android:orientation="vertical"
+    tools:ignore="SmallSp">
+
+    <RelativeLayout
+        android:id="@+id/courseNotifyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:background="@color/purple"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/crossView"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignStart="@id/tvPriceCrossed"
+            android:layout_alignLeft="@id/tvPriceCrossed"
+            android:layout_alignEnd="@id/tvPriceCrossed"
+            android:layout_alignRight="@id/tvPriceCrossed"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/tvPriceCrossed"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="normal"
+            tools:text="₹7,000" />
+
+        <TextView
+            android:id="@+id/tvPriceCrossed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="13dp"
+            android:textColor="#d9d7d7"
+            android:textSize="8sp"
+            android:textStyle="normal"
+            tools:text="₹12000" />
+
+        <TextView
+            android:id="@+id/tvSyllabus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPrice"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="46dp"
+            android:text="For full Syllabus"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:textStyle="" />
+
+        <TextView
+            android:id="@+id/btnCourseNotify"
+            android:layout_width="93dp"
+            android:layout_height="14dp"
+            android:layout_below="@+id/tvSyllabus"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/background_button_video_summary"
+            android:gravity="center"
+            android:text="See Details"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+</LinearLayout>

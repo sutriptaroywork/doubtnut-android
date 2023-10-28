@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rootLayout"
+    android:background="#51459e"
+    android:paddingStart="30dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="30dp"
+    android:paddingBottom="14dp">
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/lato"
+        android:textColor="#ffc700"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="24h : 00m : 00s" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer"
+        tools:text="3 Questions asked" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:text="Ask 2 more to unlock free course for 7 days" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="2dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="35dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/qaProgress"
+        app:layout_constraintEnd_toStartOf="@+id/qaProgress"
+        tools:visibility="gone" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/qaProgress"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="30dp"
+        app:cpb_background_progressbar_color="@color/white"
+        app:cpb_progress="50"
+        app:cpb_progress_max="100"
+        app:cpb_progressbar_color="#ffc700"
+        app:cpb_progressbar_width="2dp"
+        app:cpb_round_border="true"
+        app:cpb_start_angle="270"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:cpb_progress="50" />
+
+    <TextView
+        android:id="@+id/qaRatio"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="2dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/qaProgress"
+        app:layout_constraintEnd_toEndOf="@+id/qaProgress"
+        app:layout_constraintStart_toStartOf="@+id/qaProgress"
+        app:layout_constraintTop_toTopOf="@id/qaProgress"
+        tools:text="3/5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

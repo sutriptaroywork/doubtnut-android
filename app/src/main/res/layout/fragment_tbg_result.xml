@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#16fcca46">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivUser"
+                android:layout_width="104dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_default_game"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircularImageView"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/tvTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivUser"
+                tools:text="Relations and Functions" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/lato_black"
+                android:gravity="center"
+                android:textColor="@color/black_two"
+                android:textSize="24sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTopic"
+                app:layout_goneMarginTop="28dp"
+                tools:text="@string/oops_you_lost" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center_horizontal"
+                android:textColor="@color/yellow_db9f00"
+                android:textSize="14sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvResult"
+                tools:text="@string/better_luck_next_time" />
+
+            <View
+                android:id="@+id/progressSeparatorUser"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/purple_d5cbfc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStatsTitleUser" />
+
+            <TextView
+                android:id="@+id/tvStatsTitleUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/your_score"
+                android:textColor="@color/black_two"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/progressBarAccuracyUser"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+            <TextView
+                android:id="@+id/tvScoreUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/purple_54138a"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/tvStatsTitleUser"
+                app:layout_constraintTop_toBottomOf="@id/tvStatsTitleUser"
+                tools:text="80/100 Points" />
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/progressBarAccuracyUser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="16dp"
+                app:cpb_background_progressbar_color="@color/purple_d5cbfc"
+                app:cpb_background_progressbar_width="20dp"
+                app:cpb_progressbar_color="@color/purple_54138a"
+                app:cpb_progressbar_width="20dp"
+                app:cpb_start_angle="90"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvScoreUser"
+                tools:cpb_progress="65" />
+
+            <TextView
+                android:id="@+id/tvAccuracyUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/purple_54138a"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/tvAccuracyTitleUser"
+                app:layout_constraintStart_toEndOf="@id/progressBarAccuracyUser"
+                app:layout_constraintTop_toTopOf="@id/progressBarAccuracyUser"
+                tools:text="6/10" />
+
+            <TextView
+                android:id="@+id/tvAccuracyTitleUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/accuracy"
+                android:textColor="@color/purple_54138a"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/progressBarAccuracyUser"
+                app:layout_constraintStart_toEndOf="@id/progressBarAccuracyUser"
+                app:layout_constraintTop_toBottomOf="@id/tvAccuracyUser" />
+
+            <TextView
+                android:id="@+id/tvScoreOpponent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/purple_54138a"
+                android:textSize="18sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/tvStatsTitleOpponent"
+                app:layout_constraintTop_toBottomOf="@id/tvStatsTitleUser"
+                tools:text="80/100 Points" />
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/progressBarAccuracyOpponent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                app:cpb_background_progressbar_color="@color/grey_bdbdbd"
+                app:cpb_background_progressbar_width="20dp"
+                app:cpb_progressbar_color="@color/yellow_fcca46"
+                app:cpb_progressbar_width="20dp"
+                app:cpb_start_angle="90"
+                app:layout_constraintStart_toEndOf="@id/progressSeparatorUser"
+                app:layout_constraintTop_toBottomOf="@id/tvScoreOpponent"
+                tools:cpb_progress="80" />
+
+            <TextView
+                android:id="@+id/tvAccuracyOpponent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/purple_54138a"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/tvAccuracyTitleOpponent"
+                app:layout_constraintStart_toEndOf="@id/progressBarAccuracyOpponent"
+                app:layout_constraintTop_toTopOf="@id/progressBarAccuracyOpponent"
+                tools:text="9/10" />
+
+            <TextView
+                android:id="@+id/tvAccuracyTitleOpponent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/accuracy"
+                android:textColor="@color/purple_54138a"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/progressBarAccuracyOpponent"
+                app:layout_constraintStart_toEndOf="@id/progressBarAccuracyOpponent"
+                app:layout_constraintTop_toBottomOf="@id/tvAccuracyOpponent" />
+
+            <TextView
+                android:id="@+id/tvStatsTitleOpponent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black_two"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/progressBarAccuracyOpponent"
+                app:layout_constraintTop_toTopOf="@id/tvStatsTitleUser"
+                tools:text="@tools:sample/first_names" />
+
+            <View
+                android:id="@+id/viewUserStatsClickInterceptor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/progressBarAccuracyUser"
+                app:layout_constraintTop_toTopOf="@id/tvStatsTitleUser"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_capsule_20dp"
+                android:backgroundTint="@color/purple"
+                android:fontFamily="@font/lato"
+                android:paddingStart="24dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="12dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progressBarAccuracyUser"
+                tools:text="Your Rank: 200" />
+
+            <TextView
+                android:id="@+id/tvSolutionsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@color/yellow_fcca46"
+                android:fontFamily="@font/lato_bold"
+                android:paddingStart="16dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="6dp"
+                android:text="@string/solutions"
+                android:textColor="@color/black_two"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/tvRank"
+                tools:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSolutions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="200dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSolutionsTitle"
+                tools:ignore="RtlSymmetry"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_video_resource" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottomSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonHome"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/lato_bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minHeight="0dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/go_home"
+                android:textColor="@color/tomato"
+                android:textSize="14sp"
+                app:cornerRadius="2dp"
+                app:layout_constraintBottom_toTopOf="@id/buttonPlayOnAnotherTopic"
+                app:layout_constraintEnd_toStartOf="@id/buttonPlayAgain"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/tomato" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPlayAgain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/lato_bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minHeight="0dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/play_again"
+
+                android:textSize="14sp"
+                app:cornerRadius="2dp"
+                app:layout_constraintBottom_toTopOf="@id/buttonPlayOnAnotherTopic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/buttonHome"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPlayOnAnotherTopic"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="26dp"
+                android:fontFamily="@font/lato_bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minHeight="0dp"
+                android:paddingStart="32dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/tomato"
+                android:textSize="14sp"
+                app:cornerRadius="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="@color/tomato"
+                tools:text="PLAY AGAIN ON ANOTHER TOPIC" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="timerFeed"
+            type="com.doubtnutapp.libraryhome.liveclasses.model.TimerViewItem" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/bunker"
+        android:paddingHorizontal="4dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="9dp">
+
+        <TextView
+            android:id="@+id/totalVideos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Algebra (15 Videos)" />
+
+        <ImageView
+            android:id="@+id/live_video_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_live_icon"
+            app:layout_constraintStart_toStartOf="@id/totalVideos"
+            app:layout_constraintTop_toBottomOf="@id/totalVideos" />
+
+        <TextView
+            android:id="@+id/live_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/live_today"
+            android:textAllCaps="true"
+            android:textColor="#ff0000"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@id/live_video_dot"
+            app:layout_constraintTop_toBottomOf="@id/totalVideos"
+            tools:text="LIVE TODAY" />
+
+        <LinearLayout
+            android:id="@+id/timerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/timer_background"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintStart_toStartOf="@id/live_video_dot"
+            app:layout_constraintTop_toBottomOf="@id/live_video_dot">
+
+            <TextView
+                android:id="@+id/timerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/lato_black"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                tools:text="00 : 00 : 00" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/lato_black"
+            android:text="hrs"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/timerView"
+            app:layout_constraintStart_toEndOf="@id/timerView"
+            app:layout_constraintTop_toTopOf="@id/timerView" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/timerGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{timerFeed.liveStatus == 1 ? View.VISIBLE : View.GONE}"
+            app:constraint_referenced_ids="timerView,live_video_dot,live_today,textView45"
+            tools:layout_editor_absoluteY="5dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

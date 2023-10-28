@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:enabled="false"
+    tools:context=".feed.view.FeedFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:contentInsetStart="@dimen/dimen_0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:contentDescription="@string/notifications_text"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#EB532C"
+                    app:srcCompat="@drawable/ic_notification_bell_black" />
+
+                <TextView
+                    android:id="@+id/tvNotificationCount"
+                    android:layout_width="@dimen/dimen_16dp"
+                    android:layout_height="@dimen/dimen_16dp"
+                    android:layout_marginStart="@dimen/dimen_32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/notification_bg"
+                    android:backgroundTint="@color/red_eee7f3"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dimen_4dp"
+                    android:paddingTop="@dimen/dimen_3dp"
+                    android:paddingEnd="@dimen/dimen_4dp"
+                    android:paddingBottom="@dimen/dimen_3dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_7sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivNotification"
+                    app:layout_constraintEnd_toEndOf="@+id/ivNotification"
+                    app:layout_constraintHorizontal_bias="0.83"
+                    app:layout_constraintStart_toEndOf="@+id/ivNotification"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text="9+" />
+
+                <ImageView
+                    android:id="@+id/ivContacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:contentDescription="@string/notifications_text"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/ivNotification"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_notification_bell_black" />
+
+                <ImageView
+                    android:id="@+id/ivDnrRupya"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:contentDescription="@string/notifications_text"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginEnd="18dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_dnr" />
+
+                <ImageView
+                    android:id="@+id/ivStudyGroup"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/ivDnrRupya"
+                    android:layout_marginEnd="12dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_topic_booster_game_banner" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dimen_16dp"
+            android:paddingTop="@dimen/dimen_8dp"
+            android:paddingBottom="@dimen/dimen_12dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:ignore="RtlSymmetry"
+            tools:listitem="@layout/item_user_status" />
+
+        <View
+            android:id="@+id/statusDivider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_4dp"
+            android:background="@color/grey_feed"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="true" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/tvEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center_horizontal"
+                android:text="@string/no_posts_found"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/progressBarNested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="@dimen/dimen_50dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <com.doubtnutapp.common.DebugLogView
+        android:id="@+id/debugLogView"
+        android:layout_width="170dp"
+        android:layout_height="130dp"
+        android:layout_gravity="end"
+        tools:visibility="visible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCreatePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:background="@color/color_orange"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_add_white"
+        app:tint="@color/white"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabScrollUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="30dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleX="0"
+        android:scaleY="0"
+        app:backgroundTint="@color/redTomato"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_expand_less_white_24dp"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+</FrameLayout>

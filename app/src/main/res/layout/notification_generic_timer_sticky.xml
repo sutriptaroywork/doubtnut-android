@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:minHeight="100dp"
+    android:orientation="vertical"
+    tools:ignore="SmallSp">
+
+    <RelativeLayout
+        android:id="@+id/timerNotifyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_margin="1dp"
+        android:background="@color/orange_eb532c"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivBackground"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            tools:background="@color/purple" />
+
+        <TextView
+            android:id="@+id/tvNotificationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/ivBackground"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="normal"
+            tools:text="Registration ends in" />
+
+        <TextView
+            android:id="@+id/tvNotificationTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNotificationTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/ivBackground"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            tools:text="10: 20: 15" />
+
+        <TextView
+            android:id="@+id/tvRegisterNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNotificationTimer"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toEndOf="@id/ivBackground"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:background="@color/orange_ff612d"
+            tools:text="Register Now!!" />
+
+    </RelativeLayout>
+</LinearLayout>

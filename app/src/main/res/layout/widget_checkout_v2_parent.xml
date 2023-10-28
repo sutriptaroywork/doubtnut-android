@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="3.6sp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:text="Online Methods" />
+
+    <com.doubtnutapp.widgetmanager.ui.WidgetisedRecyclerView
+        android:id="@+id/rvParentWidgets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="3"
+        tools:listitem="@layout/widget_checkout_v2_child" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/lato"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="3.6sp"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:text="More Payment Methods" />
+
+</LinearLayout>

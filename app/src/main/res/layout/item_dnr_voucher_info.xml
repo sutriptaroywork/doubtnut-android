@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/viewToggleHelper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:fontFamily="@font/lato_bold"
+        android:paddingEnd="@dimen/dimen_8dp"
+        android:textColor="@color/grey_504949"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/iv_arrow_down"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="About Flipkart" />
+
+
+    <ImageView
+        android:id="@+id/iv_arrow_down"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_arrow_down_dnr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:tint="@color/black_2f2f2f"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_up"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="13dp"
+        android:padding="3dp"
+        android:rotation="180"
+        android:src="@drawable/ic_arrow_down_24_px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black_2f2f2f"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="23dp"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="5.6sp"
+        android:textColor="@color/grey_808080"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewToggleHelper"
+        tools:text="Morbi non egestas dignissim nulla. Eu purus in mi, urna egestas sed. Scelerisque nam eleme" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/grey_e5e5e5"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/grey"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/captureQuestionPhotoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:fontFamily = "@font/lato"
+        android:textSize="20sp"
+        android:text="@string/msg_capturequestionphoto_cameraactivity"
+        android:textColor="@color/white" />
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/white" />
+
+    <ImageView
+        android:id="@+id/noHandWrittenImage"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_nohandwritten" />
+
+    <View
+        android:id="@+id/seeThroughView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:id="@+id/trickyQuestionCaption"
+        style="@style/TextAppearance.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/caption_dontHaveQuestion"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/trickyQuestionImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_camera_home" />
+
+    <LinearLayout
+        android:id="@+id/trickyQuestionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_trickyquestionlayout"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_questionthumbnail"/>
+
+        <TextView
+            style="@style/TextAppearance.Caption"
+            android:textColor="@color/black"
+            android:id="@+id/trickyQuestionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/caption_tryTrickyQuestion"/>
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            app:srcCompat="@drawable/ic_trickyquestion"/>
+
+    </LinearLayout>
+
+</merge>

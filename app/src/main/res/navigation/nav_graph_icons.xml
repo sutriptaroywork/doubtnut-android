@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_icons"
+    app:startDestination="@id/iconsHomeFragment">
+
+    <fragment
+        android:id="@+id/iconsHomeFragment"
+        android:name="com.doubtnutapp.icons.ui.IconsHomeFragment"
+        android:label="fragment_icons_home"
+        tools:layout="@layout/fragment_icons_home">
+
+        <argument
+            android:name="type"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="id"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="title"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <deepLink app:uri="doubtnutapp://icons?type={type}&amp;id={id}&amp;title={title}" />
+    </fragment>
+
+</navigation>

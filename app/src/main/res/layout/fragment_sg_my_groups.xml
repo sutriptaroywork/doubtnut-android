@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showPaths="true"
+    app:layoutDescription="@xml/collapsing_sg_my_groups">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/studyGroupIntro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#fff9f1"
+        android:padding="24dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivStudyGroup"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_study_dost" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black_two"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivStudyGroup"
+            tools:text="Hey, Welcome to Doubtnut Study Group " />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:textColor="#546E7A"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:text="Now Create your own study group
+or join any public group to chat!!" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvJoinGroupTitle"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black_two"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studyGroupIntro"
+        tools:text="Join Groups"
+        tools:visibility="visible" />
+
+    <com.doubtnutapp.widgets.StudyGroupSearchView
+        android:id="@+id/etSearch"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rect_round_corner_8dp"
+        android:backgroundTint="@color/grey_f2f2f2"
+        android:drawableStart="@drawable/ic_search_suggestion"
+        android:drawablePadding="12dp"
+        android:drawableTint="@color/black"
+        android:hint="@string/search_for_a_friend"
+        android:imeOptions="actionSearch"
+        android:importantForAutofill="no"
+        android:inputType="textNoSuggestions"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textColor="@android:color/primary_text_light_nodisable"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:debounceTime="500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvJoinGroupTitle"
+        app:minimumQueryTextLength="4"
+        tools:ignore="TextContrastCheck"
+        tools:targetApi="m"
+        tools:visibility="visible" />
+
+    <com.doubtnutapp.widgetmanager.ui.WidgetisedRecyclerView
+        android:id="@+id/rvMyGroups"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btCreateNewGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSearch"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <include
+        android:id="@+id/noResultContainer"
+        layout="@layout/fragment_sg_unavailable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btCreateNewGroup"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:elevation="0dp"
+        android:visibility="gone"
+        android:fontFamily="@font/lato"
+        android:stateListAnimator="@null"
+        android:text="@string/sg_create_new_group"
+        android:textAllCaps="false"
+        android:textColor="#DD2C00"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:cornerRadius="4dp"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/tomato"
+        app:strokeWidth="0.8dp"
+        tools:ignore="TextContrastCheck" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabScrollUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="85dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:visibility="gone"
+        app:backgroundTint="@color/blue_9eccfe"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_join_study_group"
+        app:tint="#2C87EA"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

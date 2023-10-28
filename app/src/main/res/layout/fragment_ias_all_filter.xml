@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".newglobalsearch.ui.IasAllFilterFragment">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/closeAllFilterScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="10dp"
+            android:src="?attr/homeAsUpIndicator"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginRight="12dp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="Filter Your Results"
+            android:textColor="@color/warm_grey"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/clearFiters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginRight="12dp"
+            android:enabled="false"
+            android:text="Clear Filter"
+            android:textColor="@color/ias_clear_all_filter_textcolor"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnApplyFilter"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="8dp"
+        android:nestedScrollingEnabled="true"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_ias_all_filters" />
+
+
+    <TextView
+        android:id="@+id/btnApplyFilter"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:background="@drawable/enable_disable_tomato_button"
+        android:enabled="false"
+        android:fontFamily="@font/lato"
+        android:foreground="@drawable/selectable_item_background"
+        android:gravity="center"
+        android:text="@string/view_results"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:id="@+id/progressFilter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <ProgressBar
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+    </FrameLayout>
+</RelativeLayout>

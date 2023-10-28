@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="161dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivMain"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_profile_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_badge_one"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="40dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivMain"
+            app:layout_constraintEnd_toEndOf="@id/ivMain"
+            app:layout_constraintStart_toEndOf="@id/ivMain"
+            tools:src="#ff7f00" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:lineSpacingExtra="4.9sp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_badge_one"
+            app:layout_constraintEnd_toEndOf="@id/iv_badge_one"
+            app:layout_constraintStart_toStartOf="@id/iv_badge_one"
+            app:layout_constraintTop_toTopOf="@id/iv_badge_one"
+            tools:ignore="HardcodedText"
+            tools:text="12" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/studentName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="5.6sp"
+            android:maxLines="1"
+            android:textColor="#541488"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivMain"
+            tools:text="Abhishek Sharma Abhishek SharmaAbhishek SharmaAbhishek Sharma" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/scholarshipGiven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rect_round_corner_4dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            app:backgroundTint="#ff7f00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/studentName"
+            tools:ignore="SmallSp"
+            tools:text="100% scholarship" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/examTargeted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="4.9sp"
+            android:textColor="#666467"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@id/scholarshipTestGiven"
+            app:layout_constraintEnd_toEndOf="@id/scholarshipGiven"
+            app:layout_constraintStart_toStartOf="@id/scholarshipGiven"
+            app:layout_constraintTop_toBottomOf="@id/scholarshipGiven"
+            tools:text="IIT JEE 2022" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/scholarshipTestGiven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="5.4sp"
+            android:textColor="#666467"
+            android:textSize="9sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/examTargeted"
+            app:layout_constraintStart_toStartOf="@id/examTargeted"
+            app:layout_constraintTop_toBottomOf="@id/examTargeted"
+            tools:ignore="SmallSp"
+            tools:text="Scholarship Test 1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

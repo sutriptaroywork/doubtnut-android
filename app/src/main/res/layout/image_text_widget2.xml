@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:paddingBottom="@dimen/dimen_4dp"
+    android:id="@+id/mainLayout"
+    tools:background="#c0d9ff">
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/lato"
+        android:letterSpacing="0"
+        android:lineSpacingExtra="4.9sp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/ivImage2"
+        app:layout_constraintStart_toEndOf="@+id/ivImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Topic name ke sath sath Maths ke sabhi chapters ki taiyaari karein!" />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        app:layout_goneMarginTop="@dimen/dimen_0dp"
+        android:fontFamily="@font/lato"
+        android:letterSpacing="0"
+        android:lineSpacingExtra="4.9sp"
+        android:textColor="#2f2f2f"
+        android:textSize="@dimen/font_14sp"
+        app:layout_constraintEnd_toStartOf="@+id/ivImage2"
+        app:layout_goneMarginEnd="55dp"
+        app:layout_constraintStart_toEndOf="@+id/ivImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="Topic name ke sath sath Maths ke sabhi chapters ki taiyaari karein!
+Topic name ke sath sath Maths ke sabhi chapters ki taiyaari karein!" />
+
+
+    <ImageView
+        android:id="@+id/ivImage2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/ivImage3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvEndTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:visibility="visible"
+        tools:ignore="ContentDescription"
+       />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEndTitle"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:textSize="9sp"
+        android:text="Doubt Pe Charcha"
+        android:visibility="visible"
+        />
+
+    <TextView
+        android:id="@+id/buttonCta"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:fontFamily="@font/lato_bold"
+        android:layout_marginTop="22dp"
+        android:textColor="@color/white"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:visibility="gone"
+        android:textSize="@dimen/dimen_15sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="@dimen/dimen_15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Redeem Now"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

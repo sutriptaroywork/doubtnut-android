@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:viewBindingIgnore="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:paddingHorizontal="@dimen/dimen_16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dimen_8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="@dimen/dimen_12dp"
+                android:src="@drawable/ic_arrow_back_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato"
+                android:textColor="#2f2f2f"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Create Post" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="@dimen/dimen_16dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/btnCreatePost"
+                app:layout_constraintRight_toLeftOf="@+id/btnCreatePost"
+                app:layout_constraintTop_toTopOf="@+id/btnCreatePost" />
+
+            <TextView
+                android:id="@+id/btnCreatePost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners_1da0f4"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                android:paddingVertical="@dimen/dimen_4dp"
+                android:text="@string/post"
+                android:textColor="@android:color/white"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_24dp"
+                android:src="@color/grey_feed"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="1dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headerLayout"
+                tools:src="@color/green" />
+
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_12dp"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                android:fontFamily="@font/lato"
+                android:textColor="#2f2f2f"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toRightOf="@+id/ivProfileImage"
+                app:layout_constraintTop_toTopOf="@+id/ivProfileImage"
+                tools:text="Hi Shinali" />
+
+            <TextView
+                android:id="@+id/tvChooseDnCommunity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_12dp"
+                android:drawableRight="@drawable/ic_drop_down"
+                android:drawablePadding="@dimen/dimen_8dp"
+                android:drawableTint="@color/black"
+                android:fontFamily="@font/lato"
+                android:textColor="#2f2f2f"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/ivProfileImage"
+                app:layout_constraintTop_toBottomOf="@+id/tvProfileName"
+                android:text="Choose a doubtnut community" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/etPostText"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_height="wrap_content"
+            android:background="#FEFEFE"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:autoLink="web"
+            android:elevation="@dimen/dimen_8dp"
+            android:minHeight="80dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:hint="@string/what_would_you_like_to_share"
+            android:inputType="textMultiLine"
+            android:maxLines="8"
+            android:padding="@dimen/dimen_8dp"
+            android:minLines="3"
+            android:textColorLink="#007eff"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfileImage" />
+
+
+        <ScrollView
+            android:id="@+id/postScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fitsSystemWindows="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/postExtraContainer"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPostText"
+            app:layout_constraintVertical_bias="0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLinks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:autoLink="web"
+                    android:textColorLink="#007eff"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etPostText" />
+
+                <com.doubtnutapp.feed.view.LinkPreviewView
+                    android:id="@+id/linkPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_12dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLinks"
+                    tools:visibility="visible" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/viewAttachments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="3"
+                    app:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/btnAddTopic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginBottom="@dimen/dimen_20dp"
+                    android:background="@drawable/post_topic_background"
+                    android:drawableLeft="@drawable/ic_add_white_small"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="@dimen/dimen_4dp"
+                    android:paddingLeft="@dimen/dimen_8dp"
+                    android:paddingRight="@dimen/dimen_12dp"
+                    android:text="@string/add_topic"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/postExtraContainer"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/postExtraContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/btnImagePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:drawableLeft="@drawable/ic_post_image"
+                android:drawablePadding="@dimen/dimen_16dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/dimen_12dp"
+                android:text="Image"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/btnVideoPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:drawableLeft="@drawable/ic_post_video"
+                android:drawablePadding="@dimen/dimen_16dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/dimen_12dp"
+                android:text="Video"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/btnPdfPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:drawableLeft="@drawable/ic_pdf_ias"
+                android:drawablePadding="@dimen/dimen_20dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/dimen_12dp"
+                android:text="PDF"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/btnLinkPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:drawableLeft="@drawable/ic_post_link"
+                android:drawablePadding="@dimen/dimen_16dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/dimen_12dp"
+                android:text="Link"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/btnLivePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:background="?selectableItemBackground"
+                android:drawableLeft="@drawable/ic_post_live"
+                android:drawablePadding="@dimen/dimen_16dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/dimen_12dp"
+                android:text="Go Live"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

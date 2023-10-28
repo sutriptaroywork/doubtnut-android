@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Some strings like bad_access_token_title are stubs and its translations are provided by
+modules like app. -->
+<resources>
+    <string name="api_error">Something went wrong please try later !!</string>
+    <string name="call_us">Call Us</string>
+    <string name="copy_referral_msg">Copy Referral Msg</string>
+    <string name="share_your_referral_code">Share Your Referral Code</string>
+    <string name="share">Share</string>
+    <string name="referral_code_copied">Copied!</string>
+    <string name="refer_amp_earn"><![CDATA[Refer & Earn]]></string>
+    <string name="see_all_rewards">See all Rewards</string>
+    <string name="mera_dost">Mera dost</string>
+    <string name="no_contacts_found">No contacts found</string>
+    <string name="bad_access_token_title" translatable="false">Bad Access Token</string>
+    <string name="bad_access_token_body" translatable="false">We received a Bad Access Token. We recommend you to logout and signin again.</string>
+    <string name="btn_logout" translatable="false">LOGOUT</string>
+
+    <string name="badRequest_tittle_2" translatable="false">Bad Access Token</string>
+    <string name="badRequest_body_2" translatable="false">We received a bad access token. We recommend you to login again.</string>
+
+    <string name="login_button" translatable="false">Login</string>
+
+    <string name="days" translatable="false">Days</string>
+    <string name="hours" translatable="false">Hours</string>
+    <string name="min" translatable="false">Min</string>
+    <string name="sec" translatable="false">Sec</string>
+
+    <string name="somethingWentWrong" translatable="false">Something went wrong</string>
+    <string name="string_noInternetConnection" translatable="false">Check your Internet Connection !</string>
+
+    <string name="no_posts_found" translatable="false">No posts found</string>
+</resources>

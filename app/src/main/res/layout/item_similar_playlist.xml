@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.doubtnutapp.domain.base.SolutionResourceType" />
+
+        <variable
+            name="similarVideoData"
+            type="com.doubtnutapp.domain.similarVideo.entities.SimilarPlaylistVideoEntity" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#223d4e">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:minHeight="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textSolutionImage">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.doubtnutapp.widgets.mathview.MathViewSimilarPlaylist
+                android:id="@+id/dmathView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="false"
+                android:scrollbars="none"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivMatch"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:id="@+id/clickHelperView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:focusable="true" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="1" />
+
+            <ImageView
+                android:id="@+id/ivPlayVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:src="@drawable/ic_match_question_play_button"
+                android:visibility="@{similarVideoData.resourceType.equals(SolutionResourceType.SOLUTION_RESOURCE_TYPE_VIDEO) ? View.VISIBLE: View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardContainer">
+
+            <TextView
+                android:id="@+id/tvQuestionId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:contentDescription="@string/string_latest_playbutton_content_des"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_black"
+                android:gravity="start"
+                android:letterSpacing="0.12"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@{similarVideoData.questionIdSimilar}"
+                android:textColor="#a8b3ba"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                tools:text="42342325" />
+
+            <RelativeLayout
+                android:id="@+id/bottomRightLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/questionAskedYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_toStartOf="@+id/questionAskedCount"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:singleLine="true"
+                    android:text="@{similarVideoData.ref != null ? similarVideoData.ref.trim(): similarVideoData.ref}"
+                    android:textColor="#a8b3ba"
+                    android:textSize="12sp"
+                    android:visibility="@{similarVideoData.ref != null ? View.VISIBLE: View.GONE}"
+                    tools:text="asfa fdf dff dfdfdsfdfdff"
+                    app:drawableStartCompat="@drawable/ic_question_asked_year" />
+
+                <TextView
+                    android:id="@+id/questionAskedCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="2dp"
+                    android:drawableStart="@drawable/ic_question_asked_count"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:singleLine="true"
+                    android:text="@{similarVideoData.views + '+'}"
+                    android:textColor="#a8b3ba"
+                    android:textSize="12sp"
+                    android:visibility="@{similarVideoData.views != null ? View.VISIBLE: View.GONE}"
+                    tools:text="187K+"
+                    tools:visibility="visible" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#dcdcdc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/textSolutionImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_match_page_text_solution"
+            android:visibility="@{similarVideoData.resourceType.equals(SolutionResourceType.SOLUTION_RESOURCE_TYPE_TEXT) ? View.VISIBLE: View.GONE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/overflowMenuSimilar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:minWidth="4dp"
+            android:minHeight="14dp"
+            android:padding="5dp"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_match_page_three_dots"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/overflowMenuSimilarView"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintEnd_toStartOf="@+id/overflowMenuSimilar"
+            app:layout_constraintTop_toBottomOf="@+id/overflowMenuSimilar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

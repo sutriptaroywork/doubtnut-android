@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_50">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarLiveChat"
+            android:layout_width="match_parent"
+            app:titleTextColor="@color/white"
+            android:theme="@style/ToolbarTheme"
+            android:layout_height="?attr/actionBarSize">
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutComments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/invite_pagebg"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewLiveChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="?actionBarSize" />
+
+        <RelativeLayout
+            android:id="@+id/linearLayoutImageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/seashell"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/divider">
+
+            <ImageView
+                android:id="@+id/imageViewCaptured"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:padding="5dp" />
+
+            <ImageView
+                android:id="@+id/imageViewClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:onClick="onCloseButtonClicked"
+                app:srcCompat="@drawable/ic_close_black" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#000"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewCamera"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="onCameraButtonClicked"
+                android:padding="10dp"
+                android:layout_gravity="bottom"
+                app:srcCompat="@drawable/ic_camera_home" />
+
+            <ImageView
+                android:id="@+id/imageViewAudio"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:layout_gravity="bottom"
+                app:srcCompat="@drawable/ic_microphone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_comment"
+                android:visibility="visible"
+                android:layout_marginEnd="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCamera"
+                app:layout_constraintTop_toBottomOf="@id/divider">
+
+                <EditText
+                    android:id="@+id/editTextCommentInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_weight="3.5"
+                    android:background="@null"
+                    android:hint="@string/string_writeComment"
+                    android:inputType="textMultiLine"
+                    android:maxLines="4"
+                    android:padding="5dp"
+                    android:scrollbars="vertical" />
+
+                <ImageView
+                    android:id="@+id/imageViewSendComment"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight=".5"
+                    android:onClick="onSendChatButtonClicked"
+                    android:padding="5dp"
+                    android:layout_gravity="bottom"
+                    app:srcCompat="@drawable/ic_send_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/ll_audio"
+                android:visibility="gone"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCamera"
+                app:layout_constraintTop_toBottomOf="@id/divider">
+
+                <!--<EditText-->
+                <!--android:id="@+id/editTextCommentInput"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:minHeight="50dp"-->
+                <!--android:layout_weight="3.5"-->
+                <!--android:background="@null"-->
+                <!--android:hint="@string/string_writeComment"-->
+                <!--android:inputType="textMultiLine"-->
+                <!--android:maxLines="4"-->
+                <!--android:padding="5dp"-->
+                <!--android:scrollbars="vertical" />-->
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="50dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_time_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="00:00"
+                    android:padding="5dp"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:visibility="visible"
+                    />
+                <ImageView
+                    android:id="@+id/iv_record_mic_red"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:paddingHorizontal="5dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_mic_none_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarLiveChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/redDark"
+            android:drawableStart="@drawable/ic_arrow_down"
+            tools:drawableStart="@drawable/ic_arrow_down"
+            android:text="25 new comments"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            android:visibility="gone"
+            android:id="@+id/fabNewChat"
+            >
+
+
+        </com.google.android.material.button.MaterialButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

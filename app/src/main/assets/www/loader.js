@@ -1,0 +1,1 @@
+ document.onreadystatechange=function (){var state=document.readyState; /* console.log(state); */ if (state=='complete'){document.getElementById('main').style.display="block"; document.getElementById('loader').style.display="none";}else{document.getElementById('main').style.display="none"; document.getElementById('loader').style.display="block";}}

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    tools:context=".doubtfeed.ui.DoubtFeedFragment">
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="3dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_profile_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/notificationLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivProfile"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/doubtNotificationBell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_home_notification"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvDoubtNotificationCount"
+            android:layout_width="@dimen/dimen_16dp"
+            android:layout_height="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_notification_count"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_7sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="9+" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvDoubtFeedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/doubt_feed"
+        android:textColor="@color/black_two"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_2dp"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="@dimen/dimen_16dp"
+        android:background="#e5e5e5"
+        app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="90dp"
+        app:layout_constraintTop_toBottomOf="@id/divider9">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivNoDailyGoal"
+                android:layout_width="72dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvNoDailyGoalTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/black_two"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivNoDailyGoal"
+                tools:text="No Daily Goal" />
+
+            <TextView
+                android:id="@+id/tvNoDailyGoalDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="70dp"
+                android:gravity="center"
+                android:textColor="@color/grey_969696"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNoDailyGoalTitle"
+                tools:text="Ask a question to set goal for the day and start studying" />
+
+            <TextView
+                android:id="@+id/tvDailyGoalTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black_two"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Daily Goal" />
+
+            <LinearLayout
+                android:id="@+id/layoutTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    android:fontFamily="@font/lato"
+                    android:textColor="@color/purple"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    tools:text="22:00" />
+
+                <TextView
+                    android:id="@+id/tvTimerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:textColor="@color/purple"
+                    android:textSize="14sp"
+                    tools:text="@string/hrs_left" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDailyGoalDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDailyGoalTitle"
+                tools:text="Introducing daily task habbits to help you get ready for your goal for upto 3 topics daily" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewGoalCompletedTick"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                app:cardElevation="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rippleColor="@color/colorTransparent"
+                app:shapeAppearanceOverlay="@style/CircularImageView">
+
+                <ImageView
+                    android:id="@+id/ivTick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_doubt_feed_daily_goal_progress_done"
+                    android:padding="14dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_tick_doubt_feed"
+                    tools:ignore="ContentDescription" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvDailyGoalCompletedTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black_two"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/barrierAboveProgressLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardViewGoalCompletedTick"
+                tools:text="Daily Goal Completed" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierAboveProgressLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tvDailyGoalCompletedTitle,tvDailyGoalDescription" />
+
+            <include layout="@layout/layout_doubt_feed_progress_bar" />
+
+            <TextView
+                android:id="@+id/tvProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/purple"
+                android:textSize="14sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flowDailyGoals"
+                tools:text="Topic 1 of 3 in progress" />
+
+            <TextView
+                android:id="@+id/tvDailyGoalCompletedDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProgress"
+                tools:text="Congratulations. You completed all your  task for today’s goal. If you want to regenerate your feed with a new topic ask a question"
+                tools:visibility="visible" />
+
+            <FrameLayout
+                android:id="@+id/buttonAskQuestionContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrierDescription">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonAskQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/ask_question"
+                    android:textAllCaps="false" />
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tvProgress,buttonAskQuestionContainer" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tvNoDailyGoalDescription,tvDailyGoalCompletedDescription" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupNoDailyGoalHidden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="groupDailyGoalsCompleted,flowDailyGoals,progressBar,tvProgress" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupDailyGoalsCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tvDailyGoalCompletedDescription,tvDailyGoalCompletedTitle,cardViewGoalCompletedTick,buttonAskQuestionContainer" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupNoDailyGoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="ivNoDailyGoal,tvNoDailyGoalTitle,tvNoDailyGoalDescription,buttonAskQuestionContainer" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupDailyGoalsCompletedHidden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="tvDailyGoalTitle,tvDailyGoalDescription,layoutTimer" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupDailyGoalInProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="tvProgress,tvDailyGoalTitle,tvDailyGoalDescription,layoutTimer,flowDailyGoals,progressBar" />
+
+            <TextView
+                android:id="@+id/tvYourDoubts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black_two"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrierProgress"
+                tools:text="Your Doubts" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTopics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="4dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tvYourDoubts"
+                tools:listitem="@layout/item_doubt_feed_topic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCarousels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/rvTopics"
+                tools:itemCount="1"
+                tools:listitem="@layout/widget_doubt_feed_daily_goal" />
+
+            <ProgressBar
+                android:id="@+id/progressBarLoader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvTopics" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

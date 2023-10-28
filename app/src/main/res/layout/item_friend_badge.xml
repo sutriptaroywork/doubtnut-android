@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <import type="android.view.View" />
+
+        <variable
+            name="badge"
+            type="com.doubtnutapp.gamification.friendbadgesscreen.model.FriendBadge" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/badgeImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            app:imageurl="@{badge.badgeIconUrl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholder="@{@drawable/circle_test_question_attempted}" />
+
+        <ImageView
+            android:id="@+id/badgeImageOverlay"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            app:srcCompat="@drawable/overlay_badge"
+            android:visibility="@{badge.isAchieved ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_lock"
+            android:visibility="@{badge.isAchieved ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@+id/badgeImageOverlay"
+            app:layout_constraintEnd_toStartOf="@+id/badgeDetail" />
+
+        <TextView
+            android:id="@+id/badgeTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{badge.name}"
+            tools:text ="dfgfgdfgdfgdfgdfdddddddfffdgdddfdgdd"
+            app:layout_constraintStart_toEndOf="@+id/badgeImage"
+            app:layout_constraintEnd_toStartOf="@+id/badgeShare"
+            app:layout_constraintTop_toTopOf="@+id/badgeImage" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/autoDownload"
+        android:enabled="true"
+        android:title="@string/photos_auto_download"
+        app:showAsAction="never" />
+
+</menu>

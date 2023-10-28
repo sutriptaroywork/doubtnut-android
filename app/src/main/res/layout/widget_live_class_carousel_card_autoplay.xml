@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    tools:layout_width="340dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="6dp"
+        android:clipToPadding="false"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/buttonsContainer"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewBackground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@color/colorLightSkyBlue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="#e34c4c" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewFaculty"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:paddingTop="24dp"
+                android:scaleType="fitEnd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_constraintVertical_bias="1"
+                tools:src="@tools:sample/avatars"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/facultyImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="51dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitEnd"
+                app:layout_constraintBottom_toTopOf="@+id/layoutUsersWatching"
+                app:layout_constraintDimensionRatio="2:3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars"
+                tools:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:background="#ca3030"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_bold"
+                android:maxLength="40"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:paddingHorizontal="8dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toTopOf="@id/textViewTitleInfo"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineFacultyImage"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="Smallsp"
+                tools:layout_constraintHorizontal_bias="0"
+                tools:layout_constraintVertical_bias="0"
+                tools:text="English Grammer, State Board English Grammer, State Board "
+                tools:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewTitleInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tvFacultyInfo"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineFacultyImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSubject"
+                app:layout_constraintVertical_bias="0"
+                app:layout_goneMarginTop="24dp"
+                tools:layout_constraintEnd_toEndOf="parent"
+                tools:layout_constraintHorizontal_bias="1"
+                tools:text="दो सदिशों का सदिश  गुणनफल एवं इनके गुणधर्म "
+                tools:textSize="25sp"
+                tools:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvFacultyInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/lato"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/tvTitle3"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineFacultyImage"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleInfo"
+                app:layout_constraintVertical_bias="0"
+                tools:ignore="Smallsp"
+                tools:text="By Manisha Chauhan"
+                tools:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitle3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/lato"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/tvTargetExam"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineFacultyImage"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFacultyInfo"
+                app:layout_constraintVertical_bias="0"
+                tools:ignore="Smallsp"
+                tools:text="Title 3"
+                tools:visibility="gone" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTargetExam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_capsule_targetexam"
+                android:fontFamily="@font/lato"
+                android:maxLines="1"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:textColor="@color/color_750406"
+                android:textSize="11sp"
+                android:textStyle="normal"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineFacultyImage"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle3"
+                app:layout_constraintVertical_bias="0"
+                app:layout_goneMarginTop="24dp"
+                tools:ignore="Smallsp"
+                tools:text="Target Exam"
+                tools:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_bottom_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guidelineFacultyImage"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTargetExam"
+                app:layout_constraintVertical_bias="1"
+                tools:text="Classes on Mon, Wed, Fri 3:00 Pm"
+                tools:visibility="visible" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineFacultyImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".6" />
+
+            <ImageView
+                android:id="@+id/imageViewPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_autoplay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone" />
+
+            <com.doubtnutapp.rvexoplayer.RvExoPlayerView
+                android:id="@+id/rvPlayer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:resize_mode="fill" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutUsersWatching"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="#800f1805"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgViews"
+                    android:layout_width="@dimen/dimen_12dp"
+                    android:layout_height="@dimen/dimen_12dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:src="@drawable/ic_views_count_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textViewUsersWatched"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_6dp"
+                    android:fontFamily="@font/lato"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imgViews"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="13K Students watched" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTopTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:background="#ca3030"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_bold"
+                android:lines="1"
+                android:maxLength="40"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:paddingHorizontal="8dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineFacultyImage"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="English Grammer, State Board English Grammer, State Board "
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="@id/cardView"
+        app:layout_constraintStart_toStartOf="@id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvBottomLayoutTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tvBottomLayoutTitle2"
+            app:layout_constraintEnd_toStartOf="@+id/ivVolume"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Deep Water I William recounting | Deep Water I William recounting "
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_bottom_title_2"
+            android:layout_width="10dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvBottomLayoutTitle2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvBottomLayoutTitle2"
+            tools:src="@drawable/ic_view_24dp"
+            tools:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvBottomLayoutTitle2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:textColor="#5b5b5b"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@id/button"
+            app:layout_constraintEnd_toStartOf="@+id/ivVolume"
+            app:layout_constraintStart_toEndOf="@id/iv_bottom_title_2"
+            app:layout_constraintTop_toBottomOf="@id/tvBottomLayoutTitle"
+            app:layout_goneMarginStart="0dp"
+            app:layout_goneMarginTop="0dp"
+            tools:ignore="SmallSp"
+            tools:text="1200 watching | 45 min"
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVolume"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="8dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_small_volume_mute"
+            app:layout_constraintBottom_toTopOf="@id/button"
+            app:layout_constraintEnd_toStartOf="@+id/btBottomLayoutText"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/btBottomLayoutText"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/tomato"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/button"
+            app:layout_constraintEnd_toStartOf="@id/btn_reminder"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginEnd="0dp"
+            tools:text="Join Now"
+            tools:textAllCaps="false"
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_reminder"
+            android:layout_width="48dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/selector_bg_reminder"
+            android:elevation="@dimen/dimen_4dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:paddingStart="25dp"
+            android:paddingLeft="0dp"
+            android:paddingEnd="25dp"
+            android:paddingRight="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:srcCompat="@drawable/selector_icon_reminder"
+            app:strokeColor="@color/tomato"
+            tools:ignore="ContentDescription"
+            tools:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp"
+            android:textAllCaps="false"
+            android:textColor="@color/tomato"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_reminder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBottomLayoutTitle2"
+            app:layout_goneMarginTop="0dp"
+            app:strokeColor="@color/tomato"
+            tools:text="Go to Course"
+            tools:visibility="visible" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_22dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            app:cardCornerRadius="3dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutPopularity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_most_watched_card"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageChart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:src="@drawable/ic_trending_chart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewPopularityTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="@dimen/dimen_6dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Most Watched"
+                    android:textColor="#1a29a9"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageChart"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

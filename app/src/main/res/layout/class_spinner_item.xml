@@ -1,0 +1,13 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:fontFamily="@font/lato"
+    android:padding="2dp"
+    android:singleLine="true"
+    android:text="dummy text"
+    android:textAlignment="inherit"
+    android:textColor="@color/dropmenu_item_text_color"
+    android:textSize="14sp" />

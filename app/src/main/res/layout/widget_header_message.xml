@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fdca46">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/lato"
+        android:maxLines="2"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:textColor="#393939"
+        android:textSize="14sp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        tools:text="Nitin Vijay (Physics)"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvButton"
+        android:textColor="@color/tomato"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="14sp"
+        tools:text="Get Now"/>
+
+</RelativeLayout>

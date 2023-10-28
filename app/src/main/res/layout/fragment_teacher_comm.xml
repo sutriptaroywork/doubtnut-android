@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutQuiz"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvTeacherName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_4dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:fontFamily="@font/lato_black"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTimer"
+        app:layout_constraintStart_toEndOf="@+id/teacherImage"
+        app:layout_constraintTop_toTopOf="@+id/teacherImage"
+        tools:text="Sachin Sir" />
+
+    <TextView
+        android:id="@+id/textViewTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_12dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTeacherName"
+        app:layout_constraintEnd_toStartOf="@+id/closeButton"
+        app:layout_constraintTop_toTopOf="@+id/tvTeacherName"
+        tools:text="00:30" />
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="@dimen/dimen_20"
+        android:layout_height="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginEnd="@dimen/dimen_18dp"
+        android:src="@drawable/ic_close"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginEnd="@dimen/dimen_16dp" />
+
+    <TextView
+        android:id="@+id/tvTeacherText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        android:fontFamily="@font/lato"
+        android:paddingBottom="@dimen/dimen_20"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/teacherImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvTeacherName"
+        tools:text="Communication Communication Communication
+Communication Communication Communication Communication Communication Communication
+Communication Communication Communication Communication Communication Communication" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/teacherImage"
+        android:layout_width="@dimen/dimen_16dp"
+        android:layout_height="@dimen/dimen_16dp"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

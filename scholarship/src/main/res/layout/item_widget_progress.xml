@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view_left"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_tick"
+        app:layout_constraintEnd_toStartOf="@+id/iv_tick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_tick"
+        tools:background="@color/green_56bd5b"
+        tools:visibility="visible" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_tick"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toStartOf="@id/view_right"
+        app:layout_constraintStart_toEndOf="@id/view_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginEnd="48dp"
+        app:layout_goneMarginStart="48dp"
+        app:shapeAppearanceOverlay="@style/CircularImageView_50"
+        app:strokeWidth="1dp"
+        tools:background="@color/white"
+        tools:strokeColor="#979797" />
+
+    <View
+        android:id="@+id/view_right"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_tick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_tick"
+        app:layout_constraintTop_toTopOf="@+id/iv_tick"
+        tools:background="@color/green_56bd5b"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_tick"
+        app:layout_constraintStart_toStartOf="@id/iv_tick"
+        app:layout_constraintTop_toBottomOf="@id/iv_tick"
+        tools:text="Register" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

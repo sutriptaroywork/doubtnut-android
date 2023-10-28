@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="conceptVideosFeed"
+            type="com.doubtnutapp.librarylisting.model.ConceptVideosViewItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:listPreferredItemHeightLarge"
+        android:background="@drawable/selectable_item_background">
+
+        <TextView
+            android:id="@+id/concept_videos_chapter_title"
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@{conceptVideosFeed.title}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Chapter Name" />
+
+        <ImageView
+            android:id="@+id/concept_videos_trending"
+            android:layout_width="12dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/concept_videos_chapter_title"
+            app:layout_constraintTop_toBottomOf="@+id/concept_videos_chapter_title"
+            tools:src="@drawable/ic_trending" />
+
+        <TextView
+            style="@style/DescriptionTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{conceptVideosFeed.subTitle}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/concept_videos_trending"
+            app:layout_constraintTop_toBottomOf="@id/concept_videos_chapter_title"
+            app:layout_constraintWidth_default="wrap"
+            tools:text="Trending" />
+
+        <TextView
+            android:id="@+id/concept_total_videos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/text_black"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="6" />
+
+        <TextView
+            android:id="@+id/textViewVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/concept_total_videos"
+            app:layout_constraintStart_toStartOf="@id/concept_total_videos"
+            app:layout_constraintTop_toBottomOf="@id/concept_total_videos" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

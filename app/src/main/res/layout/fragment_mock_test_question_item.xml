@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottombarMockTest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_attempted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_f2f2f2"
+            android:fontFamily="@font/lato"
+            android:paddingLeft="@dimen/dimen_16dp"
+            android:paddingTop="@dimen/dimen_16dp"
+            android:paddingBottom="@dimen/dimen_16dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_12sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvskipped"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:elevation="@dimen/dimen_16dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/skipped_text"
+            android:textAlignment="center"
+            android:textColor="@color/tomato"
+            android:textSize="@dimen/font_14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/tv_marks_heading"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_marks_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_4dp"
+            android:elevation="@dimen/dimen_16dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/marks_text_small"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/tvMarks"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvMarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:elevation="@dimen/dimen_16dp"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="@dimen/font_14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12"
+            tools:visibility="visible" />
+
+        <com.doubtnutapp.widgets.mathview.MockTestMathView
+            android:id="@+id/mockTestMathView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="46dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/bottombarMockTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/btnReview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="@dimen/dimen_14dp"
+            android:layout_marginStart="@dimen/dimen_24dp"
+            android:layout_marginEnd="@dimen/dimen_24dp"
+            android:layout_weight="2"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/review_text"
+            app:backgroundTint="@color/white"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/orange_eb532c"
+            android:textSize="@dimen/font_14sp"
+            app:cornerRadius="@dimen/radius_5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tvSkip"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="36dp"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center|right"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_back_button"
+                android:padding="@dimen/dimen_10dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:tint="@color/black"
+                android:visibility="visible"
+                app:backgroundTint="@color/grey_f2f2f2"
+                app:cornerRadius="@dimen/radius_5dp"
+                app:srcCompat="@drawable/ic_arrow_back_tomato" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center|right"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/string_next_button"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14sp"
+                app:cornerRadius="@dimen/radius_5dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/string_clear_answer"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14sp"
+                app:cornerRadius="@dimen/radius_5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_solution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:background="@drawable/bg_video_solution"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:paddingTop="22dp"
+            android:paddingBottom="22dp"
+            android:text="@string/view_solution_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_12sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

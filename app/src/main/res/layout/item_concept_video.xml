@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.doubtnutapp.domain.base.SolutionResourceType" />
+
+        <variable
+            name="conceptVideoData"
+            type="com.doubtnutapp.similarVideo.model.ConceptsVideoList" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="250dp"
+            android:layout_height="110dp"
+            tools:background="@color/blueDark">
+
+            <ImageView
+                android:id="@+id/contentLock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:visibility="@{conceptVideoData.contentLock.isLocked ? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_lock" />
+
+            <ImageView
+                android:id="@+id/ivPlayVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@{conceptVideoData.resourceType.equals(SolutionResourceType.SOLUTION_RESOURCE_TYPE_VIDEO) ? @drawable/ic_play_tranparent : @drawable/ic_text_solutions}" />
+
+            <com.doubtnutapp.widgets.mathview.MathViewSimilar
+                android:id="@+id/conceptVideoMathView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="false"
+                android:scrollbars="none"
+                android:text="@{conceptVideoData.ocrText}"
+                android:visibility="@{conceptVideoData.ocrText!=null ? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="fskdjfnskdnfknsdkfgnkngknkgnksdngsngksnkgskgnksnk" />
+
+            <ImageView
+                android:id="@+id/conceptVideoImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/lato_black"
+                android:gravity="start|center_vertical"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="@{conceptVideoData.ocrText == null ? View.VISIBLE : View.GONE}"
+                app:imageurl="@{conceptVideoData.thumbnailImage}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:src="@drawable/ic_thumbs_down_video_selected" />
+
+            <View
+                android:id="@+id/clickHelperView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

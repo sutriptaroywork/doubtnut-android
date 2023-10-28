@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "107329891796",
+    "firebase_url": "https://doubtnut-staging.firebaseio.com",
+    "project_id": "doubtnut-staging",
+    "storage_bucket": "doubtnut-staging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107329891796:android:f6626e5534fa050d717a41",
+        "android_client_info": {
+          "package_name": "com.doubtnutapp.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107329891796-dmdfi0eiedig83c2vqb6pdb87425obsj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAln3M5hyoV6UaeM3uVH-3Awe4YOOgbYzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107329891796-dmdfi0eiedig83c2vqb6pdb87425obsj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

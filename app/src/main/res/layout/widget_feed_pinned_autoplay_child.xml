@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginVertical="@dimen/dimen_12dp"
+        android:autoLink="web"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:maxLines="20"
+        android:textColor="#6a6a6a"
+        android:textColorLink="#007eff"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="This is a test message" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage" />
+
+    <com.doubtnutapp.rvexoplayer.RvExoPlayerView
+        android:id="@+id/rvPlayer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        app:resize_mode="fill" />
+
+    <View
+        android:id="@+id/clickHelperView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/rvPlayer"
+        app:layout_constraintEnd_toEndOf="@id/rvPlayer"
+        app:layout_constraintStart_toStartOf="@id/rvPlayer"
+        app:layout_constraintTop_toTopOf="@id/rvPlayer" />
+
+    <ImageView
+        android:id="@+id/ivVolume"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_volume_icon"
+        android:padding="4dp"
+        android:src="@drawable/ic_mute"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:tint="@color/white" />
+
+    <com.doubtnutapp.feed.view.FeedPostActionsView
+        android:id="@+id/viewPostActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivVolume" />
+
+    <com.doubtnutapp.feed.view.FeedCommentView
+        android:id="@+id/viewFeedComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPostActions" />
+
+    <TextView
+        android:id="@+id/tvAllComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginBottom="@dimen/dimen_12dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/view_all_comments"
+        android:textColor="#0091ff"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/viewFeedComment"
+        app:layout_constraintTop_toBottomOf="@+id/viewFeedComment" />
+
+
+    <LinearLayout
+        android:id="@+id/addCommentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAllComments">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivSelfProfileImage"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@color/grey_feed" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:background="@drawable/bg_comment_chatbubble"
+            android:fontFamily="@font/lato"
+            android:paddingVertical="@dimen/dimen_8dp"
+            android:paddingStart="@dimen/dimen_8dp"
+            android:text="Write a comment..."
+            android:textColor="#6a6a6a"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

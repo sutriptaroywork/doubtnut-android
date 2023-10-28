@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootMcq"
+    android:layout_width="match_parent"
+    android:layout_height="276dp"
+    android:background="@color/white"
+    android:paddingStart="@dimen/dimen_15dp"
+    android:paddingEnd="@dimen/dimen_15dp">
+
+    <ImageView
+        android:id="@+id/headingIconQuizMcq"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:src="@drawable/placeholder_quiz_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headingQuizMcq"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:fontFamily="@font/lato_black"
+        android:textColor="#481a62"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconQuizMcq"
+        app:layout_constraintEnd_toStartOf="@id/skipQuizMcq"
+        app:layout_constraintStart_toEndOf="@id/headingIconQuizMcq"
+        app:layout_constraintTop_toTopOf="@id/headingIconQuizMcq"
+        tools:text="Khele Quiz Game aur batore rewards" />
+
+    <TextView
+        android:id="@+id/skipQuizMcq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="Skip"
+        android:textColor="#481a62"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconQuizMcq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/headingIconQuizMcq" />
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7.5dp"
+        android:alpha="0.1"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headingIconQuizMcq" />
+
+    <ScrollView
+        android:id="@+id/scrollOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line">
+
+        <LinearLayout
+            android:id="@+id/llQuizOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvQuizMcqQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14.5dp"
+                android:fontFamily="@font/lato"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:text="Q1. Magnesium ribbon is rubbed before burning because it has a coating of" />
+
+            <LinearLayout
+                android:id="@+id/llQuestionOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_14dp"
+                    android:layout_height="@dimen/dimen_14dp"
+                    android:backgroundTint="@color/tomato"
+                    android:src="@drawable/circle_quiz_mcq" />
+
+                <TextView
+                    android:id="@+id/tvOptionOneQuiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:fontFamily="@font/lato"
+                    android:lineSpacingExtra="@dimen/dimen_6sp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_11sp"
+                    android:textStyle="bold"
+                    tools:text="(a) basic magnesium carbonate" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llQuestionTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_14dp"
+                    android:layout_height="@dimen/dimen_14dp"
+                    android:backgroundTint="@color/tomato"
+                    android:src="@drawable/circle_quiz_mcq" />
+
+                <TextView
+                    android:id="@+id/tvOptionTwoQuiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:fontFamily="@font/lato"
+                    android:lineSpacingExtra="@dimen/dimen_6sp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_11sp"
+                    android:textStyle="bold"
+                    tools:text="(b) basic magnesium oxide" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llQuestionThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_14dp"
+                    android:layout_height="@dimen/dimen_14dp"
+                    android:backgroundTint="@color/tomato"
+                    android:src="@drawable/circle_quiz_mcq" />
+
+                <TextView
+                    android:id="@+id/tvOptionThreeQuiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:fontFamily="@font/lato"
+                    android:lineSpacingExtra="@dimen/dimen_6sp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_11sp"
+                    android:textStyle="bold"
+                    tools:text="(c) basic magnesium oxide" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llQuestionFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_14dp"
+                    android:layout_height="@dimen/dimen_14dp"
+                    android:backgroundTint="@color/tomato"
+                    android:src="@drawable/circle_quiz_mcq" />
+
+                <TextView
+                    android:id="@+id/tvOptionFourQuiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:fontFamily="@font/lato"
+                    android:lineSpacingExtra="@dimen/dimen_6sp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_11sp"
+                    android:textStyle="bold"
+                    tools:text="(d) basic magnesiumksdfhnsdf rfwelsjrlj ljlw jrtlwj wt jwltjlwjtl wl l jljrtg eltjetijsdhflsdklfdlgldgldjgldfjgldjj oxide" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnQuizMcq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollOptions"
+        tools:text="WATCH video" />
+</androidx.constraintlayout.widget.ConstraintLayout>

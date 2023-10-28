@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="leaderboardItemDataModel"
+            type="com.doubtnutapp.gamification.userProfileData.model.DailyLeaderboardItemDataModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clItemRoot"
+        android:layout_width="92dp"
+        android:layout_height="140dp"
+        android:layout_margin="8dp"
+        android:foreground="@drawable/selectable_item_background"
+        android:background="@drawable/card_stroke_grey">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="11dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageViewUserProfile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:imageurl="@{leaderboardItemDataModel.leaderBoardProfileImage}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholder="@{@drawable/ic_person_grey}"
+                tools:src="@tools:sample/avatars"
+                app:civ_border_color="@color/actionBarArrowColor"
+                app:civ_border_width="4dp"/>
+
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@{leaderboardItemDataModel.leaderBoardRank &lt; 2 ? @drawable/ic_bg_rank_red : @drawable/ic_bg_rank_yellow }"
+                android:gravity="center"
+                android:textColor="@{leaderboardItemDataModel.leaderBoardRank &lt; 2 ? @color/white : @color/black }"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewUserProfile"
+                app:layout_constraintStart_toEndOf="@+id/imageViewUserProfile"
+                app:layout_constraintTop_toTopOf="parent"
+                app:text="@{String.valueOf(leaderboardItemDataModel.leaderBoardRank)}"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/textViewUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato"
+                android:maxEms="5"
+                android:maxLines="1"
+                android:textColor="@color/app_black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewUserProfile"
+                app:text="@{leaderboardItemDataModel.leaderBoardUserName}"
+                tools:text="Vikas Gup..." />
+
+
+            <ImageView
+                android:id="@+id/dailyLeaderBoardBadge"
+                android:layout_width="22dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:padding="3dp"
+                android:src="@drawable/ic_points_badge_24dp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewRank"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUserName"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/lato"
+                android:textColor="#541488"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/dailyLeaderBoardBadge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/dailyLeaderBoardBadge"
+                app:layout_constraintTop_toBottomOf="@+id/dailyLeaderBoardBadge"
+                app:layout_constraintTop_toTopOf="@+id/dailyLeaderBoardBadge"
+                app:text="@{String.valueOf(leaderboardItemDataModel.leaderBoardPoints)}"
+                tools:text="4357" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

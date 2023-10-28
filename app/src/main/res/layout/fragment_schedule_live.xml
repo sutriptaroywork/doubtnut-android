@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSecondary"
+            android:paddingBottom="@dimen/dimen_4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_arrow_back_video"
+            app:subtitleTextColor="@color/white"
+            app:title="Go Live"
+            app:titleTextColor="@color/white" />
+
+        <FrameLayout
+            android:id="@+id/viewPostImage"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#f6f6f6"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/ic_photo_camera_black_24dp"
+                android:drawablePadding="@dimen/dimen_8dp"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:gravity="center_horizontal"
+                android:text="Upload thumbnail from gallery for your live banner" />
+
+            <ImageView
+                android:id="@+id/ivPostImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:fontFamily="@font/lato"
+            android:hint="Add Description"
+            android:maxLines="3"
+            android:paddingBottom="@dimen/dimen_16dp"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPostImage" />
+
+        <TextView
+            android:id="@+id/btnAddTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:background="@drawable/rounded_corners_stroke_ea532c"
+            android:drawableLeft="@drawable/ic_add_white_small"
+            android:drawableTint="#ea532c"
+            android:paddingHorizontal="@dimen/dimen_12dp"
+            android:paddingVertical="@dimen/dimen_4dp"
+            android:text="@string/add_topic"
+            android:textColor="#ea532c"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+        <LinearLayout
+            android:id="@+id/viewPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/etDate">
+
+            <RadioGroup
+                android:id="@+id/priceRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/btnFree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:checked="true"
+                    android:fontFamily="@font/lato"
+                    android:text="Free" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/btnPaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Paid" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvAmountIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_32dp"
+                android:text="₹"
+                android:textColor="#d95e3c"
+                android:textSize="@dimen/font_14sp" />
+
+            <EditText
+                android:id="@+id/etPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:fontFamily="@font/lato"
+                android:hint="Amount"
+                android:inputType="number"
+                android:textSize="@dimen/font_14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:background="#44000000" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGoLive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_corners_ea532c"
+            android:fontFamily="@font/lato"
+            android:text="●   Go Live Now"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPrice" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#44000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:text="Or You can schedule your live session at a later time"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="DD-MM-YY"
+                android:inputType="none"
+                android:textSize="@dimen/font_14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+            <EditText
+                android:id="@+id/etTimeStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_32dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="00:00"
+                android:inputType="none"
+                android:paddingHorizontal="@dimen/dimen_12dp"
+                android:textSize="@dimen/font_14sp"
+                app:layout_constraintLeft_toRightOf="@+id/etDate"
+                app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+            <TextView
+                android:id="@+id/tvTimeDivider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:text="-"
+                app:layout_constraintBottom_toBottomOf="@+id/etTimeStart"
+                app:layout_constraintLeft_toRightOf="@+id/etTimeStart"
+                app:layout_constraintRight_toLeftOf="@+id/etTimeEnd"
+                app:layout_constraintTop_toTopOf="@+id/etTimeStart" />
+
+            <EditText
+                android:id="@+id/etTimeEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="00:00"
+                android:inputType="none"
+                android:paddingHorizontal="@dimen/dimen_12dp"
+                android:textSize="@dimen/font_14sp"
+                app:layout_constraintLeft_toRightOf="@+id/etTimeStart"
+                app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnScheduleLive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_corners_5c38f5"
+            android:fontFamily="@font/lato"
+            android:text="Schedule Live"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddTopic" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCreate" />
+
+    </LinearLayout>
+
+</ScrollView>

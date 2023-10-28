@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".topicboostergame.ui.TopicBoosterGameOpponentSearchFragment">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/khelo_or_jeeto_header"
+        app:layout_constraintDimensionRatio="103:66"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".286" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivUser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="17dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_user_default_game"
+        app:layout_constraintBottom_toBottomOf="@id/tvVs"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/tvVs"
+        app:layout_constraintHeight_percent=".16"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvVs"
+        app:shapeAppearanceOverlay="@style/CircularImageView"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:text="@string/you"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/ivUser"
+        app:layout_constraintStart_toStartOf="@id/ivUser"
+        app:layout_constraintTop_toBottomOf="@id/ivUser" />
+
+    <TextView
+        android:id="@+id/tvVs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/vs"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivOpponent"
+        app:layout_constraintStart_toEndOf="@id/ivUser"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".25" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivOpponent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_opponent_default_game"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/tvVs"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".16"
+        app:layout_constraintStart_toEndOf="@id/tvVs"
+        app:layout_constraintTop_toTopOf="@id/tvVs"
+        app:shapeAppearanceOverlay="@style/CircularImageView" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationOpponentSearch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/ivOpponent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/ivOpponent"
+        app:layout_constraintHeight_percent=".16"
+        app:layout_constraintStart_toStartOf="@id/ivOpponent"
+        app:layout_constraintTop_toTopOf="@id/ivOpponent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="topic_booster_game_opponent_search_animation.json"
+        app:lottie_imageAssetsFolder="topic_booster_game_opponent_search_animation_images"
+        app:lottie_loop="true"
+        app:shapeAppearanceOverlay="@style/CircularImageView"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvOpponentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/ivOpponent"
+        app:layout_constraintStart_toStartOf="@id/ivOpponent"
+        app:layout_constraintTop_toBottomOf="@id/ivOpponent"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tvOnlinePlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/tvWaitTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias=".54"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/players_online" />
+
+    <TextView
+        android:id="@+id/tvWaitTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/waiting_for_opponent_to_join"
+        android:textColor="@color/black_two"
+        android:textSize="24sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/tvStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".54"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:textColor="@color/warm_grey"
+        android:textSize="16sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWaitTitle"
+        tools:text="This may take upto 1 minute This may take upto 1 minute This may take upto 1 minute This may take upto 1 minute" />
+
+    <TextView
+        android:id="@+id/tvStartingIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/animationTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".8"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/starting_in"
+        tools:visibility="visible" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationTimer"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStartingIn"
+        app:lottie_fileName="topic_booster_game_timer_animation.json"
+        app:lottie_imageAssetsFolder="topic_booster_game_timer_animation_images"
+        tools:src="@tools:sample/avatars"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

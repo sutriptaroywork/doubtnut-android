@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/filterTabs"
+        app:tabTextAppearance="@style/ChannelFilterTab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="@color/redTomato"
+        app:tabIndicatorHeight="4dp"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="#838080"
+        app:tabMode="fixed" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/onboarding_ask_button_inactive"
+        app:layout_constraintBottom_toBottomOf="@+id/filterTabs"
+        app:layout_constraintLeft_toLeftOf="@+id/filterTabs"
+        app:layout_constraintRight_toRightOf="@+id/filterTabs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

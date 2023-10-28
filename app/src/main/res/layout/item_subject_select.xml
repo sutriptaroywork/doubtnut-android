@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:background="@drawable/background_selected_subject"
+        app:layout_constraintCircleRadius="37dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lato_bold"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="@dimen/dimen_12sp"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        app:layout_constraintStart_toStartOf="@id/background"
+        app:layout_constraintEnd_toEndOf="@id/background"
+        app:layout_constraintTop_toBottomOf="@id/background"
+        tools:text="Maths"/>
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="34dp"
+        android:layout_height="41dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:src="@drawable/ic_launcher1"
+        tools:ignore="ContentDescription"/>
+
+    <ImageView
+        android:id="@+id/checkbox"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:src="@drawable/checked"
+        android:layout_marginTop="@dimen/dimen_6dp"
+        android:layout_marginStart="@dimen/dimen_2dp"
+        android:visibility="gone"
+        app:tint="@color/green_54b726"
+        app:layout_constraintStart_toStartOf="@id/background"
+        app:layout_constraintTop_toTopOf="@id/background"
+        tools:visibility="visible"
+        tools:ignore="ContentDescription"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

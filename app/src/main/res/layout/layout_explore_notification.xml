@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootExplore"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:maxHeight="350dp"
+    android:paddingStart="@dimen/dimen_15dp"
+    android:paddingEnd="@dimen/dimen_15dp">
+
+    <ImageView
+        android:id="@+id/headingIconExplore"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/placeholder_quiz_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headingExplore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_8dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:fontFamily="@font/lato_black"
+        android:textColor="#481a62"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconExplore"
+        app:layout_constraintEnd_toStartOf="@id/skipExplore"
+        app:layout_constraintStart_toEndOf="@id/headingIconExplore"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ye nya aya hai app me" />
+
+    <TextView
+        android:id="@+id/skipExplore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/skip"
+        android:textColor="#481a62"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconExplore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headingIconExplore" />
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="9.5dp"
+        android:alpha="0.1"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headingIconExplore" />
+
+    <TextView
+        android:id="@+id/titleExplore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginEnd="58dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black_two"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thumbnailExplore"
+        tools:text="Ab ap kr skte apne dosto se discuss apne doubts, doubtnut chat k sath" />
+
+    <ImageView
+        android:id="@+id/thumbnailExplore"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="27.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <com.doubtnutapp.widgets.mathview.MathViewSimilar
+        android:id="@+id/mathViewExplore"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="27.5dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <Button
+        android:id="@+id/btnExplore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleExplore"
+        tools:text="Explore now" />
+</androidx.constraintlayout.widget.ConstraintLayout>

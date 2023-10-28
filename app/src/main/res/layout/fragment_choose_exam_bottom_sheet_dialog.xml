@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grid_bottom_sheet_background"
+    android:clipToPadding="false"
+    android:minHeight="360dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato_bold"
+        android:lineSpacingExtra="5.6sp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="कृपया  एग्जाम का नाम चुनिए कृपया  एग्जाम का नाम चुनिए कृपया  एग्जाम का नाम चुनिए " />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_exams"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:clipToPadding="true"
+        android:nestedScrollingEnabled="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="36dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/tv_submit"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintVertical_bias="0"
+        tools:listitem="@layout/item_choose_exam" />
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:background="@color/color_eb532c"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="कोर्स ढूंढे "
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

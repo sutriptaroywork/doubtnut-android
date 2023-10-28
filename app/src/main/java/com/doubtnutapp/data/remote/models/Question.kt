@@ -1,0 +1,31 @@
+package com.doubtnutapp.data.remote.models
+
+data class Question(
+    val `class`: String,
+    val subject: String,
+    val chapter: String,
+    val question: String,
+    val doubt: String,
+    val question_image: String,
+    val question_id: String,
+    val student_id: String,
+    val book: String,
+    val is_allocated: String,
+    val allocated_to: String,
+    val allocation_time: String?,
+    val is_answered: String,
+    val is_text_answered: String,
+    val ocr_done: String,
+    val ocr_text: String,
+    val original_ocr_text: String,
+    val matched_question: String?,
+    val question_credit: String,
+    val timestamp: String,
+    val is_trial: String,
+    val is_skipped: String,
+    val parent_id: String,
+    val incorrect_ocr: String?,
+    val skip_question: String?,
+    val difficulty: String?,
+    val locale: String?
+)

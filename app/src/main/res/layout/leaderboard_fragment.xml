@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.doubtnutapp.gamification.leaderboard.ui.LeaderboardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".gamification.leaderboard.ui.GameLeaderBoardActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="185dp"
+                    android:background="@color/white"
+                    app:elevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <View
+                            android:id="@+id/group1"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:clickable="true"
+                            android:onClick="@{(view) -> viewmodel.topLeaderBoardLiveData.get(1).own ? viewmodel.closeScreen() : viewmodel.onMoreOptions(viewmodel.topLeaderBoardLiveData[1].userId)}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/textView26"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageView31"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[1] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:civ_border_color="@color/actionBarArrowColor"
+                            app:civ_border_width="4dp"
+                            app:imageurl="@{viewmodel.topLeaderBoardLiveData[1].profileImage}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.44"
+                            app:placeholder="@{@drawable/ic_person_grey}"
+                            app:srcCompat="@drawable/ic_sample"
+                            tools:src="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/leaderBoardRank31"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_bg_rank_yellow"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[1] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView31"
+                            app:layout_constraintTop_toTopOf="@+id/imageView31"
+                            app:text="@{String.valueOf(viewmodel.topLeaderBoardLiveData[1].rank)}"
+                            tools:text="1" />
+
+                        <TextView
+                            android:id="@+id/textView26"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxEms="12"
+                            android:maxLength="15"
+                            android:textColor="#541488"
+                            android:textSize="15sp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[1] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView31"
+                            app:layout_constraintStart_toStartOf="@+id/imageView31"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView31"
+                            app:text="@{viewmodel.topLeaderBoardLiveData[1].userName}"
+                            tools:text="TextViewTextViewmdsdsm"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/pointsBadge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[1] == null ? View.INVISIBLE : View.VISIBLE}"
+                            android:src="@drawable/ic_points_badge"
+                            app:layout_constraintStart_toStartOf="@id/textView26"
+                            app:layout_constraintTop_toBottomOf="@id/textView26" />
+
+                        <TextView
+                            android:id="@+id/textView27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:textColor="#5b5555"
+                            android:textSize="12sp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[1] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:layout_constraintStart_toEndOf="@+id/pointsBadge"
+                            app:layout_constraintTop_toBottomOf="@+id/textView26"
+                            app:text="@{viewmodel.topLeaderBoardLiveData[1].points}"
+                            tools:text="TextView" />
+
+                        <View
+                            android:id="@+id/group2"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:clickable="true"
+                            android:onClick="@{(view) -> viewmodel.topLeaderBoardLiveData.get(0).own ? viewmodel.closeScreen() : viewmodel.onMoreOptions(viewmodel.topLeaderBoardLiveData[0].userId)}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView32"
+                            app:layout_constraintStart_toEndOf="@+id/imageView31"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[0] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:civ_border_color="@color/actionBarArrowColor"
+                            app:civ_border_width="4dp"
+                            app:imageurl="@{viewmodel.topLeaderBoardLiveData[0].profileImage}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView32"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imageView31"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.217"
+                            app:placeholder="@{@drawable/ic_person_grey}"
+                            tools:src="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/leaderBoardRank"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_bg_rank_red"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[0] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                            app:layout_constraintTop_toTopOf="@+id/imageView3"
+                            app:text="@{String.valueOf(viewmodel.topLeaderBoardLiveData[0].rank)}"
+                            tools:text="1" />
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxEms="12"
+                            android:maxLength="15"
+                            android:textColor="#541488"
+                            android:textSize="15sp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[0] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                            app:layout_constraintStart_toStartOf="@+id/imageView3"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                            app:text="@{viewmodel.topLeaderBoardLiveData[0].userName}"
+                            tools:text="TextViewTextViewmdsdsm" />
+
+                        <ImageView
+                            android:id="@+id/pointsBadge1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[0] == null ? View.INVISIBLE : View.VISIBLE}"
+                            android:src="@drawable/ic_points_badge"
+                            app:layout_constraintStart_toStartOf="@id/textView24"
+                            app:layout_constraintTop_toBottomOf="@id/textView24" />
+
+                        <TextView
+                            android:id="@+id/textView28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:textColor="#5b5555"
+                            android:textSize="12sp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[0] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:layout_constraintStart_toEndOf="@+id/pointsBadge1"
+                            app:layout_constraintTop_toBottomOf="@+id/textView24"
+                            app:text="@{viewmodel.topLeaderBoardLiveData[0].points}"
+                            tools:text="TextView" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:clickable="true"
+                            android:onClick="@{(view) -> viewmodel.topLeaderBoardLiveData.get(2).own ? viewmodel.closeScreen() : viewmodel.onMoreOptions(viewmodel.topLeaderBoardLiveData[2].userId)}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageView32"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[2] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:civ_border_color="@color/actionBarArrowColor"
+                            app:civ_border_width="4dp"
+                            app:imageurl="@{viewmodel.topLeaderBoardLiveData[2].profileImage}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imageView3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.45"
+                            app:placeholder="@{@drawable/ic_person_grey}"
+                            app:srcCompat="@drawable/ic_sample"
+                            tools:src="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/leaderBoardRank32"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/ic_bg_rank_yellow"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[2] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView32"
+                            app:layout_constraintTop_toTopOf="@+id/imageView32"
+                            app:text="@{String.valueOf(viewmodel.topLeaderBoardLiveData[2].rank)}" />
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxEms="12"
+                            android:maxLength="15"
+                            android:textColor="#541488"
+                            android:textSize="15sp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[2] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView32"
+                            app:layout_constraintStart_toStartOf="@+id/imageView32"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView32"
+                            app:text="@{viewmodel.topLeaderBoardLiveData[2].userName}"
+                            tools:text="TextViewTextViewmdsdsm" />
+
+                        <ImageView
+                            android:id="@+id/pointsBadge2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[2] == null ? View.INVISIBLE : View.VISIBLE}"
+                            android:src="@drawable/ic_points_badge"
+                            app:layout_constraintStart_toStartOf="@id/textView25"
+                            app:layout_constraintTop_toBottomOf="@id/textView25" />
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:textColor="#5b5555"
+                            android:textSize="12sp"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData[2] == null ? View.INVISIBLE : View.VISIBLE}"
+                            app:layout_constraintStart_toEndOf="@+id/pointsBadge2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView25"
+                            app:text="@{viewmodel.topLeaderBoardLiveData[2].points}"
+                            tools:text="TextView" />
+
+                        <View
+                            android:id="@+id/viewBottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#DCDCDC"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData == null || viewmodel.topLeaderBoardLiveData.isEmpty() ? View.INVISIBLE : View.VISIBLE}"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvNoData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no_data"
+                            tools:visibility="visible"
+                            android:visibility="@{viewmodel.topLeaderBoardLiveData == null || viewmodel.topLeaderBoardLiveData.isEmpty() ? View.VISIBLE : View.INVISIBLE}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/gameLeaderBoardList"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_gameleader" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:visibility="@{viewmodel.ownGameResultLiveData == null ? View.GONE : View.VISIBLE}"
+            app:cardElevation="3dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="@{(view) -> viewmodel.closeScreen()}"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:text="@{String.valueOf(viewmodel.ownGameResultLiveData.rank)}"
+                    tools:text="1" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    app:imageurl="@{viewmodel.ownGameResultLiveData.profileImage}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView30"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_sample" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView32"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:text="@{viewmodel.ownGameResultLiveData.userName}"
+                    tools:text="Shahid Kapoor" />
+
+                <ImageView
+                    android:id="@+id/pointsBadge4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_points_badge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textView32"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:text="@{viewmodel.ownGameResultLiveData.points}"
+                    tools:text="3000" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

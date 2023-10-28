@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_f2f2f2"
+            android:paddingTop="@dimen/dimen_12dp"
+            android:paddingBottom="@dimen/dimen_12dp">
+
+            <TextView
+                android:id="@+id/tv_questions_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/questions_type_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_mcq"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_questions_type"
+                app:srcCompat="@drawable/ic_mcq" />
+
+            <TextView
+                android:id="@+id/tv_mcq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/mcq_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_mcq"
+                app:layout_constraintStart_toEndOf="@+id/iv_mcq"
+                app:layout_constraintTop_toTopOf="@+id/iv_mcq"
+                app:layout_goneMarginStart="@dimen/dimen_8dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_answer"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_mcq"
+                app:srcCompat="@drawable/ic_detailed_ans" />
+
+            <TextView
+                android:id="@+id/tv_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/detailed_answer_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_answer"
+                app:layout_constraintStart_toEndOf="@+id/iv_answer"
+                app:layout_constraintTop_toTopOf="@+id/iv_answer"
+                app:layout_goneMarginStart="@dimen/dimen_8dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_matrix"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_answer"
+                app:srcCompat="@drawable/ic_match_the_matrix" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/match_the_matrix_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_matrix"
+                app:layout_constraintStart_toEndOf="@+id/iv_matrix"
+                app:layout_constraintTop_toTopOf="@+id/iv_matrix"
+                app:layout_goneMarginStart="@dimen/dimen_8dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_test_rules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_24dp"
+            android:layout_marginTop="@dimen/dimen_14dp"
+            android:layout_marginBottom="@dimen/dimen_14dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/test_rules_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_14sp">
+
+        </TextView>
+
+
+        <ScrollView
+            android:id="@+id/scrolltvrules"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="70dp"
+            android:scrollbars="vertical">
+
+                <TextView
+                    android:id="@+id/tvRulesStarted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_test_rules"
+                    android:layout_marginStart="@dimen/dimen_32dp"
+                    android:layout_marginEnd="@dimen/dimen_32dp"
+                    android:layout_marginBottom="@dimen/dimen_14dp"
+                    android:fontFamily="@font/lato"
+                    android:lineSpacingMultiplier="1.5"
+                    android:padding="@dimen/alerter_padding_half"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12sp"
+                    tools:text="आप जीत सकते है पेटीएम कैश अगर आप क्विज को उसके निर्धारित समय पर खेलते हैं (शाम ८ बजे हर रोज़)|| You can win PayTM Cash if you attempt it at scheduled time(8PM everyday)\nआप एक क्विज सिर्फ एक बार दे सकते हैं || You can give a quiz only once
+सवाल पर वापस नहीं आ सकते हैं यदि आपने उसका जवाब सबमिट कर दिया है या स्किप कर दिया है || Can't come back to the question once submitted or skipped\nकुछ सवालों का गलत जवाब देने पर मार्क्स कट भी सकते हैं || Some questions may have negative marking" />
+
+
+         <!--   </RelativeLayout>-->
+
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottombarMockTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dimen_8dp"
+        android:visibility="visible"
+        app:backgroundTint="@color/white">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_52dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/string_start_test"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:backgroundTint="@color/green_56bd5b" />
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

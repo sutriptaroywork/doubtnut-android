@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootAsk"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dimen_15dp"
+    android:paddingEnd="@dimen/dimen_15dp">
+
+    <ImageView
+        android:id="@+id/headingIconQuizAsk"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/placeholder_quiz_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headingQuizAsk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/lato_black"
+        android:textColor="#481a62"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconQuizAsk"
+        app:layout_constraintEnd_toStartOf="@id/skipQuizAsk"
+        app:layout_constraintStart_toEndOf="@id/headingIconQuizAsk"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ask a question" />
+
+    <TextView
+        android:id="@+id/skipQuizAsk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/skip"
+        android:textColor="#481a62"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconQuizAsk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/headingIconQuizAsk" />
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:alpha="0.1"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headingIconQuizAsk" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAsk3Left"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="24.5dp"
+        app:civ_border_color="@color/imageBorderQuizAsk"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toStartOf="@id/ivAsk3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAsk2Left"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="24.5dp"
+        android:elevation="@dimen/dimen_6dp"
+        app:civ_border_color="@color/imageBorderQuizAsk"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="@id/ivAskMiddle"
+        app:layout_constraintStart_toStartOf="@id/ivAsk3Left"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAskMiddle"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="24.5dp"
+        android:elevation="8dp"
+        app:civ_border_color="@color/imageBorderQuizAsk"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="@id/ivAsk3"
+        app:layout_constraintStart_toStartOf="@id/ivAsk3Left"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAsk2"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="24.5dp"
+        android:elevation="@dimen/dimen_6dp"
+        app:civ_border_color="@color/imageBorderQuizAsk"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="@id/ivAsk3"
+        app:layout_constraintStart_toStartOf="@id/ivAskMiddle"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAsk3"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="24.5dp"
+        app:civ_border_color="@color/imageBorderQuizAsk"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivAsk3Left"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <TextView
+        android:id="@+id/subtitleQuizAsk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_22dp"
+        android:layout_marginTop="10.5dp"
+        android:layout_marginEnd="@dimen/dimen_22dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="0.6sp"
+        android:textColor="#b3000000"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivAskMiddle"
+        tools:text="10k Students asked questions in last 10 min." />
+
+    <TextView
+        android:id="@+id/titleQuizAsk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black_two"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitleQuizAsk"
+        tools:text=" Ap bhi clear kr apne doubts " />
+
+    <Button
+        android:id="@+id/btnQuizAsk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleQuizAsk"
+        tools:text="ASK A QUESTION" />
+</androidx.constraintlayout.widget.ConstraintLayout>

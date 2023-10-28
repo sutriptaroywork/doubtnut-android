@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="trendingRecentData"
+            type="com.doubtnutapp.newglobalsearch.model.TrendingPdfAndBooksViewItem" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:paddingTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="32dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/searchName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner_trending_search_background"
+            android:singleLine="true"
+            android:fontFamily="@font/lato"
+            android:paddingStart="16dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="32dp"
+            android:text="@{trendingRecentData.name}"
+            android:paddingBottom="6dp"
+            android:textSize="14sp"
+            android:textColor="@color/search_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Complex Numbers" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

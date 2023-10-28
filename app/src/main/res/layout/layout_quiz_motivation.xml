@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rootMotivation"
+    android:background="@color/white"
+    android:maxHeight="350dp"
+    android:paddingStart="@dimen/dimen_15dp"
+    android:paddingEnd="@dimen/dimen_15dp">
+
+    <ImageView
+        android:id="@+id/headingIconQuizMotivation"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:src="@drawable/placeholder_quiz_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headingQuizMotivation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:fontFamily="@font/lato_black"
+        android:textColor="#481a62"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconQuizMotivation"
+        app:layout_constraintEnd_toStartOf="@id/skipMotivation"
+        app:layout_constraintStart_toEndOf="@id/headingIconQuizMotivation"
+        app:layout_constraintTop_toTopOf="@id/headingIconQuizMotivation"
+        tools:text="Motivational video of the day" />
+
+    <TextView
+        android:id="@+id/skipMotivation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/skip"
+        android:textColor="#481a62"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconQuizMotivation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headingIconQuizMotivation" />
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5.5dp"
+        android:alpha="0.1"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headingIconQuizMotivation" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvThumbnailMotivation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5.5dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/dimen_8dp"
+        app:layout_constraintDimensionRatio="293:164"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/thumbnailQuizMotivation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/placeholder_thumbnail_quiz"
+                android:alpha="0.8"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/overlayQuizMotivation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <com.doubtnutapp.widgets.mathview.MathViewSimilar
+                android:id="@+id/mathViewQuizMotivation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/dimen_50dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:elevation="@dimen/dimen_4dp"
+        android:src="@drawable/ic_play_quiz_video"
+        app:layout_constraintBottom_toBottomOf="@id/cvThumbnailMotivation"
+        app:layout_constraintEnd_toEndOf="@id/cvThumbnailMotivation"
+        app:layout_constraintStart_toStartOf="@id/cvThumbnailMotivation"
+        app:layout_constraintTop_toTopOf="@id/cvThumbnailMotivation" />
+
+    <Button
+        android:id="@+id/btnQuizMotivation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        tools:text="WATCH video"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvThumbnailMotivation" />
+</androidx.constraintlayout.widget.ConstraintLayout>

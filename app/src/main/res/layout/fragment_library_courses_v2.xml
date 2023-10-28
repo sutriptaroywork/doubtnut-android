@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.otaliastudios.nestedscrollcoordinatorlayout.NestedScrollCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dropdownCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:layout_marginBottom="@dimen/dimen_12dp"
+            android:elevation="30dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/rvWidgets"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/orange_ff612d"
+            app:strokeWidth="1dp"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/cardTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_12dp"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:layout_marginBottom="@dimen/dimen_12dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/blue_273de9"
+                    android:textSize="@dimen/font_16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivExpand"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="NEET 2021 | लाइव क्लासेस"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivExpand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_expand_more" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.doubtnutapp.widgetmanager.ui.WidgetisedRecyclerView
+            android:id="@+id/rvWidgets"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="true"
+            android:paddingBottom="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dropdownCard"
+            app:layout_constraintVertical_bias="0" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottomBarExplore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:elevation="@dimen/dimen_0dp"
+            android:fadingEdgeLength="10dp"
+            android:visibility="gone"
+            app:backgroundTint="@color/white"
+            app:contentInsetStart="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@drawable/top_shadow_gradient" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewEmiTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato"
+                        android:textColor="#504949"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/textViewAmountToPay"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_default="wrap"
+                        tools:text="EMI Available @ ₹2,763/Month" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewKnowMore"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Know More"
+                        android:textColor="#54138a"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textViewEmiTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewEmiTitle"
+                        tools:ignore="SmallSp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStartingAt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        android:fontFamily="@font/lato"
+                        android:text="@string/text_starting_at"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="@dimen/dimen_12sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/textViewAmountToPay"
+                        app:layout_constraintEnd_toStartOf="@+id/textViewAmountToPay"
+                        app:layout_constraintTop_toTopOf="@id/textViewAmountToPay"
+                        app:layout_goneMarginEnd="@dimen/dimen_8dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewAmountToPay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="@font/lato_black"
+                        android:textColor="#3b8700"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_goneMarginEnd="8dp"
+                        tools:text="₹6,999" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewAmountStrikeThrough"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="6dp"
+                        android:fontFamily="@font/lato"
+                        android:textColor="@color/brown_grey"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/textViewAmountSaving"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewAmountToPay"
+                        tools:text="₹9,999" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewAmountSaving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:textColor="#2f80ed"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewAmountToPay"
+                        tools:ignore="SmallSp"
+                        tools:text="Save  ₹6,999" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/viewDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#e2e2e2"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tomato">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewPayInstallment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/tomato"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="16dp"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textViewPay"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Pay in Installments" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewPay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/tomato"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="16dp"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textViewPayInstallment"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Pay in Full" />
+
+                    <View
+                        android:id="@+id/viewPaymentDivider"
+                        android:layout_width="0.5dp"
+                        android:layout_height="50dp"
+                        android:background="#e2e2e2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/chatBuddyAnimation"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="85dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="lottie_chat_buddy_home.zip" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupTooltip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="textViewToolTip,layoutTooltip" />
+
+        <TextView
+            android:id="@+id/textViewToolTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="▶"
+            android:textColor="@color/text_black"
+            app:layout_constraintBottom_toBottomOf="@+id/chatBuddyAnimation"
+            app:layout_constraintEnd_toStartOf="@+id/chatBuddyAnimation"
+            app:layout_constraintTop_toTopOf="@+id/chatBuddyAnimation" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTooltip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/capsule_solid_black"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewToolTip"
+            app:layout_constraintEnd_toStartOf="@+id/chatBuddyAnimation"
+            app:layout_constraintTop_toTopOf="@+id/textViewToolTip"
+            app:layout_constraintWidth_percent="0.55">
+
+            <TextView
+                android:id="@+id/titleToolTip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="center"
+                android:text="Jane kon sa course hai best apke liye"
+                android:textColor="@color/color_rank_yellow"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey900transparent"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/courseSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:behavior_peekHeight="500dp"
+        app:layout_behavior="@string/bottom_sheet_behavior" />
+
+</com.otaliastudios.nestedscrollcoordinatorlayout.NestedScrollCoordinatorLayout>

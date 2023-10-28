@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_profile_one_bg, iv_profile_one,tv_username_one, iv_badge_one, tv_badge_one, iv_marks_one, tv_marks_one"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_profile_two_bg, iv_profile_two,tv_username_two, iv_two_badge, tv_badge_two, iv_marks_two, tv_marks_two"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_profile_three_bg, iv_profile_three,tv_username_three, iv_three_badge, tv_badge_three, iv_marks_three, tv_marks_three"
+        tools:visibility="visible" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_profile_one_bg"
+        android:layout_width="87dp"
+        android:layout_height="87dp"
+        android:background="@drawable/gradient_champion"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile_one"
+        app:layout_constraintEnd_toEndOf="@id/iv_profile_one"
+        app:layout_constraintStart_toStartOf="@id/iv_profile_one"
+        app:layout_constraintTop_toTopOf="@id/iv_profile_one" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile_one"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_username_one"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="5.6sp"
+        android:maxLines="1"
+        android:textColor="#541488"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/iv_profile_one"
+        app:layout_constraintStart_toStartOf="@id/iv_profile_one"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_one"
+        tools:text="usernameuseusernameusedwdwdwdwd" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_badge_one"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/bg_circle_white"
+        android:src="#eb532c"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile_one_bg"
+        app:layout_constraintEnd_toEndOf="@id/iv_profile_one_bg"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/iv_profile_one_bg" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_badge_one"
+        android:layout_width="9dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="4.9sp"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_badge_one"
+        app:layout_constraintEnd_toEndOf="@id/iv_badge_one"
+        app:layout_constraintStart_toStartOf="@id/iv_badge_one"
+        app:layout_constraintTop_toTopOf="@id/iv_badge_one"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_marks_one"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_marks_one"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_one"
+        app:srcCompat="@drawable/ic_marks" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_marks_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4.9sp"
+        android:textColor="#5b5555"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_marks_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_marks_one"
+        app:layout_constraintTop_toTopOf="@+id/iv_marks_one"
+        tools:text="37822" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_profile_two_bg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/gradient_runner_up"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile_two"
+        app:layout_constraintEnd_toEndOf="@id/iv_profile_two"
+        app:layout_constraintStart_toStartOf="@id/iv_profile_two"
+        app:layout_constraintTop_toTopOf="@id/iv_profile_two" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile_two"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile_one"
+        app:layout_constraintEnd_toStartOf="@id/iv_profile_one"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_one"
+        tools:src="@tools:sample/avatars" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_username_two"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="5.6sp"
+        android:maxLines="1"
+        android:textColor="#541488"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/iv_profile_two"
+        app:layout_constraintStart_toStartOf="@id/iv_profile_two"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_two"
+        tools:text="usernameuseusernameuse" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_two_badge"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bg_circle_white"
+        android:src="#FDCA46"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile_two"
+        app:layout_constraintEnd_toEndOf="@id/iv_profile_two"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/iv_profile_two" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_marks_two"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_marks_two"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/tv_username_two"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_two"
+        app:srcCompat="@drawable/ic_marks" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_marks_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4.9sp"
+        android:textColor="#5b5555"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_marks_two"
+        app:layout_constraintEnd_toEndOf="@id/tv_username_two"
+        app:layout_constraintStart_toEndOf="@+id/iv_marks_two"
+        app:layout_constraintTop_toTopOf="@+id/iv_marks_two"
+        tools:text="3781" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_badge_two"
+        android:layout_width="9dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="4.9sp"
+        android:text="2"
+        android:textColor="#292929"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_two_badge"
+        app:layout_constraintEnd_toEndOf="@id/iv_two_badge"
+        app:layout_constraintStart_toStartOf="@id/iv_two_badge"
+        app:layout_constraintTop_toTopOf="@id/iv_two_badge"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_profile_three_bg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/gradient_runner_up"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile_three"
+        app:layout_constraintEnd_toEndOf="@id/iv_profile_three"
+        app:layout_constraintStart_toStartOf="@id/iv_profile_three"
+        app:layout_constraintTop_toTopOf="@id/iv_profile_three" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile_three"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_profile_one"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_one"
+        tools:src="@tools:sample/avatars" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_username_three"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="5.6sp"
+        android:maxLines="1"
+        android:textColor="#541488"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/iv_profile_three"
+        app:layout_constraintStart_toStartOf="@id/iv_profile_three"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_three"
+        tools:text="X" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_marks_three"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_marks_three"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/tv_username_three"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_three"
+        app:srcCompat="@drawable/ic_marks" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_marks_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4.9sp"
+        android:textColor="#5b5555"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_marks_three"
+        app:layout_constraintEnd_toEndOf="@id/tv_username_three"
+        app:layout_constraintStart_toEndOf="@+id/iv_marks_three"
+        app:layout_constraintTop_toTopOf="@+id/iv_marks_three"
+        tools:text="3781" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_three_badge"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bg_circle_white"
+        android:src="#FDCA46"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile_three"
+        app:layout_constraintEnd_toEndOf="@id/iv_profile_three"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/iv_profile_three" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_badge_three"
+        android:layout_width="9dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="4.9sp"
+        android:text="3"
+        android:textColor="#292929"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_three_badge"
+        app:layout_constraintEnd_toEndOf="@id/iv_three_badge"
+        app:layout_constraintStart_toStartOf="@id/iv_three_badge"
+        app:layout_constraintTop_toTopOf="@id/iv_three_badge"
+        tools:ignore="HardcodedText" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="iv_profile_one_bg, iv_profile_one,tv_username_one, iv_badge_one, tv_badge_one, iv_marks_one, tv_marks_one, iv_profile_two_bg, iv_profile_two,tv_username_two, iv_two_badge, tv_badge_two, iv_marks_two, tv_marks_two, iv_profile_three_bg, iv_profile_three,tv_username_three, iv_three_badge, tv_badge_three, iv_marks_three, tv_marks_three" />
+
+    <View
+        android:id="@+id/view_footer_divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="25dp"
+        android:background="#dcdcdc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        tools:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        tools:background="#e1daff"
+        tools:visibility="visible">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_footer_title"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="13dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_footer_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_footer_title"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Padho aur Jeeto 20% OFF coupon today"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_footer_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/tomato"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_footer_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_footer_title"
+            tools:text="Improve your rank now >>" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="view_footer_divider2, cl_footer" />
+
+    <com.doubtnutapp.widgetmanager.ui.WidgetisedRecyclerView
+        android:id="@+id/rv_footer_widgets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/barrier2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

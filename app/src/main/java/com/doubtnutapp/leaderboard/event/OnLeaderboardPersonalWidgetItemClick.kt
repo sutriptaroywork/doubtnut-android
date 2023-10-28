@@ -1,0 +1,5 @@
+package com.doubtnutapp.leaderboard.event
+
+import com.doubtnutapp.leaderboard.widget.LeaderboardPersonalDataItem
+
+data class OnLeaderboardPersonalWidgetItemClick(val item: LeaderboardPersonalDataItem)

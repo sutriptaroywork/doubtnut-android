@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue_e0eaff">
+
+    <ImageView
+        android:id="@+id/ivTeacher"
+        android:layout_width="@dimen/dimen_16dp"
+        android:layout_height="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTeacherName"
+        app:layout_constraintStart_toStartOf="@+id/tvAnnouncement"
+        app:layout_constraintTop_toTopOf="@+id/tvTeacherName" />
+
+
+    <TextView
+        android:id="@+id/textViewTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_12dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTeacherName"
+        app:layout_constraintEnd_toStartOf="@+id/ivClose"
+        app:layout_constraintTop_toTopOf="@+id/tvTeacherName"
+        tools:text="00:30" />
+
+    <TextView
+        android:id="@+id/tvTeacherName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTimer"
+        app:layout_constraintStart_toEndOf="@+id/ivTeacher"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Sachin Sir :" />
+
+    <TextView
+        android:id="@+id/tvAnnouncement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:layout_marginEnd="@dimen/dimen_12dp"
+        android:layout_marginBottom="@dimen/dimen_12dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTeacherName"
+        tools:text="Sit sapien lorem nisl gravida imperdiet. Egestas venenatis amet, porttitor interdum viverra lorem donec tincidunt. Id netus fermentum nisi, malesuada vehicula rutrum. Dictum mauris nec gravida." />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="@dimen/dimen_20"
+        android:layout_height="@dimen/dimen_20"
+        android:layout_marginEnd="@dimen/dimen_12dp"
+        android:src="@drawable/ic_close"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTimer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

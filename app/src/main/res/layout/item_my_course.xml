@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:layout_marginStart="@dimen/dimen_2dp"
+    android:layout_marginTop="@dimen/dimen_2dp"
+    android:layout_marginEnd="@dimen/dimen_10dp"
+    android:layout_marginBottom="@dimen/dimen_2dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:minWidth="285dp"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_trial_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="24dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_trial_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_gif"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Trial Activated Trial Activated Trial Activated Trial Activated Trial Activated "
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_gif"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_timer"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@tools:sample/avatars"
+                tools:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_timer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="end"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="23h : 12m : 13s"
+                tools:textColor="#ff0000"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato_bold"
+            android:lineSpacingExtra="3.8sp"
+            android:maxLines="2"
+            android:textColor="#2a52d1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container_trial_info"
+            app:layout_goneMarginTop="16dp"
+            tools:text="कक्षा 12 | फ्री क्लासेज हिंदी में (बोर्ड्स 2022) कक्षा 12 | फ्री क्लासेज हिंदी में (बोर्ड्स 2022)" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:text="2020-21 बैच 2020-21 बैच 2020-21 बैच 2020-21 बैच 2020-21 बैच 2020-21 बैच 2020-21 बैच 2020-21 बैच "
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_bullet_image"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_circle_white"
+            android:backgroundTint="#fa7d5d"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="@id/tv_subtitle"
+            app:layout_constraintTop_toTopOf="@id/tv_bullet_label"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_bullet_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="4.9sp"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/iv_bullet_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+            app:layout_constraintVertical_bias="0"
+            tools:text="आपकी गणित की क्लास आज ३:०० ब ग ३:०० बजे है आपकी गणित की क्लास आज ३:०० ब ग ३:०० बजे है आपकी गणित की क्लास आज ३:०० ब ग ३:०० बजे है आपकी गणित की क्लास आज ३:०० ब ग ३:०० बजे है "
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_bullet_image_two"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_circle_white"
+            android:backgroundTint="#fa7d5d"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="@id/tv_subtitle"
+            app:layout_constraintTop_toTopOf="@id/tv_bullet_label_two"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_bullet_label_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="4.9sp"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/iv_bullet_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_bullet_label"
+            app:layout_constraintVertical_bias="0"
+            tools:text="आपकी गणित की क्लास आज ३:०० ब ग ३:०० बजे है आपकी गणित की क्लास आज ३:०० ब ग ३:०० बजे है आपकी गणित की क्लास आज ३:०० ब ग ३:०० बजे है आपकी गणित की क्लास आज ३:०० ब ग ३:०० बजे है "
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/lato"
+            android:gravity="end"
+            android:letterSpacing="0.02"
+            android:textColor="@color/grey_969696"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@id/view_progress_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="1"
+            tools:text="73%" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <View
+            android:id="@+id/view_progress_background"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="31dp"
+            android:background="#c4c4c4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <View
+            android:id="@+id/view_progress"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:background="#1eb56e"
+            app:layout_constraintBottom_toBottomOf="@id/view_progress_background"
+            app:layout_constraintEnd_toStartOf="@id/guideline_progress"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/view_progress_background"
+            app:layout_constraintTop_toTopOf="@id/view_progress_background" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.doubtnutapp.ui.forum.comments.CommentItemViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10dp">
+
+        <View
+            android:id="@+id/replyCommentSpace"
+            android:layout_width="@dimen/dimen_60dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:src="@color/grey_feed"
+            app:imageurl="@{viewmodel.studentAvatar}"
+            app:layout_constraintLeft_toRightOf="@+id/replyCommentSpace"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholder="@{@drawable/ic_person_grey}"
+            tools:src="@drawable/ic_person_grey" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:maxWidth="180dp"
+            android:maxLines="1"
+            android:text="@{viewmodel.studentUserName}"
+            android:textColor="@color/black_two"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileImage"
+            app:layout_constraintEnd_toStartOf="@id/iv_like"
+            app:layout_constraintStart_toEndOf="@id/ivProfileImage"
+            app:layout_constraintTop_toTopOf="@id/ivProfileImage"
+            tools:text="@tools:sample/lorem/random" />
+
+        <TextView
+            android:id="@+id/userTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_teacher_tag"
+            android:fontFamily="@font/lato_bold"
+            android:paddingStart="@dimen/dimen_4dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="@dimen/dimen_4dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCreatedAt"
+            app:layout_constraintStart_toStartOf="@+id/tvUsername"
+            app:layout_constraintTop_toTopOf="@+id/tvCreatedAt"
+            tools:ignore="SmallSp"
+            tools:text="Admin"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_bullet_image"
+            android:layout_width="@dimen/dimen_4dp"
+            android:layout_height="@dimen/dimen_4dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_circle_white"
+            android:backgroundTint="@color/black_two"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCreatedAt"
+            app:layout_constraintStart_toEndOf="@+id/userTag"
+            app:layout_constraintTop_toTopOf="@+id/tvCreatedAt"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvCreatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lato"
+            android:textColor="@color/warm_grey"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_bullet_image"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsername"
+            app:layout_goneMarginStart="0dp"
+            app:time="@{viewmodel.createdAt}"
+            tools:ignore="SmallSp"
+            tools:text="Just Now" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_like"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:onClick="@{(view) -> viewmodel.onLikeClicked(view)}"
+            android:padding="4dp"
+            android:src="@drawable/selector_like_small"
+            app:isSelected="@{viewmodel.isLiked()}"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileImage"
+            app:layout_constraintEnd_toStartOf="@id/tvLikeCount"
+            app:layout_constraintTop_toTopOf="@id/ivProfileImage" />
+
+        <TextView
+            android:id="@+id/tvLikeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_4dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:onClick="@{(view) -> viewmodel.onLikeClicked(view)}"
+            android:text="@{viewmodel.likeCount == 0 ? &quot;&quot; : viewmodel.likeCount.toString()}"
+            android:textColor="@color/black_two"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileImage"
+            app:layout_constraintEnd_toStartOf="@id/iv_book_mark"
+            app:layout_constraintTop_toTopOf="@id/ivProfileImage"
+            tools:ignore="SmallSp"
+            tools:text="12" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_book_mark"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="@dimen/dimen_4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{(view) -> viewmodel.onBookmarkClicked(view)}"
+            android:padding="4dp"
+            android:src="@drawable/selector_bookmark"
+            android:visibility="gone"
+            app:isSelected="@{viewmodel.isBookmarked()}"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileImage"
+            app:layout_constraintEnd_toStartOf="@id/overflowMenu"
+            app:layout_constraintTop_toTopOf="@id/ivProfileImage"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/overflowMenu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@string/more_options"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivProfileImage"
+            app:srcCompat="@drawable/ic_overflowmenu"
+            app:tint="@color/black_two"
+            tools:tint="@color/black_two" />
+
+        <TextView
+            android:id="@+id/tvCommentMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_feed_comment_chatbubble"
+            android:backgroundTint="#f1f1f1"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="9sp"
+            android:padding="8dp"
+            android:text="@{viewmodel.message}"
+            android:textColor="@color/black_two"
+            android:textSize="14sp"
+            android:visibility='@{(viewmodel.message.equals("") || viewmodel.message == null) ? View.GONE : View.VISIBLE}'
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivProfileImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreatedAt"
+            tools:text="# Doubt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tvViewSolution"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="#edf5ff"
+            android:padding="6dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvCommentMessage"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableStart="@drawable/ic_play_course_item"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:text="@string/play_solution"
+                android:textColor="@color/grey_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/imageViewComment"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/grey"
+            android:importantForAccessibility="no"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvViewSolution"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/imageButton_comment_play"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/play"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewComment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageViewComment"
+            app:layout_constraintTop_toTopOf="@+id/imageViewComment"
+            app:srcCompat="@drawable/ic_play_video_course"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textViewReplies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:fontFamily="@font/lato_bold"
+            android:paddingVertical="@dimen/dimen_8dp"
+            android:textColor="@color/tomato"
+            android:textSize="12sp"
+            android:visibility="@{(viewmodel.replyCount == null || viewmodel.replyCount == 0) ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvUsername"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewComment"
+            app:layout_constraintVertical_bias="0"
+            tools:text="10 replies"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/btnReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:background="?android:selectableItemBackground"
+            android:fontFamily="@font/lato_bold"
+            android:paddingVertical="@dimen/dimen_8dp"
+            android:text="@string/reply"
+            android:textColor="#88888d"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewReplies"
+            app:layout_constraintTop_toTopOf="@id/textViewReplies"
+            app:layout_constraintVertical_bias="0"
+            app:layout_goneMarginStart="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

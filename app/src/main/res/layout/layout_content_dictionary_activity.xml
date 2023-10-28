@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutWordDetail"
+        android:layout_width="match_parent"
+        android:paddingLeft="16dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btnAudio"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_elevated_circle"
+            android:elevation="@dimen/dimen_8dp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
+            android:src="@drawable/ic_speaker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/tomato"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:textColor="#020202"
+            android:layout_marginLeft="8dp"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/btnAudio"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Sophisticated" />
+
+        <TextView
+            android:id="@+id/tvPhonetic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:textColor="#7c7c7c"
+            android:textSize="16dp"
+            android:textStyle="normal"
+            app:layout_constraintLeft_toLeftOf="@+id/tvText"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvText"
+            app:layout_constraintTop_toBottomOf="@+id/tvText"
+            tools:text="/səˈfɪstɪkeɪtɪd/" />
+
+        <TextView
+            android:id="@+id/tvMeaning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/tvText"
+            app:layout_constraintStart_toStartOf="@+id/tvText"
+            app:layout_constraintTop_toBottomOf="@+id/tvPhonetic"
+            tools:text="जटिल" />
+
+        <TextView
+            android:id="@+id/tvLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8sp"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            android:drawableRight="@drawable/ic_drop_down"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:drawableTint="@color/blue_2b56ac"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:textColor="#2b56ac"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvMeaning"
+            tools:text="Hindi" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWordMeaning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMeaning"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_dictionary_meaning" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

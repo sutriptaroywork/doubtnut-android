@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="filterValue"
+            type="com.doubtnutapp.domain.newglobalsearch.entities.SearchFilterItem" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/multi_tag_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_ias_filter_value"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:maxLines="1"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:text="@{filterValue.display()}"
+            android:textAlignment="center"
+            android:textColor="@color/ias_filter_value_textcolor"
+            android:textSize="@dimen/dimen_13sp"
+            app:isSelected="@{filterValue.selected}"
+            tools:text="tag tag tag tag tag tag " />
+    </FrameLayout>
+</layout>

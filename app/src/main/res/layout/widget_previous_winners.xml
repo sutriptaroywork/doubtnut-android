@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corner_transparent_fill_4dp"
+    android:backgroundTint="#541488"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="6dp"
+    tools:ignore="UnusedAttribute"
+    tools:layout_margin="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_image1"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:src="@drawable/ic_profile_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_image3"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="31dp"
+        android:src="@drawable/ic_profile_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/iv_image2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Margin start is width - 4dp -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_image2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="22dp"
+        android:src="@drawable/ic_profile_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/iv_image1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:alignContent="stretch"
+        app:alignItems="stretch"
+        app:flexWrap="wrap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_image3"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="#541488"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            tools:text="Check previous week winners" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_image4"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="3dp"
+            tools:src="@tools:sample/avatars" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

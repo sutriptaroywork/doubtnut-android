@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="storeItem"
+            type="com.doubtnutapp.store.model.StoreResult" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/storeItemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:foreground="@drawable/selectable_item_background"
+        android:minHeight="200dp">
+
+        <ImageView
+            android:id="@+id/storeItemImageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:imageurl="@{storeItem.imgUrl}"
+            app:layout_constraintBottom_toTopOf="@+id/buyRelativeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:id="@+id/buyRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:background="@color/disabled_buy_rl_color"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/buyItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/item_store_buy_text"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/verticalDivider"
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/buyItem"
+                android:background="@color/white" />
+
+            <ImageView
+                android:id="@+id/dnCashImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/verticalDivider"
+                android:src="@drawable/ic_dn_cash"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/dnCashValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/dnCashImage"
+                android:text="@{storeItem.price.toString()}"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:text="150" />
+
+            <TextView
+                android:id="@+id/dnCashTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/dnCashValue"
+                android:text="@string/item_store_dncash_title"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/overlayRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#99ffffff"
+            app:layout_constraintBottom_toTopOf="@+id/buyRelativeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/noCashTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:alpha="0.6"
+                android:background="@color/white"
+                android:fontFamily="@font/lato"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/item_store_not_enough_cash"
+                android:textColor="#17181f"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewLevelInfoItemDataModel"
+            type="com.doubtnutapp.gamification.gamepoints.model.ViewLevelInfoItemDataModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewLevelInfoItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/ivAchived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:padding="4dp"
+            android:visibility="@{viewLevelInfoItemDataModel.isAchieved() ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.304"
+            app:srcCompat="@drawable/ic_is_achived" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/badgeLevel"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/ic_bg_badge"
+            android:fontFamily="@font/lato"
+            android:padding="4dp"
+            android:text="@{String.valueOf(viewLevelInfoItemDataModel.lvl)}"
+            android:textColor="#541488"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/ivAchived"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12" />
+
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginStart="20dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="4sp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/badgeLevel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.304"
+            tools:text="75 Points earn karein for level 3 " />
+
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="@drawable/selector_gamemilestonebar"
+            android:visibility="@{viewLevelInfoItemDataModel.isLast ? View.GONE : View.VISIBLE}"
+            app:isSelected="@{viewLevelInfoItemDataModel.isAchieved()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/badgeLevel"
+            app:layout_constraintStart_toEndOf="@+id/ivAchived"
+            app:layout_constraintStart_toStartOf="@+id/badgeLevel"
+            app:layout_constraintTop_toBottomOf="@+id/badgeLevel"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageStep"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStepCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/imageStep"
+        app:layout_constraintStart_toStartOf="@+id/imageStep"
+        app:layout_constraintEnd_toEndOf="@+id/imageStep"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageStep"
+        android:fontFamily="@font/lato_bold"
+        tools:text="1"
+        android:textColor="#007aff"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/black"
+        android:layout_marginEnd="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageStep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageStep"
+        tools:text="Invite your freinds/cousins" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/lato"
+        android:textColor="#707070"
+        android:layout_marginEnd="10dp"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="Just share your link" />
+
+    <ImageView
+        android:id="@+id/imageDottedStrip"
+        android:layout_width="5dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/line_dotted_step"
+        app:layout_constraintStart_toStartOf="@+id/imageStep"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

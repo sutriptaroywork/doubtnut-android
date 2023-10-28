@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFreeCourse"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imageViewGradient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="175dp"
+                app:layout_constraintWidth_percent="0.35"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ic_vector_free_course"
+                >
+
+            </ImageView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTagOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                app:cardBackgroundColor="#a9cbff"
+                app:cardCornerRadius="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/textViewTagOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seats Filling Fast"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="@dimen/text_10sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTagTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardTagOne"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:layout_marginStart="@dimen/dimen_7dp"
+                app:cardBackgroundColor="#a9cbff"
+                app:cardCornerRadius="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/textViewTagTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2022-2023"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="@dimen/text_10sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/textviewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewGradient"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Class 10 I Bihar Board wasnjdwsa dwsahzudwhsaudwb sabdssahbdhsahwbsahbdehwsabdsaa"
+                />
+
+            <TextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/cardTagOne"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="#2a52d1"
+                tools:text="₹300/Month"
+                android:textStyle="bold"
+                />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userImage"
+                android:layout_width="@dimen/dimen_18dp"
+                android:layout_height="@dimen/dimen_18dp"
+                android:src="@drawable/ic_user_default_game"
+                android:layout_marginTop="7dp"
+                app:layout_constraintTop_toBottomOf="@+id/cardSubscribe"
+                app:layout_constraintStart_toStartOf="@id/textViewPrice"
+                />
+
+            <TextView
+                android:id="@+id/textViewBottomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/userImage"
+                app:layout_constraintStart_toEndOf="@+id/userImage"
+                tools:text="2000+ students taking this tuition"
+                android:textSize="10sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="3dp"
+                android:textColor="#424040"
+                android:fontFamily="@font/lato_bold"
+                />
+            
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSubscribe"
+                android:layout_width="145dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrice"
+                app:layout_constraintStart_toStartOf="@id/textViewPrice"
+                app:cardCornerRadius="@dimen/dimen_20dp"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/redTomato"
+                >
+
+                <TextView
+                    android:id="@+id/textViewSubscribe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:text="Padhai shuru karein"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutRightHalf"
+                android:layout_width="123dp"
+                android:layout_height="170dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+                <TextView
+                    android:id="@+id/textViewLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="English Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/dimen_20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/lato_bold"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="302dp"
+                    tools:layout_editor_absoluteY="62dp" />
+
+
+                <TextView
+                    android:id="@+id/textViewCourse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/dimen_6dp"
+                    android:textSize="@dimen/dimen_12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewLanguage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="Course ID #790" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

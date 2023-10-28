@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:src="#f6f6f6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato_bold"
+        android:maxLines="1"
+        android:textColor="#6a6a6a"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTimestamp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@+id/ivProfileImage"
+        app:layout_constraintRight_toLeftOf="@+id/tvTopic"
+        app:layout_constraintTop_toTopOf="@+id/ivProfileImage"
+        tools:text="Naman Dwivedi" />
+
+    <TextView
+        android:id="@+id/tvTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:fontFamily="@font/lato"
+        android:textColor="#6a6a6a"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProfileImage"
+        app:layout_constraintLeft_toRightOf="@+id/ivProfileImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvUsername"
+        tools:ignore="SmallSp"
+        tools:text="Yesterday at 2:07 PM" />
+
+    <ImageView
+        android:id="@+id/overflowMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:paddingStart="10dp"
+        android:paddingTop="@dimen/dimen_8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTopic"
+        app:srcCompat="@drawable/ic_overflowmenu" />
+
+    <TextView
+        android:id="@+id/tvTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_8dp"
+        android:background="@drawable/post_topic_background"
+        android:fontFamily="@font/lato"
+        android:paddingHorizontal="@dimen/dimen_8dp"
+        android:paddingVertical="@dimen/dimen_4dp"
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintRight_toLeftOf="@+id/overflowMenu"
+        app:layout_constraintTop_toTopOf="@+id/tvUsername"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginVertical="@dimen/dimen_12dp"
+        android:autoLink="web"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:maxLines="20"
+        android:textColor="#6a6a6a"
+        android:textColorLink="#007eff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfileImage"
+        tools:text="This is a test message" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/flAttachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage">
+
+        <ImageView
+            android:id="@+id/ivAttachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:adjustViewBounds="true"
+            android:background="@color/grey_feed"
+            android:gravity="start"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/ivPlayVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_video_play"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAttachment"
+            app:layout_constraintLeft_toLeftOf="@+id/ivAttachment"
+            app:layout_constraintRight_toRightOf="@+id/ivAttachment"
+            app:layout_constraintTop_toTopOf="@+id/ivAttachment" />
+
+        <com.doubtnutapp.rvexoplayer.RvExoPlayerView
+            android:id="@+id/rvPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:resize_mode="fill"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/clickHelperView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/rvPlayer"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="@+id/rvPlayer"
+            app:layout_constraintStart_toStartOf="@+id/rvPlayer"
+            app:layout_constraintTop_toTopOf="@+id/rvPlayer"
+            tools:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <include
+            android:id="@+id/viewVideoBlocked"
+            layout="@layout/layout_feed_video_blocked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/llVideoInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingTop="@dimen/dimen_4dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:paddingBottom="@dimen/dimen_4dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flAttachment"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/videoTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato_bold"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#6a6a6a"
+            android:textSize="15sp"
+            tools:text="Video Title" />
+
+        <ImageView
+            android:id="@+id/ivVolume"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_small_volume_mute"
+            android:visibility="visible"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <com.doubtnutapp.feed.view.FeedPostActionsView
+        android:id="@+id/viewPostActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llVideoInfo" />
+
+    <com.doubtnutapp.feed.view.FeedCommentView
+        android:id="@+id/viewFeedComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPostActions" />
+
+    <TextView
+        android:id="@+id/tvAllComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginBottom="@dimen/dimen_12dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/view_all_comments"
+        android:textColor="#0091ff"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/viewFeedComment"
+        app:layout_constraintTop_toBottomOf="@+id/viewFeedComment" />
+
+    <LinearLayout
+        android:id="@+id/addCommentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAllComments">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivSelfProfileImage"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@color/grey_feed" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:background="@drawable/bg_comment_chatbubble"
+            android:fontFamily="@font/lato"
+            android:paddingVertical="@dimen/dimen_8dp"
+            android:paddingStart="@dimen/dimen_8dp"
+            android:text="Write a comment..."
+            android:textColor="#6a6a6a"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_8dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:background="@color/grey_feed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCommentContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

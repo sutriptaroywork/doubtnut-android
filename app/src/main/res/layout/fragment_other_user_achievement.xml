@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:paddingBottom="50dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/pointsEarnedCardLayout"
+            layout="@layout/item_my_earned_points_card" />
+
+        <include
+            android:id="@+id/myWalletLayout"
+            layout="@layout/item_my_wallet" />
+
+        <include
+            android:id="@+id/myBadges"
+            layout="@layout/item_my_badges" />
+
+        <include
+            android:id="@+id/dailyLeaderboardCard"
+            layout="@layout/item_my_daily_leaderboard" />
+
+        <include
+            android:id="@+id/dailyAttendenceCard"
+            layout="@layout/item_my_daily_attendence" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/lato_bold"
+                android:paddingStart="12dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewAmountToPay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Some Text sadfa asdfasd sadfasd\n sdfasdf" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewAmountToPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/lato_black"
+                android:textColor="#3b8700"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="₹6,999" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewAmountStrikeThrough"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/brown_grey"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewAmountSaving"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+                tools:text="₹9,999" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewAmountSaving"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="#2f80ed"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+                tools:text="Save  ₹6,999" />
+
+            <LinearLayout
+                android:id="@+id/layoutPointers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="6dp"
+                android:minHeight="30dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/textViewAmountStrikeThrough"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+                tools:layout_height="100dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                android:drawableRight="@drawable/ic_drop_down"
+                android:drawablePadding="@dimen/dimen_4dp"
+                android:fontFamily="@font/lato"
+                android:paddingTop="@dimen/dimen_4dp"
+                android:paddingBottom="@dimen/dimen_4dp"
+                android:text="@string/see_more_text"
+                android:textColor="@color/redTomato"
+                android:textSize="@dimen/dimen_12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/layoutPointers"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPointers" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupEmiOngoingNot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="
+                    textViewAmountToPay,
+                    textViewAmountStrikeThrough,
+                    textViewAmountSaving" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupEmiOngoing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="
+                    textViewAmountDue,
+                    textViewAmountDueLabel,
+                    viewDueDivider,
+                    textViewPaid,
+                    textViewPaidLabel,
+                    viewRemainingDivider,
+                    textViewRemaining,
+                    textViewRemainingLabel,
+                    viewDueDivider2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewAmountDue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#273de9"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSeeMore"
+                tools:text="₹2,763" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewAmountDueLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="4dp"
+                android:text="PAYMENT DUE"
+                android:textColor="#a8b3ba"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAmountDue" />
+
+            <View
+                android:id="@+id/viewDueDivider"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="#e2e2e2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAmountDueLabel" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPaid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="4dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="4dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewRemaining"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewDueDivider"
+                tools:text="₹2,763" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPaidLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:paddingStart="4dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="8dp"
+                android:text="PAID"
+                android:textColor="#a8b3ba"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewRemaining"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPaid" />
+
+            <View
+                android:id="@+id/viewRemainingDivider"
+                android:layout_width="0.5dp"
+                android:layout_height="0dp"
+                android:background="#e2e2e2"
+                app:layout_constraintBottom_toBottomOf="@+id/viewDueDivider2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewDueDivider" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewRemaining"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:paddingStart="4dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="4dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewPaid"
+                app:layout_constraintTop_toBottomOf="@+id/viewDueDivider"
+                tools:text="₹2,763" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewRemainingLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="4dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="8dp"
+                android:text="REMAINING"
+                android:textColor="#a8b3ba"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewPaid"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRemaining" />
+
+            <View
+                android:id="@+id/viewDueDivider2"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="#e2e2e2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRemainingLabel" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutEmiParent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewDueDivider2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutEmiMin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/capsule_stroke_grey_solid_white_two"
+                    android:padding="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="wrap">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewEmiTitleMin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato"
+                        android:textColor="#504949"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textViewKnowMoreMin"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_default="wrap"
+                        tools:text="EMI Available @ ₹2,763/Month" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewKnowMoreMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Know More"
+                        android:textColor="#54138a"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewEmiTitleMin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textViewEmiTitleMin" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutEmi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/capsule_stroke_grey_solid_white_two"
+                    android:padding="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="spread">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutEmiRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_default="spread">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewEmiSubTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="EMI Details &amp; Schedule" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewEmiDescription"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginEnd="12dp"
+                            android:lineSpacingExtra="4.2sp"
+                            android:textColor="@color/grey_medium"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewEmiSubTitle"
+                            tools:text="Payment karo asaan kishto mein" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewMonth"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:paddingStart="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="4dp"
+                            android:textColor="#a8b3ba"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toStartOf="@+id/textViewInstallment"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewEmiDescription"
+                            tools:text="MONTHss" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewInstallment"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:textColor="#a8b3ba"
+                            android:textSize="11sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewEmiDescription"
+                            tools:text="INSTALLMENTS" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutInstallment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewMonth"
+                            tools:layout_height="100dp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewEmiTotal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:paddingStart="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="4dp"
+                            android:textColor="#a8b3ba"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/textViewTotalAmount"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/layoutInstallment"
+                            tools:text="Total" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewTotalAmount"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:textColor="#a8b3ba"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/layoutInstallment"
+                            tools:text="₹7,999" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewEmiTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato"
+                        android:textColor="#504949"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textViewKnowMore"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/layoutEmiRow"
+                        app:layout_constraintWidth_default="wrap"
+                        tools:text="EMI Available @ ₹2,763/Month" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewKnowMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Know Less"
+                        android:textColor="#54138a"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewEmiTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textViewEmiTitle"
+                        app:layout_constraintTop_toTopOf="@+id/textViewEmiTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/viewDivider"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="8dp"
+                android:background="#e2e2e2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutEmiParent"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPayInstallment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:paddingStart="4dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="16dp"
+                android:textColor="@color/tomato"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textViewPay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewDivider"
+                tools:text="Pay in Installments" />
+
+            <View
+                android:id="@+id/viewPaymentDivider"
+                android:layout_width="0.5dp"
+                android:layout_height="0dp"
+                android:background="#e2e2e2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewDivider" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:paddingStart="4dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="16dp"
+                android:textColor="@color/tomato"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewPayInstallment"
+                app:layout_constraintTop_toBottomOf="@+id/viewDivider"
+                tools:text="Pay in Full" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/topicCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topicNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/bookImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/imageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="title"
+                android:textSize="14sp"
+                android:textColor="#17181f"
+                android:fontFamily="@font/lato"
+                app:layout_constraintStart_toStartOf="@+id/bookImage"
+                app:layout_constraintTop_toTopOf="@+id/bookImage"
+                app:layout_constraintBottom_toBottomOf="@+id/bookImage"
+                app:layout_constraintEnd_toEndOf="@+id/bookImage"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/bookName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/rightArrow"
+                app:layout_constraintStart_toEndOf="@+id/bookImage"
+                app:layout_constraintBottom_toTopOf="@+id/authorName"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="#17181f"
+                android:fontFamily="@font/lato"
+                tools:text="Organic Chemistry By Himanshu Pandey Pandey"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/authorName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/rightArrow"
+                app:layout_constraintStart_toEndOf="@+id/bookImage"
+                app:layout_constraintTop_toBottomOf="@+id/bookName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="14sp"
+                android:textColor="#17181f"
+                android:fontFamily="@font/lato"
+                tools:text="Organic Chemistry By Himanshu Pandey"
+                tools:ignore="SmallSp" />
+
+            <ImageView
+                android:id="@+id/rightArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                android:tint="#969696"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintStart_toEndOf="@+id/bookName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bookImage"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

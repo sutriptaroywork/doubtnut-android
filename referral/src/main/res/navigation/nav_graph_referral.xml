@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_referral"
+    app:startDestination="@id/referralHomeFragment">
+
+    <fragment
+        android:id="@+id/referralHomeFragment"
+        android:name="com.doubtnut.referral.ui.ReferralHomeFragment"
+        android:label="fragment_referral_home"
+        tools:layout="@layout/fragment_referral_home">
+
+        <deepLink app:uri="doubtnutapp://referral" />
+        <deepLink app:uri="doubtnutapp://referral_page" />
+
+    </fragment>
+
+</navigation>

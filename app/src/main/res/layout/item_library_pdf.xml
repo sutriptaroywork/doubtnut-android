@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.doubtnutapp.utils.RedDotNewVisibilityUtil" />
+
+        <variable
+            name="pdfFeed"
+            type="com.doubtnutapp.librarylisting.model.PdfViewItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selectable_item_background">
+
+        <TextView
+            android:id="@+id/library_pdf_title"
+            style="@style/TitleTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:singleLine="true"
+            android:text="@{pdfFeed.title}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewPdf"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="wrap"
+            tools:text="Chapter Name  Name   Name  NameName" />
+
+        <ImageView
+            android:id="@+id/imageViewPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_pdf"
+            app:layout_constraintBottom_toBottomOf="@id/library_pdf_title"
+            app:layout_constraintEnd_toStartOf="@+id/newBadge"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/library_pdf_title"
+            app:layout_constraintTop_toTopOf="@id/library_pdf_title" />
+
+        <TextView
+            android:id="@+id/textViewDot"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/bg_notificationtopfeatureicon"
+            android:gravity="center"
+            android:visibility="@{RedDotNewVisibilityUtil.shouldShowRedDot(pdfFeed.announcement.type,pdfFeed.announcement.state) ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPdf"
+            app:layout_constraintEnd_toStartOf="@+id/buttonPdfDownload"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPdf"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPdf" />
+
+        <include
+            android:id="@+id/newBadge"
+            layout="@layout/item_new_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            app:isVisible="@{RedDotNewVisibilityUtil.shouldShowNewBadge(pdfFeed.announcement.type,pdfFeed.announcement.state)}"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPdf"
+            app:layout_constraintEnd_toStartOf="@+id/btnDownloadPdf"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPdf"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPdf" />
+
+        <FrameLayout
+            android:id="@+id/btnDownloadPdf"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:background="?selectableItemBackground"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/share_button"
+            app:layout_constraintDimensionRatio="H,1:2"
+            app:layout_constraintEnd_toStartOf="@id/share_button"
+            app:layout_constraintTop_toTopOf="@id/share_button"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/bg_download_red" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/share_button"
+            android:layout_width="70dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/whatsapp_share"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_whatsapp_copy_3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:text="@string/share"
+                android:textColor="@color/whatsapp_green"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            style="@style/DescriptionTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:maxLines="2"
+            android:text="@{pdfFeed.description}"
+            android:textColor="@color/warm_grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/share_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/library_pdf_title"
+            tools:text="Chapter Name " />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

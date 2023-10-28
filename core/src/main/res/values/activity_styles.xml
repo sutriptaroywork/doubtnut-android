@@ -1,0 +1,100 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorSecondary">@color/redTomato</item>
+        <item name="colorAccent">@color/redTomato</item>
+        <item name="colorButtonNormal">@color/buttonColor</item>
+        <item name="android:forceDarkAllowed" tools:ignore="NewApi">false</item>
+    </style>
+
+    <style name="WhiteStatusBarTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/statusBar</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="CameraGuideActivityTheme" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/greyBlack</item>
+    </style>
+
+    <style name="CommentsActivityTheme" parent="AppTheme">
+        <item name="colorAccent">@color/redTomato</item>
+    </style>
+
+    <style name="VideoViewTheme" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="DownloadedVideoScreenTheme" parent="AppTheme">
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeStyle">@style/Widget.Doubnut.ActionMode</item>
+    </style>
+
+    <style name="Widget.Doubnut.ActionMode" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="colorAccent">@color/redTomato</item>
+        <item name="android:statusBarColor">@color/grey_light</item>
+    </style>
+
+    <style name="Theme.Transparent2" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:statusBarColor">@color/grey_light</item>
+    </style>
+
+    <style name="Theme.BottomSheetTransparent" parent="AppTheme">
+        <item name="android:windowBackground">@color/transparent_bottom_sheet</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="colorAccent">@color/redTomato</item>
+        <item name="android:statusBarColor">@color/grey_light</item>
+    </style>
+
+    <style name="Widget.Doubnut.AdProgress" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <style name="Theme.FlatButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/grey_light</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CheckboxStyle" parent="AppTheme">
+        <item name="colorAccent">@color/tomato</item>
+    </style>
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+</resources>

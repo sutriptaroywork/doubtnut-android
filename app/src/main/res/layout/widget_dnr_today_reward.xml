@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_dedede"
+    app:cardCornerRadius="@dimen/dimen_8dp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="#dedede"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        app:layout_constraintDimensionRatio="1:6.8"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivSerialNumber"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginTop="@dimen/dimen_7dp"
+            android:background="@color/grey_e5e5e5"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircularImageView"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvSerialNumber"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:textColor="#7379f8"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivSerialNumber"
+            app:layout_constraintEnd_toEndOf="@id/ivSerialNumber"
+            app:layout_constraintStart_toStartOf="@id/ivSerialNumber"
+            app:layout_constraintTop_toTopOf="@id/ivSerialNumber"
+            tools:text="3" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="@dimen/dimen_7dp"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:maxWidth="80dp"
+            android:maxLines="2"
+            android:textColor="#7379f8"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivSerialNumber"
+            tools:text="Questions Asked Today" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_9dp"
+            android:background="#7379f8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="@dimen/dimen_7dp"
+            android:layout_marginEnd="@dimen/dimen_9dp"
+            android:layout_marginBottom="@dimen/dimen_7dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:letterSpacing="-0.02"
+            android:lines="3"
+            android:maxLines="3"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            app:layout_constraintEnd_toStartOf="@+id/ivCoin"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toTopOf="@id/view"
+            tools:text="Earned 15 DNR Today " />
+
+        <ImageView
+            android:id="@+id/ivCoin"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_7dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="@dimen/dimen_7dp"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toEndOf="@id/subtitle"
+            app:layout_constraintTop_toTopOf="@id/view"
+            tools:ignore="ContentDescription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

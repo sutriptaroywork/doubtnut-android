@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_12dp"
+    android:layout_marginBottom="@dimen/dimen_12dp">
+
+    <LinearLayout
+        android:id="@+id/ll_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivShop"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            tools:src="@drawable/ic_bio_location" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:fontFamily="@font/lato"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_14sp"
+            android:textStyle="bold"
+            tools:text="235 m" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:fontFamily="@font/lato"
+        android:paddingEnd="@dimen/dimen_20dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_13sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/ll_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Nunc amet imperdiet arcu purus nunc risus, commodo id. Viverra dignissim ante." />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btnMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#273de9"
+        android:drawableStart="@drawable/ic_small_phone"
+        android:drawablePadding="@dimen/dimen_10dp"
+        android:drawableTint="#273de9"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:fontFamily="@font/lato"
+        android:paddingTop="@dimen/dimen_15dp"
+        android:textColor="#273de9"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/ll_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="9899 717 933" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

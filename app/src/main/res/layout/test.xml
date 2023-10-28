@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="questionMeta"
+            type="com.doubtnutapp.data.remote.models.QuestionMeta" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contestContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvContest"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="@dimen/card_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/questionCardContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false">
+
+                <ImageButton
+                    android:id="@+id/ibVideoPlay"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/ic_play_video_on_card"
+                    android:clickable="false"
+                    android:contentDescription="@string/string_latest_playbutton_content_des"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPlaylistId"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvPlaylistId" />
+
+                <TextView
+                    android:id="@+id/tvPlaylistId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/lato"
+                    android:padding="4dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/ibVideoPlay"
+                    tools:ignore="SmallSp"
+                    tools:text="1858 | 12:15" />
+
+                <TextView
+                    android:id="@+id/tvNCERTQuestionNoCard"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/lato_black"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tvPlaylistId"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Algebric Expression" />
+
+                <com.doubtnutapp.widgets.mathview.MathView
+                    android:id="@+id/mathViewCard"
+                    android:layout_width="120dp"
+                    android:layout_height="93dp"
+                    android:fontFamily="@font/lato_black"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="8dp"
+                    tools:text="Algebric Expression" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/questionCardContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/playlist_item_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvContest"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvNCERTQuestionNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_black"
+                android:maxLines="2"
+                android:textColor="#383838"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/ocr_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Q. 01" />
+
+            <TextView
+                android:id="@+id/ocr_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="@+id/tvNCERTQuestionNo"
+                app:layout_constraintStart_toStartOf="@+id/tvNCERTQuestionNo"
+                app:layout_constraintTop_toBottomOf="@+id/tvNCERTQuestionNo" />
+
+            <com.doubtnutapp.widgets.mathview.MathView
+                android:id="@+id/mathView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="@+id/tvNCERTQuestionNo"
+                app:layout_constraintStart_toStartOf="@+id/tvNCERTQuestionNo"
+                app:layout_constraintTop_toBottomOf="@+id/tvNCERTQuestionNo" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#f0f0f0"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/mathView"
+                app:layout_constraintStart_toStartOf="@+id/mathView"
+                app:layout_constraintTop_toBottomOf="@+id/view8">
+
+                <TextView
+                    android:id="@+id/chip_itemQuestion_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="1dp"
+                    android:fontFamily="@font/lato"
+                    android:text='@{"#"+String.valueOf(questionMeta.target_course)}'
+                    android:textColor="#0178b9"
+                    android:textSize="10sp"
+                    android:visibility="@{questionMeta.target_course!= null ? View.VISIBLE : View.GONE}"
+                    tools:ignore="SmallSp"
+                    tools:text="#boards" />
+
+                <TextView
+                    android:id="@+id/chip_itemQuestion_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="1dp"
+                    android:fontFamily="@font/lato"
+                    android:text='@{"#"+String.valueOf(questionMeta.level)}'
+                    android:textColor="#0178b9"
+
+                    android:textSize="10sp"
+                    android:visibility="@{questionMeta.level!= null ? View.VISIBLE : View.GONE}"
+                    tools:text="#Intermediate" />
+
+                <TextView
+                    android:id="@+id/chip_itemQuestion_package1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="1dp"
+                    android:fontFamily="@font/lato"
+                    android:textColor="#0178b9"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp"
+                    tools:text="#Microconcepts" />
+
+                <TextView
+                    android:id="@+id/chip_itemQuestion_package2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="1dp"
+                    android:fontFamily="@font/lato"
+                    android:textColor="#0178b9"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp"
+                    tools:text="#ncert" />
+
+                <TextView
+                    android:id="@+id/chip_itemQuestion_package3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="1dp"
+                    android:fontFamily="@font/lato"
+                    android:textColor="#0178b9"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp"
+                    tools:text="#ncert #ncert" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.doubtnut.scholarship">
+
+    <application>
+        <activity
+            android:name="com.doubtnut.scholarship.ui.ScholarshipActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

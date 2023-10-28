@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_topic_booster_game"
+    app:startDestination="@id/tbgHomeFragment">
+
+    <fragment
+        android:id="@+id/tbgQuizFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.TbgQuizFragment"
+        android:label="TopicBoosterGameQuizFragment"
+        tools:layout="@layout/fragment_tbg_quiz">
+        <action
+            android:id="@+id/actionShowQuizExitDialog"
+            app:destination="@id/tbgPopupDialogFragment" />
+        <action
+            android:id="@+id/actionShowMessageDialog"
+            app:destination="@+id/topicBoosterGameMessageDialogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/topicBoosterGameResultFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.TbgResultFragment"
+        android:label="TbgResultFragment"
+        tools:layout="@layout/fragment_tbg_result">
+        <argument
+            android:name="inviterId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="inviteeId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="gameId"
+            app:argType="string" />
+        <argument
+            android:name="totalScore"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="inviterScore"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="inviteeScore"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="inviterCorrectQuestions"
+            android:defaultValue="@null"
+            app:argType="long[]"
+            app:nullable="true" />
+        <argument
+            android:name="inviteeCorrectQuestions"
+            android:defaultValue="@null"
+            app:argType="long[]"
+            app:nullable="true" />
+        <argument
+            android:name="topic"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="questionIds"
+            android:defaultValue="@null"
+            app:argType="long[]"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="doubtnutapp://khelo_jeeto/result?game_id={gameId}" />
+        <argument
+            android:name="submitResult"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/actionOpenResultUnavailableScreen"
+            app:destination="@id/tbgUnavailableFragment"
+            app:popUpTo="@id/tbgHomeFragment" />
+        <argument
+            android:name="isQuit"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/actionShowLevelUpDialog"
+            app:destination="@id/levelUnlockDialogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tbgHomeFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.TbgHomeFragment"
+        android:label="fragment_topic_booster_game_home"
+        tools:layout="@layout/fragment_topic_booster_game_home">
+        <action
+            android:id="@+id/actionOpenLevelsBottomSheet"
+            app:destination="@id/levelsBottomSheetDialogFragment" />
+        <action
+            android:id="@+id/actionSelectChapter"
+            app:destination="@id/tbgChapterSelectionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/actionOpenFaqBottomSheet"
+            app:destination="@id/faqBottomSheetDialogFragment" />
+        <action
+            android:id="@+id/actionOpenInviteDialogFragment"
+            app:destination="@id/tbgPopupDialogFragment" />
+        <deepLink app:uri="doubtnutapp://khelo_jeeto/home" />
+        <action
+            android:id="@+id/actionStartGameFlow"
+            app:destination="@id/navGraphGameFlow">
+            <argument
+                android:name="chapterAlias"
+                app:argType="string" />
+            <argument
+                android:name="isInviter"
+                android:defaultValue="true"
+                app:argType="boolean" />
+            <argument
+                android:name="inviterId"
+                app:argType="string" />
+            <argument
+                android:name="gameId"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+            <argument
+                android:name="isOpponentBot"
+                android:defaultValue="true"
+                app:argType="boolean" />
+        </action>
+    </fragment>
+
+    <dialog
+        android:id="@+id/levelsBottomSheetDialogFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.LevelsBottomSheetDialogFragment"
+        android:label="fragment_levels_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_levels_bottom_sheet_dialog" />
+
+    <dialog
+        android:id="@+id/subjectBottomSheetDialogFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.SubjectBottomSheetDialogFragment"
+        android:label="SubjectBottomSheetDialogFragment"
+        tools:layout="@layout/fragment_subject_bottom_sheet_dialog">
+        <argument
+            android:name="subjects"
+            app:argType="com.doubtnutapp.data.remote.models.topicboostergame2.Subject[]" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/chapterBottomSheetDialogFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.ChapterBottomSheetDialogFragment"
+        android:label="ChapterBottomSheetDialogFragment"
+        tools:layout="@layout/fragment_chapter_bottom_sheet_dialog">
+        <argument
+            android:name="chapters"
+            app:argType="com.doubtnutapp.data.remote.models.topicboostergame2.Topic[]" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="searchPlaceholder"
+            app:argType="string" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/tbgChapterSelectionFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.TbgChapterSelectionFragment"
+        android:label="fragment_topic_booster_game_chapter_selection"
+        tools:layout="@layout/fragment_topic_booster_game_chapter_selection">
+        <argument
+            android:name="subjectAlias"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionOpenSubjectBottomSheet"
+            app:destination="@id/subjectBottomSheetDialogFragment" />
+        <action
+            android:id="@+id/actionOpenChapterBottomSheet"
+            app:destination="@id/chapterBottomSheetDialogFragment" />
+        <action
+            android:id="@+id/actionOpenInviteScreen"
+            app:destination="@id/tbgInviteFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <deepLink app:uri="doubtnutapp://khelo_jeeto/chapter?subject={subjectAlias}&amp;chapter_alias={chapterAlias}" />
+        <action
+            android:id="@+id/actionStartGameFlow"
+            app:destination="@id/navGraphGameFlow"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/tbgChapterSelectionFragment">
+            <argument
+                android:name="chapterAlias"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="isInviter"
+                android:defaultValue="false"
+                app:argType="boolean" />
+            <argument
+                android:name="inviterId"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="gameId"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+            <argument
+                android:name="isOpponentBot"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </action>
+        <argument
+            android:name="chapterAlias"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tbgInviteFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.TbgInviteFragment"
+        android:label="fragment_tbg_invite"
+        tools:layout="@layout/fragment_tbg_invite">
+        <action
+            android:id="@+id/actionOpenPopupDialogFragment"
+            app:destination="@id/tbgPopupDialogFragment" />
+        <action
+            android:id="@+id/actionOpenCountryCodePickerDialog"
+            app:destination="@id/countryCodePickerDialogFragment" />
+        <argument
+            android:name="chapterAlias"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionStartGameFlow"
+            app:destination="@id/navGraphGameFlow"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/tbgChapterSelectionFragment">
+            <argument
+                android:name="chapterAlias"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="inviteeIds"
+                android:defaultValue="@null"
+                app:argType="string[]"
+                app:nullable="true" />
+            <argument
+                android:name="isInviter"
+                android:defaultValue="false"
+                app:argType="boolean" />
+            <argument
+                android:name="inviterId"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="gameId"
+                app:argType="string" />
+            <argument
+                android:name="isWhatsApp"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </action>
+        <deepLink app:uri="doubtnutapp://khelo_jeeto/invite?chapter={chapterAlias}" />
+        <argument
+            android:name="source"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink13"
+            app:uri="doubtnutapp://khelo_jeeto/invite?chapter={chapterAlias}&amp;source={source}" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/countryCodePickerDialogFragment"
+        android:name="com.doubtnutapp.widgets.countrycodepicker.CountryCodePickerDialogFragment"
+        android:label="CountryCodePickerDialogFragment"
+        tools:layout="@layout/fragment_country_code_picker_dialog" />
+
+    <dialog
+        android:id="@+id/faqBottomSheetDialogFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.FaqBottomSheetDialogFragment"
+        android:label="FaqBottomSheetDialogFragment"
+        tools:layout="@layout/fragment_faq_bottom_sheet_dialog">
+        <argument
+            android:name="faqData"
+            app:argType="com.doubtnutapp.data.remote.models.topicboostergame2.Faq" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/tbgPopupDialogFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.TbgPopupDialogFragment"
+        android:label="TbgPopUpDialogFragment"
+        tools:layout="@layout/fragment_topic_booster_game_invite_dialog">
+
+        <argument
+            android:name="popupDialogData"
+            app:argType="com.doubtnutapp.data.remote.models.topicboostergame2.PopupDialogData" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/tbgLeaderboardFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.TbgLeaderboardFragment"
+        android:label="TbgLeaderboardFragment"
+        tools:layout="@layout/fragment_tbg_leaderboard">
+        <deepLink app:uri="doubtnutapp://khelo_jeeto/leaderboard?active_tab_id={activeTabId}" />
+        <argument
+            android:name="activeTabId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tbgUnavailableFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.TbgUnavailableFragment"
+        android:label="TbgUnavailableFragment"
+        tools:layout="@layout/fragment_tbg_unavailable">
+        <argument
+            android:name="unavailableData"
+            app:argType="com.doubtnutapp.data.remote.models.topicboostergame2.UnavailableData" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/levelUnlockDialogFragment"
+        android:name="com.doubtnutapp.topicboostergame2.ui.LevelUnlockDialogFragment"
+        android:label="LevelUnlockDialogFragment"
+        tools:layout="@layout/fragment_level_unlock_dialog">
+
+        <argument
+            android:name="levelUpContainer"
+            app:argType="com.doubtnutapp.data.remote.models.topicboostergame2.LevelUpContainer" />
+    </dialog>
+
+    <navigation
+        android:id="@+id/navGraphGameFlow"
+        app:startDestination="@id/tbgOpponentWaitFragment">
+        <fragment
+            android:id="@+id/tbgOpponentWaitFragment"
+            android:name="com.doubtnutapp.topicboostergame2.ui.TbgOpponentWaitFragment"
+            android:label="TbgOpponentWaitFragment"
+            tools:layout="@layout/fragment_tbg_opponent_wait">
+            <deepLink app:uri="doubtnutapp://khelo_jeeto/wait?game_id={gameId}&amp;inviter={inviterId}&amp;chapter_alias={chapterAlias}&amp;is_opponent_bot={isOpponentBot}&amp;is_inviter={isInviter}" />
+            <argument
+                android:name="chapterAlias"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="inviteeIds"
+                android:defaultValue="@null"
+                app:argType="string[]"
+                app:nullable="true" />
+            <argument
+                android:name="isInviter"
+                android:defaultValue="false"
+                app:argType="boolean" />
+            <argument
+                android:name="inviterId"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="gameId"
+                android:defaultValue="@null"
+                app:argType="string"
+                app:nullable="true" />
+            <argument
+                android:name="isOpponentBot"
+                android:defaultValue="false"
+                app:argType="boolean" />
+            <action
+                android:id="@+id/actionStartGame"
+                app:destination="@id/tbgQuizFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"
+                app:popUpTo="@id/tbgOpponentWaitFragment"
+                app:popUpToInclusive="true">
+                <argument
+                    android:name="gameId"
+                    app:argType="string" />
+                <argument
+                    android:name="inviterId"
+                    app:argType="string" />
+                <argument
+                    android:name="inviteeId"
+                    app:argType="string"
+                    app:nullable="true" />
+                <argument
+                    android:name="topic"
+                    app:argType="string" />
+                <argument
+                    android:name="isInviter"
+                    app:argType="boolean" />
+                <argument
+                    android:name="opponentName"
+                    app:argType="string" />
+                <argument
+                    android:name="opponentImage"
+                    app:argType="string" />
+                <argument
+                    android:name="isOpponentBot"
+                    app:argType="boolean" />
+            </action>
+            <action
+                android:id="@+id/actionShowWaitExitDialog"
+                app:destination="@id/tbgPopupDialogFragmentGameFlow" />
+            <argument
+                android:name="isWhatsApp"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/tbgQuizFragment"
+            android:name="com.doubtnutapp.topicboostergame2.ui.TbgQuizFragment"
+            android:label="TopicBoosterGameQuizFragment"
+            tools:layout="@layout/fragment_topic_booster_game_quiz">
+            <action
+                android:id="@+id/actionShowMessageDialog"
+                app:destination="@+id/topicBoosterGameMessageDialogFragment" />
+            <action
+                android:id="@+id/actionShowQuizExitDialog"
+                app:destination="@id/tbgPopupDialogFragmentGameFlow" />
+            <argument
+                android:name="gameId"
+                app:argType="string" />
+            <argument
+                android:name="inviterId"
+                app:argType="string" />
+            <argument
+                android:name="inviteeId"
+                app:argType="string"
+                app:nullable="true" />
+            <argument
+                android:name="topic"
+                app:argType="string" />
+            <argument
+                android:name="isInviter"
+                app:argType="boolean" />
+            <argument
+                android:name="opponentName"
+                app:argType="string" />
+            <argument
+                android:name="opponentImage"
+                app:argType="string" />
+            <argument
+                android:name="isOpponentBot"
+                app:argType="boolean" />
+        </fragment>
+        <dialog
+            android:id="@+id/topicBoosterGameMessageDialogFragment"
+            android:name="com.doubtnutapp.topicboostergame2.ui.TbgMessageDialogFragment"
+            android:label="TopicBoosterGameMessageDialogFragment"
+            tools:layout="@layout/fragment_topic_booster_game_message_dialog">
+            <argument
+                android:name="messages"
+                app:argType="string[]" />
+        </dialog>
+
+        <dialog
+            android:id="@+id/tbgPopupDialogFragmentGameFlow"
+            android:name="com.doubtnutapp.topicboostergame2.ui.TbgPopupDialogFragment"
+            android:label="TbgPopUpDialogFragment"
+            tools:layout="@layout/fragment_topic_booster_game_invite_dialog">
+            <argument
+                android:name="popupDialogData"
+                app:argType="com.doubtnutapp.data.remote.models.topicboostergame2.PopupDialogData" />
+        </dialog>
+
+        <action
+            android:id="@+id/actionShowResult"
+            app:destination="@id/topicBoosterGameResultFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/tbgQuizFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/actionOpponentUnavailable"
+            app:destination="@id/tbgUnavailableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/tbgOpponentWaitFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/actionStartGameFlowFromWaitFragment"
+            app:destination="@id/tbgOpponentWaitFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/tbgOpponentWaitFragment"
+            app:popUpToInclusive="true" />
+    </navigation>
+
+</navigation>

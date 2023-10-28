@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="microconcept"
+            type="com.doubtnutapp.data.remote.models.MicroConcept" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/root"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="7dp"
+        android:background="@color/colorAccent"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <com.doubtnutapp.widgets.mathview.MathView
+            android:id="@+id/mathView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:clickable="false"
+            android:gravity="center"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tvMicroconcept"
+            style="@style/TextAppearance.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="3dp"
+            android:clickable="false"
+            android:drawableLeft="@drawable/ic_play_circle_outline_white_24"
+            android:gravity="center_vertical|center_horizontal"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@{microconcept.mc_id}"
+            android:textColor="@color/white" />
+
+    </FrameLayout>
+
+</layout>

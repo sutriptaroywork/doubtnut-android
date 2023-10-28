@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="formulaItemList"
+            type="com.doubtnutapp.data.remote.models.FormulaSheetFormulas.FormulasList" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:minHeight="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/formulaItemFrame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/formulaItemImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:scaleType="fitCenter"
+                    app:imageurl="@{formulaItemList.formulaItemImageUrl}" />
+
+                <WebView
+                    android:id="@+id/formulaItemView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal" />
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/lines"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/mathView"
+                android:layout_marginTop="4dp"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llayout"
+                android:layout_margin="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvVieweShortCuts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="8dp"
+                    android:textSize="15dp"
+                    tools:text="ViewShorstCuts" />
+
+                <TextView
+                    android:id="@+id/tvVieweConstants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="15dp"
+                    tools:text="constants" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lines2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/mathView"
+                android:layout_marginTop="4dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/tvAddToCheatsheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="32dp"
+                android:text="@string/add_to_cheatsheet"
+                android:textColor="@color/colorSecondary"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

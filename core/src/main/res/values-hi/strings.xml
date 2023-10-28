@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="api_error">Something went wrong please try later !!</string>
+    <string name="call_us">हमें कॉल करें</string>
+    <string name="copy_referral_msg">रेफरल सन्देश कॉपी करें</string>
+    <string name="share_your_referral_code">रेफरल सन्देश दोस्तों को भेजें</string>
+    <string name="share">शेयर करें</string>
+    <string name="referral_code_copied">रेफरल सन्देश कॉपी हो गया</string>
+    <string name="refer_amp_earn">रेफेर करो और कमाओ</string>
+    <string name="see_all_rewards">सब इनाम देखें</string>
+    <string name="mera_dost">मेरा दोस्त</string>
+    <string name="no_contacts_found">कोई कॉन्टेक्ट्स नहीं मिले</string>
+</resources>

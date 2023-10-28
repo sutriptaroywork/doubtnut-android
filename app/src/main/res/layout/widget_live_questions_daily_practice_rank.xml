@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_3dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:layout_marginBottom="@dimen/dimen_3dp"
+        app:cardCornerRadius="@dimen/dimen_2dp"
+        app:cardElevation="@dimen/dimen_4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_bold"
+                android:lines="2"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/rankIcon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="My Rank" />
+
+            <TextView
+                android:id="@+id/subTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato"
+                android:lines="2"
+                android:textColor="@color/grey_504949"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/rankText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                tools:text="Aapki leaderboard ki rank" />
+
+            <TextView
+                android:id="@+id/pointsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:fontFamily="@font/lato"
+                android:textSize="@dimen/dimen_13sp"
+                app:layout_constraintBottom_toBottomOf="@id/subTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/subTitle"
+                tools:text="My Points" />
+
+            <ImageView
+                android:id="@+id/pointsIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="@dimen/dimen_1dp"
+                app:layout_constraintBottom_toTopOf="@id/pointsText"
+                app:layout_constraintStart_toStartOf="@id/pointsText" />
+
+            <TextView
+                android:id="@+id/points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4dp"
+                android:layout_marginBottom="@dimen/dimen_1dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="#ea4053"
+                android:textSize="@dimen/dimen_16sp"
+                app:layout_constraintBottom_toBottomOf="@id/pointsIcon"
+                app:layout_constraintStart_toEndOf="@id/pointsIcon"
+                tools:text="38" />
+
+            <TextView
+                android:id="@+id/rankText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_14dp"
+                android:fontFamily="@font/lato"
+                android:textSize="@dimen/dimen_13sp"
+                app:layout_constraintBottom_toBottomOf="@id/subTitle"
+                app:layout_constraintEnd_toStartOf="@id/pointsText"
+                app:layout_constraintTop_toTopOf="@id/subTitle"
+                tools:text="My Rank" />
+
+            <ImageView
+                android:id="@+id/rankIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="@dimen/dimen_1dp"
+                app:layout_constraintBottom_toTopOf="@id/rankText"
+                app:layout_constraintStart_toStartOf="@id/rankText" />
+
+            <TextView
+                android:id="@+id/rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4dp"
+                android:layout_marginBottom="@dimen/dimen_1dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="#f3754d"
+                android:textSize="@dimen/dimen_16sp"
+                app:layout_constraintBottom_toBottomOf="@id/rankIcon"
+                app:layout_constraintStart_toEndOf="@id/rankIcon"
+                tools:text="13" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

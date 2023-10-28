@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/groupImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_user_default_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSelectGroupTick"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_sg_select_tick"
+        app:layout_constraintBottom_toBottomOf="@+id/groupImage"
+        app:layout_constraintEnd_toEndOf="@+id/groupImage"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvGroupName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/groupImage"
+        app:layout_constraintEnd_toStartOf="@+id/ivVerifiedTick"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="IIT JEE Prepration IIT JEE Prepration IIT JEE Prepration" />
+
+    <ImageView
+        android:id="@+id/ivVerifiedTick"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_verified_group"
+        android:layout_marginRight="@dimen/dimen_4dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toTopOf="@+id/tvGroupName"
+        app:layout_constraintStart_toEndOf="@+id/tvGroupName"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvMyGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/my_group"
+        android:textColor="#898888"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toEndOf="@+id/groupImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvGroupName" />
+
+    <TextView
+        android:id="@+id/tvLastSent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/lato"
+        android:textColor="#808080"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toEndOf="@+id/groupImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyGroup"
+        tools:text="Last Seen at 6:14PM" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="323dp" />
+
+    <TextView
+        android:id="@+id/tvInvitationStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:background="@color/tomato"
+        android:fontFamily="@font/lato"
+        android:paddingStart="12dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="4dp"
+        android:text="@string/invite"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_sg_notification_off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

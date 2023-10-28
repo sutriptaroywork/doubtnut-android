@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notesCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:strokeColor="@color/color_c31292"
+    app:strokeWidth="@dimen/dimen_1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPDF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvPDFHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:fontFamily="@font/lato"
+            android:textColor="@color/color_c31292"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPDF"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="चैप्टर  का नाम " />
+
+        <TextView
+            android:id="@+id/tvNotesText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_6dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:layout_marginBottom="@dimen/dimen_12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato_bold"
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/grey_504949"
+            android:textSize="@dimen/dimen_17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_book_mark"
+            app:layout_constraintStart_toStartOf="@+id/tvPDFHeading"
+            app:layout_constraintTop_toBottomOf="@+id/tvPDFHeading"
+            tools:text="Parallelogram Law, Law, Polygon dat.
+            Parallelogram Law, Law, Polygon datParallelogram Law, Law, Polygon daParallelogram Law, Law, Polygon dat...t" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_book_mark"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            android:src="@drawable/selector_bookmark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewPDF"
+            android:layout_width="@dimen/dimen_32dp"
+            android:layout_height="@dimen/dimen_32dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_notes_pdf" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

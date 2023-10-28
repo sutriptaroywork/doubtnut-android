@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/parenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_6dp"
+        android:layout_marginEnd="@dimen/dimen_6dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        app:cardElevation="@dimen/dimen_4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffbe99"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvMediumTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_12dp"
+                    android:layout_marginBottom="@dimen/dimen_12dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dimen_8dp"
+                    android:paddingTop="@dimen/dimen_3dp"
+                    android:paddingEnd="@dimen/dimen_8dp"
+                    android:paddingBottom="@dimen/dimen_3dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="English Medium" />
+
+                <TextView
+                    android:id="@+id/tvSeatsTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_4dp"
+                    android:layout_marginTop="@dimen/dimen_12dp"
+                    android:layout_marginBottom="@dimen/dimen_12dp"
+                    android:background="@color/color_8064f4"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dimen_8dp"
+                    android:paddingTop="@dimen/dimen_3dp"
+                    android:paddingEnd="@dimen/dimen_8dp"
+                    android:paddingBottom="@dimen/dimen_3dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvMediumTag"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Seats Filling Fast" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:layout_marginTop="@dimen/dimen_6dp"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="2"
+                android:minLines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header"
+                tools:text="NDA Exam 2021 - Crash Course" />
+
+            <ImageView
+                android:id="@+id/ivOne"
+                android:layout_width="@dimen/dimen_16dp"
+                android:layout_height="@dimen/dimen_16dp"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <TextView
+                android:id="@+id/tvOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_3dp"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="2"
+                android:textColor="@color/color_3e3e3e"
+                android:textSize="@dimen/text_10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivOne"
+                app:layout_constraintStart_toEndOf="@+id/ivOne"
+                app:layout_constraintTop_toTopOf="@+id/ivOne"
+                tools:text="500+ Daily classes" />
+
+            <ImageView
+                android:id="@+id/ivTwo"
+                android:layout_width="@dimen/dimen_16dp"
+                android:layout_height="@dimen/dimen_16dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                app:layout_constraintStart_toEndOf="@+id/tvOne"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <TextView
+                android:id="@+id/tvTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_3dp"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="2"
+                android:textColor="@color/color_3e3e3e"
+                android:textSize="@dimen/text_10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivOne"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivTwo"
+                app:layout_constraintTop_toTopOf="@+id/ivOne"
+                tools:text="Access to 20+ Books" />
+
+            <ImageView
+                android:id="@+id/ivThree"
+                android:layout_width="@dimen/dimen_16dp"
+                android:layout_height="@dimen/dimen_16dp"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivOne" />
+
+            <TextView
+                android:id="@+id/tvThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_3dp"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="2"
+                android:textColor="@color/color_3e3e3e"
+                android:textSize="@dimen/text_10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivThree"
+                app:layout_constraintEnd_toStartOf="@+id/ivFour"
+                app:layout_constraintStart_toEndOf="@+id/ivThree"
+                app:layout_constraintTop_toTopOf="@+id/ivThree"
+                tools:text="Everyday homework" />
+
+            <ImageView
+                android:id="@+id/ivFour"
+                android:layout_width="@dimen/dimen_16dp"
+                android:layout_height="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                app:layout_constraintStart_toStartOf="@+id/ivTwo"
+                app:layout_constraintTop_toBottomOf="@+id/ivTwo" />
+
+            <TextView
+                android:id="@+id/tvFour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_3dp"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="2"
+                android:textColor="@color/color_3e3e3e"
+                android:textSize="@dimen/text_10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFour"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivFour"
+                app:layout_constraintTop_toTopOf="@+id/ivFour"
+                tools:text="100+ Practice PDFs" />
+
+            <TextView
+                android:id="@+id/tvFive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12sp"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                app:layout_constraintTop_toBottomOf="@+id/ivThree"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/ivThree"
+                tools:text="Score 250+ Marks in NDA Exam" />
+
+            <TextView
+                android:id="@+id/tvSix"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/grey_3f3f3f"
+                android:textSize="@dimen/text_10sp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvFive"
+                app:layout_constraintTop_toBottomOf="@+id/tvFive"
+                tools:text="Starts 5th Aug" />
+
+            <TextView
+                android:id="@+id/tvStartingFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="1"
+                android:textColor="@color/color_2a52d1"
+                android:textSize="@dimen/text_10sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/tvSix"
+                app:layout_constraintTop_toBottomOf="@+id/tvSix"
+                tools:text="Starting From" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/color_2a52d1"
+                android:textSize="@dimen/dimen_17sp"
+                app:layout_constraintStart_toStartOf="@+id/tvStartingFrom"
+                app:layout_constraintTop_toBottomOf="@+id/tvStartingFrom"
+                tools:text="₹3000/Month" />
+
+            <TextView
+                android:id="@+id/strikethroughPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/grey_03"
+                android:textSize="@dimen/text_10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
+                app:layout_constraintEnd_toStartOf="@+id/btnViewMore"
+                app:layout_constraintStart_toEndOf="@+id/tvPrice"
+                app:layout_constraintHorizontal_bias=".1"
+                app:layout_constraintTop_toBottomOf="@+id/tvStartingFrom"
+                tools:text="₹3000/Month" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGetAdmission"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12dp"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:layout_marginBottom="@dimen/dimen_4dp"
+                android:fontFamily="@font/lato_bold"
+                android:paddingStart="@dimen/dimen_24dp"
+                android:paddingEnd="@dimen/dimen_24dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnViewMore"
+                app:layout_constraintVertical_bias="0"
+                tools:text="Get Admission" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_12dp"
+                android:layout_marginBottom="@dimen/dimen_4dp"
+                android:fontFamily="@font/lato_bold"
+                android:paddingStart="@dimen/dimen_8dp"
+                android:paddingEnd="@dimen/dimen_8dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_12sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvPrice"
+                tools:text="View More" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/discountLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/btnGetAdmission">
+
+                <View
+                    android:id="@+id/separator"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_2dp"
+                    android:layout_marginStart="@dimen/dimen_7dp"
+                    android:layout_marginEnd="@dimen/dimen_9dp"
+                    android:background="@color/colorLightGray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivDiscount"
+                    android:layout_width="@dimen/dimen_14dp"
+                    android:layout_height="@dimen/dimen_14dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="@dimen/dimen_6dp"
+                    android:layout_marginBottom="@dimen/dimen_6dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/discountText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_12dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/color_757272"
+                    android:textSize="@dimen/dimen_11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivDiscount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivDiscount"
+                    app:layout_constraintTop_toTopOf="@+id/ivDiscount"
+                    tools:text="Get 30% off on this course" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

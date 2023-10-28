@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rewardDayContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="15dp">
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/reward_green_ring"
+        android:padding="1dp"
+        app:layout_constraintBottom_toTopOf="@id/tvDay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivScratchCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/border_white_scratch_card"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/ivBackground"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/ivBackground"
+        app:layout_constraintStart_toStartOf="@id/ivBackground"
+        app:layout_constraintTop_toTopOf="@id/ivBackground"
+        app:shapeAppearanceOverlay="@style/CircularImageView"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ivTick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/attendance_tick"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivBackground"
+        app:layout_constraintEnd_toEndOf="@id/ivBackground"
+        app:layout_constraintStart_toStartOf="@id/ivBackground"
+        app:layout_constraintTop_toTopOf="@id/ivBackground"
+        app:tint="@color/white"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible"
+        tools:tint="@color/grey"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationCircleStreak"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivBackground"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/ivBackground"
+        app:layout_constraintHeight_percent=".16"
+        app:layout_constraintStart_toStartOf="@id/ivBackground"
+        app:layout_constraintTop_toTopOf="@id/ivBackground"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="lottie_circle_streak_animation.zip"
+        app:lottie_loop="true"
+        app:shapeAppearanceOverlay="@style/CircularImageView"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black_two"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBackground"
+        tools:text=" Today - Day 10" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

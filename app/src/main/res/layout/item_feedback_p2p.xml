@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_feedback_dialog"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close_black" />
+
+
+
+        
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="@dimen/dimen_36dp"
+            android:layout_height="@dimen/dimen_36dp"
+            android:src="@drawable/freshchat_ic_calendar_agent_avatar"
+            android:layout_marginTop="35dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CircularImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="85dp"
+            />
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#202020"
+            app:layout_constraintTop_toTopOf="@id/ivProfile"
+            app:layout_constraintStart_toEndOf="@+id/ivProfile"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="4sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/dimen_40dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="Rate Kunal’s  answer"
+            android:gravity="start"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_smiley"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivProfile"
+            android:layout_marginTop="@dimen/dimen_20"
+            app:layout_goneMarginTop="@dimen/dimen_16dp"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:id="@+id/btn_smiley_one"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/bg_toggle_smiley_1"
+                android:textOff=""
+                android:textOn=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_smiley_two"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:checked="true" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:id="@+id/btn_smiley_two"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/bg_toggle_smiley_2"
+                android:textOff=""
+                android:textOn=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_smiley_three"
+                app:layout_constraintStart_toEndOf="@+id/btn_smiley_one"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:checked="true" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:id="@+id/btn_smiley_three"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/bg_toggle_smiley_3"
+                android:textOff=""
+                android:textOn=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_smiley_four"
+                app:layout_constraintStart_toEndOf="@+id/btn_smiley_two"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:checked="true" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:id="@+id/btn_smiley_four"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/bg_toggle_smiley_4"
+                android:textOff=""
+                android:textOn=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_smiley_five"
+                app:layout_constraintStart_toEndOf="@+id/btn_smiley_three"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:checked="true" />
+
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:id="@+id/btn_smiley_five"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/bg_toggle_smiley_5"
+                android:textOff=""
+                android:textOn=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_smiley_four"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:checked="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="7sp"
+            android:textColor="#504949"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_smiley"
+            tools:ignore="SmallSp"
+            tools:text="@string/rating1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFeedbackOptions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <com.doubtnutapp.liveclass.ui.views.TagView
+            android:id="@+id/tagView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:background="@color/color_fcfcfc"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

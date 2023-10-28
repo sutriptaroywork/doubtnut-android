@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/noDataView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".newglobalsearch.ui.NoDataFoundFragment">
+
+    <ImageView
+        android:id="@+id/no_data_image"
+        android:layout_width="119dp"
+        android:layout_height="109dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/ic_in_app_search" />
+
+
+    <TextView
+        android:id="@+id/msgNoResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/empty_filtered_results"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/no_data_image" />
+
+    <TextView
+        android:id="@+id/msgClearFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="28dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/clear_filter_for_results"
+        android:textColor="@color/grey_808080"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/msgNoResults" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/clearFilterForResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="@color/tomato"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:padding="@dimen/dimen_16dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="Clear Filters"
+        tools:text="Clear Filters" />
+
+</LinearLayout>

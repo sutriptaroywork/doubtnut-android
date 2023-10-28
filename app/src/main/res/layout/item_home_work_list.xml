@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_12dp"
+    android:layout_marginTop="@dimen/dimen_10dp"
+    android:layout_marginEnd="@dimen/dimen_12dp"
+    android:layout_marginBottom="@dimen/dimen_10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivStatus"
+            android:layout_width="@dimen/dimen_10dp"
+            android:layout_height="@dimen/dimen_10dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_4dp"
+            android:fontFamily="@font/lato"
+            android:textSize="@dimen/dimen_11sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivStatus"
+            app:layout_constraintStart_toEndOf="@id/ivStatus"
+            app:layout_constraintTop_toTopOf="@id/ivStatus"
+            tools:text="Pending"
+            tools:textColor="@color/color_eba900" />
+
+        <TextView
+            android:id="@+id/tvLectureName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato_bold"
+            android:maxLines="1"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ivStatus"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatus"
+            tools:text="Lecture Name Here"
+            tools:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvQuestionsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            android:fontFamily="@font/lato"
+            android:textColor="@color/black_80000000"
+            android:textSize="@dimen/text_10sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvLectureName"
+            app:layout_constraintTop_toBottomOf="@id/tvLectureName"
+            tools:text="12 Questions" />
+
+        <ImageView
+            android:id="@+id/ivDueDate"
+            android:layout_width="@dimen/dimen_12dp"
+            android:layout_height="@dimen/dimen_12dp"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginTop="@dimen/dimen_4dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/tvQuestionsCount"
+            app:layout_constraintStart_toEndOf="@+id/tvQuestionsCount"
+            app:layout_constraintTop_toBottomOf="@id/tvLectureName" />
+
+        <TextView
+            android:id="@+id/tvDueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_2dp"
+            android:fontFamily="@font/lato"
+            android:textColor="@color/black_80000000"
+            android:textSize="@dimen/text_10sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivDueDate"
+            app:layout_constraintStart_toEndOf="@+id/ivDueDate"
+            app:layout_constraintTop_toTopOf="@+id/ivDueDate"
+            tools:text="Due on 23 Jan" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_stroke_grey_solid_white"
+    android:paddingBottom="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/radioButtonParent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/imageViewLogo"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:minHeight="50dp"
+            android:paddingStart="@dimen/dimen_12dp"
+            android:paddingLeft="@dimen/dimen_12dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvNew"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="wrap"
+            tools:text="Paytm " />
+
+        <TextView
+            android:id="@+id/tvNew"
+            style="@style/TextAppearance.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_curvedrect_red"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:padding="3dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/text_new"
+            android:textColor="@android:color/white"
+            android:textSize="8sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/radioButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SmallSp"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_24dp"
+        android:layout_marginRight="@dimen/dimen_20"
+        app:layout_constraintBottom_toTopOf="@id/tvInfo"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toRightOf="@id/radioButtonParent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="3dp"
+        android:drawableEnd="@drawable/ic_icon_small_help"
+        android:drawablePadding="4dp"
+        android:drawableTint="@color/purple"
+        android:paddingTop="@dimen/dimen_8dp"
+        android:paddingBottom="@dimen/dimen_8dp"
+        android:textColor="@color/purple"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonParent"
+        tools:text="Ye Kya Hai?"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etUpi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rectangle_stroke_grey_solid_white"
+        android:hint="Upi id"
+        android:maxLines="1"
+        android:paddingStart="@dimen/dimen_12dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_9dp"
+        android:textSize="@dimen/dimen_13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="4.6sp"
+        android:paddingStart="43dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/grey_504949"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUpi"
+        tools:text="Isme aapko ek coupon code deliver hoga jisse aap apna course activate kar sakte hai"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/textViewDesc"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_40dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            android:background="@drawable/rectangle_stroke_grey_solid_white"
+            android:digits="1234567890 "
+            android:hint="Card Number"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLength="25"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dimen_12dp"
+            android:paddingTop="@dimen/dimen_9dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_9dp"
+            android:textSize="@dimen/dimen_13sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etExpiry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_40dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:background="@drawable/rectangle_stroke_grey_solid_white"
+            android:hint="MM/YY"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLength="5"
+            android:paddingLeft="@dimen/dimen_12dp"
+            android:paddingTop="@dimen/dimen_9dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_9dp"
+            android:textSize="@dimen/dimen_13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/etCVV"
+            app:layout_constraintTop_toBottomOf="@id/etCardNumber" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCVV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_24dp"
+            android:background="@drawable/rectangle_stroke_grey_solid_white"
+            android:drawableRight="@drawable/ic_icon_small_help"
+            android:drawableTint="@color/grey_cbcbcb"
+            android:hint="CVV"
+            android:imeOptions="actionNext"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:paddingLeft="@dimen/dimen_12dp"
+            android:paddingTop="@dimen/dimen_9dp"
+            android:paddingRight="@dimen/dimen_4dp"
+            android:paddingBottom="@dimen/dimen_9dp"
+            android:textSize="@dimen/dimen_13sp"
+            app:layout_constraintLeft_toRightOf="@id/etExpiry"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCardNumber" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etNameOnCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_40dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:background="@drawable/rectangle_stroke_grey_solid_white"
+            android:ellipsize="end"
+            android:hint="Name on Card"
+            android:imeOptions="actionDone"
+            android:inputType="textCapCharacters"
+            android:paddingLeft="@dimen/dimen_12dp"
+            android:paddingTop="@dimen/dimen_9dp"
+            android:paddingBottom="@dimen/dimen_9dp"
+            android:textSize="@dimen/dimen_13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etExpiry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_preferred_methods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/layout_card">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPreferredMethods"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/preferred_method_item" />
+
+        <TextView
+            android:id="@+id/tvSelectFromOtherBanks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_14dp"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_24dp"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:drawablePadding="@dimen/dimen_15dp"
+            android:drawableTint="@color/greyBlackDark"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="4.9sp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvPreferredMethods"
+            tools:text="Select from all other Banks" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="studentclass"
+            type="com.doubtnutapp.data.remote.models.StudentClass" />
+    </data>
+    <com.google.android.material.button.MaterialButton xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/btnCourse"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text='@{String.valueOf(studentclass.classDisplay)}'
+        android:textColor="@color/white"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/white"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="15dp"
+        app:backgroundTint="@android:color/transparent"/>
+</layout>

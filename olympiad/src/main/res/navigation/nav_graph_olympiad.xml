@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_olympiad"
+    app:startDestination="@id/olympiadRegisterFragment">
+
+    <fragment
+        android:id="@+id/olympiadRegisterFragment"
+        android:name="com.doubtnut.olympiad.ui.OlympiadRegisterFragment"
+        android:label="fragment_olympiad_register"
+        tools:layout="@layout/fragment_olympiad_register">
+
+        <argument
+            android:name="type"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="id"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="title"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <deepLink app:uri="doubtnutapp://olympiad/register?type={type}&amp;id={id}&amp;title={title}" />
+        <deepLink app:uri="doubtnutapp://olympiad-register?type={type}&amp;id={id}&amp;title={title}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/olympiadSuccessFragment"
+        android:name="com.doubtnut.olympiad.ui.OlympiadSuccessFragment"
+        android:label="fragment_olympiad_success"
+        tools:layout="@layout/fragment_olympiad_success">
+
+        <argument
+            android:name="type"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="id"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="title"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <deepLink app:uri="doubtnutapp://olympiad/success?type={type}&amp;id={id}&amp;title={title}" />
+        <deepLink app:uri="doubtnutapp://olympiad-success?type={type}&amp;id={id}&amp;title={title}" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "code": 200,
+    "success": true,
+    "message": "Success"
+  },
+  "data": {
+    "widgets": [
+      {
+        "type": "widget_autoplay",
+        "data": {
+          "scroll_direction": "vertical",
+          "auto_play": true,
+          "default_mute": false,
+          "auto_play_initiation": 100,
+          "items": [
+            {
+              "type": "course_video",
+              "data": {
+                "title1": "",
+                "state": 2,
+                "disable_click": true,
+                "title2": "",
+                "top_title1": "",
+                "question_id": "",
+                "subject": "",
+                "color": "",
+                "page": "",
+                "image_url": "",
+                "live_at": 0,
+                "live_date": "",
+                "is_live": true,
+                "card_width": "1",
+                "card_ratio": "16:9",
+                "auto_play": true,
+                "default_mute": false,
+                "auto_play_initiation": 100,
+                "top_title": "",
+                "image_bg_card": "https://d10lpgp6xz60nq.cloudfront.net/engagement_framework/E5EC29F7-418E-2A33-A7DE-EDC9E8BDA117.webp",
+                "video_resource": {
+                  "resource": "https://d3cvwyf9ksu0h5.cloudfront.net/answer-1659340464.mp4",
+                  "is_flv": false,
+                  "video_resource": "answer-1659340464.mp4",
+                  "timeout": 4,
+                  "drm_scheme": "widevine",
+                  "media_type": "BLOB",
+                  "drop_down_list": [],
+                  "drm_license_url": "",
+                  "offset": null
+                }
+              },
+              "extra_params": {
+                "source": ""
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

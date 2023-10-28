@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/sendMessageTransition"
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="2000"
+        app:pathMotionArc="startHorizontal"/>
+
+    <Transition
+        android:id="@+id/opponentSendMessageTransition"
+        app:constraintSetEnd="@id/opponentEnd"
+        app:constraintSetStart="@id/opponentStart"
+        app:duration="2000"
+        app:pathMotionArc="startVertical"/>
+
+    <Transition
+        android:id="@+id/sendEmojiTransition"
+        app:constraintSetEnd="@id/emojiEnd"
+        app:constraintSetStart="@id/emojiStart"
+        app:duration="2000"
+        app:pathMotionArc="startHorizontal"/>
+
+    <Transition
+        android:id="@+id/opponentSendEmojiTransition"
+        app:constraintSetEnd="@id/opponentEmojiEnd"
+        app:constraintSetStart="@id/opponentEmojiStart"
+        app:duration="2000"
+        app:pathMotionArc="startVertical"/>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/buttonChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomSeparator"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/buttonEmoji"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/buttonChat"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toEndOf="@id/buttonChat"
+            app:layout_constraintTop_toTopOf="@id/buttonChat"
+            app:visibilityMode="ignore" />
+
+        <Constraint
+            android:id="@+id/containerEmoji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/bottomSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonEmoji"
+            app:visibilityMode="ignore" />
+
+
+        <Constraint
+            android:id="@+id/bottomSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/ivUser" />
+
+        <Constraint
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/buttonChat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:visibilityMode="ignore" />
+
+        <Constraint
+            android:id="@+id/tvOpponentMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/ivOpponent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:visibilityMode="ignore" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonEmoji"
+            app:visibilityMode="ignore" />
+
+        <Constraint
+            android:id="@+id/containerEmoji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/bottomSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonEmoji"
+            app:visibilityMode="ignore" />
+
+        <Constraint
+            android:id="@+id/tvOpponentMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/ivOpponent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:visibilityMode="ignore" />
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/opponentStart">
+        <Constraint
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.Material.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/tvOpponent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@id/progressBar"
+            app:layout_constraintEnd_toEndOf="@id/ivOpponent" />
+
+        <Constraint
+            android:id="@+id/containerEmoji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/bottomSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonEmoji"
+            app:visibilityMode="ignore" />
+
+        <Constraint
+            android:id="@+id/ivOpponent"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toTopOf="@id/tvOpponent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Constraint
+            android:id="@+id/tvOpponentMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/ivOpponent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:visibilityMode="ignore" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/opponentEnd">
+
+        <Constraint
+            android:id="@+id/tvOpponentMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/buttonChat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:visibilityMode="ignore" />
+
+        <Constraint
+            android:id="@+id/containerEmoji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/bottomSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonEmoji"
+            app:visibilityMode="ignore" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/emojiStart">
+
+        <Constraint
+            android:id="@+id/tvEmoji"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@id/buttonEmoji"
+            app:layout_constraintStart_toEndOf="@id/buttonChat"
+            app:visibilityMode="ignore" />
+
+        <Constraint
+            android:id="@+id/containerEmoji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/bottomSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonEmoji"
+            app:visibilityMode="ignore" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/emojiEnd">
+
+        <Constraint
+            android:id="@+id/tvEmoji"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bottomSeparator"
+            app:visibilityMode="ignore" />
+
+        <Constraint
+            android:id="@+id/containerEmoji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/bottomSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonEmoji"
+            app:visibilityMode="ignore" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/opponentEmojiStart">
+
+        <Constraint
+            android:id="@+id/tvOpponentEmoji"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@id/ivOpponent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:visibilityMode="ignore" />
+
+        <Constraint
+            android:id="@+id/containerEmoji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/bottomSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonEmoji"
+            app:visibilityMode="ignore" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/opponentEmojiEnd">
+
+        <Constraint
+            android:id="@+id/tvOpponentEmoji"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@id/buttonChat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:visibilityMode="ignore" />
+
+        <Constraint
+            android:id="@+id/containerEmoji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/bottomSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonEmoji"
+            app:visibilityMode="ignore" />
+
+    </ConstraintSet>
+
+</MotionScene>

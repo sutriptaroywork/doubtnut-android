@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/itemReport"
+        android:icon="@drawable/ic_reportflag"
+        android:title="Report"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/itemMute"
+        android:icon="@drawable/ic_notifications_off_black_24dp"
+        android:title="Mute"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/itemDelete"
+        android:icon="@drawable/ic_delete"
+        android:title="Delete"
+        app:showAsAction="never" />
+
+</menu>

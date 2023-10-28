@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corner_white_fill_4dp"
+    tools:backgroundTint="#f1f1f1"
+    tools:layout_margin="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/dimen_24dp"
+            android:layout_height="@dimen/dimen_24dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_wallet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:fontFamily="@font/lato"
+            android:letterSpacing="0"
+            android:textColor="@color/black_50"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Enter / Select Coupon" />
+
+        <TextView
+            android:id="@+id/tvCouponAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/lato"
+            android:gravity="end"
+            android:letterSpacing="0"
+            android:lineSpacingExtra="4.9sp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text=" ₹200.00 " />
+
+        <TextView
+            android:id="@+id/couponStatusApplied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/lato"
+            android:gravity="end"
+            android:textColor="#273de9"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCouponAmount"
+            tools:text="Change Coupon" />
+
+        <TextView
+            android:id="@+id/couponStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:gravity="end"
+            android:textColor="#273de9"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/next"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Select Coupon" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="@dimen/dimen_14dp"
+            android:layout_height="@dimen/dimen_14dp"
+            android:src="@drawable/ic_arrow_right"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/couponStatus"
+            app:layout_constraintEnd_toStartOf="@+id/fakeView"
+            app:layout_constraintTop_toTopOf="@id/couponStatus"
+            app:tint="#273de9" />
+
+        <View
+            android:id="@+id/fakeView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/couponStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/couponStatus" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#edffe1"
+        app:layout_constraintTop_toBottomOf="@id/parentLayout"
+        tools:visibility="visible">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_footer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="3.9sp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@id/view_footer_divider"
+            app:layout_constraintEnd_toStartOf="@id/tv_footer_code"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            tools:text="Extra 30% off with Nikita Singh’s code" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_footer_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="4.2sp"
+            android:textColor="#3c9d00"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_footer"
+            app:layout_constraintEnd_toStartOf="@id/iv_footer_code"
+            app:layout_constraintTop_toTopOf="@id/tv_footer"
+            tools:text="ABCXY" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_footer_code"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_icon_small_green"
+            app:layout_constraintBottom_toBottomOf="@id/tv_footer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_footer" />
+
+        <View
+            android:id="@+id/view_footer_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#3c9d00"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

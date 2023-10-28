@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_notfication_education_layout">
+
+        <ImageView
+            android:id="@+id/imageView_notificationEducation_robot"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/ic_notification_education_robot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_notificationEducation_update"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/ic_notification_education_updated"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".075"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_notificationEducation_robot"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView_notificationEducation_dontMiss"
+            style="@style/TextAppearance.Headline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/dialog_notificationEducation_dontMissNotification"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_notificationEducation_update" />
+
+        <TextView
+            android:id="@+id/textView_notificationEducation_notificationTurnOn"
+            style="@style/TextAppearance.Subtitle1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/string_notificationEducation_notificationTurnedOn"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_notificationEducation_dontMiss" />
+
+        <TextView
+            android:id="@+id/textView_notificationEducation_enableNotification"
+            style="@style/TextAppearance.Subtitle1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/string_notificationEducation_enableNotification"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView_notificationEducation_allow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_notificationEducation_notificationTurnOn"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView_notificationEducation_allow"
+            style="@style/TextAppearance.Headline6"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="1dp"
+            android:background="@drawable/bg_notification_education_action_button_right"
+            android:gravity="center"
+            android:text="@string/string_notificationEducation_allow"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView_notificationEducation_cancel" />
+
+        <TextView
+            android:id="@+id/textView_notificationEducation_cancel"
+            style="@style/TextAppearance.Headline6"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/bg_notification_education_action_button"
+            android:gravity="center"
+            android:text="@string/string_notificationEducation_cancel"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView_notificationEducation_allow"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

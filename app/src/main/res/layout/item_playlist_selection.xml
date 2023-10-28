@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="playlistEntity"
+            type="com.doubtnutapp.domain.addtoplaylist.entities.PlaylistEntity" />
+
+    </data>
+
+    <CheckBox
+        android:id="@+id/checkboxPlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:buttonTint="@color/redTomato"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@{playlistEntity.name}"
+        android:textColor="@color/black_two"
+        android:textSize="14sp"
+        tools:text="Watch Later" />
+
+</layout>

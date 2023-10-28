@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTransparent"
+    android:elevation="10dp">
+
+    <TextView
+        android:id="@+id/btnAllChapters"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:background="@color/color_eb532c"
+        android:enabled="false"
+        android:fontFamily="@font/lato"
+        android:foreground="@drawable/selectable_item_background"
+        android:gravity="center"
+        android:text="View All Chapters"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</FrameLayout>

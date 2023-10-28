@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="searchPlaylist"
+            type="com.doubtnutapp.newglobalsearch.model.SearchPlaylistViewItem" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/playlistLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:layout_gravity="center_vertical"
+            android:id="@+id/thumbnailContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                android:adjustViewBounds="true"
+                tools:src="@tools:sample/backgrounds/scenic"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageViewLock"
+                android:layout_margin="5dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center" />
+
+            <FrameLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.doubtnutapp.widgets.mathview.MathViewSimilar
+                    android:id="@+id/mvsVideoThumbnail"
+                    android:layout_width="150dp"
+                    android:layout_height="86dp"
+                    android:contentDescription="@string/string_latest_bg_content_des"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                <ImageView
+                    android:id="@+id/ivVideoPlay"
+                    android:layout_gravity="center"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:contentDescription="@string/string_latest_playbutton_content_des"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_match_question_play_button" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:id="@+id/liveViewContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewLive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_live_video_tag"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lato"
+                    android:maxLines="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:visibility="gone"
+                    tools:text="@string/live_now_dot"
+                    tools:visibility="visible" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/textViewLiveClassTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato"
+                android:maxLines="2"
+                android:textColor="@color/blue_6236ff"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/liveViewContainer"
+                tools:text="Physics Live Class"
+                tools:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/searchResultDisplayName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato"
+                android:maxLines="3"
+                android:text="@{searchPlaylist.display}"
+                android:textColor="#2f2f2f"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/buttonSearchGetAdmissionPdf"
+                app:layout_constraintTop_toBottomOf="@id/textViewLiveClassTitle"
+                tools:text="TextView" />
+
+            <TextView
+                android:id="@+id/searchResultPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:fontFamily="@font/lato_bold"
+                android:text="@{searchPlaylist.coursePrice}"
+                android:visibility="invisible"
+                android:textColor="#2f2f2f"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLiveClassTitle"
+                tools:text="TextView " />
+
+            <TextView
+                android:id="@+id/buttonSearchGetAdmissionPdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:paddingTop="@dimen/dimen_9dp"
+                android:paddingBottom="@dimen/dimen_9dp"
+                android:paddingLeft="@dimen/dimen_15dp"
+                android:paddingRight="@dimen/dimen_15dp"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="end"
+                android:visibility="invisible"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minHeight="0dp"
+                android:text="@{searchPlaylist.buttonDetails.button_text}"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/searchResultPrice"
+                app:strokeColor="@color/tomato"
+                tools:text="purchase now" />
+
+            <TextView
+                android:id="@+id/subPlaylistData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/lato"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@{searchPlaylist.subData}"
+                android:textColor="@color/warm_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/searchResultDisplayName"
+                app:layout_constraintTop_toBottomOf="@id/searchResultDisplayName"
+                app:layout_constraintEnd_toStartOf="@id/buttonSearchGetAdmissionPdf"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Playlist" />
+
+            <TextView
+                android:id="@+id/tvVipBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/round_corner_textview_background"
+                android:paddingStart="5dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="3dp"
+                android:text="@string/kota_classes"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/searchResultDisplayName"
+                app:layout_constraintTop_toBottomOf="@id/subPlaylistData"
+                app:layout_constraintVertical_bias="0.0"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvPremium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/doubtnnut_choice_bg"
+                android:paddingStart="5dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="3dp"
+                android:text="@string/doubtnut_choice"
+                android:textColor="@color/doubtnnut_choice"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/searchResultDisplayName"
+                app:layout_constraintTop_toBottomOf="@id/tvVipBadge"
+                app:layout_constraintVertical_bias="0.0"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/buttonSearchGetAdmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingTop="@dimen/dimen_9dp"
+                android:paddingBottom="@dimen/dimen_9dp"
+                android:paddingLeft="@dimen/dimen_15dp"
+                android:paddingRight="@dimen/dimen_15dp"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center_horizontal"
+                android:visibility="gone"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minHeight="0dp"
+                android:text="@{searchPlaylist.buttonDetails.button_text}"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPremium"
+                app:strokeColor="@color/tomato"
+                tools:text="@{searchPlaylist.buttonDetails.button_text}" />
+
+            <TextView
+                android:id="@+id/tvRecommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_toppers_choice"
+                android:drawableStart="@drawable/ic_icon_fire"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/lato_black"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="3dp"
+                android:text="@string/topper_s_choice"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/tvVipBadge"
+                app:layout_constraintTop_toBottomOf="@id/subPlaylistData"
+                app:layout_constraintVertical_bias="0.0"
+                tools:visibility="visible" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/left_margin"
+            android:layout_marginTop="@dimen/top_margin"
+            android:layout_marginEnd="@dimen/right_margin"
+            android:layout_marginBottom="@dimen/bottom_margin">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:cardBackgroundColor="@color/blue">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageViewBook"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:contentDescription="@string/string_latest_bg_content_des"
+                        android:scaleType="fitXY"
+                        app:imageurl="@{searchPlaylist.imageUrl}"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                    <TextView
+                        android:id="@+id/textViewTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:paddingBottom="@dimen/dimen_10dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/lato"
+                        android:gravity="center_vertical"
+                        android:maxLength="60"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:capsuleBgVisibility="@{searchPlaylist.display}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewBook"
+                        app:textNullOrNot="@{searchPlaylist.display}"
+                        tools:text="Height &amp; Distance" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/barrier1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="bottom"
+                        app:constraint_referenced_ids="textViewTitle"
+                        app:layout_constraintEnd_toEndOf="@+id/textViewTitle"
+                        app:layout_constraintStart_toStartOf="@+id/textViewTitle" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/containerTeacher"
+            android:layout_width="match_parent"
+            android:background="@color/grey_fafafa"
+            android:elevation="@dimen/dimen_3dp"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dimen_10dp"
+            android:visibility="gone"
+            android:layout_height="130dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_fafafa"
+                android:weightSum="5">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:background="@color/grey_fafafa"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivProfileImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="24dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/CircularImageView"
+                        tools:ignore="UnusedAttribute"
+                        tools:src="@tools:sample/avatars" />
+
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/lato_bold"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="@tools:sample/full_names" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:background="@color/grey_fafafa"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_details"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:id="@+id/buttonSubscribe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="25dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center"
+                        android:insetTop="0dp"
+                        android:minHeight="0dp"
+                        android:paddingLeft="@dimen/dimen_15dp"
+                        android:paddingTop="@dimen/dimen_6dp"
+                        android:paddingRight="@dimen/dimen_15dp"
+                        android:paddingBottom="@dimen/dimen_6dp"
+                        android:text="@{searchPlaylist.buttonDetails.button_text}"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:strokeColor="@color/tomato"
+                        tools:text="purchase now" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</layout>

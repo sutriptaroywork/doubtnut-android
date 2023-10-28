@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.imageview.ShapeableImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ivUser"
+    android:layout_width="43dp"
+    android:layout_height="44dp"
+    android:paddingStart="4dp"
+    android:paddingTop="4dp"
+    android:paddingEnd="4dp"
+    android:paddingBottom="5dp"
+    android:src="@drawable/ic_profile_placeholder"
+    app:layout_constraintBottom_toTopOf="@id/cardView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:shapeAppearanceOverlay="@style/CircularImageView"
+    app:strokeColor="@color/green_15a9a6"
+    app:strokeWidth="2dp" />

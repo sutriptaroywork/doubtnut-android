@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:paddingVertical="4dp">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"
+                    android:minHeight="32dp"
+                    android:minWidth="32dp"
+                    android:paddingHorizontal="4dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="?selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/ic_back_black" />
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    style="@style/TextAppearance.Body1"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:hint="@string/type_here"
+                    android:inputType="text"
+                    android:padding="12dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"
+                    android:minHeight="32dp"
+                    android:minWidth="32dp"
+                    android:paddingHorizontal="4dp"
+                    app:srcCompat="@drawable/ic_close_black"
+                    android:id="@+id/ivClose"
+
+                    />
+            </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvGlobalSearch"
+        android:paddingTop="10dp"
+        android:clipToPadding="false"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+    <TextView
+        android:id="@+id/tvNoResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_results"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarFormulaSheetFormulas"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

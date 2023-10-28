@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTitleMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:minLines="2"
+        android:textColor="#273de9"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textViewAmountStartingAt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Mission JEE 2022 - Powered by VMC" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewAmountStartingAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="6dp"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="4.2sp"
+        android:textColor="@color/brown_grey"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAmountToPay"
+        app:layout_constraintEnd_toStartOf="@+id/textViewAmountToPay"
+        app:layout_constraintTop_toTopOf="@+id/textViewAmountToPay"
+        tools:text="Starting" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewAmountToPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="6dp"
+        android:fontFamily="@font/lato_black"
+        android:gravity="end"
+        android:lineSpacingExtra="5.4sp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/textViewAmountStartingAtHi"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="₹1,099" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewAmountStartingAtHi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="6dp"
+        android:fontFamily="@font/lato"
+        android:gravity="end"
+        android:lineSpacingExtra="4.2sp"
+        android:textColor="@color/brown_grey"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAmountToPay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewAmountToPay"
+        tools:text="₹1,099" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewAmountStrikeThrough"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/lato"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="3.3sp"
+        android:textColor="@color/brown_grey"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAmountToPay"
+        tools:text="8,999" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:background="#cbcbcb"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="2.2sp"
+        android:padding="5dp"
+        android:textColor="@color/grey_dark"
+        android:textSize="11sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleMain"
+        tools:text="Hindi Medium" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:textColor="@color/grey_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTag"
+        app:layout_constraintStart_toEndOf="@+id/tvTag"
+        app:layout_constraintTop_toTopOf="@+id/tvTag"
+        tools:text="4.1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRating"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_star_five_yes"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTag"
+        app:layout_constraintStart_toEndOf="@+id/tvRating"
+        app:layout_constraintTop_toTopOf="@+id/tvTag" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:drawableStart="@drawable/ic_icon_time"
+        android:drawablePadding="4dp"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="2.2sp"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:textColor="@color/grey_medium"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTag"
+        tools:text="July 2020 - August 2021" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

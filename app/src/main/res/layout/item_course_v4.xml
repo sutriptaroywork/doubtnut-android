@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.doubtnutapp.widgets.TimerWidget
+            android:id="@+id/widget_timer_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_6dp"
+            android:layout_marginEnd="@dimen/dimen_6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_height="22dp"
+            tools:visibility="gone" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_6dp"
+            android:layout_marginEnd="@dimen/dimen_6dp"
+            app:layout_constraintTop_toBottomOf="@id/widget_timer_view"
+            app:layout_goneMarginTop="12dp"
+            app:strokeColor="@color/color_c4c4c4"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_9dp"
+                    android:layout_marginEnd="@dimen/dimen_12dp"
+                    android:layout_marginBottom="6dp"
+                    android:clipToPadding="false"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="2dp"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constraintDimensionRatio="16:9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cardContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:lineSpacingExtra="4.2sp"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="6dp"
+                            android:textColor="#273de9"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:background="#e1e4ff"
+                            tools:text="Use Coupon Code ‘ABCXY’ to buy these courses"
+                            tools:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/imageViewBackground"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="12dp"
+                            android:scaleType="centerCrop"
+                            android:src="#4ca4e3"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_header"
+                            app:layout_goneMarginTop="0dp"
+                            tools:ignore="ContentDescription" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_header"
+                            app:layout_goneMarginTop="0dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="4dp"
+                                android:background="#c2ffffff"
+                                android:fontFamily="@font/lato_bold"
+                                android:maxLines="1"
+                                android:paddingHorizontal="8dp"
+                                android:paddingStart="@dimen/dimen_6dp"
+                                android:paddingTop="3dp"
+                                android:paddingEnd="@dimen/dimen_6dp"
+                                android:paddingBottom="3dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_10sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="SmallSp"
+                                tools:text="English Medium" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textViewTitleInfo"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="@dimen/dimen_12dp"
+                                android:layout_marginEnd="4dp"
+                                android:fontFamily="@font/lato_bold"
+                                android:gravity="center_vertical"
+                                android:maxLines="5"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_24sp"
+                                app:layout_constraintEnd_toStartOf="@+id/imageViewFaculty"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvMedium"
+                                tools:text="Board Exam Me Machao Dhamaal" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageViewFaculty"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dimen_4dp"
+                                android:scaleType="fitCenter"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                tools:src="@tools:sample/avatars" />
+
+                            <ImageView
+                                android:id="@+id/imageViewPlay"
+                                android:layout_width="@dimen/dimen_40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/ic_autoplay"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="ContentDescription" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.doubtnutapp.rvexoplayer.RvExoPlayerView
+                            android:id="@+id/rvPlayer"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="12dp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_header"
+                            app:layout_goneMarginTop="0dp"
+                            app:resize_mode="fill" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTagOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/color_e34c4c"
+                    android:fontFamily="@font/lato_bold"
+                    android:maxLines="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingStart="@dimen/dimen_6dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="@dimen/dimen_6dp"
+                    android:paddingBottom="3dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="@+id/cardView"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView"
+                    tools:ignore="SmallSp"
+                    tools:text="Best Seller" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTagTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/color_8064f4"
+                    android:fontFamily="@font/lato_bold"
+                    android:maxLines="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingStart="@dimen/dimen_6dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="@dimen/dimen_6dp"
+                    android:paddingBottom="3dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toEndOf="@+id/tvTagOne"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView"
+                    tools:ignore="SmallSp"
+                    tools:text="2021-22 Session ke liye" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTagThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/color_0ed4bd"
+                    android:fontFamily="@font/lato_bold"
+                    android:maxLines="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingStart="@dimen/dimen_12dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="@dimen/dimen_12dp"
+                    android:paddingBottom="3dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toEndOf="@+id/tvTagTwo"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView"
+                    tools:ignore="SmallSp"
+                    tools:text="NEW" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/cardView"
+                    app:layout_constraintStart_toStartOf="@+id/tvTagOne"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTagOne"
+                    tools:text="Class 12 I Bihar Board..." />
+
+                <TextView
+                    android:id="@+id/tvStudentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="@dimen/text_10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                    tools:layout_editor_absoluteY="279dp"
+                    tools:text="2000  Enrolled Student "
+                    tools:textColor="@color/color_424040" />
+
+                <TextView
+                    android:id="@+id/tvStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="@dimen/text_10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/tvStudentCount"
+                    app:layout_constraintTop_toBottomOf="@+id/tvStudentCount"
+                    tools:text="Starting from 5th July"
+                    tools:textColor="@color/color_424040" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/color_2a52d1"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvStartDate"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSlashPrice"
+                    app:layout_constraintTop_toTopOf="@+id/tvStartDate"
+                    tools:text="₹1,111/Month" />
+
+                <TextView
+                    android:id="@+id/tvSlashPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/grey_03"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
+                    app:layout_constraintEnd_toEndOf="@+id/cardView"
+                    app:layout_constraintTop_toTopOf="@+id/tvPrice"
+                    tools:text="₹600" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/admissionBtn"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_12dp"
+                    android:layout_marginBottom="@dimen/dimen_16dp"
+                    android:textAllCaps="false"
+                    app:backgroundTint="@color/color_ea532c"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/cardView"
+                    app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tvStartDate"
+                    tools:text="Get Admission" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

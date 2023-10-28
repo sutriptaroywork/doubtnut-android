@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dimen_4dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        android:layout_marginEnd="@dimen/dimen_12dp">
+
+        <ImageView
+            android:id="@+id/ivBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLectureName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato_bold"
+            android:maxLines="2"
+            android:textColor="@color/white_CCffffff"
+            android:textSize="@dimen/text_10sp"
+            app:layout_constraintEnd_toStartOf="@+id/tickIv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Lecture Name Here " />
+
+        <TextView
+            android:id="@+id/lectureDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvLectureName"
+            app:layout_constraintTop_toBottomOf="@+id/tvLectureName"
+            tools:text="Complete the homework before your next class" />
+
+        <TextView
+            android:id="@+id/statusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_20"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_11sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvLectureName"
+            tools:text="Completed" />
+
+
+        <ImageView
+            android:id="@+id/tickIv"
+            android:layout_width="@dimen/dimen_8dp"
+            android:layout_height="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_11sp"
+            app:layout_constraintBottom_toBottomOf="@id/statusTv"
+            app:layout_constraintEnd_toStartOf="@id/statusTv"
+            app:layout_constraintTop_toTopOf="@+id/statusTv"
+            tools:text="Completed" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewResultButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            android:backgroundTint="@color/white"
+            android:textAllCaps="false"
+            android:textColor="@color/color_eb532c"
+            android:textSize="@dimen/dimen_12sp"
+            app:cornerRadius="@dimen/dimen_2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/pdfButton"
+            app:layout_constraintStart_toStartOf="@id/tvLectureName"
+            app:layout_constraintTop_toBottomOf="@id/lectureDescription"
+            tools:text="View Result" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pdfButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_14dp"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:layout_marginBottom="@dimen/dimen_12dp"
+            android:backgroundTint="@color/colorTransparent"
+            android:drawableLeft="@drawable/ic_download"
+            android:text="@string/pdf_text"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/dimen_2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lectureDescription"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+

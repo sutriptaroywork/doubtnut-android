@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    tools:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e2eddf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_main"
+                android:layout_width="62dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:maxWidth="41dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic"
+                tools:visibility="gone" />
+
+            <!--margin top is update via title_alignment as well-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_title_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="14dp"
+                app:layout_goneMarginStart="12dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/lato_bold"
+                android:lineSpacingExtra="0sp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:layout_marginTop="4dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tv_title_two"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_main"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginBottom="4dp"
+                tools:text="Connect with Other Students "
+                tools:visibility="visible" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_title_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_goneMarginStart="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/lato_bold"
+                android:lineSpacingExtra="4sp"
+                android:maxLines="1"
+                android:textColor="#777777"
+                android:textSize="11sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_main"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_one"
+                tools:text="Section Detail text will come here"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="6dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/rv_main2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_header"
+            app:layout_constraintVertical_bias="0"
+            app:layout_goneMarginBottom="5dp"
+            tools:ignore="RtlSymmetry"
+            tools:listitem="@layout/item_explore_card" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="6dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/tv_action"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/rv_main"
+            app:layout_constraintVertical_bias="0"
+            tools:ignore="RtlSymmetry"
+            tools:visibility="visible"
+            tools:listitem="@layout/item_explore_card" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#efe9f3"
+            android:fontFamily="@font/lato_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:lineSpacingExtra="-3sp"
+            android:paddingStart="16dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="5dp"
+            android:textColor="#eb532c"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_main2"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="UnusedAttribute"
+            tools:targetApi="m"
+            tools:text="See All The Categories >"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

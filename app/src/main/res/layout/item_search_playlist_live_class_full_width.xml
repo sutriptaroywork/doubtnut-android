@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="searchPlaylist"
+            type="com.doubtnutapp.newglobalsearch.model.SearchPlaylistViewItem" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="4dp"
+        android:foreground="?selectableItemBackground"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/playlistLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/thumbView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#232a4f"
+                app:layout_constraintDimensionRatio="18:9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:imageurl="@{searchPlaylist.imageUrl}"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="9dp"
+                    android:background="@color/blue"
+                    android:fontFamily="@font/lato_bold"
+                    android:maxLines="2"
+                    android:padding="5dp"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Physics" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewTitleInfo"
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="9dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:text="@{searchPlaylist.display}"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewSubject"
+                    tools:text="Deep Water | William recounting an older experience - L2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewFacultyInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="9dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="9dp"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    app:hideIfNull="@{searchPlaylist.imageInfo.facultyTitle}"
+                    app:layout_constraintEnd_toStartOf="@+id/imageViewFaculty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTitleInfo"
+                    tools:text="By Shivani Sharma, B.Tech" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewFaculty"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="4dp"
+                    app:imageurl="@{searchPlaylist.imageInfo.facultyImage}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTitleInfo" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewTimeInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginBottom="8dp"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:textColor="#ffc700"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewDuration"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Today 7:00 pm" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewDuration"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:drawableStart="@drawable/ic_duration_live"
+                    android:drawablePadding="2dp"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:textColor="#ffc700"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewTimeInfo"
+                    app:layout_constraintEnd_toStartOf="@+id/imageViewFaculty"
+                    app:layout_constraintTop_toTopOf="@id/textViewTimeInfo"
+                    tools:text="2 hr 2 min" />
+
+                <ImageView
+                    android:id="@+id/imageViewPlay"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_play_lecture"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewBackground"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/textViewLive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_live_video_tag"
+                android:elevation="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato"
+                android:maxLines="1"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:textAllCaps="true"
+                android:textSize="@dimen/dimen_12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRecommended"
+                tools:text="@string/live_now_dot"
+                tools:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_8dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato"
+                android:maxLines="3"
+                android:text="@{searchPlaylist.display}"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLive"
+                tools:text="@tools:sample/lorem/random" />
+
+            <TextView
+                android:id="@+id/tvVipBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/round_corner_textview_background"
+                android:paddingStart="5dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="3dp"
+                android:text="@string/kota_classes"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvRecommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4dp"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_icon_fire"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/lato_black"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="3dp"
+                android:text="@string/topper_s_choice"
+                android:textColor="#1cb972"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/tvVipBadge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/thumbView"
+                app:layout_goneMarginStart="8dp"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="#a8b3ba"
+                app:firstCapText="@{searchPlaylist.subject}"
+                app:hideOnNull="@{searchPlaylist.subject}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                tools:text="Chemistry" />
+
+            <TextView
+                android:id="@+id/tvLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="#a8b3ba"
+                app:hideOnNull="@{searchPlaylist.language}"
+                app:layout_constraintBottom_toBottomOf="@id/tvSubject"
+                app:layout_constraintStart_toEndOf="@id/tvSubject"
+                app:layout_constraintTop_toTopOf="@id/tvSubject"
+                app:setDotText="@{searchPlaylist.language}"
+                tools:text="English" />
+
+            <TextView
+                android:id="@+id/tvViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="#a8b3ba"
+                app:hideOnNull="@{searchPlaylist.views}"
+                app:layout_constraintBottom_toBottomOf="@id/tvSubject"
+                app:layout_constraintStart_toEndOf="@id/tvLanguage"
+                app:layout_constraintTop_toTopOf="@id/tvSubject"
+                app:viewsCount="@{searchPlaylist.views}"
+                tools:text="12K Views" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_grey_tooltip"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:textColor="@android:color/white"
+                app:hideOnNull="@{searchPlaylist.duration}"
+                app:layout_constraintBottom_toBottomOf="@id/tvSubject"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvSubject"
+                app:videoDuration="@{searchPlaylist.duration}"
+                tools:text="1:30" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

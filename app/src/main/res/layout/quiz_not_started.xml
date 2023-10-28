@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/quiz_bg">
+
+    <ImageView
+        android:id="@+id/imageView_dailyquiz_back_not_started"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/string_back_arrow_img_content_des"
+        android:padding="@dimen/back_arrow_padding"
+        android:src="?attr/homeAsUpIndicator"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <ScrollView
+        android:id="@+id/scrolltvrules"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:lineSpacingMultiplier="1.5"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/layout_quiz_bottom_timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvRules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.5"
+                android:padding="@dimen/alerter_padding_half"
+                android:textColor="@color/white"
+                tools:text="आप जीत सकते है पेटीएम कैश अगर आप क्विज को उसके निर्धारित समय पर खेलते हैं (शाम ८ बजे हर रोज़)|| You can win PayTM Cash if you attempt it at scheduled time(8PM everyday)\nआप एक क्विज सिर्फ एक बार दे सकते हैं || You can give a quiz only once
+सवाल पर वापस नहीं आ सकते हैं यदि आपने उसका जवाब सबमिट कर दिया है या स्किप कर दिया है || Can't come back to the question once submitted or skipped\nकुछ सवालों का गलत जवाब देने पर मार्क्स कट भी सकते हैं || Some questions may have negative marking" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/layout_quiz_bottom_timer"
+        layout="@layout/quiz_bottom_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrolltvrules" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

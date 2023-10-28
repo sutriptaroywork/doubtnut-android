@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewFeedPoll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dimen_8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewPollSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:id="@+id/radioGroupPoll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioButtonPollOption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="0dp"
+                tools:text="RadioButton" />
+
+            <RadioButton
+                android:id="@+id/radioButtonPollOption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="0dp"
+                tools:text="RadioButton" />
+
+            <RadioButton
+                android:id="@+id/radioButtonPollOption3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="0dp"
+                tools:text="RadioButton" />
+
+            <RadioButton
+                android:id="@+id/radioButtonPollOption4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="0dp"
+                tools:text="RadioButton" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnPollSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:text="@string/string_itemtimeline_pollingSubmit"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupPoll" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewPollResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPollSubmit">
+
+        <TextView
+            android:id="@+id/textView_itemPolling_resultPercent1"
+            style="@style/TextAppearance.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="4"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout_itemPolling_result1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout_itemPolling_result1"
+            tools:text="Hello" />
+
+
+        <FrameLayout
+            android:id="@+id/linearLayout_itemPolling_result1"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_itempolling_resultprogress"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout_itemPolling_result2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_itemPolling_resultPercent1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside">
+
+            <ProgressBar
+                android:id="@+id/progressBar_itemPolling_result1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="322dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="2dp"
+                android:max="100"
+                android:progress="50"
+                android:progressDrawable="@drawable/drawable_progressbar_custom" />
+
+            <TextView
+                android:id="@+id/textView_itemPolling_result1"
+                style="@style/TextAppearance.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView_itemPolling_resultPercent2"
+            style="@style/TextAppearance.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="4"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout_itemPolling_result2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout_itemPolling_result2"
+            tools:text="Hello" />
+
+        <FrameLayout
+            android:id="@+id/linearLayout_itemPolling_result2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_itempolling_resultprogress"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout_itemPolling_result3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_itemPolling_resultPercent2"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_itemPolling_result1"
+            app:layout_constraintVertical_chainStyle="spread">
+
+            <ProgressBar
+                android:id="@+id/progressBar_itemPolling_result2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:max="100"
+                android:progress="100"
+                android:progressDrawable="@drawable/drawable_progressbar_custom" />
+
+            <TextView
+                android:id="@+id/textView_itemPolling_result2"
+                style="@style/TextAppearance.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView_itemPolling_resultPercent3"
+            style="@style/TextAppearance.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="4"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout_itemPolling_result3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout_itemPolling_result3"
+            tools:text="Hello" />
+
+        <FrameLayout
+            android:id="@+id/linearLayout_itemPolling_result3"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_itempolling_resultprogress"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout_itemPolling_result4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_itemPolling_resultPercent3"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_itemPolling_result2"
+            app:layout_constraintVertical_chainStyle="spread"
+            tools:layout_editor_absoluteY="138dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar_itemPolling_result3"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:max="100"
+                android:progress="60"
+                android:progressDrawable="@drawable/drawable_progressbar_custom"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView_itemPolling_result3"
+                style="@style/TextAppearance.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView_itemPolling_resultPercent4"
+            style="@style/TextAppearance.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="4"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout_itemPolling_result4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout_itemPolling_result4"
+            tools:text="Hello" />
+
+        <FrameLayout
+            android:id="@+id/linearLayout_itemPolling_result4"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_itempolling_resultprogress"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_itemPolling_resultPercent4"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_itemPolling_result3"
+            app:layout_constraintVertical_chainStyle="spread">
+
+            <ProgressBar
+                android:id="@+id/progressBar_itemPolling_result4"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="327dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:max="100"
+                android:progress="10"
+                android:progressDrawable="@drawable/drawable_progressbar_custom" />
+
+            <TextView
+                android:id="@+id/textView_itemPolling_result4"
+                style="@style/TextAppearance.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black" />
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvPollCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:textColor="#6a6a6a"
+        android:textSize="@dimen/font_14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPollResults"
+        tools:text="9 Submits" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

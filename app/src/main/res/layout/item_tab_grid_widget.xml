@@ -1,0 +1,33 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/left_margin"
+    android:layout_marginTop="@dimen/top_margin"
+    android:layout_marginEnd="@dimen/right_margin"
+    android:layout_marginBottom="@dimen/bottom_margin"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="1dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <TextView
+        android:id="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingTop="@dimen/dimen_8dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:paddingBottom="@dimen/dimen_8dp"
+        android:singleLine="true"
+        android:text="dummy text"
+        android:textAlignment="inherit"
+        android:textColor="@color/dropmenu_item_text_color"
+        android:textSize="10sp" />
+</androidx.cardview.widget.CardView>

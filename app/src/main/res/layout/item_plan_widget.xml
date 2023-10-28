@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_4dp"
+    android:layout_marginTop="@dimen/dimen_12dp"
+    android:layout_marginEnd="@dimen/dimen_16dp"
+    android:layout_marginBottom="@dimen/dimen_12dp"
+    android:background="@color/white"
+    android:minWidth="140dp"
+    app:cardCornerRadius="@dimen/dimen_4dp"
+    app:cardElevation="@dimen/dimen_4dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:layout_width="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_4dp"
+        android:paddingBottom="@dimen/dimen_6dp">
+
+        <ImageView
+            android:id="@+id/ivBestSeller"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_tag_light_locked" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="4.8sp"
+            android:maxLines="1"
+            android:textColor="@color/color_54138a"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBestSeller"
+            tools:ignore="UnusedAttribute"
+            tools:text="6 महीने" />
+
+        <TextView
+            android:id="@+id/tvNewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:fontFamily="@font/lato_black"
+            android:gravity="end"
+            android:lineSpacingExtra="7.2sp"
+            android:maxLines="1"
+            android:textColor="@color/color_223d4d"
+            android:textSize="24sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/tvDuration"
+            app:layout_constraintTop_toBottomOf="@+id/tvDuration"
+            tools:text="₹5,000" />
+
+        <TextView
+            android:id="@+id/tvMonthPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_2dp"
+            android:fontFamily="@font/lato"
+            android:gravity="end"
+            android:lineSpacingExtra="3.3sp"
+            android:maxLines="1"
+            android:textColor="@color/color_223d4d"
+            android:textSize="11sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/tvNewPrice"
+            app:layout_constraintTop_toBottomOf="@+id/tvNewPrice"
+            tools:text="₹1,002/Month" />
+
+        <TextView
+            android:id="@+id/tvOldPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:fontFamily="@font/lato"
+            android:gravity="end"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="3.5sp"
+            android:textColor="@color/grey_808080"
+            android:textSize="@dimen/dimen_11sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/tvMonthPrice"
+            app:layout_constraintTop_toBottomOf="@+id/tvMonthPrice"
+            tools:text="₹1,500" />
+
+        <TextView
+            android:id="@+id/tvDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_6dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="@dimen/dimen_6dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/lato"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="4.6sp"
+            android:maxLines="1"
+            android:textColor="@color/blue_273DE9"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvOldPrice"
+            app:layout_constraintTop_toBottomOf="@+id/tvNewPrice"
+            tools:ignore="UnusedAttribute"
+            tools:text="Save 30%" />
+
+        <TextView
+            android:id="@+id/tvEmi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_6dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="3.2sp"
+            android:maxLines="2"
+            android:textColor="@color/grey_808080"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvOldPrice"
+            app:layout_constraintTop_toBottomOf="@+id/tvOldPrice"
+            tools:text="5 students bought in last 30 mins" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

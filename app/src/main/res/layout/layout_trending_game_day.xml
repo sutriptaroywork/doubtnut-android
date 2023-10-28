@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rootGame"
+    android:background="@color/white"
+    android:maxHeight="300dp"
+    android:paddingStart="@dimen/dimen_15dp"
+    android:paddingEnd="@dimen/dimen_15dp">
+
+    <ImageView
+        android:id="@+id/headingIconQuizGame"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:src="@drawable/placeholder_quiz_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headingQuizGame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:fontFamily="@font/lato_black"
+        android:textColor="#481a62"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconQuizGame"
+        app:layout_constraintEnd_toStartOf="@id/skipGame"
+        app:layout_constraintStart_toEndOf="@id/headingIconQuizGame"
+        app:layout_constraintTop_toTopOf="@id/headingIconQuizGame"
+        tools:text="Trending game of the day" />
+
+    <TextView
+        android:id="@+id/skipGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/skip"
+        android:textColor="#481a62"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconQuizGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headingIconQuizGame" />
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5.5dp"
+        android:alpha="0.1"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headingIconQuizGame" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/thumbnailQuizGame"
+        android:layout_width="148dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="12.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        tools:layout_constraintDimensionRatio="1:1" />
+
+    <Button
+        android:id="@+id/btnQuizGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_14dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        tools:text="My button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thumbnailQuizGame" />
+</androidx.constraintlayout.widget.ConstraintLayout>

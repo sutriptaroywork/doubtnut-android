@@ -1,0 +1,145 @@
+[
+  {
+    "position": "1",
+    "feature_type": "pdf",
+    "title": "PDF",
+    "time": "2019-06-01T12:53:46.000Z",
+    "is_show": "1",
+    "notification_count": 0,
+    "playlist_id": "104565",
+    "playlist_title": "PDFs",
+    "external_url" : ""
+
+  },
+  {
+    "position": "2",
+    "feature_type": "concept_video",
+    "title": "Concept Video",
+    "time": "2019-06-01T12:53:46.000Z",
+    "is_show": "1",
+    "notification_count": 0,
+    "playlist_id": "101997",
+    "playlist_title": "Concept Videos",
+    "external_url" : ""
+
+
+  },
+
+  {
+    "position": "3",
+    "feature_type": "external_url",
+    "title": "Ask on WhatsApp",
+    "time": "2019-06-27T21:24:19.000Z",
+    "is_show": "1",
+    "link": "https://d10lpgp6xz60nq.cloudfront.net/images/whatsapp_topicon.webp",
+    "playlist_title": "ASK ON WHATSAPP",
+    "notification_count": 0,
+    "playlist_id": "",
+    "external_url" : "https://bit.ly/2ITx2zK"
+  },
+
+  {
+    "position": "4",
+    "feature_type": "ncert",
+    "title": "NCERT",
+    "time": "2019-06-01T12:53:46.000Z",
+    "is_show": "1",
+    "notification_count": 0,
+    "playlist_id": "100007",
+    "playlist_title": "NCERT SOLUTIONS",
+    "external_url" : ""
+
+
+  },
+  {
+    "position": "5",
+    "feature_type": "formula_deck",
+    "title": "Formula Deck",
+    "time": "2019-06-01T12:53:46.000Z",
+    "is_show": "1",
+    "notification_count": 0,
+    "playlist_id": "",
+    "playlist_title": "",
+    "external_url" : ""
+
+
+  },
+  {
+    "position": "6",
+    "feature_type": "quiz",
+    "title": "Quiz",
+    "time": "2019-06-01T12:53:46.000Z",
+    "is_show": "1",
+    "notification_count": 0,
+    "playlist_id": "",
+    "playlist_title": "",
+    "external_url" : ""
+
+
+  },
+  {
+    "position": "7",
+    "feature_type": "gupshup",
+    "title": "GupShup",
+    "time": "2019-06-01T12:53:46.000Z",
+    "is_show": "1",
+    "notification_count": 0,
+    "playlist_id": "",
+    "playlist_title": "",
+    "external_url" : ""
+
+
+  },
+  {
+    "position": "8",
+    "feature_type": "login",
+    "title": "Login",
+    "time": "2019-06-01T12:53:46.000Z",
+    "is_show": "1",
+    "notification_count": 0,
+    "playlist_id": "",
+    "playlist_title": "",
+    "external_url" : ""
+
+  },
+  {
+    "position": "9",
+    "feature_type": "doubtnut_stickers",
+    "title": "Doubtnut Stickers",
+    "time": "2019-06-01T12:53:46.000Z",
+    "is_show": "1",
+    "notification_count": 0,
+    "playlist_id": "",
+    "playlist_title": "",
+    "external_url" : ""
+
+
+  },
+  {
+    "position": "10",
+    "feature_type": "contest",
+    "title": "Contest",
+    "time": "2019-06-01T12:53:46.000Z",
+    "is_show": "1",
+    "notification_count": 0,
+    "playlist_id": "",
+    "playlist_title": "",
+    "external_url" : ""
+
+
+  },
+  {
+    "position": "11",
+    "feature_type": "invite",
+    "title": "Invite",
+    "time": "2019-06-01T12:53:46.000Z",
+    "is_show": "1",
+    "notification_count": 0,
+    "playlist_id": "",
+    "playlist_title": "",
+    "external_url" : ""
+
+  }
+
+
+]

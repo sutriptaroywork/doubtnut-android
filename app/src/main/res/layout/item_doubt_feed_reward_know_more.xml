@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp">
+
+    <TextView
+        android:id="@+id/tvLevelNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_reward_level_no_5dd1cf"
+        android:fontFamily="@font/lato"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1." />
+
+    <TextView
+        android:id="@+id/tvLevelTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black_two"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tvLevelNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Level 1." />
+
+    <TextView
+        android:id="@+id/tvLevelDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/gray_979797"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLevelNumber"
+        app:layout_constraintTop_toBottomOf="@id/tvLevelTitle"
+        tools:text="As you will open doubtnut on the first
+day you will be on level 1 and you will get a scratch
+card as a welcome bonus." />
+</androidx.constraintlayout.widget.ConstraintLayout>

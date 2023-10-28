@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".liveclass.ui.practice_english.PracticeEnglishActivity">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="16dp"
+        android:layout_height="@dimen/dimen_16dp"
+        android:layout_marginStart="@dimen/dimen_14dp"
+        android:layout_marginTop="@dimen/dimen_14dp"
+        android:src="@drawable/ic_arrow_back_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvToolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_14dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4.9sp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvQuestionNumber"
+        app:layout_constraintStart_toEndOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="My Homework" />
+
+    <TextView
+        android:id="@+id/tvQuestionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_14dp"
+        android:layout_marginEnd="@dimen/dimen_14dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4.9sp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1/10" />
+
+    <FrameLayout
+        android:id="@+id/practiceEnglishContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvToolbarTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

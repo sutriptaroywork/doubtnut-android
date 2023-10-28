@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<data>
+    <variable
+        name="course"
+        type="com.doubtnutapp.data.remote.models.Course" />
+</data>
+
+<com.google.android.material.button.MaterialButton
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/btnCourse"
+    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+    android:text="@{course.course}"
+    android:layout_width="120dp"
+    android:layout_height="100dp"
+    android:textColor="@color/colorPrimaryDark"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/colorPrimaryDark"
+    android:layout_margin="15dp"
+    android:padding="15dp"
+    android:textAppearance="@style/TextAppearance.Headline6"
+    app:backgroundTint="@android:color/transparent"/>
+
+
+</layout>

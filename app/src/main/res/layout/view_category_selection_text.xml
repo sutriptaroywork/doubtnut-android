@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:paddingTop="4dp"
+    android:backgroundTint="@color/colorLightGray"
+    android:paddingBottom="4dp"
+    android:minHeight="26dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corner_white_fill_4dp"
+    android:paddingStart="@dimen/dimen_8dp"
+    android:paddingEnd="@dimen/dimen_8dp">
+
+    <View
+        android:id="@+id/iv_selection_dot"
+        android:layout_width="@dimen/dimen_8dp"
+        android:layout_height="@dimen/dimen_8dp"
+        android:visibility="gone"
+        android:backgroundTint="@color/color_eb532c"
+        android:background="@drawable/bg_circle_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4.6sp"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/grey_504949"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_selection_dot"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="IIT" />
+
+    <TextView
+        android:id="@+id/tv_selection_count"
+        android:layout_width="@dimen/dimen_10dp"
+        android:layout_height="@dimen/dimen_10dp"
+        android:backgroundTint="@color/color_eb532c"
+        android:layout_marginStart="4dp"
+        android:textSize="6.9sp"
+        android:includeFontPadding="false"
+        android:background="@drawable/bg_circle_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_label"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/lato"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        android:lineSpacingExtra="1.4sp"
+        android:gravity="center"
+        tools:text="12"
+        tools:ignore="SmallSp" />
+
+    <ImageView
+        android:layout_width="@dimen/dimen_12dp"
+        android:layout_height="@dimen/dimen_12dp"
+        android:background="@drawable/ic_drop_down"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_selection_count"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/grey_504949" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

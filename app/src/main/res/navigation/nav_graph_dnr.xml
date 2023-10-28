@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_dnr"
+    app:startDestination="@id/dnrHomeFragment">
+
+    <action android:id="@+id/action_dnr_tnc_fragment"
+        app:destination="@id/dnrTncBottomSheet"/>
+
+    <fragment
+        android:id="@+id/dnrHomeFragment"
+        android:name="com.doubtnutapp.dnr.ui.fragment.DnrHomeFragment"
+        android:label="SgHomeFragment"
+        tools:layout="@layout/fragment_dnr_home">
+        <deepLink app:uri="doubtnutapp://dnr/home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dnrWidgetListFragment"
+        android:name="com.doubtnutapp.dnr.ui.fragment.DnrWidgetListFragment"
+        android:label="DnrWidgetListFragment"
+        tools:layout="@layout/fragment_dnr_widget_list">
+        <argument
+            android:name="screen"
+            app:argType="string" />
+        <argument
+            android:name="isToolbarVisible"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <deepLink app:uri="doubtnutapp://dnr/widgets?screen={screen}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dnrVoucherExploreFragment"
+        android:name="com.doubtnutapp.dnr.ui.fragment.DnrVoucherExploreFragment"
+        android:label="DnrVoucherExploreFragment"
+        tools:layout="@layout/fragment_dnr_voucher_explore">
+        <argument
+            android:name="voucherId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue=" " />
+        <argument
+            android:name="source"
+            android:defaultValue="voucher_list"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink app:uri="doubtnutapp://dnr/voucher_explore?voucher_id={voucherId}" />
+        <deepLink app:uri="doubtnutapp://dnr/voucher_explore?voucher_id={voucherId}&amp;source={source}" />
+        <deepLink app:uri="doubtnutapp://dnr/voucher_explore?redeem_id={redeemId}&amp;source={source}" />
+        <argument
+            android:name="redeemId"
+            android:defaultValue=" "
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dnrMysteryBoxFragment"
+        android:name="com.doubtnutapp.dnr.ui.fragment.DnrMysteryBoxFragment"
+        android:label="fragment_dnr_mystery_box"
+        tools:layout="@layout/fragment_dnr_mystery_box">
+        <deepLink app:uri="doubtnutapp://dnr/mystery_box" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dnrSpinTheWheelFragment"
+        android:name="com.doubtnutapp.dnr.ui.fragment.DnrSpinTheWheelFragment"
+        android:label="fragment_dnr_spin_the_wheel"
+        tools:layout="@layout/fragment_dnr_spin_the_wheel">
+        <deepLink app:uri="doubtnutapp://dnr/spin_the_wheel" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dnrVoucherFragment"
+        android:name="com.doubtnutapp.dnr.ui.fragment.DnrVoucherListFragment"
+        android:label="DnrVoucherFragment"
+        tools:layout="@layout/fragment_dnr_voucher_list">
+        <deepLink app:uri="doubtnutapp://dnr/voucher_list?activeTabId={activeTabId}" />
+        <argument
+            android:name="activeTabId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dnrVoucherRedeemBottomSheetFragment"
+        android:name="com.doubtnutapp.dnr.ui.fragment.DnrVoucherRedeemBottomSheetFragment"
+        android:label="DnrVoucherRedeemBottomSheetFragment"
+        tools:layout="@layout/fragment_dnr_voucher_redeem_bottom_sheet">
+
+        <deepLink app:uri="doubtnutapp://dnr/pending_vouchers" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dnrTncBottomSheet"
+        android:name="com.doubtnutapp.dnr.ui.fragment.DnrTncBottomSheet"
+        android:label="DnrTncBottomSheet"
+        tools:layout="@layout/fragment_dnr_tnc_bottom_sheet">
+
+        <deepLink app:uri="doubtnutapp://dnr/tnc" />
+        <argument
+            android:name="tncDialogData"
+            app:argType="com.doubtnutapp.dnr.widgets.DnrTotalRewardWidget$TncDialogData"
+            app:nullable="true" />
+    </dialog>
+</navigation>

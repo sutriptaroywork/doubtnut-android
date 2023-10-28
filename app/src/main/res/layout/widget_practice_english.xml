@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#21e7755c"
+        android:visibility="visible"
+        android:elevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_18dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:fontFamily="@font/lato_bold"
+            android:lineSpacingExtra="0.7sp"
+            android:text="English Practice"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvQuestionNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:fontFamily="@font/lato_bold"
+            android:lineSpacingExtra="0.7sp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title"
+            tools:text="1/5" />
+
+        <TextView
+            android:id="@+id/tvHindiText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:fontFamily="@font/lato_bold"
+            android:lineSpacingExtra="0.7sp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnNextQuestion"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="इस वाक्य को अंग्रेजी में बोलें बोलें बोलें बोलें बोलें बोलें " />
+
+        <Button
+            android:id="@+id/btnNextQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvHindiText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvHindiText" />
+
+        <ImageButton
+            android:id="@+id/recordButton"
+            android:layout_width="71dp"
+            android:layout_height="74dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/audio_mic_bg"
+            android:backgroundTint="#eb532c"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_mic_doubt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible"
+            app:mic_icon="@drawable/recv_ic_mic_white" />
+
+        <TextView
+            android:id="@+id/tvHintText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="0.7sp"
+            android:textColor="@color/color_eb532c"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_marginBottom="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/recordButton"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewQuestion"
+            android:text="Press and Hold for recording" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:visibility="invisible"
+            app:cardElevation="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHindiText">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivSpeakerQuestion"
+                    android:layout_width="@dimen/dimen_24dp"
+                    android:layout_height="@dimen/dimen_24dp"
+                    android:layout_marginStart="@dimen/dimen_16dp"
+                    android:src="@drawable/ic_speaker"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/blue" />
+
+                <TextView
+                    android:id="@+id/tvQuestion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/dimen_20dp"
+                    android:fontFamily="@font/lato"
+                    android:gravity="start"
+                    android:lineSpacingExtra="0.7sp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/ivSpeakerQuestion"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="हिंदी का व्याख्या यहाँ आएगा bjhvhjhvhvhjvhjvjhvjvjvjvjvhvhvhvhvhvhvhvhvhvjvjvj" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:visibility="gone"
+            app:cardElevation="@dimen/dimen_7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewQuestion"
+            tools:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen_14dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_6dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="9.6sp"
+                    android:textColor="#3b8700"
+                    android:textSize="@dimen/font_14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/tvCorrectText"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="78%" />
+
+                <TextView
+                    android:id="@+id/tvCorrectText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_6dp"
+                    android:layout_marginEnd="@dimen/dimen_6dp"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="3.6sp"
+                    android:textColor="#3b8700"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPercentage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvPercentage"
+                    tools:text="Correct" />
+
+                <TextView
+                    android:id="@+id/tvYourAnswerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:fontFamily="@font/lato"
+                    android:lineSpacingExtra="0.5sp"
+                    android:textColor="#808080"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Your answer" />
+
+                <TextView
+                    android:id="@+id/btnTryAgain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:lineSpacingExtra="0.5sp"
+                    android:padding="@dimen/dimen_4dp"
+                    android:textColor="@color/orange_eb532c"
+                    android:textSize="11sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvYourAnswerText"
+                    app:layout_constraintStart_toEndOf="@+id/tvYourAnswerText"
+                    app:layout_constraintTop_toTopOf="@+id/tvYourAnswerText"
+                    tools:text="Try Again" />
+
+                <ImageView
+                    android:id="@+id/ivYourAnswerSpeaker"
+                    android:layout_width="@dimen/dimen_18dp"
+                    android:layout_height="@dimen/dimen_18dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_12dp"
+                    android:src="@drawable/ic_speaker"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvYourAnswerText"
+                    app:tint="@color/blue" />
+
+                <TextView
+                    android:id="@+id/tvYourAnswer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_12dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:fontFamily="@font/lato"
+                    android:lineSpacingExtra="0.7sp"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/ivYourAnswerSpeaker"
+                    app:layout_constraintTop_toBottomOf="@id/tvYourAnswerText"
+                    tools:text="हिंदी का व्याख्या यहाँ आएगा  हिंदी का व्याख्या यहाँ आएगा हिंदी का व्याख्या यहाँ आएगा " />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/dimen_14dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/grey_06"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvYourAnswer" />
+
+                <TextView
+                    android:id="@+id/tvCorrectAnswerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="@dimen/dimen_14dp"
+                    android:fontFamily="@font/lato"
+                    android:lineSpacingExtra="0.5sp"
+                    android:textColor="#808080"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider"
+                    tools:text="Correct answer" />
+
+                <ImageView
+                    android:id="@+id/ivCorrectAnswerSpeaker"
+                    android:layout_width="@dimen/dimen_18dp"
+                    android:layout_height="@dimen/dimen_18dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:src="@drawable/ic_speaker"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvCorrectAnswer"
+                    app:tint="@color/blue" />
+
+                <TextView
+                    android:id="@+id/tvCorrectAnswer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_14dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/radius_5dp"
+                    android:fontFamily="@font/lato"
+                    android:lineSpacingExtra="0.7sp"
+                    android:lines="2"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@id/ivYourAnswerSpeaker"
+                    app:layout_constraintTop_toBottomOf="@id/tvCorrectAnswerText"
+                    tools:text="हिंदी का व्याख्या यहाँ आएगा हिंदी का व्याख्या यहाँ आएगा हिंदी का व्याख्या यहाँ आएगा " />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewWriterAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:visibility="gone"
+            app:cardElevation="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btnSubmitQuestion"
+            app:layout_constraintTop_toBottomOf="@id/cardViewQuestion">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/etWriteAnswer"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dimen_14dp"
+                    android:layout_marginTop="@dimen/dimen_14dp"
+                    android:layout_marginBottom="@dimen/dimen_14dp"
+                    android:layout_marginEnd="@dimen/dimen_14dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/lato"
+                    android:gravity="top"
+                    android:hint="हिंदी अनुवाद यहाँ लिखें"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:letterSpacing="0"
+                    android:lineSpacingExtra="4.9sp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivMic"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="@dimen/dimen_8dp"
+                    android:src="@drawable/ic_mic_black_24_dp_1"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutAnswerSpeaker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewSingleBlankAnswer">
+
+            <ImageView
+                android:id="@+id/ivSpeaker"
+                android:layout_width="@dimen/dimen_18dp"
+                android:layout_height="@dimen/dimen_18dp"
+                android:layout_marginStart="45dp"
+                android:src="@drawable/ic_speaker"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/blue" />
+
+            <TextView
+                android:id="@+id/tvAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="0.7sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/ivSpeaker"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="हिंदी का व्याख्या यहाँ आएगा " />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvAnswerHintText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="0.5sp"
+            android:textColor="@color/grey_808080"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutAnswerSpeaker"
+            tools:text="Sahi answer select karo:" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/layoutAnswerHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_24dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_24dp"
+            android:background="#21e7755c"
+            android:nestedScrollingEnabled="false"
+            app:flexDirection="row"
+            app:flexWrap="wrap"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnSubmitQuestion"
+            app:layout_constraintTop_toBottomOf="@+id/tvAnswerHintText" />
+
+        <TextView
+            android:id="@+id/refreshMultiBlank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/orange_ff612d"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/tvAnswerHintText"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            app:layout_constraintTop_toTopOf="@+id/tvAnswerHintText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAnswerHintText"
+            android:text="REFRESH" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewSingleBlankAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:visibility="gone"
+            app:cardElevation="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHindiText">
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/layout_write_answer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:padding="@dimen/dimen_15dp"
+                app:flexDirection="row"
+                app:flexWrap="wrap" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/btnSubmitQuestion"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="4.9sp"
+            android:textAllCaps="false"
+            android:textColor="@color/color_eb532c"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Submit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/resultLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#21e7755c"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+            android:id="@+id/tvEnglishPractice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_18dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="9.6sp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="English Practice" />
+
+        <ImageView
+            android:id="@+id/ivResult"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnglishPractice" />
+
+        <TextView
+            android:id="@+id/tvResultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="9.6sp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivResult"
+            tools:text="You got 7 correct answers!" />
+
+        <TextView
+            android:id="@+id/tvResultSubTitle"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_32dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginEnd="@dimen/dimen_32dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:textColor="#808080"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvResultTitle"
+            tools:text="Congratulations, aaj ki practice complete karne ke liye aapko mila 20 DN Cash!" />
+
+        <TextView
+            android:id="@+id/btnPracticeMore"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_32dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/bg_capsule_reminder_white"
+            android:fontFamily="@font/lato"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/dimen_8dp"
+            android:paddingBottom="@dimen/dimen_8dp"
+            android:textColor="@color/color_eb532c"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/tvResultSubTitle"
+            tools:text="Practice More" />
+
+        <TextView
+            android:id="@+id/tvShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:lineSpacingExtra="0.7sp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnPracticeMore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Share" />
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:lineSpacingExtra="0.7sp"
+            android:textColor="@color/color_eb532c"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvShare"
+            app:layout_constraintEnd_toStartOf="@+id/tvShare"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvShare"
+            tools:text="Share" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/practiceEnglishLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_12dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contentLayout"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_eb532c">
+
+            <TextView
+                android:id="@+id/practiceEnglishTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Kya aapko apni English strong karni hai?" />
+
+            <TextView
+                android:id="@+id/practiceEnglishCta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Practice Now" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:elevation="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

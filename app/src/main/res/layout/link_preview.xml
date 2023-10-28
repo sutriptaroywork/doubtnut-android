@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="5dp"
+    android:background="@drawable/rounded_corners_stroke_black"
+    android:id="@+id/rich_link_card">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/rich_link_image"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"/>
+
+    <LinearLayout
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_4dp"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:id="@+id/rich_link_title"
+            android:textColor="@color/grey_900"
+            android:padding="2dp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Data"/>
+
+        <TextView
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:id="@+id/rich_link_desp"
+            android:textColor="@color/blue_grey_300"
+            android:fontFamily="@font/lato"
+            android:padding="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Data"/>
+
+    </LinearLayout>
+</LinearLayout>

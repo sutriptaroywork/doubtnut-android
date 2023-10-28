@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BreadcrumbsView">
+        <attr name="popupTheme" />
+    </declare-styleable>
+
+    <declare-styleable name="MathView">
+        <attr name="text" format="string" />
+        <attr name="engine" format="enum">
+            <enum name="KaTeX" value="0" />
+            <enum name="MathJax" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CurvedTopBar">
+        <attr name="curved_corner_radius" format="dimension" />
+        <attr name="curved_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="WaveRipple">
+        <attr name="wave_gap" format="dimension" />
+        <attr name="wave_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="AskQuestionProgressView">
+        <attr name="view_overlay" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TagView">
+        <attr name="tag_color" format="integer" />
+        <attr name="tag_background" format="integer" />
+        <attr name="tag_item_background" format="integer" />
+        <attr name="layout_background" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="FilterTagView">
+        <attr name="filter_tag_color" format="integer" />
+        <attr name="filter_tag_background" format="integer" />
+        <attr name="filter_tag_item_background" format="integer" />
+        <attr name="filter_layout_background" format="integer" />
+        <attr name="filter_tag_multi_select" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CategorySelectionTextView">
+        <attr name="cstv_background_tint" format="reference" />
+        <attr name="cstv_text" format="string" />
+        <attr name="cstv_is_multiselect" format="boolean" />
+        <attr name="cstv_is_selected" format="boolean" />
+        <attr name="cstv_selected_item_count" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularStatusView">
+        <attr name="portion_width" format="dimension" />
+        <attr name="portion_color" format="color" />
+        <attr name="portion_spacing" format="dimension" />
+        <attr name="portions_count" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="StickyScrollView">
+        <attr name="stuckShadowHeight" format="dimension" />
+        <attr name="stuckShadowDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="YouTubeOverlay">
+        <attr name="yt_playerView" format="reference" />
+        <attr name="yt_seekSeconds" format="integer" />
+        <attr name="yt_animationDuration" format="integer" />
+        <attr name="yt_iconAnimationDuration" format="integer" />
+        <attr name="yt_arcSize" format="dimension" />
+        <attr name="yt_tapCircleColor" format="color" />
+        <attr name="yt_backgroundCircleColor" format="color" />
+
+        <attr name="yt_textAppearance" format="reference" />
+        <attr name="yt_icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="StudyGroupSearchView">
+        <attr name="debounceTime" format="integer" />
+        <attr name="minimumQueryTextLength" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="InvertedTextProgressbar">
+        <attr name="text_color" format="color"/>
+        <attr name="text_inverted_color" format="color"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="text_typeface" format="integer"/>
+        <attr name="max_progress" format="integer"/>
+        <attr name="min_progress" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="BottomNavCustomView"
+        >
+        <attr name="useCustomItemSelectedListener" format="boolean"
+            />
+        <attr name="customColorForIcons" format="color"
+            />
+    </declare-styleable>
+
+</resources>

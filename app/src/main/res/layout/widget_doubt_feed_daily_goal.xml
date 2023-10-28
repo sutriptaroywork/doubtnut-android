@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/colorTransparent"
+        app:shapeAppearanceOverlay="@style/CircularImageView">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivTick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_tick_doubt_feed"
+            app:shapeAppearanceOverlay="@style/CircularImageView"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_doubt_feed_daily_goal_number"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/purple"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="4" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/black_two"
+        android:textSize="14sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/tvPracticing"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/cardView"
+        app:layout_constraintTop_toTopOf="@id/cardView"
+        app:layout_constraintWidth_default="wrap"
+        tools:text="Recommended Live Class" />
+
+    <TextView
+        android:id="@+id/tvPracticing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/grey_969696"
+        android:textSize="12sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:layout_constraintWidth_default="wrap"
+        tools:text="4.7K Practicing" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black_two"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintWidth_default="wrap"
+        tools:text="Live classes clears concepts &amp; helps get you solve exam solutions of up to 15 marks" />
+
+    <ImageView
+        android:id="@+id/ivLineVertical"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:background="@drawable/line_dotted_daily_goal_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/cardView"
+        app:layout_constraintStart_toStartOf="@id/cardView"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ivLineHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/line_dotted_daily_goal"
+        android:translationX="-2dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivLineVertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivLineVertical"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/viewClickInterceptor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:translationX="-4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivLineVertical"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        tools:ignore="RtlSymmetry"
+        tools:itemCount="2"
+        tools:listitem="@layout/widget_topic_video" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

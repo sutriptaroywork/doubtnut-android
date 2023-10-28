@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="studentclass"
+            type="com.doubtnutapp.data.remote.models.StudentClass" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/selectable_item_background"
+        android:layout_marginStart="@dimen/carditem_start_end_margin"
+        android:layout_marginTop="@dimen/carditem_top_bottom_margin"
+        android:layout_marginEnd="@dimen/carditem_start_end_margin"
+        android:layout_marginBottom="@dimen/carditem_top_bottom_margin"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/card_corners"
+        app:cardElevation="@dimen/card_elevation">
+
+        <TextView
+            android:id="@+id/button_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:padding="@dimen/card_text_padding"
+            android:text='@{studentclass.classDisplay}'
+            android:textColor="@color/black"
+            android:textSize="@dimen/card_text_size"
+            tools:text="Class 6" />
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

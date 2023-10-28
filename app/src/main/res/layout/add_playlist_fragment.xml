@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/library"
+        android:orientation="horizontal"
+        >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        app:srcCompat="@drawable/ic_close_white"
+        android:padding="8dp"
+        android:layout_marginStart="4dp"
+        android:id="@+id/btnClose"
+        />
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/library"
+        android:text="@string/add_to_playlist"
+        style="@style/TextAppearance.Headline6"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:elevation="5dp"/>
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_create_list"
+        android:visibility="visible"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rvPlaylists"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="15dp">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_create_list"
+        android:layout_marginTop="56dp"
+        >
+
+        <TextView
+            style="@style/TextAppearance.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/create_a_playlist"
+            android:drawableLeft="@drawable/ic_playlist_add"
+            android:clickable="true"
+            android:id="@+id/tv_create_playlist"
+            />
+            <EditText
+                android:id="@+id/et_playlist_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"
+                android:hint="Enter PlayList Name Here"
+                android:inputType="textPersonName"
+                android:maxLength="100"
+                android:visibility="gone"
+                />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreatePlaylist"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Create new playlist"
+            android:textColor="@color/black"
+            android:layout_alignParentBottom="true"
+            app:backgroundTint="@color/buttonColor"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#66000000"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

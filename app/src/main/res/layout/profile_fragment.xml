@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.doubtnutapp.gamification.userProfileData.viewmodel.ProfileViewModel" />
+
+        <variable
+            name="loginImage"
+            type="String" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="0dp"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="@{(view) -> viewmodel.clickForLogin(viewmodel.isLogInLiveData)}"
+                app:layout_scrollFlags="scroll">
+
+                <ImageView
+                    android:id="@+id/iv_profile_setting"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/settings"
+                    android:padding="5dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.031"
+                    app:srcCompat="@drawable/ic_setting_black"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_edit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/string_editProfile"
+                    android:padding="5dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_profile_setting"
+                    app:layout_constraintHorizontal_bias="0.993"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.031"
+                    app:srcCompat="@drawable/ic_edit_black_profile"
+                    tools:visibility="visible" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile_picture"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="28dp"
+                    app:civ_border_color="@color/actionBarArrowColor"
+                    app:civ_border_width="4dp"
+                    app:imageurl="@{viewmodel.isLogInLiveData? viewmodel.profileImageLiveData : loginImage}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:placeholder="@{@drawable/ic_person_grey}"
+                    tools:src="@tools:sample/avatars" />
+
+                <ImageView
+                    android:id="@+id/imageViewVipUser"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:importantForAccessibility="no"
+                    app:imageurl="@{viewmodel.profileVipLiveData}"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_profile_picture"
+                    app:layout_constraintTop_toTopOf="@+id/iv_profile_picture" />
+
+                <ImageView
+                    android:id="@+id/textView13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:importantForAccessibility="no"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/white"
+                    android:visibility="@{viewmodel.bannerImageLiveData.empty ? View.GONE : View.VISIBLE}"
+                    app:imageurl="@{viewmodel.bannerImageLiveData}"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_profile_picture"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_profile_picture"
+                    app:layout_constraintStart_toStartOf="@+id/iv_profile_picture"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_picture"
+                    app:srcCompat="@drawable/ic_rising_star" />
+
+                <TextView
+                    android:id="@+id/pointsToEarnedTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:textColor="#60a0f1"
+                    android:textSize="10sp"
+                    android:visibility="@{viewmodel.isLogInLiveData ? View.GONE : View.VISIBLE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13"
+                    app:layout_constraintVertical_bias="0.081"
+                    app:text="@{viewmodel.pointsToEarnedLiveData}"
+                    tools:ignore="SmallSp"
+                    tools:text="Login to earn 50 points " />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/lato"
+                    android:textColor="#2f2f2f"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pointsToEarnedTv"
+                    app:text="@{viewmodel.userProfileName}"
+                    tools:text="Shahrukh Khan" />
+
+                <ProgressBar
+                    android:id="@+id/progressProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/profileTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:tabIndicatorColor="@color/redTomato"
+                app:tabSelectedTextColor="@color/black" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/profileViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <include layout="@layout/item_placeholder_horizontal_card" />
+
+                <include layout="@layout/item_placeholder_horizontal_card_two" />
+
+                <include layout="@layout/item_placeholder_horizontal_card_two" />
+
+                <include layout="@layout/item_placeholder_horizontal_card_two" />
+
+                <include layout="@layout/item_placeholder_horizontal_card_two" />
+
+                <include layout="@layout/item_placeholder_horizontal_card_two" />
+
+                <include layout="@layout/item_placeholder_horizontal_card_two" />
+
+                <include layout="@layout/item_placeholder_horizontal_card_two" />
+
+                <include layout="@layout/item_placeholder_horizontal_card_two" />
+
+                <include layout="@layout/item_placeholder_horizontal_card_two" />
+
+                <include layout="@layout/item_placeholder_horizontal_card_two" />
+
+                <include layout="@layout/item_placeholder_horizontal_card_two" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

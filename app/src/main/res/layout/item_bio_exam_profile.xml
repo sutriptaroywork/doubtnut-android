@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bioBoardExamView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_12dp"
+    android:layout_marginTop="@dimen/dimen_10dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/bioExamText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="IIT JEE"
+          app:layout_constraintTop_toTopOf="parent"
+          android:paddingStart="@dimen/dimen_8dp"
+          android:paddingEnd="@dimen/dimen_8dp"
+          android:paddingBottom="@dimen/dimen_8dp"
+          android:paddingTop="@dimen/dimen_8dp"
+          android:textColor="#2f2f2f"
+          android:textSize="@dimen/font_14sp"
+          android:fontFamily="@font/lato"
+          app:layout_constraintStart_toStartOf="parent"
+          />
+
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/bioExamCheck"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toEndOf="@+id/bioExamText"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text=""
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

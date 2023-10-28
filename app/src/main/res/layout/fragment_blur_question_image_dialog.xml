@@ -1,0 +1,85 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d9000000"
+    tools:context="com.doubtnutapp.matchquestion.ui.fragment.dialog.BlurQuestionImageDialogFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".3"
+        app:layout_constraintWidth_percent=".7">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textViewBlurImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/ic_info"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/lato_bold"
+                android:lineSpacingExtra="17sp"
+                android:text="@string/sorry_your_question_image_is_blur"
+                android:textColor="#17181f"
+                app:layout_constraintStart_toStartOf="@id/imageViewQuestion"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageViewQuestion"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/background_blur_image"
+                android:outlineProvider="background"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@id/textViewHelp"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewBlurImage"
+                app:layout_constraintWidth_percent=".9"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/textViewHelp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:visibility="visible"
+                android:text="@string/know_how_to_select_a_correct_image"
+                android:textColor="@color/blue_007aff"
+                app:layout_constraintBottom_toTopOf="@id/buttonClickClearPicture"
+                app:layout_constraintEnd_toEndOf="@id/imageViewQuestion"
+                app:layout_constraintStart_toStartOf="@id/imageViewQuestion"
+                app:layout_constraintTop_toBottomOf="@id/imageViewQuestion" />
+
+            <Button
+                android:id="@+id/buttonClickClearPicture"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="13dp"
+                android:text="@string/click_a_clear_picture"
+                android:textAllCaps="false"
+                android:fontFamily="@font/lato_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/imageViewQuestion"
+                app:layout_constraintStart_toStartOf="@id/imageViewQuestion"
+                app:layout_constraintTop_toBottomOf="@id/textViewHelp"
+                app:layout_constraintWidth_percent=".8" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

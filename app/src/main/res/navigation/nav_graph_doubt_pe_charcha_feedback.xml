@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_doubt_pe_charcha_feedback"
+    app:startDestination="@id/userSelectForFeedbackFragment">
+
+
+    <fragment
+        android:id="@+id/userSelectForFeedbackFragment"
+        android:name="com.doubtnutapp.doubtpecharcha.ui.fragment.UserSelectForFeedbackFragment"
+        android:label="UserSelectForFeedbackFragment" >
+
+
+        <action
+            android:id="@+id/action_userSelectForFeedbackFragment_to_doubtPeCharchaUserFeedbackRatingFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/userSelectForFeedbackFragment"
+            app:destination="@id/doubtPeCharchaUserFeedbackRatingFragment" />
+        <action
+            android:id="@+id/action_userSelectForFeedbackFragment_to_doubtPeCharchaUserFeedbackRatingFragment2"
+            app:destination="@id/doubtPeCharchaUserFeedbackRatingFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/doubtPeCharchaUserFeedbackRatingFragment"
+        android:name="com.doubtnutapp.doubtpecharcha.ui.fragment.DoubtPeCharchaUserFeedbackRatingFragment"
+        android:label="DoubtPeCharchaUserFeedbackRatingFragment"
+        >
+    </fragment>
+
+</navigation>

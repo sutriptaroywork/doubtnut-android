@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fullLayout"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginStart="@dimen/dimen_12dp"
+    android:layout_marginTop="@dimen/dimen_12dp"
+    android:layout_marginEnd="@dimen/dimen_12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/saleLayout"
+        android:layout_width="210dp"
+        android:layout_height="0dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="SALE ENDS" />
+
+        <TextView
+            android:id="@+id/subtitleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTv"
+            tools:text="TONIGHT" />
+
+        <TextView
+            android:id="@+id/bottomText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:layout_marginBottom="@dimen/dimen_12dp"
+            android:fontFamily="@font/lato_light"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Ratta chhodo, Live classes ke saath har topic ke champion bano" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/timerLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/yellow_f4ac3e"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/saleLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/topText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="top text" />
+
+        <TextView
+            android:id="@+id/hoursTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topText"
+            tools:text="00" />
+
+        <TextView
+            android:id="@+id/vipText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/dimen_12dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="GET A VIP PASS" />
+
+        <TextView
+            android:id="@+id/hoursText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:fontFamily="@font/lato_light"
+            android:gravity="center"
+            android:text="hrs"
+            android:textColor="@color/color_fcfcfc"
+            android:textSize="@dimen/font_9sp"
+            app:layout_constraintEnd_toEndOf="@+id/hoursTv"
+            app:layout_constraintStart_toStartOf="@+id/hoursTv"
+            app:layout_constraintTop_toBottomOf="@+id/hoursTv"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/minutesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/secondsTv"
+            app:layout_constraintHorizontal_bias="0.41"
+            app:layout_constraintStart_toEndOf="@+id/hoursTv"
+            app:layout_constraintTop_toTopOf="@+id/hoursTv"
+            tools:text="00" />
+
+        <TextView
+            android:id="@+id/minsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:fontFamily="@font/lato_light"
+            android:gravity="center"
+            android:text="mins"
+            android:textColor="@color/color_fcfcfc"
+            android:textSize="@dimen/font_9sp"
+            app:layout_constraintEnd_toEndOf="@+id/minutesTv"
+            app:layout_constraintStart_toStartOf="@+id/minutesTv"
+            app:layout_constraintTop_toBottomOf="@+id/hoursTv"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/secondsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/hoursTv"
+            tools:text="00" />
+
+        <TextView
+            android:id="@+id/secondsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:fontFamily="@font/lato_light"
+            android:gravity="center"
+            android:text="secs"
+            android:textColor="@color/color_fcfcfc"
+            android:textSize="@dimen/font_9sp"
+            app:layout_constraintEnd_toEndOf="@+id/secondsTv"
+            app:layout_constraintStart_toStartOf="@+id/secondsTv"
+            app:layout_constraintTop_toBottomOf="@+id/secondsTv"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

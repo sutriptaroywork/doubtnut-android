@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">डाउटनट</string>
+
+
+    <string name="submit">"टेस्ट जमा करें"</string>
+    <string name="retake">फिर लें</string>
+    <string name="rotate">घुमाएँ</string>
+    <string name="crop_only_one_question">केवल एक प्रश्न क्रॉप करें </string>
+    <string name="find_solution">उत्तर खोजें</string>
+
+</resources>

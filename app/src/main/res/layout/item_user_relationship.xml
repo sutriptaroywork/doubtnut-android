@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:paddingBottom="@dimen/dimen_8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:src="#f6f6f6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato_bold"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:textColor="#6a6a6a"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@+id/ivProfileImage"
+        app:layout_constraintTop_toTopOf="@+id/ivProfileImage"
+        tools:text="Naman Dwivedi" />
+
+    <TextView
+        android:id="@+id/tvFollow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:singleLine="true"
+        android:text="  •  Follow"
+        android:textColor="#1da0f4"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@+id/tvUsername"
+        app:layout_constraintRight_toLeftOf="@+id/tvUserRelationship"
+        app:layout_constraintTop_toTopOf="@+id/tvUsername"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvUserClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:layout_marginEnd="@dimen/dimen_8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:singleLine="true"
+        android:textColor="#6a6a6a"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@+id/ivProfileImage"
+        app:layout_constraintRight_toLeftOf="@+id/tvUserRelationship"
+        app:layout_constraintTop_toBottomOf="@+id/tvUsername"
+        tools:text="12th Class msjdldksjdhs shdhahda djahdhadhad ahdghaghda dahdhahd" />
+
+    <TextView
+        android:id="@+id/tvUserRelationship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:background="@drawable/card_stroke_grey"
+        android:fontFamily="@font/lato_bold"
+        android:paddingHorizontal="@dimen/dimen_8dp"
+        android:paddingVertical="@dimen/dimen_4dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Remove" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

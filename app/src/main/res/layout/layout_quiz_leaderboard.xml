@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLeaderboard"
+    android:layout_width="match_parent"
+    android:layout_height="276dp"
+    android:background="@color/white"
+    android:paddingStart="@dimen/dimen_15dp"
+    android:paddingEnd="@dimen/dimen_15dp">
+
+    <ImageView
+        android:id="@+id/headingIconQuizLeaderboard"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/placeholder_quiz_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headingQuizLeaderboard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:fontFamily="@font/lato_black"
+        android:textColor="#481a62"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconQuizLeaderboard"
+        app:layout_constraintEnd_toStartOf="@+id/skipQuizLeaderboard"
+        app:layout_constraintStart_toEndOf="@id/headingIconQuizLeaderboard"
+        app:layout_constraintTop_toTopOf="@id/headingIconQuizLeaderboard"
+        tools:text="Winners of the Quiz Game" />
+
+    <TextView
+        android:id="@+id/skipQuizLeaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/skip"
+        android:textColor="#481a62"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingQuizLeaderboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headingQuizLeaderboard" />
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="9.5dp"
+        android:alpha="0.1"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headingIconQuizLeaderboard" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivRankOne"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <TextView
+        android:id="@+id/rankOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_tomato_rank"
+        android:elevation="@dimen/dimen_4dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:lineSpacingExtra="0sp"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ivRankOne"
+        app:layout_constraintTop_toTopOf="@id/ivRankOne" />
+
+    <TextView
+        android:id="@+id/tvNameRankOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="-2sp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/ivRankOne"
+        app:layout_constraintStart_toStartOf="@+id/ivRankOne"
+        app:layout_constraintTop_toBottomOf="@id/ivRankOne"
+        tools:text="Rama" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivRankTwo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:layout_marginEnd="55dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivRankOne"
+        app:layout_constraintTop_toTopOf="@id/ivRankOne" />
+
+    <TextView
+        android:id="@+id/tvRankTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_yellow_rank"
+        android:elevation="@dimen/dimen_4dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:lineSpacingExtra="0sp"
+        android:text="2"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ivRankTwo"
+        app:layout_constraintTop_toTopOf="@id/ivRankTwo" />
+
+    <TextView
+        android:id="@+id/tvNameRankTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="-2sp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/ivRankTwo"
+        app:layout_constraintStart_toStartOf="@+id/ivRankTwo"
+        app:layout_constraintTop_toBottomOf="@id/ivRankTwo"
+        tools:text="Radhe" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivRankThree"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        app:layout_constraintStart_toEndOf="@+id/ivRankOne"
+        app:layout_constraintTop_toTopOf="@id/ivRankOne" />
+
+    <TextView
+        android:id="@+id/tvRankThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_yellow_rank"
+        android:elevation="@dimen/dimen_4dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:lineSpacingExtra="0sp"
+        android:text="3"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ivRankThree"
+        app:layout_constraintTop_toTopOf="@id/ivRankThree" />
+
+    <TextView
+        android:id="@+id/tvNameRankThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="-2sp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/ivRankThree"
+        app:layout_constraintStart_toStartOf="@+id/ivRankThree"
+        app:layout_constraintTop_toBottomOf="@id/ivRankThree"
+        tools:text="Rita" />
+
+    <Button
+        android:id="@+id/btnQuizLeaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="PLAY and WIN" />
+</androidx.constraintlayout.widget.ConstraintLayout>

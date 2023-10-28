@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTransparent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonCropAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/lato_bold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:minHeight="0dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/crop_again"
+        android:textAllCaps="false"
+        android:textColor="#4e4f56"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:cornerRadius="4dp"
+        app:icon="@drawable/ic_crop"
+        app:iconPadding="3dp"
+        app:iconSize="13dp"
+        app:iconTint="#4e4f56"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonCropAgain1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/lato_bold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:minHeight="0dp"
+        android:paddingStart="10dp"
+        android:layout_marginBottom="310dp"
+        android:paddingEnd="10dp"
+        android:text="@string/crop_again"
+        android:textAllCaps="false"
+        android:textColor="#4e4f56"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:cornerRadius="4dp"
+        app:icon="@drawable/ic_crop"
+        app:iconPadding="3dp"
+        app:iconSize="13dp"
+        app:iconTint="#4e4f56"
+        tools:ignore="SmallSp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/matchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:behavior_fitToContents="false"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="260dp"
+        app:layout_behavior="com.doubtnutapp.widgets.viewpagerbottomsheetbehavior.LockableViewPagerBottomSheetBehavior"
+        app:shapeAppearance="@style/MatchBottomSheetShapeAppearance">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="0dp"
+                android:orientation="vertical"
+                android:outlineProvider="none"
+                android:visibility="gone"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:elevation="0dp"
+                app:expanded="false"
+                tools:visibility="visible" >
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/questionMatchTab"
+                    style="@style/AppTheme.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    android:outlineProvider="none"
+                    app:layout_scrollFlags="scroll|enterAlways|snap"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/redTomato"
+                    app:tabTextAppearance="@style/MatchBottomSheetTabsTextAppearance"
+                    app:tabTextColor="@color/brown_grey" />
+
+                <com.doubtnutapp.matchquestion.ui.view.MatchFilterFacetListView
+                    android:id="@+id/matchFilterFacetListView"
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    app:layout_scrollFlags="scroll|enterAlways|snap"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/matchResultsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clipToPadding="false"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <com.doubtnutapp.widgets.SwipeLockableViewPager
+                    android:id="@+id/questionMatchViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingBottom="56dp"
+                    android:translationZ="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/loaderAnimation"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintDimensionRatio="1.8:0.6"
+                    tools:src="@tools:sample/avatars"/>
+
+                <TextSwitcher
+                    android:id="@+id/loaderAnimationTextSwitcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/loaderAnimation">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:fontFamily="@font/lato"
+                        android:textColor="@color/tomato"
+                        android:textSize="14sp"
+                        tools:text="@tools:sample/lorem" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:fontFamily="@font/lato"
+                        android:textColor="@color/tomato"
+                        android:textSize="14sp"
+                        tools:text="@tools:sample/lorem" />
+
+                </TextSwitcher>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="@color/white"
+            android:text="@string/looking_for_solutions"
+            android:textColor="#272727"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/separatorView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/warm_grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+        <TextView
+            android:id="@+id/tvBottomTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:gravity="end"
+            android:visibility="gone"
+            android:drawablePadding="8dp"
+            android:background="@color/white"
+            app:drawableEndCompat="@drawable/ic_arrow"
+            android:textColor="#eb532c"
+            android:text="Check All Courses"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:visibility="gone"
+            app:elevation="4dp"
+            app:itemIconSize="25dp"
+            app:itemIconTint="@drawable/nav_item_color_state"
+            app:itemTextColor="@drawable/nav_item_color_state"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu_bottom_nav_home" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/askQuestion"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardCornerRadius="35dp"
+            app:cardElevation="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bottomnavigation_doubt_buttonbg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="21dp"
+                    app:srcCompat="@drawable/ic_camera_red" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/caption_bottomnavigation_doubt"
+                    android:textColor="@color/redTomato"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

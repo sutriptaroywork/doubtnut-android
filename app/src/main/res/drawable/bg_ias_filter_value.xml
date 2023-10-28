@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/bg_filter_tags_selected" android:state_enabled="true" android:state_selected="true" />
+    <item android:drawable="@drawable/bg_ias_filter_tags" android:state_enabled="true" android:state_selected="false" />
+    <item android:drawable="@drawable/bg_ias_filter_tags_disable" android:state_enabled="false" android:state_selected="true" />
+    <item android:drawable="@drawable/bg_ias_filter_tags_disable" android:state_enabled="false" android:state_selected="false" />
+
+</selector>

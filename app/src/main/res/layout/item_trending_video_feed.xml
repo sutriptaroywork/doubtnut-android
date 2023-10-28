@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="videoFeed"
+            type="com.doubtnutapp.newglobalsearch.model.TrendingVideoViewItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:cardBackgroundColor="@color/blue">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/viewGradient"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:constraintDimension="@{`layoutType`}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_constraintDimensionRatio="16:9" />
+
+            <ImageView
+                android:id="@+id/ivVideoThumb"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/string_latest_bg_content_des"
+                android:scaleType="fitXY"
+                app:constraintDimension="@{`layoutType`}"
+                app:imageurl="@{videoFeed.imageUrl}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_constraintDimensionRatio="16:9"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <com.doubtnutapp.widgets.mathview.MathViewSimilar
+                android:id="@+id/ivVideo"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/string_latest_bg_content_des"
+                android:scaleType="fitXY"
+                app:constraintDimension="@{`layoutType`}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_constraintDimensionRatio="16:9"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/ibVideoPlay"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/card_inside_item_margin"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/string_latest_playbutton_content_des"
+                app:layout_constraintBottom_toTopOf="@+id/tvMeta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_match_question_play_button" />
+
+            <TextView
+                android:id="@+id/tvMeta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato"
+                android:maxLines="1"
+                android:paddingTop="6dp"
+                android:text="@{videoFeed.chapter}"
+                android:textColor="@color/text_black"
+                android:textSize="14sp"
+                android:visibility="@{videoFeed.chapter != null ? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivVideo"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="5 Marks | UP Board Exam’19" />
+
+            <TextView
+                android:id="@+id/tvVideoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="@{videoFeed.subject}"
+                android:textColor="@color/warm_grey"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="@{videoFeed.subject != null ? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toStartOf="@+id/tvQuestioId"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMeta"
+                tools:text="Height &amp; Height" />
+
+            <TextView
+                android:id="@+id/tvQuestioId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_light"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="6dp"
+                android:text="@{videoFeed.questionId}"
+                android:textColor="@color/warm_grey"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/tvMeta"
+                tools:text="1212332" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tvVideoTitle"
+                app:layout_constraintEnd_toEndOf="@+id/tvVideoTitle"
+                app:layout_constraintStart_toStartOf="@+id/tvVideoTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

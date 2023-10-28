@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/groupInfo"
+        android:enabled="true"
+        android:title="@string/group_info"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/inviteMember"
+        android:enabled="true"
+        android:title="@string/invite_member"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/copyInviteLink"
+        android:enabled="true"
+        android:title="@string/copy_invite_link"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/leaveGroup"
+        android:enabled="true"
+        android:title="@string/leave_study_group"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/muteNotification"
+        android:enabled="true"
+        android:title="@string/leave_study_group"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/reportGroup"
+        android:enabled="true"
+        android:title="@string/report_group"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/faq"
+        android:enabled="true"
+        android:title="@string/faqs"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/markResolved"
+        android:enabled="true"
+        android:title="@string/mark_resolved"
+        app:showAsAction="never" />
+
+</menu>

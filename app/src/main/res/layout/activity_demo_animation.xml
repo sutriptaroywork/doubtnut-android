@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/closeDemo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_close_grey"
+            android:tint="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/kaise_paaye_better_solutions"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/closeDemo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/demoVideoList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:itemCount="1"
+            app:layout_constraintBottom_toTopOf="@+id/layoutBottomListView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:listitem="@layout/item_demo_animation_v2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutBottomListView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#541388"
+            android:visibility="visible"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sampleQuestionTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/don_t_have_question_ndemo_question_ke_sath_try_karin"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:lineSpacingExtra="2sp"
+                app:layout_constraintEnd_toStartOf="@+id/sampleQuestionRecyclerView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sampleQuestionRecyclerView"
+                android:layout_width="119dp"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_marginEnd="12dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_sample_question" />
+
+            <TextView
+                android:id="@+id/clickToTry"
+                android:layout_width="0dp"
+                android:layout_height="19dp"
+                android:textSize="10sp"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="#fcca45"
+                android:text="@string/click_to_try"
+                android:gravity="center"
+                android:background="@drawable/background_button_click_to_try"
+                app:layout_constraintStart_toStartOf="@id/sampleQuestionRecyclerView"
+                app:layout_constraintEnd_toEndOf="@id/sampleQuestionRecyclerView"
+                app:layout_constraintBottom_toBottomOf="@+id/sampleQuestionRecyclerView"
+                tools:ignore="SmallSp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

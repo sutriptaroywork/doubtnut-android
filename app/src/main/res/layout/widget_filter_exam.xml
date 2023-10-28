@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bunker">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTitleFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+        android:drawableTint="@color/tomato"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTitleFilter2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="LIVE SECTIONS" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTitleFilter2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+        android:drawableTint="@color/tomato"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:gravity="end|center_vertical"
+        android:maxLines="1"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewTitleFilter"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="LIVE SECTIONS" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTitleFilter2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTitleFilter2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

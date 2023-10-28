@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#30000000">
+
+    <item android:id="@+id/masked">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/tomato" />
+                </shape>
+            </item>
+            <item
+                android:bottom="@dimen/dimen_8dp"
+                android:drawable="@drawable/ic_send_white_24dp"
+                android:gravity="center"
+                android:left="@dimen/dimen_8dp"
+                android:right="8dp"
+                android:top="@dimen/dimen_8dp" />
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/tomato" />
+                </shape>
+            </item>
+            <item
+                android:bottom="@dimen/dimen_8dp"
+                android:drawable="@drawable/ic_send_white_24dp"
+                android:gravity="center"
+                android:left="@dimen/dimen_8dp"
+                android:right="8dp"
+                android:top="@dimen/dimen_8dp" />
+        </layer-list>
+    </item>
+
+</ripple>

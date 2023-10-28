@@ -1,0 +1,17 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp"
+        android:radius="@dimen/alerter_padding_default"
+        android:topLeftRadius="@dimen/alerter_padding_default"
+        android:topRightRadius="@dimen/alerter_padding_default" />
+
+    <solid android:color="@color/red" />
+
+    <padding
+        android:bottom="@dimen/alerter_padding_default"
+        android:left="@dimen/alerter_padding_default"
+        android:right="@dimen/alerter_padding_default"
+        android:top="@dimen/alerter_padding_default" />
+</shape>

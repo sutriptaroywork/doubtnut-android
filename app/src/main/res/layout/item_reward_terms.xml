@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/rewardTermNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="7sp"
+        android:textColor="@color/purple_593ecc"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        tools:text="1." />
+
+    <TextView
+        android:id="@+id/tvRewardTermsRule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="7sp"
+        android:textColor="@color/purple_593ecc"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        tools:text="Doubtnut reserves the right to withdraw the reward system at any time" />
+</LinearLayout>

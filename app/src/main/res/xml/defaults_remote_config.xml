@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>CAMERA_COUNT</key>
+        <value>5</value>
+    </entry>
+
+    <entry>
+        <key>LOADING_SCREEN</key>
+        <value>Old</value>
+    </entry>
+
+    <entry>
+        <key>SHOW_EXO_DATE_CHANGE_DIALOG</key>
+        <value>1</value>
+    </entry>
+
+    <entry>
+        <key>ADVANCED_SEARCH_TOPICS_POSITION</key>
+        <value>0</value>
+    </entry>
+
+    <entry>
+        <key>IN_APP_SEARCH_VERSION</key>
+        <value>1</value>
+    </entry>
+
+    <entry>
+        <key>EVENT_INFO</key>
+        <value>
+            {
+            "source": "default",
+            "match_video_watch": 1,
+            "question_ask": 1,
+            "registration_login_complete": 1,
+            "session_start_dn": 1,
+            "app_install_dn": 1,
+            "lc_payment_pay_now": 1,
+            "lc_course_click_buy_now": 1,
+            "lc_bundle_click_buy_now": 1,
+            "lc_buy_now_click": 1,
+            "dn_video_watch_9_to_12": 1.2,
+            "dn_video_watch_iit": 1.2,
+            "dn_video_watch_neet": 1.2,
+            "FindSolutionButtonClick": 1.2,
+            "PlayVideoClick": 1.2,
+            "FeedEngagement": 1.2,
+            "HomeInBottomClick": 1.2,
+            "SplashStateScreen": 1.2,
+            "VideoPlayedBlob": 1.2,
+            "MatchPageTabDoubtnut": 1.2,
+            "MatchPageView": 1.2,
+            "lc_call_click": 1.2,
+            "LC_sheet_click_buy_now": 1.2,
+            "ncp_view_plan_tapped": 1.2,
+            "ncp_choose_plan_item_clicked": 1.2,
+            "mpvp_course_bottomsheet_trial_clicked": 1.2,
+            "mpvp_course_bottomsheet_buy_now_clicked": 1.2,
+            "pc_cta_click": 1.2,
+            "lfet_20m_7d": 1.2,
+            "lfet_10m_3d": 1.2,
+            "lfet_5m_1d": 1.2,
+            "lfvv_4_7d": 1.2,
+            "sfvv_3_1d": 1.2,
+            "sfvv_6_2d": 1.2,
+            "lfvv_4_3d": 1.2,
+            "lfvv_2_1d": 1.2,
+            "lfvv_2_3d": 1.2,
+            "cons_lf_2d": 1.2,
+            "cons_sf_3d": 1.2
+            }
+        </value>
+    </entry>
+
+    <entry>
+        <key>COURSE_CLASS_ENABLED</key>
+        <value>
+            11,12,13
+        </value>
+    </entry>
+
+    <entry>
+        <key>LIVE_CLASS_CLASS_ENABLED</key>
+        <value>
+            6,7,8,9,10,11,12,13
+        </value>
+    </entry>
+
+    <entry>
+        <key>COMMUNITY_GUIDELINES_JSON</key>
+        <value>
+            {
+            "main_text": "Every day, students and teachers use Doubtnut to share their thoughts, connect with students and friends and build communities. _br We recognize how important it is for Doubtnut to be a place where people feel empowered to communicate, and we take seriously our role in keeping abuse off our service. That’s why we’ve developed a set of Community Guidelines that outline what is and is not allowed on Doubtnut. _br Our Community Standards apply to everyone, all around the world, and to all types of content. They’re designed to be comprehensive. _b Anyone can report potentially violating content, including Profiles, individual posts and comments. We also give people control over their own experience by allowing them to unfollow people. __b _br The goal of our Community Guidelines has always been to create a place for expression and give people a voice. This has not and will not change. Building community and bringing India closer together depends on student’s ability to share diverse views, experiences, ideas and information. We want students to be able to talk openly about the issues that matter to them, even if some may disagree or find them objectionable. _br _b The consequences for violating our Community Standards vary depending on the severity of the violation and the person's history on the platform. __b For instance, we may warn someone for a first violation, but if they continue to violate our policies, we may ban their ability to post on Doubtnut or disable their profile. We also may notify law enforcement when we believe there is a genuine risk of physical harm or a direct threat to public safety. _br Our Community Guidelines are a guide for what is and isn’t allowed on Doubtnut. It is in this spirit that we ask users of the Doubtnut community to follow these guidelines.",
+            "guideline_1": {   "title": "No Vulgarity",   "text": "We restrict the display of nudity or sexual activity. Additionally, we default to removing sexual imagery to prevent the sharing of non-consensual or underage content. Restrictions on the display of sexual activity also apply to digitally created content. We also restrict sexually explicit language that may lead to solicitation because users within our student community are sensitive to this type of content and it may impede the ability for them to connect with their friends and the broader community." },
+            "guideline_2": {   "title": "No Violence",   "text": "We remove content that glorifies violence or celebrates the suffering or humiliation of others because it may create an environment that discourages participation. We allow graphic content (with some limitations) to help people raise awareness about issues. We know that people value the ability to discuss important issues like human rights abuses or acts of terrorism. We also know that people have different sensitivities with regard to graphic and violent content. " },
+            "guideline_3": {   "title": "No Bullying",   "text": "Bullying and harassment happen in many places and come in many different forms, from making threats to releasing personally identifiable information, to sending threatening messages, and making unwanted malicious contact, abusive comments. We do not tolerate this kind of behavior because it prevents people from feeling safe and respected on Doubtnut. _br We remove content that's meant to degrade or shame people. We recognize that bullying and harassment can have more of an emotional impact on students, which is why our policies provide heightened protection for our users. _br We require self-reporting because it helps us understand that the person targeted feels bullied or harassed. We encourage people to report such behavior and content." },
+            "guideline_4": {   "title": "No Hate Speech",   "text": "We do not allow hate speech on Doubtnut because it creates an environment of intimidation and exclusion and in some cases may promote real-world violence. _br We define hate speech as a direct attack on people based on what we call protected characteristics — race, ethnicity, national origin, religious affiliation, sexual orientation, caste, sex, gender, gender identity, and serious disease or disability. We define attack as violent or dehumanizing speech, statements of inferiority, or calls for exclusion or segregation and take action on the same." }
+            }
+        </value>
+    </entry>
+
+    <entry>
+        <key>RETRY_ASK_FLOW_COUNT</key>
+        <value>0</value>
+    </entry>
+
+    <entry>
+        <key>ASK_FLOW_TIME_OUT</key>
+        <value>20</value>
+    </entry>
+
+    <entry>
+        <key>offline_video_count</key>
+        <value>5</value>
+    </entry>
+    <entry>
+        <key>enable_glide_optimisation</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>enable_rgb_565</key>
+        <value>true</value>
+    </entry>
+
+</defaultsMap>

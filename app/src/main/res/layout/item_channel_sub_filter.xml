@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvFilter"
+        tools:text="Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_8dp"
+        android:background="@drawable/selector_channel_filter"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:textAllCaps="false"
+        android:textColor="@color/selector_channel_filter_text"
+        android:textSize="12dp">
+
+    </TextView>
+</LinearLayout>

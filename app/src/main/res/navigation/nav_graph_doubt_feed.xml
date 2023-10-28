@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_doubt_feed"
+    app:startDestination="@id/doubtFeedFragment2">
+
+    <fragment
+        android:id="@+id/doubtFeedFragment2"
+        android:name="com.doubtnutapp.doubtfeed2.ui.DoubtFeedFragment2"
+        android:label="DoubtFeedFragment"
+        tools:layout="@layout/fragment_doubt_feed_2">
+        <action
+            android:id="@+id/actionShowInfoDialog"
+            app:destination="@id/dfInfoDialogFragment" />
+        <action
+            android:id="@+id/actionOpenStatsScreen"
+            app:destination="@id/dfStatsFragment" />
+        <action
+            android:id="@+id/actionDoubtFeedUnavailable"
+            app:destination="@id/dfUnavailableFragment"
+            app:popUpTo="@id/doubtFeedFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/actionOpenLeaderboardScreen"
+            app:destination="@id/leaderboardFragment" />
+        <action
+            android:id="@+id/actionOpenPreviousDoubtsScreen"
+            app:destination="@id/dfPreviousDoubtsFragment" />
+        <action
+            android:id="@+id/actionShowGoalCompletedDialogFragment"
+            app:destination="@id/dfGoalCompletedDialogFragment" />
+        <action
+            android:id="@+id/actionShowBackPressDialog"
+            app:destination="@id/dfBackPressDialogFragment" />
+        <action
+            android:id="@+id/actionShowScratchCardDialog"
+            app:destination="@id/scratchCardDialogFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dfInfoDialogFragment"
+        android:name="com.doubtnutapp.doubtfeed2.ui.DfInfoDialogFragment"
+        android:label="DfInfoDialogFragment"
+        tools:layout="@layout/fragment_df_info_dialog">
+        <argument
+            android:name="infoData"
+            app:argType="com.doubtnutapp.data.remote.models.doubtfeed2.DoubtFeedInfo" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/dfStatsFragment"
+        android:name="com.doubtnutapp.doubtfeed2.ui.DfStatsFragment"
+        android:label="DfStatsFragment"
+        tools:layout="@layout/fragment_df_stats">
+        <action
+            android:id="@+id/actionOpenLeaderboardScreen"
+            app:destination="@id/leaderboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dfUnavailableFragment"
+        android:name="com.doubtnutapp.doubtfeed2.ui.DfUnavailableFragment"
+        android:label="fragment_df_unavailable"
+        tools:layout="@layout/fragment_df_unavailable">
+        <argument
+            android:name="topPaneData"
+            app:argType="com.doubtnutapp.data.remote.models.doubtfeed2.TopPaneData"
+            app:nullable="true" />
+        <argument
+            android:name="infoData"
+            app:argType="com.doubtnutapp.data.remote.models.doubtfeed2.DoubtFeedInfo"
+            app:nullable="true" />
+        <argument
+            android:name="benefitsData"
+            app:argType="com.doubtnutapp.data.remote.models.doubtfeed2.DoubtFeedInfo"
+            app:nullable="true" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="com.doubtnutapp.doubtfeed2.leaderboard.ui.LeaderboardFragment"
+        android:label="LeaderboardFragment"
+        tools:layout="@layout/fragment_df_leaderboard_list">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="doubtnutapp://doubt_feed_2/leaderboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dfPreviousDoubtsFragment"
+        android:name="com.doubtnutapp.doubtfeed2.ui.DfPreviousDoubtsFragment"
+        android:label="DfPreviousDoubtsFragment"
+        tools:layout="@layout/fragment_df_previous_doubts">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="topics"
+            app:argType="com.doubtnutapp.data.remote.models.doubtfeed2.Topic[]" />
+        <argument
+            android:name="carouselsJson"
+            app:argType="string" />
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:uri="doubtnutapp://doubt_feed_2/previous" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dfGoalCompletedDialogFragment"
+        android:name="com.doubtnutapp.doubtfeed2.ui.DfGoalCompletedDialogFragment"
+        android:label="DfGoalCompletedDialogFragment"
+        tools:layout="@layout/fragment_df_goal_completed_dialog">
+        <argument
+            android:name="popupData"
+            app:argType="com.doubtnutapp.data.remote.models.doubtfeed2.DfPopupData" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/dfBackPressDialogFragment"
+        android:name="com.doubtnutapp.doubtfeed2.ui.DfBackPressDialogFragment"
+        android:label="DfBackPressDialogFragment"
+        tools:layout="@layout/fragment_df_back_press_dialog">
+        <argument
+            android:name="popupData"
+            app:argType="com.doubtnutapp.data.remote.models.doubtfeed2.DfPopupData" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/scratchCardDialogFragment"
+        android:name="com.doubtnutapp.doubtfeed2.reward.ui.ScratchCardDialogFragment"
+        android:label="ScratchCardDialogFragment"
+        tools:layout="@layout/fragment_df_reward_scratch_card_dialog">
+        <argument
+            android:name="reward"
+            app:argType="com.doubtnutapp.doubtfeed2.reward.data.model.Reward" />
+        <argument
+            android:name="shareText"
+            app:argType="string"
+            app:nullable="true" />
+    </dialog>
+</navigation>

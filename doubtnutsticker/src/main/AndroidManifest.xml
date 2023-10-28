@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.doubtnutapp.sticker">
+
+    <application
+        android:allowBackup="false"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.doubtnutapp.sticker.EntryActivity" />
+        <activity
+            android:name="com.doubtnutapp.sticker.StickerPackListActivity"
+            android:label="@string/title_activity_sticker_packs_list" />
+        <activity
+            android:name="com.doubtnutapp.sticker.StickerPackDetailsActivity"
+            android:parentActivityName="com.doubtnutapp.sticker.StickerPackListActivity"
+            tools:ignore="UnusedAttribute">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.doubtnutapp.sticker.StickerPackListActivity" />
+        </activity>
+        <activity
+            android:name="com.doubtnutapp.sticker.StickerPackInfoActivity"
+            android:label="@string/title_activity_sticker_pack_info"
+            android:parentActivityName="com.doubtnutapp.sticker.StickerPackDetailsActivity"
+            tools:ignore="UnusedAttribute">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.doubtnutapp.sticker.StickerPackDetailsActivity" />
+        </activity>
+
+        <provider
+            android:name="com.doubtnutapp.sticker.StickerContentProvider"
+            android:authorities="${contentProviderAuthority}"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.whatsapp.sticker.READ" />
+    </application>
+</manifest>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/parentView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<com.google.android.material.card.MaterialCardView
+				android:id="@+id/cardView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="12dp"
+				android:layout_marginTop="2dp"
+				android:layout_marginEnd="12dp"
+				app:cardCornerRadius="2dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent">
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="#333333"
+						android:padding="8dp">
+
+						<TextView
+								android:id="@+id/tvTitle"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:fontFamily="@font/lato"
+								android:paddingEnd="4dp"
+								android:textColor="@color/white"
+								android:textSize="14sp"
+								android:textStyle="normal"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintEnd_toStartOf="@+id/tvCtaText"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toTopOf="parent"
+								tools:text="यह कोर्स हिंदी माध्यम में भी उपलब्ध है ">
+
+						</TextView>
+
+						<TextView
+								android:id="@+id/tvCtaText"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginEnd="@dimen/dimen_8dp"
+								android:fontFamily="@font/lato"
+								android:gravity="center_horizontal"
+								android:lineSpacingExtra="5.3sp"
+								android:textColor="#ff7a57"
+								android:textSize="15sp"
+								android:textStyle="normal"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintEnd_toStartOf="@+id/ivClose"
+								app:layout_constraintTop_toTopOf="parent"
+								tools:text="हिंदी में देखें ">
+
+						</TextView>
+
+						<ImageView
+								android:id="@+id/ivClose"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:src="@drawable/ic_icon_close"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintTop_toTopOf="parent" />
+
+						<View
+								android:layout_width="0dp"
+								android:layout_height="1dp"
+								android:layout_marginTop="@dimen/dimen_2dp"
+								android:background="#ff7a57"
+								app:layout_constraintEnd_toEndOf="@+id/tvCtaText"
+								app:layout_constraintStart_toStartOf="@+id/tvCtaText"
+								app:layout_constraintTop_toBottomOf="@+id/tvCtaText" />
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+		</com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="270"
+        android:centerColor="@color/big_stone"
+        android:endColor="@color/big_stone"
+        android:startColor="@color/big_stone" />
+    <corners android:radius="30dp" />
+    <padding
+        android:bottom="2dp"
+        android:left="5dp"
+        android:right="5dp"
+        android:top="2dp" />
+</shape>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e0eaff"
+    android:paddingStart="12dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/facetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="10sp"
+        android:textColor="#17181f"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/facetRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/facetRecyclerView"
+        tools:ignore="SmallSp"
+        tools:text="Refine by" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/facetRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/facetTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_match_filter_facet" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/topicRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/facetRecyclerView"
+        tools:listitem="@layout/item_match_filter_topic" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lastFacetTitleContainer"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/allTopics"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topicRecyclerView">
+
+        <TextView
+            android:id="@+id/lastFacetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_selected_filter"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:gravity="start"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#636363"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Some Basic Principles " />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/allTopics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/lato"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:textColor="@color/tomato"
+        android:textSize="11sp"
+        app:drawableEndCompat="@drawable/ic_all_topic_right_arrow"
+        app:drawableTint="@color/tomato"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lastFacetTitleContainer"
+        tools:ignore="SmallSp"
+        tools:text="Filters" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

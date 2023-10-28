@@ -1,0 +1,125 @@
+{
+  "project_info": {
+    "project_number": "687673132756",
+    "firebase_url": "https://doubtnut-e000a.firebaseio.com",
+    "project_id": "doubtnut-e000a",
+    "storage_bucket": "doubtnut-e000a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687673132756:android:bf37ca9439260fba",
+        "android_client_info": {
+          "package_name": "com.doubtnut"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687673132756-erqh1dbcm5i9qrdqqtfkujsl1vpvvgcd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doubtnut",
+            "certificate_hash": "511dff90d8b9b8269a36ca1e5e8b88034172d3fa"
+          }
+        },
+        {
+          "client_id": "687673132756-jrjqrfv5mv1aahkt4ovk5q2m5c7g532v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8xQ6Kw9g7cFGiFU70n7kF2E9bj9AdiI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687673132756-jrjqrfv5mv1aahkt4ovk5q2m5c7g532v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687673132756:android:739cf2ef4e1f532a",
+        "android_client_info": {
+          "package_name": "com.doubtnutapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687673132756-3sseui5mi23ubboidvil8j7p8qhjfnci.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doubtnutapp",
+            "certificate_hash": "4cddbd489254c0d9ea0b22b9b612e485fc2ed5b3"
+          }
+        },
+        {
+          "client_id": "687673132756-280842pj51quakr4kn5sg6u328ch1lhf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doubtnutapp",
+            "certificate_hash": "1435dd88be3ab08d17b2efe65aa80b971838e2fc"
+          }
+        },
+        {
+          "client_id": "687673132756-sgbgfmv6c0v0l518felt4ad2uhh1tknd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doubtnutapp",
+            "certificate_hash": "db52da180b74606242232033658b7649e8f00df3"
+          }
+        },
+        {
+          "client_id": "687673132756-4pl37hspvfbe8bjr9jm13tbqq2qokkti.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doubtnutapp",
+            "certificate_hash": "5c5872260a81eca6b0d3ca69ca262c77244d686b"
+          }
+        },
+        {
+          "client_id": "687673132756-5qosqhu0d0cbmmfv6q0qgi7v48kr5jcv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doubtnutapp",
+            "certificate_hash": "2b5fc5171df88f26e64cf9f73260d66e0b310798"
+          }
+        },
+        {
+          "client_id": "687673132756-ig3ccjbqd2fd6a2o1c5a0e5dl0qfv3fm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doubtnutapp",
+            "certificate_hash": "511dff90d8b9b8269a36ca1e5e8b88034172d3fa"
+          }
+        },
+        {
+          "client_id": "687673132756-jrjqrfv5mv1aahkt4ovk5q2m5c7g532v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8xQ6Kw9g7cFGiFU70n7kF2E9bj9AdiI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687673132756-jrjqrfv5mv1aahkt4ovk5q2m5c7g532v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

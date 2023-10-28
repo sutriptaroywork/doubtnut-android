@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_12dp"
+    android:elevation="@dimen/dimen_10dp"
+    android:id="@+id/rootCardView"
+    app:cardCornerRadius="4dp"
+    app:strokeColor="#26000000"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_10dp">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageTickCross"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/radioButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_tick" />
+
+        <TextView
+            android:id="@+id/tvOption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:lineSpacingExtra="0.7sp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/imageTickCross"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="हिंदी का व्याख्या यहाँ आएगा " />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

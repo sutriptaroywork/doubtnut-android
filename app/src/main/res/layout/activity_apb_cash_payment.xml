@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".payment.ApbCashPaymentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back_black">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Cash Payments"
+                android:textColor="@color/black" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/dimen_10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/airtelImage"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_margin="@dimen/dimen_12dp"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:src="@drawable/ic_arrow_back_black" />
+
+            <TextView
+                android:id="@+id/coupon_code_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:textColor="#54138a"
+                android:textSize="@dimen/font_14sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/airtelImage"
+                tools:text="Your Coupon Code" />
+
+            <TextView
+                android:id="@+id/tvCouponCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:fontFamily="@font/lato"
+                android:textColor="#54138a"
+                android:textSize="29dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/coupon_code_text"
+                tools:text="DFGHJY" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_24dp"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:fontFamily="@font/lato"
+                android:gravity="center_horizontal"
+                android:textColor="@color/grey_dark"
+                android:textSize="@dimen/dimen_16sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCouponCode"
+                tools:text="You have to deposit minimum Rs 50 . Ye amount aapke DN wallet mein jayega jisse aap courses aur PDF’s khareed sakte hai" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSearchNearestStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                tools:text="SEARCH THE NEAREST STORE" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGetStoreList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:backgroundTint="@color/white"
+                android:drawableLeft="@drawable/ic_message"
+                android:fontFamily="@font/lato"
+                android:textAllCaps="false"
+                android:textColor="#eb532c"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSearchNearestStore"
+                app:strokeColor="@color/orange_ff612d"
+                app:strokeWidth="2dp"
+                tools:text="Get Store list by Sending Pin Code*" />
+
+            <TextView
+                android:id="@+id/btnSendSMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/lato"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="4.6sp"
+                android:textColor="@color/grey_dark"
+                android:textSize="@dimen/font_14sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnGetStoreList"
+                tools:text="*Send SMS with the Pin Code on the number 8448200000 " />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_recyclerview_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24dp"
+                android:background="#e0eaff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSendSMS">
+
+                <TextView
+                    android:id="@+id/tvRecyclerViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_24dp"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5.4sp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="HOW DOES IT WORK?" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVoiceInstructions"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_12dp"
+                    android:backgroundTint="#e0eaff"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_0dp"
+                    android:shadowColor="@color/colorTransparent"
+                    android:textAllCaps="false"
+                    android:textColor="#273de9"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:textStyle="bold"
+                    android:theme="@style/Theme.MaterialComponents"
+                    app:icon="@drawable/ic_volume"
+                    app:iconTint="#273DE9"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Voice Instructions" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/processRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:background="#e0eaff"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_recyclerview_head"
+                tools:listitem="@layout/apb_registration_item_1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="@dimen/dimen_16dp"
+        android:nestedScrollingEnabled="false"
+        android:visibility="gone" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

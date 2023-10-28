@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notificationCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/notificationImage"
+        android:layout_width="@dimen/dimen_60dp"
+        android:layout_height="@dimen/dimen_60dp"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNotificationTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato_light"
+        android:gravity="start"
+        android:maxLines="2"
+        android:textColor="@color/black_two"
+        android:textSize="@dimen/font_14sp"
+        app:layout_constraintEnd_toStartOf="@+id/overflowMenu"
+        app:layout_constraintStart_toEndOf="@+id/notificationImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Anupriya Kashyap and 4 others commented on your post" />
+
+    <TextView
+        android:id="@+id/tvNotificationMsg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato_light"
+        android:gravity="start"
+        android:maxLines="2"
+        android:textColor="@color/black_two"
+        android:textSize="@dimen/font_14sp"
+        app:layout_constraintEnd_toStartOf="@+id/overflowMenu"
+        app:layout_constraintStart_toEndOf="@+id/notificationImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotificationTitle"
+        tools:text="Anupriya Kashyap and 4 others commented on your post" />
+
+    <TextView
+        android:id="@+id/tvNotificationTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/grey_969696"
+        android:textSize="@dimen/dimen_12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/notificationImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotificationMsg"
+        tools:text="Just Now" />
+
+    <ImageView
+        android:id="@+id/overflowMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_4dp"
+        android:background="?android:selectableItemBackground"
+        android:importantForAccessibility="no"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:paddingRight="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_4dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvNotificationMsg"
+        app:srcCompat="@drawable/ic_overflowmenu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

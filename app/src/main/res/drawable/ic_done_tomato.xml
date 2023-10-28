@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/white" />
+            <padding
+                android:bottom="@dimen/dimen_2dp"
+                android:left="@dimen/dimen_2dp"
+                android:right="@dimen/dimen_2dp"
+                android:top="2dp" />
+
+            <size
+                android:width="30dp"
+                android:height="30dp" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_done_red" />
+</layer-list>

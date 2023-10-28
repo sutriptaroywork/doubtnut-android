@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_12dp"
+        app:cardCornerRadius="@dimen/dimen_4dp"
+        app:cardElevation="@dimen/dimen_4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#ffc700"
+                android:fontFamily="@font/lato"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="5.4sp"
+                android:paddingStart="@dimen/dimen_12dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="कोर्स खरीदना है अभी बाकी " />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:fontFamily="@font/lato"
+                android:paddingLeft="@dimen/dimen_12dp"
+                android:textColor="@color/grey_dark"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/imageView"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                tools:text="IIT JEE क्रैश कोर्स - हिंदी माध्यम " />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_14dp"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:fontFamily="@font/lato_black"
+                android:gravity="end"
+                android:lineSpacingExtra="5.4sp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSubTitle"
+                tools:text="₹6,999" />
+
+            <TextView
+                android:id="@+id/tvCrossedPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/lato"
+                android:gravity="end"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="4.6sp"
+                android:textColor="@color/grey_medium"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/tvPrice"
+                app:layout_constraintLeft_toRightOf="@id/tvPrice"
+                app:layout_constraintTop_toTopOf="@id/tvPrice"
+                tools:text="₹12,999" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="@id/tvCrossedPrice"
+                app:layout_constraintLeft_toLeftOf="@id/tvCrossedPrice"
+                app:layout_constraintRight_toRightOf="@id/tvCrossedPrice"
+                app:layout_constraintTop_toTopOf="@id/tvCrossedPrice" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="65dp"
+                android:layout_margin="@dimen/dimen_10dp"
+                app:layout_constraintBottom_toTopOf="@id/buttonPaymentComplete"
+                app:layout_constraintLeft_toRightOf="@id/tvSubTitle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                tools:src="@drawable/ic_check_bounty" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPaymentComplete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_12dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginRight="@dimen/dimen_12dp"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:lineSpacingExtra="6.3sp"
+                android:textColor="#eb532c"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tvCouponText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView"
+                app:strokeColor="@color/orange_eb532c"
+                app:strokeWidth="2dp"
+                tools:text="पेमेंट कम्पलीट करें " />
+
+            <TextView
+                android:id="@+id/tvCouponText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_12dp"
+                android:layout_marginRight="@dimen/dimen_12dp"
+                android:layout_marginBottom="@dimen/dimen_14dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="5.3sp"
+                android:textColor="#273de9"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonPaymentComplete"
+                tools:text="लगाओ कूपन ‘COUPON’ 30%  ऑफ के लिए " />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

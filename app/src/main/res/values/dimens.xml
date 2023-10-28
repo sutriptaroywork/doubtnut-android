@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="design_bottom_navigation_active_text_size">12sp</dimen>
+
+    <!-- 24dp (arrow size) -->
+
+    <!-- Z-axis elevations -->
+    <dimen name="z_app_bar">4dp</dimen>
+
+    <dimen name="results_dot_diameter">9dp</dimen>
+
+    <dimen name="padding_huge">24dp</dimen>
+    <dimen name="padding_large">14dp</dimen>
+
+    <dimen name="joined_friend_circle">80dp</dimen>
+    <dimen name="friends_recycler_view_height">138dp</dimen>
+
+    <!-- Quiz -->
+    <dimen name="back_arrow_width">40dp</dimen>
+    <dimen name="back_arrow_padding">10dp</dimen>
+    <dimen name="timer_quiz_header">12sp</dimen>
+
+    <!-- Homepage General -->
+    <dimen name="card_radius">8dp</dimen>
+    <dimen name="card_start_end_margin">18dp</dimen>
+    <dimen name="card_outer_margin">8dp</dimen>
+    <dimen name="card_title_margin">8dp</dimen>
+    <dimen name="card_title_text_size">16sp</dimen>
+    <dimen name="card_des_text_size">12sp</dimen>
+    <dimen name="card_capsule_padding">8dp</dimen>
+    <dimen name="card_inside_item_margin">8dp</dimen>
+    <dimen name="item_margin">8dp</dimen>
+    <dimen name="item_margin_small">2dp</dimen>
+    <dimen name="list_top_margin">16dp</dimen>
+
+    <!-- Homepage card margin -->
+    <dimen name="left_margin">0dp</dimen>
+    <dimen name="top_margin">0dp</dimen>
+    <dimen name="right_margin">0dp</dimen>
+    <dimen name="bottom_margin">0dp</dimen>
+
+    <!-- Bottom Navigation View -->
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">16sp</dimen>
+    <dimen name="design_bottom_navigation_height" tools:override="true">70dp</dimen>
+    <dimen name="design_bottom_navigation_icon_size" tools:override="true">46dp</dimen>
+
+    <!-- Homepage Latest Card -->
+    <dimen name="card_capsule_text_size">14.2sp</dimen>
+    <dimen name="card_heading_text_size">14sp</dimen>
+
+    <!-- Homepage Trending Card -->
+
+    <!-- Homepage QuizTimer Card -->
+
+    <!-- Homepage List Heading -->
+    <dimen name="list_heading_bottom_capsule_width">40dp</dimen>
+    <dimen name="list_heading_bottom_capsule_height">3dp</dimen>
+    <dimen name="list_heading_viewall_textview_size">14sp</dimen>
+
+
+    <!-- Homepage video type -->
+    <dimen name="video_duration_text_size">12sp</dimen>
+
+    <!-- Homepage pdf type -->
+
+    <!-- Homepage photo type -->
+
+    <!-- Homepage quiz type -->
+
+    <!-- Homepage contest type -->
+    <dimen name="contest_card_height">82dp</dimen>
+    <dimen name="contest_des_text_size">14sp</dimen>
+    <dimen name="contest_margin">24dp</dimen>
+
+    <!-- Homepage Top Banner -->
+    <item name="structure_spacing" format="float" type="dimen">5</item>
+    <item name="spacing_circle" format="float" type="dimen">18</item>
+    <dimen name="nav_header_item_text_size">14sp</dimen>
+    <dimen name="nav_item_marign">32dp</dimen>
+    <dimen name="nav_ham_icon_height">16dp</dimen>
+    <dimen name="nav_ham_icon_width">32dp</dimen>
+    <dimen name="library_card_spacing">10dp</dimen>
+
+    <!-- Onboarding language and class selection -->
+    <dimen name="carditem_start_end_margin">16dp</dimen>
+    <dimen name="carditem_top_bottom_margin">8dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+    <dimen name="card_corners">0dp</dimen>
+    <dimen name="card_text_padding">8dp</dimen>
+    <dimen name="card_text_size">20sp</dimen>
+    <dimen name="text_heading_top_start_margin">16dp</dimen>
+    <dimen name="onboarding_heading_text_size">20sp</dimen>
+    <dimen name="onboarding_recyclerview_top_margin">16dp</dimen>
+
+
+    <!--HomeFragment-->
+    <dimen name="video_question_minimum_height">30dp</dimen>
+
+
+    <dimen name="alerter_padding_half">8dp</dimen>
+    <dimen name="alerter_padding_small">4dp</dimen>
+    <dimen name="alerter_text_medium">18sp</dimen>
+    <dimen name="alerter_padding_default">16dp</dimen>
+
+    <dimen name="design_bottom_navigation_margin" tools:override="true">15dp</dimen>
+    <dimen name="playlistcontentcardradius">4dp</dimen>
+    <dimen name="popview_point_width">168dp</dimen>
+    <dimen name="popview_point_height">48dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <item name="spacing_zero" format="float" type="dimen">0</item>
+    <item name="spacing_plan" format="float" type="dimen">33</item>
+
+    <!--Match Page Filter-->
+    <dimen name="viewholder_filter_topic_size">5sp</dimen>
+    <dimen name="fragment_filter_topic_size">6sp</dimen>
+
+
+    <!--Mock Test-->
+    <dimen name="toolbar_height">48dp</dimen>
+    <dimen name="font_14sp">14sp</dimen>
+    <dimen name="height_48dp">48dp</dimen>
+    <dimen name="dimen_48dp">48dp</dimen>
+    <dimen name="radius_5dp">5dp</dimen>
+    <dimen name="text_10sp">10sp</dimen>
+    <dimen name="height_52dp">52dp</dimen>
+    <dimen name="dimen_66dp">66dp</dimen>
+    <dimen name="dimen_12sp">12sp</dimen>
+    <dimen name="dimen_8sp">8sp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_50dp">50dp</dimen>
+    <dimen name="dimen_60dp">60dp</dimen>
+    <dimen name="dimen_11sp">11sp</dimen>
+    <dimen name="font_9sp">9sp</dimen>
+    <dimen name="dimen_40dp">40dp</dimen>
+    <dimen name="dimen_2dp">2dp</dimen>
+    <dimen name="dimen_17dp">17dp</dimen>
+    <dimen name="dimen_7sp">7sp</dimen>
+    <dimen name="dimen_13sp">13sp</dimen>
+    <dimen name="dimen_21sp">21sp</dimen>
+    <dimen name="dimen_36dp">36dp</dimen>
+    <dimen name="dimen_9dp">9dp</dimen>
+    <dimen name="font_16sp">16sp</dimen>
+    <dimen name="font_24sp">24sp</dimen>
+    <dimen name="dimen_0dp">0dp</dimen>
+    <dimen name="dimen_10dp">10dp</dimen>
+    <dimen name="dimen_12dp">12dp</dimen>
+    <dimen name="dimen_13dot7sp">13.7sp</dimen>
+    <dimen name="dimen_14dp">14dp</dimen>
+    <dimen name="dimen_15dp">15dp</dimen>
+    <dimen name="dimen_15sp">15sp</dimen>
+    <dimen name="dimen_16dp">16dp</dimen>
+    <dimen name="dimen_16sp">16sp</dimen>
+    <dimen name="dimen_17sp">17dp</dimen>
+    <dimen name="dimen_18dp">18dp</dimen>
+    <dimen name="dimen_18sp">18sp</dimen>
+    <dimen name="dimen_1dp">1dp</dimen>
+    <dimen name="dimen_20dp">20dp</dimen>
+    <dimen name="dimen_22dp">22dp</dimen>
+    <dimen name="dimen_22sp">22sp</dimen>
+    <dimen name="dimen_23dp">23dp</dimen>
+    <dimen name="dimen_24dp">24dp</dimen>
+    <dimen name="dimen_2dot2sp">2.2sp</dimen>
+    <dimen name="dimen_32dp">32dp</dimen>
+    <dimen name="dimen_35dp">35dp</dimen>
+    <dimen name="dimen_3dp">3dp</dimen>
+    <dimen name="dimen_4dp">4dp</dimen>
+    <dimen name="dimen_4sp">4sp</dimen>
+    <dimen name="dimen_6dp">6dp</dimen>
+    <dimen name="dimen_6sp">6sp</dimen>
+    <dimen name="dimen_7dp">7dp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_93dp">93dp</dimen>
+    <dimen name="dimen_96dp">96dp</dimen>
+    <dimen name="dimen_neg_16dp">-16dp</dimen>
+
+    <dimen name="dtpv_yt_arc_size">40dp</dimen>
+    <dimen name="dimen_152dp">152dp</dimen>
+    <dimen name="text_view_height">80dp</dimen>
+    <dimen name="container_height">100dp</dimen>
+    <dimen name="seek_bar_thickness">4dp</dimen>
+    <dimen name="seek_bar_thumb_size">12dp</dimen>
+    <dimen name="margin_top_notice_board_detail_title">50dp</dimen>
+
+    <dimen name="topic_booster_game_chapter_screen_margin_start">44dp</dimen>
+    <dimen name="topic_booster_game_chapter_screen_margin_end">33dp</dimen>
+</resources>

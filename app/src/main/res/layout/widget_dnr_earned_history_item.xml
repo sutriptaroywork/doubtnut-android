@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvRupyaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/grey_808080"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:paddingStart="6dp"
+        android:paddingEnd="0dp"
+        app:drawableLeftCompat="@drawable/ic_dot_gray"
+        app:drawableTint="@color/grey_808080"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Total Rupya Earned" />
+
+    <TextView
+        android:id="@+id/tvRupyaCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:fontFamily="@font/lato"
+        android:textColor="#541488"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/ivCoin"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/tvRupyaTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="100" />
+
+    <ImageView
+        android:id="@+id/ivCoin"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="#ededed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_user_default_game" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="testDetailsItem"
+            type="com.doubtnutapp.data.remote.models.TestDetails" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/alerter_padding_default"
+        android:layout_marginTop="@dimen/alerter_padding_default"
+        android:layout_marginEnd="@dimen/alerter_padding_default"
+        android:layout_marginBottom="@dimen/alerter_padding_half"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/alerter_padding_small"
+                android:fontFamily="@font/lato"
+                android:padding="@dimen/alerter_padding_small"
+                android:text="@{testDetailsItem.title}"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescription"
+                app:layout_constraintEnd_toStartOf="@+id/guideline13"
+                app:layout_constraintStart_toStartOf="@+id/guideline11"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="This is Awesome Test" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/alerter_padding_small"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato"
+                android:maxLines="2"
+                android:minLines="1"
+                android:padding="@dimen/alerter_padding_small"
+                android:text="@{testDetailsItem.description}"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline16"
+                app:layout_constraintEnd_toStartOf="@+id/guideline13"
+                app:layout_constraintStart_toStartOf="@+id/guideline11"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                tools:text="This is Awesome Test Description This is Awesome Test Description This is Awesome Test Description" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.55" />
+
+            <TextView
+                android:id="@+id/tvTestStatusLable"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/alerter_padding_small"
+                android:layout_marginEnd="@dimen/alerter_padding_half"
+                android:fontFamily="@font/lato"
+                android:gravity="bottom"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline13"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Test Starts In" />
+
+            <TextView
+                android:id="@+id/tvTestTimer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/alerter_padding_small"
+                android:layout_marginEnd="@dimen/alerter_padding_half"
+                android:fontFamily="@font/lato"
+                android:gravity="center|right"
+                android:paddingEnd="@dimen/alerter_padding_half"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toTopOf="@+id/guideline16"
+                tools:text="00:00:00" />
+
+            <TextView
+                android:id="@+id/tvAttemptStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/alerter_padding_small"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/lato"
+                android:padding="@dimen/alerter_padding_small"
+                android:text="@{testDetailsItem.attemptCount > 0 ? String.format(@string/string_attempted) : String.format(@string/string_unattempted)}"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvDuration"
+                app:layout_constraintEnd_toStartOf="@+id/guideline13"
+                app:layout_constraintStart_toEndOf="@+id/guideline11"
+                app:layout_constraintTop_toBottomOf="@+id/guideline16"
+                tools:text="Unattempted" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/alerter_padding_small"
+                android:fontFamily="@font/lato"
+                android:padding="@dimen/alerter_padding_small"
+                android:text="@{String.format(@string/string_test_duration_lable, testDetailsItem.durationInMin)}"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline13"
+                app:layout_constraintStart_toEndOf="@+id/guideline11"
+                app:layout_constraintTop_toBottomOf="@+id/tvAttemptStatus"
+                tools:text="Duration 60 min" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/alerter_padding_small"
+                android:layout_marginTop="@dimen/alerter_padding_small"
+                android:layout_marginEnd="@dimen/alerter_padding_small"
+                android:layout_marginBottom="@dimen/alerter_padding_small"
+                android:background="@drawable/rect_quiz_status"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTestStatus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:padding="@dimen/alerter_padding_small"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view5"
+                app:layout_constraintEnd_toEndOf="@+id/view5"
+                app:layout_constraintStart_toStartOf="@+id/view5"
+                app:layout_constraintTop_toTopOf="@+id/guideline16"
+                tools:text="Upcoming" />
+
+            <View
+                android:id="@+id/viewTestStatus"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline16"
+                app:layout_constraintEnd_toEndOf="@+id/view5"
+                app:layout_constraintStart_toStartOf="@+id/view5"
+                app:layout_constraintTop_toTopOf="@+id/view5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

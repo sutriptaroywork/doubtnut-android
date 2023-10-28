@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingTop="20dp"
+    android:layout_height="match_parent">
+
+    <com.doubtnutapp.widgets.StudyGroupSearchView
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rect_round_corner_8dp"
+        android:backgroundTint="@color/grey_f2f2f2"
+        android:drawableStart="@drawable/ic_search_suggestion"
+        android:drawablePadding="12dp"
+        android:hint="@string/search_for_a_friend"
+        android:imeOptions="actionSearch"
+        android:importantForAutofill="no"
+        android:inputType="textNoSuggestions"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textColor="@android:color/primary_text_light_nodisable"
+        android:textSize="12sp"
+        app:debounceTime="500"
+        app:minimumQueryTextLength="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

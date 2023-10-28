@@ -1,0 +1,1201 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">Doubtnut</string>
+    <string name="mobile_verification">मोबाइल सत्यापन</string>
+    <string name="need_to_text_you_the_OTP">हमें आपके खाते को प्रमाणित करने के लिए आपको OTP भेजने  की आवश्यकता है</string>
+    <string name="enter_your_phone_number"><font size="12">आगे बढ़ने के लिए, अपना मोबाइल नंबर दर्ज करें</font></string>
+    <string name="send_otp">OTP भेजें</string>
+    <string name="OTP_will_be_sent_to_your_number">सत्यापन के लिए आपके नंबर पर एक OTP भेजा जाएगा</string>
+    <string name="enter_valid_number">कृपया एक सही  दूरभाष क्रमांक डालिये</string>
+    <string name="enter_valid_country_code">कृपया एक मान्य देश कोड दर्ज करें</string>
+    <string name="enter_valid_otp">कृपया एक वैध OTP दर्ज करें</string>
+    <string name="verification_code">सत्यापन कोड </string>
+    <string name="verification_code_send_to">कृपया भेजा गया सत्यापन कोड टाइप करें</string>
+    <string name="verify_otp">OTP को सत्यापित करें</string>
+    <string name="resend_otp">OTP दोबारा  भेजें</string>
+    <string name="see_all">सब देखें</string>
+    <string name="skip">स्किप</string>
+    <string name="skip_in">%1$s में स्किप करें</string>
+    <string name="start_zero">00:00</string>
+    <string name="contactus">हमसे संपर्क करें</string>
+    <string name="aboutus">हमारे बारे में</string>
+    <string name="rateus">हमें रेटिंग दें</string>
+    <string name="tnc">नियम और शर्तें</string>
+    <string name="howtousedoubtnut">Doubtnut का उपयोग कैसे करें</string>
+    <string name="howtouseforum">मंच  का उपयोग कैसे करें</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="logout">लॉग आउट करे </string>
+    <string name="select_class_heading">अपनी कक्षा का चयन करें</string>
+    <string name="select_chapter_heading">अपने प्रश्न के अध्याय का चयन करें</string>
+    <string name="select_sub_chapter_heading">अपने प्रश्न का उप-भाग चुनें</string>
+    <string name="videodislikefeedback">आपको  एक समस्या का सामना करना पड़ा</string>
+    <string name="ask_community_confirmation_text1">Yayy!!</string>
+    <string name="ask_community_confirmation_text2">आपका प्रश्न मंच  में भेज दिया गया है</string>
+    <string name="ask_community_confirmation_text3">अपने प्रश्न को हल करने के लिए अपने दोस्तों से वोट प्राप्त करें</string>
+    <string name="ask_community_confirmation_text5">दोस्तों के साथ शेयर करे </string>
+    <string name="ask_community_confirmation_text6">विवरण देखें</string>
+    <string name="community_share_message">आओ मिल के इस प्रश्न को Doubtnut मंच पर हल करें </string>
+    <string name="video_share_message">वाह ! क्या बढ़िया तरीके से इस प्रश्न को Doubtnut App ने समझाया है :  खुद देखो …मान जाओगे </string>
+    <string name="asked_by">द्वारा पूछा गया</string>
+    <string name="upvote">वोट दें</string>
+    <string name="upvoted">वोट किया </string>
+    <string name="upvote_confirmation">वोट  के लिए आपका धन्यवाद</string>
+    <string name="already_upvoted">आप इस प्रश्न के लिए पहले ही वोट  कर चुके हैं</string>
+    <string name="api_error">कुछ गलत हुआ कृपया बाद में प्रयास करें</string>
+    <string name="invalidate_otp">अमान्य OTP, कृपया पुनः प्रयास करें</string>
+    <string name="question_asked"> पूछा गया प्रश्न</string>
+    <string name="answered">उत्तर दिया गया </string>
+    <string name="queued">पंक्तिबद्ध</string>
+    <string name="poor_connection">ऐसा लगता है कि सर्वर को प्रतिक्रिया देने में बहुत समय लग रहा है, यह खराब कनेक्टिविटी के कारण हो सकता है। कृपया थोड़ी देर में पुनः प्रयास करें</string>
+    <string name="badRequest_tittle">खराब पहुँच टोकन</string>
+    <string name="badRequest_body">हमें एक खराब पहुँच टोकन प्राप्त हुआ। हम आपको एक नया  टोकन प्राप्त करने की सलाह देते हैं</string>
+    <string name="badRequest_button">नया पहुंच  टोकन</string>
+    <string name="login_tittle">कृपया अपना प्रोफ़ाइल विवरण देखने के लिए लॉगिन करें</string>
+    <string name="login_button">लॉग इन करें</string>
+    <string name="find_solution">हल ढूंढे </string>
+    <string name="choose_options">कृपया एक विकल्प चुनें</string>
+    <string name="whatsapp_video_share">हेलो ! मुझे Doubtnut App पर इस सवाल का हल बहुत अच्छा लगा। इस  वीडियो का बहुत बढ़िया हल  यहां देखें</string>
+    <string name="solveItFroMe">मेरे लिए इसे हल करें</string>
+    <string name="solveItFroMeToast">हमारे विशेषज्ञ अब इसका हल  करेंगे</string>
+    <string name="typeyourquestion">अपना प्रश्न लिखें</string>
+    <string name="string_profileFragment_unknown">अज्ञात </string>
+    <string name="string_profileFragment_emailAddress">username@email.com</string>
+    <string name="nomatchtitle">कोई मेल नहीं मिला</string>
+    <string name="nomatchheading">बेहतर मेल  कैसे प्राप्त करें</string>
+    <string name="nomatchtv1">कोई हस्तलिखित प्रश्न नहीं</string>
+    <string name="nomatchtv2">एक प्रश्न का चयन करे </string>
+    <string name="nomatchtv3">यदि समीकरण प्रमुख है तो  समीकरण का चयन करो </string>
+    <string name="nomatchaskagain">दोबारा पूछे </string>
+    <string name="string_editProfile_schoolNameHint">विद्यालय का नाम</string>
+    <string name="string_networkUtils_noInternetConnection">कृपया इंटरनेट से जोड़े </string>
+    <string name="string_noInternetConnection">अपना इंटरनेट संपर्क जांचे</string>
+    <string name="dialog_notificationEducation_dontMissNotification">किसी भी नवीनतम सूचना को न छोड़े</string>
+    <string name="string_notificationEducation_notificationTurnedOn">सुनिश्चित करें कि आपकी सूचनाएं चालू हैं</string>
+    <string name="string_notificationEducation_enableNotification">Doubtnut के लिए सूचना को चालू करने के लिए सेटिंग्स पर जाए और Doubtnut के लिए सूचना चालू करें</string>
+    <string name="string_notificationEducation_cancel">रद्द करे </string>
+    <string name="string_notificationEducation_allow">अनुमति दे </string>
+    <string name="post_successfully_in_community">आपका प्रश्न community में पोस्ट किया गया है</string>
+    <string name="permtext">Doubtnut को आपके डिवाइस से कैमरा अनुमति की आवश्यकता होती है ताकि Doubt की तस्वीर ले सकें </string>
+    <string name="string_exoplayerHelper_errorPlayingVideo">वीडियो चलाते समय त्रुटि</string>
+    <string name="string_install_whatsApp">आपके डिवाइस में व्हाट्सएप इंस्टॉल नहीं है</string>
+    <string name="string_install_s">आपके डिवाइस में %s इंस्टॉल नहीं है</string>
+    <string name="somethingWentWrong">कुछ गलत हो गया</string>
+    <string name="loginLimitExceeded">लॉगिन सीमा पार हो गई है, कृपया कुछ समय बाद प्रयास करें</string>
+    <string name="viewall">सभी देखें</string>
+    <string name="dismiss">खारिज करे </string>
+    <string name="ask_question_again">फिर से प्रश्न पूछें</string>
+
+    <string name="addedtoplaylist">प्लेलिस्ट में जोड़ा गया</string>
+    <string name="alreadyaddedtoplaylist">पहले से ही आपकी प्लेलिस्ट में जोड़ा गया है</string>
+
+    <string name="string_editProfile_coachingNameHint">कोचिंग का नाम</string>
+    <string name="string_editProfile_pinCodeHint">पिन कोड</string>
+    <string name="string_itemtimeline_like">पसंद करे </string>
+
+    <string name="string_timeline_daysAgo">%1$s दिन पहले </string>
+    <string name="string_timeline_yearsAgo">%1$s साल पहले </string>
+
+    <string name="string_itemtimeline_pollingSubmit">भेजे </string>
+    <string name="string_itemtimeline_finalResult">%1$s वोट्स </string>
+
+    <string name="string_timelineFeed_chooseAnOption">कृपया एक विकल्प चुनें</string>
+    <string name="string_timelineFeed_sharingInProgress">कृपया प्रतीक्षा करें जब तक  पिछला आइटम साझा किया जा रहा है</string>
+    <string name="feed">प्रतिक्रिया </string>
+    <string name="sharedfeed">साझा की गयी प्रतिक्रिया </string>
+    <string name="starttypingyourquestion">अपना प्रश्न लिखना शुरू करें</string>
+    <string name="pleaseentertext">कृपया text दर्ज करें</string>
+    <string name="save">सेव करे </string>
+    <string name="share">शेयर करे </string>
+    <string name="friends_who_joined">जो दोस्त शामिल हुए</string>
+    <string name="invite_friend">मित्रों को आमंत्रित करें</string>
+    <string name="invite_friend_caption">दोस्तों के साथ मिलकर सीखो</string>
+    <string name="invite_share_text">मुझे डाउटनट ऐप पर मेरे सभी गणित, भौतिक विज्ञान, रसायन विज्ञान और जीवविज्ञान के सवालों का समाधान मिल रहा है - आपको भी इसे इंस्टॉल करना चाहिए - चलो डाउटनट  पर एक साथ सीखें -</string>
+    <string name="addAFrnd">मित्र बनाओ</string>
+    <string name="grant_permission">अनुमति </string>
+    <string name="exit_permission">वापस जाओ</string>
+    <string name="choose_correct_img">सही फोटो  का चयन करें</string>
+    <string name="select_class">अपनी पसंदीदा कक्षा का चयन करें</string>
+    <string name="select_image_from">से फोटो  का चयन करें</string>
+    <string name="choose_from_camera">कैमरे  से चुनें</string>
+    <string name="choose_from_gallery">गैलरी से चुने </string>
+    <string name="btn_logout">लॉग आउट करे </string>
+    <string name="bad_access_token_body">हमें एक खराब पहुंच टोकन प्राप्त हुआ। हम आपको लॉगआउट करने और फिर से साइन इन करने की सलाह देते हैं</string>
+    <string name="bad_access_token_title">खराब पहुंच टोकन</string>
+    <string name="select_excercise">अपने अभ्यास  का चयन करें</string>
+    <string name="select_chapter">अपने अध्याय का चयन करें</string>
+    <string name="btn_submit">भेजे </string>
+    <string name="play">चालू करे </string>
+    <string name="reset">रीसेट</string>
+    <string name="apply">लागू करे </string>
+    <string name="filter">फिल्टर</string>
+    <string name="playlist">प्लेलिस्ट</string>
+    <string name="learn_now">अभी सीखे </string>
+    <string name="create_a_playlist">एक नई प्लेलिस्ट बनाये </string>
+    <string name="create_a_cheatsheet">एक नई चीटशीट बनाये </string>
+
+    <string name="add_to_playlist">प्लेलिस्ट में जोड़े </string>
+    <string name="add_to_cheatsheet">चीटशीट में जोड़े </string>
+
+    <string name="audiowasnotclear">ऑडियो साफ़ नहीं था </string>
+    <string name="videowasnotclear">वीडियो साफ़ नहीं था </string>
+    <string name="solutionwasnotclear">हल स्पष्ट नहीं था </string>
+    <string name="incorrectsoltn">गलत हल </string>
+    <string name="wrongsoltn">गलत प्रश्न का उत्तर दिया गया</string>
+    <string name="className">कक्षा </string>
+    <string name="string_watched_videos">You Watched %1$d Videos</string>
+    <string name="string_daily_prize_title">You can win ₹%1$d today!</string>
+    <string name="string_wining_now">अब जीत रहे हैं</string>
+    <string name="string_yesterday_winner">बीते हुए कल का विजेता </string>
+    <string name="rules">नियम </string>
+    <string name="leaderboard">अंकतालिका</string>
+    <string name="dob">जन्म की तारीख </string>
+    <string name="coaching">कोचिंग </string>
+    <string name="classname">कक्षा </string>
+    <string name="classhint">12th</string>
+    <string name="school">विद्यालय</string>
+    <string name="select_course">अपना पसंदीदा कोर्स चुनें</string>
+    <string name="string_editProfile_languageHint">भाषा</string>
+    <string name="contestlist_title">Paytm कैश जीतो </string>
+    <string name="title_settings">सेटिंग्स </string>
+    <string name="string_fileNotPresent">माफ़ करना!! आपके द्वारा चयनित फोटो  मौजूद नहीं है या नष्ट हो गई है। कृपया एक और चुनें</string>
+    <string name="string_commentReport">रिपोर्ट </string>
+    <string name="string_commentRemove">निकाले</string>
+    <string name="string_commentReported">टिप्पणी रिपोर्ट हो चुकी है </string>
+    <string name="string_commentRemoved">टिप्पणी निकाली जा चुकी है </string>
+    <string name="string_actionIsBeingProcessed">रुको। आपकी पिछली कार्रवाई प्रक्रिया में है </string>
+
+    <string name="needstoragepermissions">फोटो का चयन करने के लिए Doubtnut को आपके फ़ोन कैमरा / स्टोरेज तक पहुँचने की आवश्यकता है, कृपया कैमरा / गैलरी का उपयोग करने की अनुमति प्रदान करें</string>
+    <string name="you_are_not_eligible">अभी आप योग्य नहीं हैं</string>
+    <string name="you_are_eligible"> आप योग्य  हैं</string>
+    <string name="string_problemWithCapturedImage">खींची  गई फोटो में कुछ गड़बड़ है। कृपया पुन: प्रयास करें</string>
+    <string name="string_itemtimeline_like_count">%1$s पसंद किया</string>
+    <string name="string_itemtimeline_comment_count">%1$s टिप्पणी की</string>
+    <string name="string_video_count">%1$d</string>
+    <string name="string_itemtimeline_comment">टिप्पणी </string>
+    <string name="string_minutes">मिनट </string>
+    <string name="string_concepts">अवधारणा </string>
+    <string name="string_yesterday">बीता हुआ कल </string>
+    <string name="next_concept">अगली अवधारणा </string>
+    <string name="chapter">अध्याय </string>
+    <string name="upvotes">वोट किया </string>
+    <string name="status">स्थिति</string>
+    <string name="askedBy">पूछा गया </string>
+    <string name="qid">QID:</string>
+    <string name="details_update_successfully">विवरण  सफलतापूर्वक अपडेट हुआ </string>
+    <string name="removed_from_dislike">नापसंद वीडियो से हटाया गया</string>
+
+    <!--Invite education dialog-->
+    <string name="invite_education_hindi_title">  सिर्फ 5 दोस्तों को आमंत्रित करके हर रोज कमाए कम से कम 25 रूपए</string>
+    <string name="invite_education_button_text">अभी आमंत्रित करे </string>
+    <string name="title_downloadnshare">डाउनलोड और शेयर करे </string>
+    <string name="donothaveanybrowser">वेब पेज खोलने के लिए आपके पास कोई ब्राउज़र नहीं है</string>
+    <string name="notAvalidLink">ये वैध  लिंक नहीं है</string>
+
+    <string name="forum_answere_first">  सबसे पहले उत्तर दे </string>
+    <string name="forum_like_first">  सबसे पहले पसंद करे </string>
+    <string name="forum_comment_first">  सबसे पहले टिप्पणी करे </string>
+    <string name="forum_comment_here">अपना उत्तर / टिप्पणी यहां  लिखें</string>
+    <!--<string name="currently_in_class">OR \n Currently I am in Class </string>-->
+
+    <!--Notification channel-->
+    <string name="BtnTryAgain">पुनः प्रयास करे </string>
+
+    <!-- QuizTopWinners -->
+    <string name="string_quiz_button">दैनिक क़्विज खेले </string>
+
+    <string name="string_start_quiz">क़्विज शुरू करे </string>
+
+    <string name="string_submit_next">अगला </string>
+    <string name="string_skip">छोड़े </string>
+    <string name="string_quiz_question_timer">%02d : %02d : %02d</string>
+    <string name="string_next_button">अगला </string>
+    <string name="string_quiz_time_over">00:00</string>
+
+    <string name="string_quiz_select_answer_else_skip_toast">कृपया कोई उत्तर चुनें या छोड़ें</string>
+    <string name="string_single_answer_question">एक  विकल्प (+%1d, %1d)</string>
+    <string name="string_multiple_answer_question">बहु विकल्पी (+%1d, %1d)</string>
+    <string name="string_numerical_answer_question">संख्यात्मक उत्तर (+%1d, %1d)</string>
+    <string name="string_matrix_answer_question">आव्यूह मेल (+%1d, %1d : Per Row)</string>
+    <string name="string_quiz_timer_img_content_des">क़्विज टाइमर </string>
+    <string name="string_back_arrow_img_content_des">*</string>
+    <string name="string_start_quiz_img_content_des">क़्विज शुरू करे </string>
+    <string name="string_quiz_no_report">कोई रिपोर्ट नहीं </string>
+    <string name="string_top_winners">स्कोर = %1$s</string>
+    <string name="string_close_report_dialog_msg">क्या आप रिपोर्ट बंद करना चाहते हैं?</string>
+    <string name="string_question_quiz_number">प्रश्न %1$d:</string>
+
+    <string name="string_attempted">  प्रयास किया गया</string>
+    <string name="string_unattempted">  प्रयास नहीं किया गया</string>
+    <string name="string_quiz_past">पहले हो चुका</string>
+    <string name="string_quiz_active">सक्रिय</string>
+    <string name="string_quiz_upcoming">आने वाला </string>
+    <string name="string_small_green_color">हरा </string>
+
+    <string name="string_small_red_color">लाल </string>
+
+    <string name="string_count_zero">0</string>
+
+    <string name="browser_error">कोई वेब व्यू नहीं मिला, कृपया कम से कम एक ब्राउज़र इनस्टॉल  करें</string>
+    <string name="string_startQuiz">क़्विज शुरू करे </string>
+    <string name="string_by">by %1$s</string>
+    <string name="string_view">देखे </string>
+    <string name="string_save">सेव करे </string>
+    <string name="ask_a_doubt">समस्या पूछे </string>
+    <string name="ask_a_doubt_body">किसी भी प्रश्न, विषय या परीक्षा के बारे में कोई संदेह पूछें</string>
+    <string name="share_info_body">अन्य छात्रों की मदद के लिए टिप्स और ट्रिक्स साझा करें</string>
+    <string name="share_info_title">जानकारी साझा करे </string>
+    <string name="plz_write_something_about_post">कृपया इस पोस्ट के बारे में कुछ लिखे </string>
+
+    <string name="string_ad_timer">Ad : %02d : %02d</string>
+    <string name="string_quiz_notification_skip">छोड़े</string>
+    <string name="string_quiz_notification_head">क़्विज खेले , कैश जीते</string>
+    <string name="string_quiz_notification_starts_in">में शुरू होता है</string>
+    <string name="string_quiz_notification_button">Doubtnut क़्विज अभी शुरू करे  </string>
+    <string name="string_AllFilterOptionValue">सभी </string>
+    <string name="string_no_data_found">डेटा नहीं मिला</string>
+    <string name="string_someErrorOccured">कुछ त्रुटि हुई, कृपया पुनः प्रयास करें</string>
+    <string name="kuch_majedar_post_kare_hi">कुछ मजेदार पोस्ट करें</string>
+    <string name="post_in_feed_hi">पोस्ट करें</string>
+    <string name="copy_link"> पोस्ट लिंक कॉपी करे </string>
+    <string name="delete_post">पोस्ट डिलीट करे </string>
+    <string name="report_post">पोस्ट रिपोर्ट करे </string>
+
+    <string name="string_copyText"> Text कॉपी करे </string>
+    <string name="title_likedBy">द्वारा पसंद किया गया</string>
+    <string name="string_writeComment">टिप्पणी लिखे </string>
+
+    <string name="string_timeline_aMinuteAgo">एक मिनट पहले </string>
+    <string name="string_timeline_minutesAgo">%1$s minutes ago</string>
+    <string name="string_timeline_anHourAgo">एक घंटे  पहले </string>
+    <string name="string_timeline_hoursAgo">%1$s घंटे  पहले </string>
+    <string name="string_timeline_justNow">अभी</string>
+
+    <string name="copy_link_successfully">लिंक कॉपी हो गया है </string>
+    <string name="post_deleted">आपका पोस्ट सफलतापूर्वक हटा दिया गया है</string>
+    <string name="post_reported">धन्यवाद, हमें आपकी रिपोर्ट मिल गई है, हम इस पर गौर करेंगे</string>
+    <string name="oops_something_went_wrong">लगता है सर्वर की लग गयी है 😭 गुस्सा 😡 मत होना , हम तुरंत ⏰ इसे ठीक कर देंगे !</string>
+
+    <!--PdfViewerActivity-->
+    <string name="pdf_url_not_present">पीडीएफ url मौजूद नहीं है</string>
+    <string name="pdf_loading">पीडीऍफ़ लोड हो रही है </string>
+
+    <string name="no_downloaded_pdf">कोई PDF डाउनलोड नहीं की गई  है </string>
+
+    <string name="pdf_file_not_present">पीडीऍफ़ फाइल मौजूद नहीं है </string>
+    <string name="myPdf">मेरी पीडीऍफ़ </string>
+
+    <!-- Test -->
+    <string name="string_no_test_available">कोई टेस्ट उपलब्ध नहीं है</string>
+    <string name="string_start_test">टेस्ट शुरू करे </string>
+    <string name="string_test_rules">कोई नियम नहीं </string>
+    <string name="string_next_test_starts">अगला टेस्ट शुरू होगा </string>
+    <string name="string_this_test_starts">यह टेस्ट शुरू होगा </string>
+
+    <string name="string_next_test_starts_in">में टेस्ट शुरू होता है</string>
+    <string name="string_test_ends">में टेस्ट समाप्त होता है</string>
+    <string name="string_test_over_dialog_title">टेस्ट खत्म</string>
+    <string name="string_test_over_no_points_dialog_msg">टेस्ट खत्म हो गया है और अगले प्रश्न से कोई अंक नहीं गिना जाएगा</string>
+    <string name="string_test_over_end_back_press_dialog_msg">क्या आप टेस्ट खत्म करना चाहते हैं</string>
+    <string name="string_leaving_test">छोड़कर</string>
+    <string name="string_submit_test">टेस्ट भेजे </string>
+    <string name="string_close_report">टेस्ट रिपोर्ट बंद करे </string>
+    <string name="string_test_report_view_answers">उत्तर देखे </string>
+    <string name="string_test_report_incorrect">गलत </string>
+    <string name="string_test_report_correct">सही </string>
+    <string name="string_test_report_skipped">छोड़कर</string>
+    <string name="string_test_report_score">स्कोर </string>
+    <string name="string_test_report_your_answer">आपके उत्तर </string>
+    <string name="test_not_start_till_time_end">एक बार टेस्ट समाप्त हो जाने पर परिणाम दिखाए जाएंगे</string>
+    <string name="string_test_report_heading">आप अपनी टेस्ट रिपोर्ट देख रहे हो </string>
+    <string name="string_test_duration_timer_finish">आपका समय खत्म हो चुका है </string>
+    <string name="string_yes">हाँ</string>
+    <string name="string_no">नहीं </string>
+    <string name="string_ok">ठीक है </string>
+    <string name="string_test_summary_tab">सारांश</string>
+    <string name="string_test_duration_lable">अवधि %02d min</string>
+    <string name="msg_invalid_question">अवैध प्रश्न </string>
+
+    <string name="sharing_pdf_in_progress">कृपया प्रतीक्षा करें कि आपकी PDF साझाकरण प्रगति में है</string>
+    <string name="string_formulaSheet">सूत्र शीट </string>
+
+    <string name="type_here">यह टाइप करो </string>
+
+    <string name="sawal_puche">सवाल पूछें</string>
+    <string name="ask_question">प्रश्न पूछे </string>
+    <string name="msg_pdf_saved_success">पीडीऍफ़ सफलतापूर्वक सेव हो गयी है </string>
+    <string name="msg_pdf_saved_failed">पीडीऍफ़ सेव फेल हो गयी है </string>
+    <string name="msg_pdf_saving_in_progress">पीडीएफ सेव किया जा रहा है! कृपया प्रतीक्षा करें</string>
+
+    <string name="string_comment">टिप्पणियां </string>
+    <string name="string_hand_written">सही answer के लिए - सिर्फ बुक से Question की फोटो खींचकर भेजे, हाथ से  लिखकर नहीं | </string>
+    <string name="know_more">अधिक  जाने </string>
+    <string name="no_results">कोई परिणाम नहीं मिला</string>
+    <string name="enter_cheatsheet_name">यहां चीटशीट  नाम दर्ज करें</string>
+    <string name="cheat_sheet_may_not_be_empty">चीटशीट  का नाम खाली नहीं हो सकता</string>
+    <string name="added_to_cheatsheet">चीटशीट  में जोड़ा गया</string>
+    <string name="string_dislike">डिस्लाइक</string>
+
+    <string name="msg_stickerpack_is_downloading">कृपया प्रतीक्षा करें कि स्टिकर पैक डाउनलोड हो रहा है</string>
+    <string name="string_excerise_01">E_01</string>
+    <string name="group_chat">GupShup - गपशप</string>
+
+    <string name="string_new_chat">%1$s नई चैट</string>
+
+    <string name="string_mock_test">मॉक टेस्ट </string>
+    <string name="string_mock_test_question_timer">%02d : %02d : %02d</string>
+    <string name="string_play_mock_test">मॉक टेस्ट </string>
+    <string name="total">कुल </string>
+    <string name="view_answers">उत्तर देखे </string>
+    <string name="string_see_winners">विजेता </string>
+    <string name="secured_marks">अंक </string>
+    <string name="string_mock_test_over">खत्म </string>
+    <string name="string_mock_test_upcoming">आने वाला </string>
+    <string name="string_mock_test_ongoing">चल रहा है </string>
+    <string name="string_test_report">टेस्ट रिपोर्ट </string>
+    <string name="answers">टेस्ट के उत्तर </string>
+
+    <!-- Home Screen Latest -->
+    <string name="string_latest_playbutton_content_des">वीडियो प्ले बटन</string>
+    <string name="string_latest_whatsapp_content_des">व्हाट्सप्प पर शेयर करे </string>
+    <string name="string_latest_bg_content_des">Doubtnut से नवीनतम  पृष्ठभूमि फोटो </string>
+
+    <!-- Home Screen Trending -->
+
+    <!-- Home Screen Quiz -->
+
+    <!-- Home Screen Heading -->
+    <string name="string_heading_text_view_all">सभी देखे </string>
+
+    <string name="advanced_search">Advanced Search</string>
+    <!--NOTE PLEASE DON'T YOUR FEATURE STRING WITH ANY OTHER FEATURE-->
+    <!--Home Screen Top option type Names-->
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+    <!-- Home Screen Main Page -->
+    <string name="toolbar_home_logo_content_des">ऐप्प लोगो</string>
+    <string name="toolbar_home_search_menu">खोजे </string>
+
+    <!-- Home Screen Quiz -->
+    <string name="string_video_duration"> %02d : %02d </string>
+    <string name="string_video_views_and_des"><b> %1$s views | </b> %2$s</string>
+
+    <!-- Home Screen Bottom Nav Menu Title -->
+    <string name="string_home_bottom_nav_pdfs">लाइव क्लास</string>
+    <string name="string_home_bottom_nav_forum">दोस्त </string>
+    <string name="string_home_bottom_nav_profile">प्रोफाइल </string>
+    <string name="string_home_bottom_nav_daily_goal">डेली गोल</string>
+
+    <!-- Home Screen Navigation Drawer -->
+    <string name="string_change_lang">भाषा बदले </string>
+
+    <!--Home feed-->
+    <string name="error_branchLinkNotFound">साझा करने योग्य लिंक बनाते समय त्रुटि</string>
+
+    <!-- Onboarding language and class selection -->
+    <string name="string_onboarding_class_text_heading">अपनी कक्षा / परीक्षा का चयन करें</string>
+    <string name="string_onboarding_language_text_heading">पसंदीदा भाषा का चयन करें</string>
+
+    <string name="error_failedToSubscribe">आप  इस परीक्षा के लिए सदस्यता लेने में विफल रहे </string>
+
+    <!-- Share All Pdf -->
+    <string name="string_sharing_message">Download करे Doubtnut के ये zabardast PDFs अभी इस link से \n\n %1$s</string>
+    <string name="string_select_pdf">कृपया साझा करने के लिए किसी भी आइटम का चयन करें</string>
+    <string name="string_share_selected_pdfs">चयनित पीडीएफ साझा करें</string>
+    <string name="string_share_multiple_pdfs">एक से अधिक  पीडीएफ साझा करें</string>
+
+    <string name="string_sharing_limit_message">आप एक बार में केवल 10 पीडीएफ भेज सकते हैं</string>
+    <string name="title_homeFeed_turantMilegaSolution">   वीडियो हल  तुरंत मिलेगा</string>
+    <string name="title_homeFeed_mathDoubt">समस्या पूछे </string>
+    <string name="cannot_add_to_cheat_sheet">आप इस फॉर्मूले को केवल अपनी स्वयं की बनाई हुई चेटशीट में जोड़ सकते हैं</string>
+    <string name="string_thanks_for_feedback">आपकी प्रतिक्रिया के लिए धन्यवाद</string>
+    <string name="mute_notification">इस पोस्ट की सूचना को बंद करे </string>
+    <string name="mute_notification_successfully">इस पोस्ट के लिए सूचना बंद हो चुकी है </string>
+    <string name="already_muted_notification_successfully">इस पोस्ट के लिए सूचना पहले ही बंद हो चुकी है </string>
+    <string name="hint_searchForAnswers">उत्तर के लिए खोजे </string>
+    <string name="msg_noResultFound">कोई परिणाम नहीं मिला </string>
+    <string name="title_trendingSearch">ट्रेंडिंग खोज </string>
+
+    <!-- Library -->
+    <string name="string_ncert_chapter_heading">NCERT हल </string>
+    <string name="string_top_banner_class_change_heading">Library for %1$s \u0020 </string>
+    <string name="string_latest_like_this_video">इस वीडियो को पसंद करे </string>
+    <string name="caption_pick_from_gallery">गैलरी से चुने </string>
+    <string name="caption_type_for_doubt">अपनी समस्या टाइप करे </string>
+    <string name="caption_dontHaveQuestion">प्रश्न नहीं है</string>
+    <string name="msg_capturequestionphoto_cameraactivity">प्रश्न की फोटो खींचो और तुरंत हल पाओ </string>
+    <string name="caption_tryTrickyQuestion">इस कठिन प्रश्न का प्रयास करें</string>
+    <string name="string_solutions">हल </string>
+    <string name="string_doubts">आपका सवाल</string>
+    <string name="no_similar_results">ऐसा  कोई परिणाम नहीं मिला</string>
+
+    <string name="title_matchQuestion_askQuestion">तो फिर जल्दी पूछो अपना अगला सवाल </string>
+    <string name="buttonText_matchQuestion_askNow">अभी पूछे </string>
+    <string name="title_matchQuestion_postCommunity">अन्य सदस्यों की मदद लें</string>
+    <string name="buttonText_matchQuestion_postOnCommunity">Community पर पोस्ट करे </string>
+    <string name="caption_bottomnavigation_doubt">समस्या </string>
+
+    <string name="my_playlist">मेरी प्लेलिस्ट </string>
+    <string name="video_watched">वीडियो देखा</string>
+    <string name="loginin">लॉग इन करें</string>
+    <string name="string_editProfile">प्रोफाइल एडिट करें</string>
+    <string name="string_name">नाम </string>
+    <string name="string_email">ईमेल </string>
+    <string name="string_home_bottom_nav_home">होम </string>
+    <string name="string_apki_sari_pdf_yaha_milegi">आपकी सारी डाउनलोड की गयी पीडीऍफ़ यहाँ मिलेगी </string>
+    <string name="view_pdf">पीडीऍफ़ देखे </string>
+    <string name="msg_playListIdNull">प्ले सूची आईडी  खाली नहीं हो सकती</string>
+    <string name="dob_not_be_empty">जन्म की तारीख खाली नहीं हो सकती </string>
+    <string name="username_not_be_empty">उपयोगकर्ता नाम रिक्त नहीं हो सकता है</string>
+
+    <string name="text_pointsEarned">अर्जित अंक</string>
+    <string name="text_dailyStreak">दैनिक स्ट्रीक </string>
+    <string name="text_leaderBoard">अंक तालिका </string>
+    <string name="text_captionPointsEarned">तेजी से स्तर और बैज अनलॉक करने के लिए अंक अर्जित करें</string>
+    <string name="text_captionDailyStreak">नियमित उपयोग  से आपको बैज मिलेगा</string>
+    <string name="text_captionLeaderBoardEarned">अब तक के शीर्ष स्कोरर</string>
+    <string name="my_badges">मेरे बैज </string>
+    <string name="activity_daily_streak_label">दैनिक स्ट्रीक </string>
+    <string name="activity_points">पॉइंट्स</string>
+    <string name="activity_gameleaderboard_label">अंक तालिका </string>
+    <string name="title_MyAchievement">मेरी उपलब्धि</string>
+    <string name="title_MyActivity">मेरी गतिविधि </string>
+    <string name="update_profile_page">प्रोफ़ाइल अपडेट करें</string>
+
+    <string name="detail_setting"> सेटिंग विस्तार</string>
+    <string name="profile_settings">प्रोफाइल सेटिंग </string>
+
+    <string name="caption_gameLevel">स्तर %1$s</string>
+    <string name="caption_gamePoints">अंक </string>
+    <string name="text_viewnow">अभी देखे </string>
+    <string name="text_share">शेयर करे </string>
+    <string name="text_unlockIt">इसे अनलॉक करे </string>
+    <string name="text_new">नया</string>
+    <string name="text_congratulation">बधाई हो </string>
+    <string name="text_successfullyUnlocked">आपने सफलतापूर्वक अनलॉक कर दिया है</string>
+    <string name="text_physicsAndChemistry">भौतिक विज्ञान और रसायन विज्ञान </string>
+    <string name="buttonText_exploreNow">अब अन्वेषण करें</string>
+    <string name="text_or">या </string>
+    <string name="text_knowHow">कैसे जाने </string>
+    <string name="text_inviteNow">अभी आमंत्रित करे </string>
+    <string name="text_level">स्तर </string>
+    <string name="text_friend">दोस्त </string>
+    <string name="msg_updateHasbeenDownloaded">नया अपडेट डाउनलोड हो गया है </string>
+    <string name="text_installUpdate">इनस्टॉल करे </string>
+    <string name="msg_installToUseNewFeature">नई सुविधा का उपयोग करने के लिए ऐप को अपडेट करें</string>
+    <string name="text_downloadUpdate">डाउनलोड करे </string>
+    <string name="msg_inUpdateFailed">कुछ गलत हो गया</string>
+    <string name="retry">दोबारा कोशिस करे </string>
+
+    <string name="one_tap_login_trucaller">ट्रू-कॉलर के माध्यम से लॉगिन करें</string>
+    <string name="one_tap_login_whatsapp">व्हाट्सप्प के साथ वन टैप लॉग इन </string>
+    <string name="login_with_mobile_number">मोबाइल नंबर के साथ लॉग इन करे </string>
+    <string name="register_to_save_all_your_activity_like_watched_videos_question_asked_and_saved_videos">अपनी सभी गतिविधि जैसे देखे गए वीडियो पूछे गए प्रश्न को सेव करने के लिए रजिस्टर करें </string>
+    <string name="enter_the_6_digit_code_sent_to_you_at">आपके लिए भेजा गया 6- अंक वाला कोड दर्ज करें</string>
+    <string name="enter_the_4_digit_code_sent_to_you_at">आपके लिए भेजा गया 4- अंक वाला कोड दर्ज करें</string>
+    <string name="resend_code_in_sec">%1$d sec</string>
+    <string name="resend_code">कोड दोबारा भेजे </string>
+    <string name="did_not_receive_otp">OTP प्राप्त नहीं हुआ </string>
+    <string name="something_went_wrong">कुछ गलत हो गया</string>
+    <string name="paao_apne_doubts_ka_instant_video_solution_bas_ek_click_pe">पाओ अपने समस्या का तुरंत वीडियो हल बस एक क्लिक पर </string>
+    <string name="india_ki_biggest_student_community_ka_hissa_bane">भारत की सबसे बड़ी छात्र community का हिस्सा बने </string>
+    <string name="seekho_padho_aur_jeeto_reward_points_aur_badges_har_din">सीखो पढ़ो और जीतो इनाम अंक और बैज हर दिन </string>
+    <string name="text_howItWorks">यह कैसे  काम करता है </string>
+    <string name="text_friendsJoinedToday">मित्र आज शामिल हुए</string>
+
+    <string name="string_dot">%1$s.</string>
+    <string name="string_howItWorks">यह कैसे  काम करता है </string>
+    <string name="type_your_doubt">अपनी समस्या टाइप करे </string>
+    <string name="find_solution_small">सलूशन ढूंढें</string>
+    <string name="ask_unlimited_questions_on_whatsapp">व्हाट्सप्प पर अनलिमिटेड प्रश्न पूछे </string>
+    <string name="sms_user_consent">मैं कॉल/एसएमएस/व्हाट्सएप द्वारा संपर्क किए जाने के लिए सहमत हूं</string>
+    <string name="total_comments">%1$d टिप्पणियां</string>
+    <string name="total_comment">%1$d टिप्पणी</string>
+    <string name="no_comment">कोई टिप्पणी नहीं </string>
+    <string name="fetching_comments">टिप्पणियां </string>
+    <string name="no_comment_text">पहली टिप्पणी करो </string>
+    <string name="no_default_browser_found">कोई डिफ़ॉल्ट ब्राउज़र नहीं मिला, कृपया पहले कोई भी ब्राउज़र स्थापित करें</string>
+    <string name="text_solution">Text हल </string>
+    <string name="structured_course_go_to_course">कोर्स पर जाएं</string>
+    <string name="live_today">आज लाइव </string>
+    <string name="title_activity_detail_live_class">लाइव क्लास गतिविधि विवरण </string>
+    <string name="action_settings">सेटिंग्स </string>
+    <string name="downloading">कृपया प्रतीक्षा करें डाउनलोड  प्रगति में  है </string>
+    <string name="live">लाइव </string>
+    <string name="watch_now">अभी देखे </string>
+    <string name="continue_watching">देखना जारी रखें</string>
+    <string name="watch_again">दोबारा देखे </string>
+    <string name="completed">पूरा हो गया </string>
+    <string name="upcoming">आने वाला </string>
+    <string name="attempt">प्रयास</string>
+    <string name="solutions">हल </string>
+    <string name="start_again">दोबारा शुरू करे </string>
+    <string name="view_result">परिणाम देखे </string>
+    <string name="start_test">टेस्ट शुरू करे </string>
+    <string name="start">शुरू करे</string>
+    <string name="item_topic_video_minute_text_title">मिनट </string>
+    <string name="timer_finished">00 : 00 : 00</string>
+    <string name="crash_course">क्रैश कोर्स डेमो वीडियो</string>
+    <string name="questions">प्रश्न </string>
+    <string name="item_topic_video_day_text_title">दिन </string>
+    <string name="coming_soon">जल्दी आने वाला है </string>
+    <string name="item_topic_video_second_text_title">सेकंड </string>
+
+    <string name="my_earned_points">मेरे पॉइंट्स</string>
+    <string name="point_jeete">पॉइंट्स जीतें DN कैश पाये </string>
+    <string name="badges_jeetein_doston_ko_dikhaye">बैज जीतें , दोस्तों को दिखाए </string>
+    <string name="dn_cash">DN कैश</string>
+    <string name="shop_with_dn_cash">किताबे खरीदे </string>
+    <string name="badges_jeetein_doston_ko_dikhayen">बैज जीतें , दोस्तों को दिखाए </string>
+    <string name="daily_leaderboard">आज की अंकतालिका </string>
+    <string name="aaj_ke_toppers">आज के टॉपर्स </string>
+    <string name="my_daily_attendence">मेरी स्ट्रीक</string>
+    <string name="kal_phir_aaye_aur_points_paayein">कल फिर आये और पॉइंट्स पाये </string>
+    <string name="item_store_not_enough_cash">पर्याप्त कैश नहीं है </string>
+    <string name="item_store_buy_text">खरीदे </string>
+    <string name="item_store_open_text">खोले </string>
+    <string name="activity_store_my_order">मेरी किताबे </string>
+    <string name="viewlevelinfo">लेवल  जानकारी देखे </string>
+
+    <string name="caption_level">लेवल %1$s के लिए कमाए </string>
+    <string name="text_share_with_frnds">दोस्तों के साथ साझा करे </string>
+
+    <string name="dialog_store_item_header">पर्याप्त DN कैश नहीं है </string>
+    <string name="dialog_store_item_subheader">आपकी जरूरत / आपको चाहिए </string>
+    <string name="dialog_store_item_footer">और अधिक DN कैश </string>
+    <string name="dialog_store_item_button_ok_title">ओके</string>
+    <string name="dialog_store_item_buy_subheader">आप ये किताब खरीद चुके है </string>
+    <string name="dialog_store_item_buy_header">बधाई हो </string>
+    <string name="dialog_store_item_buy_footer">आज ही सीखना शुरू करे </string>
+    <string name="dialog_store_item_button_open_title">अभी खोले </string>
+    <string name="activity_store_banner_freeexp">और अधिक DN कैश </string>
+    <string name="activity_store_banner_dncash_title">DN कैश</string>
+    <string name="activity_store_claim_button_title">अभी दावा करे </string>
+    <string name="item_store_dncash_title">DN कैश</string>
+    <string name="activity_points_claim_title">अप्रयुक्त पॉइंट्स </string>
+    <string name="activity_claim_points_claim_button_title">DN कैश में बदले </string>
+    <string name="activity_claim_points_what_dn_cash_title">DN कैश क्या है </string>
+    <string name="activity_what_dn_cash_description">DN कैश  Doubtnut का virtual पैसा है , इससे आप  Doubtnut का  प्रीमियम content खरीद सकते है </string>
+    <string name="activity_claim_points_equal_text">=</string>
+    <string name="activity_claim_points_conversion_description">प्रत्येक 10 पॉइंट्स के लिए आपको मिलेंगे 5 DN कैश , DN कैश का दावा करने के लिए आपके स्क्रीन पर दिखने वाले गिफ्ट बॉक्स पर क्लिक करे </string>
+    <string name="activity_claim_points_10_points">10 पॉइंट्स </string>
+    <string name="activity_claim_points_5_dn_cash">5 DN कैश </string>
+    <string name="activity_store_err_not_enough_coins">पर्याप्त पॉइंट्स नहीं है </string>
+    <string name="popup_levelup_share_with_friends">दोस्तों के साथ साझा करे </string>
+
+    <!--    <string name="popup_level_text">%1$d\nLevel</string>-->
+    <string name="popup_level_text"><![CDATA[<b>%1$d</b><br>Level]]></string>
+    <string name="popup_gamification_points_title">पॉइंट्स </string>
+    <string name="popup_gamification_earned_title">कमाए </string>
+    <string name="earn_this_badge">इस बैज को कमाए </string>
+    <string name="percent_text">%1$d %2$s complete</string>
+    <string name="activity_daily_attendance_title">मेरी दैनिक उपस्थिति </string>
+    <string name="activity_daily_attendance_longest_streak_title">आपकी सबसे लम्बी उपस्थिति </string>
+    <string name="activity_daily_attendance_days">दिन </string>
+
+    <string name="title_activity_in_app_search">app में खोज गतिविधि </string>
+    <string name="searchview_hint">विषय, टॉपिक  या प्रश्न  के लिए सर्च करे </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sorry">क्षमा करे </string>
+    <string name="no_results_found">कोई परिणाम नहीं मिला </string>
+    <string name="fragment_other_profile_activities_total_doubt_asked_title">कुल पूछे गए doubt</string>
+    <string name="fragment_other_profile_activities_video_watched_title">देखी गयी वीडियो  </string>
+    <string name="fragment_other_profile_activities_mock_test_title">मॉक टेस्ट दिया गया है </string>
+    <string name="popuplevel_badge_achieved_aapne_jeeta_ek_new_badge">आपने एक नया बैज जीता </string>
+    <string name="activity_earned_points_history_title">मेरी पॉइंट्स history</string>
+    <string name="activity_other_profile_tab_achivement">उपलब्धियाँ</string>
+    <string name="activity_other_profile_tab_activity">गतिविधि </string>
+    <string name="fragment_other_user_achievement_earned_points_title">कमाए गए पॉइंट्स </string>
+    <string name="fragment_other_user_achievement_badge_title">बैज </string>
+    <string name="fragment_other_user_achievement_daily_attendance_title">दैनिक उपस्थिति </string>
+    <string name="today_s_point">आज के पॉइंट्स </string>
+    <string name="total_points">कुल पॉइंट्स </string>
+    <string name="tenPointsEquals">2 पॉइंट्स = 1 DN कैश </string>
+
+    <string name="how_to_reach">लेवल %1$s पर कैसे पहुंचे </string>
+    <string name="gamePointsData">%1$s पॉइंट </string>
+    <string name="levelInfoPoints">%1$s  पॉइंट </string>
+    <string name="fragment_user_achievment_today_points_title">आज के पॉइंट्स </string>
+    <string name="fragment_user_achievment_total_points_title">कुल पॉइंट्स </string>
+    <string name="my_dn_cash_title">मेरा DN कैश </string>
+    <string name="buy_books_using_your_dn_cash">अपने DN कैश से किताबो का हल खरीदे (2 पॉइंट्स = 1 DN कैश )</string>
+    <string name="activity_daily_attendance_current_streak_title">आपकी वर्तमान उपस्थिति </string>
+    <string name="dn_points_description">15 Nov 2019 के बाद </string>
+    <string name="title_activity_my_bio">मेरी Bio गतिविधि </string>
+    <string name="date_ok">ओके </string>
+    <string name="date_cancel">रद्द करे </string>
+    <string name="add_exam_board">कृपया अपना परीक्षा बोर्ड जोड़े </string>
+    <string name="add_exam"> जिस परीक्षा की  तैयारी आप कर रहे है , कृप्या उसे जोड़े </string>
+    <string name="add_coaching">कृप्या अपना कोचिंग संस्थान डाले </string>
+    <string name="complete_bio">पूरी bio</string>
+    <string name="my_bio_dialog_text">क्या आप अपनी प्रोफाइल में किये गए बदलाव को सेव करना चाहते है </string>
+    <string name="dont_save">सेव न करे </string>
+    <string name="my_bio">मेरी bio</string>
+
+    <string name="view_profile">Profile देखे</string>
+    <string name="change_language">भाषा बदले</string>
+    <string name="my_pdfs">मेरे PDFs</string>
+    <string name="saved_playlist">Saved प्लेलिस्ट</string>
+    <string name="settings">सेटिंग्स </string>
+    <string name="faq">सहायता</string>
+    <string name="invite_a_friend_n_amp_earn_money">दोस्तों को आमंत्रित करके कमाए</string>
+    <string name="change_class">कक्षा बदले</string>
+
+    <string name="search_for_subjects_books_topics_or_pdfs">खोजें लाइव क्लासेस या टॉपिक्स…</string>
+    <string name="new_profile_menu_me_dekhein_apne_save_kiye_hue_pdf_and_puri_doubt_history">नई प्रोफ़ाइल मेनू में आपके द्वारा save किये गए PDF और पूर्ण Doubt history देखें</string>
+    <string name="home_widget_challenge_view_solution_button_title">हल देखे</string>
+
+    <string name="name_hint">नाम</string>
+    <string name="gender_hint">लिंग</string>
+    <string name="male_radio_button">पुरुष</string>
+    <string name="female_radio_button">महिला</string>
+    <string name="class_bio">कक्षा</string>
+    <string name="select_your_exam_board">अपना बोर्ड चुनें</string>
+    <string name="error_please_select_stream">अपना स्ट्रीम चुनें</string>
+    <string name="view_all_boards">सभी बोर्ड देखें</string>
+    <string name="see_less">कम देखें</string>
+    <string name="select_stream">आप जिस स्ट्रीम की तैयारी कर रहे हैं उसे चुनें</string>
+    <string name="competitive_exam">क्या आप किसी प्रतियोगी परीक्षा की तैयारी कर रहे हैं</string>
+    <string name="yes_radio_button">हाँ</string>
+    <string name="no_radio_button">नहीं </string>
+    <string name="select_exams">उन परीक्षाओं को चुनें जिनकी आप तैयारी कर रहे हैं</string>
+    <string name="location_hint">स्थान</string>
+    <string name="school_inter_college_hint">विद्यालय/इंटर कॉलेज</string>
+    <string name="coaching_tuition_hint">क्या आप कोचिंग / ट्यूशन लेते हैं</string>
+    <string name="tuition_hint">आपके कोचिंग / ट्यूशन का नाम दर्ज करें</string>
+    <string name="date_of_birth_hint">जन्मदिन</string>
+    <string name="enter_name">अपना नाम दर्ज करें</string>
+    <string name="create_new_playlist">एक नई प्लेलिस्ट बनाये</string>
+    <string name="plus_create_new_playlist">+ एक नई प्लेलिस्ट बनाये</string>
+    <string name="create">Create</string>
+    <string name="playlist_name">प्लेलिस्ट का नाम</string>
+    <string name="video_saved_to_watch_later">वीडियो Watch Later में Save कर दिया हैं</string>
+    <string name="change">Change</string>
+    <string name="watch_later">बाद में देखना</string>
+    <string name="activity_youtube_video_dislike_title">Dislike</string>
+    <string name="activity_youtube_video_whatsapp_title">WhatsApp</string>
+    <string name="activity_youtube_video_like_title">Like</string>
+    <string name="doubtnut_vip">Doubtnut VIP</string>
+
+    <string name="done">हो गया</string>
+    <string name="click_here">यहाँ क्लिक करें</string>
+    <string name="remove_message">संदेश हटाएं </string>
+    <string name="report_message">रिपोर्ट करें</string>
+    <string name="item_match_result_asked_title">पूछा</string>
+    <string name="related_concept">संबंधित अवधारणा</string>
+    <string name="video_feedback_other_text_hint">अपना समस्या लिखे </string>
+    <string name="video_feedback_dialog_title">आपको क्या अच्छा नहीं लगा </string>
+    <string name="match_page_feedback_thank_you_message">धन्यवाद! हम आपके ये किताब जल्द  से जल्द  Doubtnut पे उपलब्ध करने की कोशिश  करंगे!</string>
+    <string name="feedback_already_submitted">आपका सुझाव मिल गया है </string>
+    <string name="loading_your_results">आपके रिजल्ट्स लोड हो रहे हैं </string>
+    <string name="search">खोजें </string>
+    <string name="topic">टॉपिक/अध्याय </string>
+    <string name="err_select_a_topic">बेहतर रिजल्ट्स पाने के लिए टॉपिक चुनें </string>
+    <string name="advanced_search_fragment_topic_header">बेहतर रिजल्ट्स पाने के लिए अपने सवाल का टॉपिक चुनें </string>
+    <string name="ask_my_first_doubt">अपना पहला सवाल पूछें </string>
+    <string name="click_crop_solve_your_doubt">क्लिक करें, एक सवाल चुनें, अपने सवाल का जवाब पाएं </string>
+    <string name="other_text">अन्य </string>
+    <string name="leaderboard_tab_today">आज का दिन</string>
+    <string name="leaderboard_tab_all_day">पूरा दिन</string>
+    <string name="days">दिन </string>
+    <string name="day">दिन </string>
+    <string name="match_page_alert_dialog_title">“Winners never quit, and quitters never win.”</string>
+    <string name="match_page_alert_dialog_sub_title">हम आपके लिए उपयुक्त जवाब ढूंढ रहे हैं!</string>
+    <string name="yes_i_will_wait">हाँ,  थोड़ी देर रूकें </string>
+    <string name="skip_results">परिणाम को स्किप करें </string>
+    <string name="save_video_to">वीडियो यहाँ रखें </string>
+    <string name="pay_now">अभी भुगतान करें </string>
+    <string name="got_it">समझ गया </string>
+    <string name="search_classes_hint">कक्षा खोजें </string>
+    <string name="download">डाउनलोड करें </string>
+    <string name="topics_covered">शामिल विषय </string>
+    <string name="button_submit_multiselect_item_title">भेजें </string>
+    <string name="item_grid_multi_select_other_title">अन्य </string>
+    <string name="history">पहले देखा हुआ </string>
+    <string name="all_topics">सभी संबंधित विषय</string>
+    <string name="select_question_topic_to_refine_your_search">बेहतर समाधान पाने के लिए अपने प्रश्न से संबंधित विषय का चयन करें</string>
+    <string name="ask_your_doubt">Ask Your Doubt</string>
+    <string name="structured_course">Structured Course</string>
+    <string name="faculty_chapter">%1s Faculty</string>
+    <string name="degree_obtained">%1s (%2s)</string>
+    <string name="faculty_experience">Exp: %1d Years</string>
+
+    <string name="demo_video">डेमो वीडियो</string>
+    <string name="highlight">हाईलाइट</string>
+    <string name="click_to_try">प्रयास करेंं</string>
+    <string name="kaise_paaye_better_solutions">बेहतर समाधान कैसे प्राप्त करें</string>
+    <string name="yes_i_ll_like_to_solve_a_doubt">हां, मैं एक सवाल हल करना चाहूंगा</string>
+    <string name="no_i_ll_skip_learning">नहीं, मैं नहीं पूछूंगा</string>
+    <string name="gallery">गैलरी</string>
+    <string name="type_doubt">प्रश्न टाइप करें</string>
+    <string name="jane_kaise">जाने कैसे</string>
+    <string name="don_t_have_question_ndemo_question_ke_sath_try_karin">डेमो प्रश्न के साथ प्रयास करें</string>
+    <string name="students_with_all_doubts_cleared_score_91_more_than_their_peers">जो छात्र अपने सभी डॉब्टस को हल करते हैं, वे अपने साथियों की तुलना में 25% अधिक अंक प्राप्त करते हैं</string>
+    <string name="try_with_demo_question">डेमो प्रश्न के साथ प्रयास करें</string>
+    <string name="question_ke_clear_image_le">प्रश्न का स्पष्ट चित्र लें</string>
+    <string name="example_try_kare">डेमो प्रश्न के साथ प्रयास करें</string>
+    <string name="question_nahi_hai">सवाल नहीं है?</string>
+    <string name="match_notification_title">One doubt solved, is one marks earned!</string>
+    <string name="match_notification_description">Watch the solution for your question now!</string>
+    <string name="sorry_we_couldn_t_recognize_your_question">क्षमा करें, हम आपके प्रश्न को पहचान नहीं सके</string>
+    <string name="know_how_to_select_a_correct_image">क्षमा करें, हम आपके प्रश्न को पहचान नहीं सके क्योंकि यह धुंधला या हस्तलिखित हो सकता है</string>
+    <string name="example_ke_sath_try_karein">एक उदाहरण के साथ कोशिश करें</string>
+    <string name="click_here_to_try">अभ्यास के लिए यहां क्लिक करें</string>
+    <string name="or">और</string>
+    <string name="ask_a_new_question">एक नया प्रश्न पूछें</string>
+    <string name="please_wait_we_are_verifying_your_number_via_call">कृपया प्रतीक्षा करें\nहम आपका नंबर वाया कॉल सत्यापित कर रहे हैं</string>
+    <string name="enter_your_name_to_continue">जारी रखने के लिए अपना नाम दर्ज करें</string>
+    <string name="try_with_different_number"><u>अलग फोन नंबर के साथ प्रयास करें</u></string>
+    <string name="trucaller_verification_success">आपका नंबर सफलतापूर्वक सत्यापित है</string>
+    <string name="true_caller_dialog_message">इसके बजाय OTP से लॉग-इन करने का प्रयास करें?</string>
+    <string name="err_msg_fail_truecaller_verification">हम आपको ट्रू-कॉलर के माध्यम से सत्यापित नहीं कर सके। आइए और नंबर के माध्यम से कोशिश करते हैं!</string>
+    <string name="true_caller_error_message">हम आपको ट्रू-कॉलर के माध्यम से सत्यापित नहीं कर सके। आइए OTP के माध्यम से कोशिश करते हैं!</string>
+    <string name="true_caller_dialog_yes">हाँ, मैं OTP के साथ कोशिश करूँगा</string>
+    <string name="true_caller_dialog_no">नहीं, मैं ट्रू-कॉलर सत्यापन जारी रखूंगा</string>
+    <string name="firebase_otp_login_message">भेजे गए 4 अंकों वाले ओटीपी की समय सीमा समाप्त हो गई है। कृपया अपने नंबर पर भेजे गए 6 अंकों के ओटीपी के साथ प्रयास करें</string>
+    <string name="enter_valid_indian_number">कृपया देश के कोड के बिना 10 अंकों का फोन नंबर दर्ज करें</string>
+    <string name="enter_valid_10_digit_number">कृपया 10 अंकों का फोन नंबर दर्ज करें</string>
+
+    <string name="type_your_doubtt">डाउट टाइप करेंI</string>
+    <string name="tyd_hint"><![CDATA[Question को यहाँ पे लिखें या फिर copy & paste करेंI]]></string>
+    <string name="step_progress">%1d/%2d</string>
+    <string name="back_press_message">ऐप से बाहर निकलने के लिए फिर से टैप करें</string>
+    <string name="Refine_by">फ़िल्टर करें</string>
+    <string name="all_filters">सभी फ़िल्टर</string>
+    <string name="filter_your_results">अपने परिणामों को फ़िल्टर करें</string>
+    <string name="your_just_searched">यह सवाल आपने अभी पूछा</string>
+    <string name="login_with_phone_number">फोन नंबर के साथ लॉगिन करें</string>
+    <string name="_20m_students_are_learning_on_doubtnut">4 करोड़+ छात्र डाउटनट पर हैं</string>
+    <string name="another_number">एक और नंबर?</string>
+    <string name="single_click_login">सिंगल क्लिक लॉगिन</string>
+    <string name="missed_call_verification">मिस्ड कॉल सत्यापन</string>
+    <string name="select_app_nlanguage">ऐप भाषा का\nचयन करें</string>
+    <string name="you_can_change_it_any_time_from_app_settings">आप अपनी प्रोफ़ाइल से इसे किसी भी समय बदल सकते हैं</string>
+    <string name="not_able_to_login_try_with">हम आपको सत्यापित नहीं कर पा रहे हैं।\n\nनीचे दिए गए विकल्पों के साथ प्रयास करें</string>
+    <string name="tap_on_the_purple_area_to_select_your_question">समाधान पाने के लिए अपने प्रश्न का चयन करें</string>
+
+    <string name="searching_among_10_lakh_solution_videos">10 लाख + वीडियो के बीच समाधान के लिए खोज जारी है</string>
+    <string name="found_most_relevant_videos">हम सबसे प्रासंगिक वीडियो ढूंढ रहे हैं</string>
+    <string name="arranging_it_in_order_of_relevance">हम इसे प्रासंगिकता के क्रम में व्यवस्थित कर रहे हैं</string>
+    <string name="loading_solutions">समाधान लोड हो रहा है</string>
+    <string name="select_another_question">एक और प्रश्न चुनें</string>
+
+    <string name="content">वीडियो</string>
+    <string name="progress">प्रगति</string>
+    <string name="concept_videos">टॉपिक वीडियो</string>
+    <string name="question_videos">प्रश्न वीडियो</string>
+    <string name="your_progress">आपका स्कोर</string>
+    <string name="topper_progress">टॉपर का स्कोर</string>
+    <string name="topic_videos_covered">आपने कवर किया है %1s टॉपिक %2s में से</string>
+    <string name="question_videos_covered">आपने कवर किया है %1s प्रश्न %2s में से</string>
+    <string name="topper_study_plan">दैनिक टॉपर प्लान</string>
+    <string name="topper_ke_chapter_wise_study_plan">टॉपर के चैप्टर के अनुसार स्टडी प्लान</string>
+    <string name="topper_s_choice">टॉपर की पसंद</string>
+    <string name="it_may_take_upto_15_sec_for_you_to_receive_the_otp">आपको OTP प्राप्त करने में 15 सेकेंड तक का समय लग सकता है</string>
+
+    <string name="you_were_watching">आप देख रहे थे</string>
+    <plurals name="minutes_left">
+        <item quantity="one">%1$s मिनट </item>
+        <item quantity="other">%1$s मिनट </item>
+    </plurals>
+
+    <plurals name="seconds_left">
+        <item quantity="one">%1$s सेकंड बचे</item>
+        <item quantity="other">%1$s सेकंड बचे</item>
+    </plurals>
+
+    <string name="notification_settings">नोटिफिकेशन सेटिंग</string>
+    <string name="quick_search">जल्दी ढूँढे</string>
+    <string name="display_the_search_box_in_the_notification_bar">नोटिफिकेशन में प्रश्न बॉक्स प्रदर्शित करें</string>
+    <string name="video_suggestion">वीडियो का सुझाव</string>
+    <string name="display_video_suggestion_in_the_notification_bar">नोटिफिकेशन में वीडियो सुझाव प्रदर्शित करें</string>
+
+    <string name="see_more_videos">और वीडियो देखें</string>
+    <string name="youtube_videos">यूट्यूब वीडियो</string>
+    <string name="sorry_no_more_videos_available_at_the_moment">क्षमा करें, इस समय कोई  अतिरिक्त वीडियो उपलब्ध नहीं है</string>
+    <string name="asked">%1s+ पूछा</string>
+    <string name="str_in_app_close_dialog_desc1">45k छात्रों ने इनकी खोज की है</string>
+    <string name="str_in_app_close_dialog_title1">अब इन टॉपिक के सारे डॉब्टस सॉल्व करो</string>
+    <string name="str_in_app_close_dialog_desc2">पाओ अपने डॉब्टस के सोलूशन्स इन सेअर्चेस से</string>
+    <string name="str_in_app_close_dialog_title2">दूसरा उत्तर खोज रहे हो?</string>
+    <string name="search_page_title">खोजें</string>
+    <string name="fragment_otp_or_text">----------------------अथवा----------------------</string>
+    <string name="err_truecaller_missed_call">मिस्ड कॉल सत्यापन आपके लिए सक्षम नहीं किया जा सकता क्योंकि आपने कॉल लॉग एक्सेस को अक्षम कर दिया है। कृपया मिस्ड कॉल के माध्यम से सत्यापित करने में हमारी सहायता करें</string>
+    <string name="explore_unlimited_content">एक्स्प्लोर अनलिमिटेड कंटेंट</string>
+    <string name="search_live_class">खोजें लाइव क्लास</string>
+    <string name="please_check_your_internet_connection">कृपया जांचें।</string>
+    <string name="no_internet_connection">कोई इंटरनेट कनेक्शन नहीं।</string>
+    <string name="err_option_not_selected">कृपया कोई एक विकल्प चुनें</string>
+    <string name="err_upload_image_15_sec">आपकी प्रश्न छवि को अपलोड करने में समय लग रहा है! कृपया प्रतीक्षा करें जब तक हम आपके प्रश्न को हमारे सर्वर तक पहुँचाने का प्रयास कर रहें हैं!</string>
+    <string name="err_upload_image_30_sec">ओह, हम अभी भी आपके प्रश्न को अपलोड करने में कुछ चुनौतियों का सामना कर रहे हैं! लेकिन हम लगातार कोशिश कर रहे हैं!</string>
+    <string name="err_upload_image_45_sec">हमने लगभग पूरा प्रश्न अपलोड कर दिया है। हम शीघ्र ही परिणामों के साथ आपके साथ होंगे!</string>
+    <string name="video_auto_play">वीडियो ऑटो प्लेे</string>
+    <string name="sorry_your_question_image_is_blur">क्षमा करें, आपकी प्रश्न छवि धुंधली है</string>
+    <string name="click_a_clear_picture">प्रश्न का स्पष्ट चित्र लें</string>
+    <string name="selected_invalid_image">क्षमा करें, आपने एक गैर-प्रश्न छवि का चयन किया है</string>
+    <string name="click_to_continue">जारी रखने के लिए क्लिक करेन</string>
+    <string name="fragment_otp_back_press_title">कृपया कुछ देर प्रतीक्षा करें। हम आपका OTP भेजने का प्रयास कर रहे हैं</string>
+    <string name="fragment_otp_back_press_sub_title">मैं फिर से नंबर दर्ज करना चाहता हूं</string>
+    <string name="fragment_phone_back_press_title">20 K छात्र Doubtnut पर आपके राज्य से सीख रहे हैं</string>
+    <string name="fragment_phone_back_press_button_text">लॉग इन करें</string>
+    <string name="only_enter_10_digit_mobile_number">केवल 10 अंकों का मोबाइल नंबर दर्ज करें</string>
+    <string name="view_all_gallery">गैलरी खोलें</string>
+    <string name="no_images_in_gallery">गैलरी में कोई छवि मौजूद नहीं है!</string>
+    <string name="select_app_language">ऐप भाषा का चयन करें</string>
+    <string name="clear_all">फ़िल्टर हटा दें</string>
+    <string name="looking_for_solutions">उत्तर खोज रहे हैं…</string>
+    <string name="crop_again">री-क्रॉप</string>
+    <string name="login_with_your_login_pin">अपने डीएन पिन से लॉगिन करें</string>
+    <string name="please_enter_your_4_digit_login_pin">कृपया अपना 4 अंकों का पिन दर्ज करें</string>
+    <string name="verify_pin">पिन सत्यापित करें</string>
+    <string name="login_pin">लॉगिन पिन</string>
+    <string name="change_pin">(पिन बदलें)</string>
+    <string name="set_pin">(पिन सेट करें)</string>
+    <string name="please_genrate_4_digit_pin_to_login_next_time_without_internet">अगली बार OTP के बिना लॉगिन करने के लिए कृपया 4 अंकों का पिन सेट करें</string>
+    <string name="msg_verify_with_otp">OTP aa gya hai, isliye aapko DN Pin ke bajay OTP se login kar rhe hein</string>
+    <string name="explore_class_to_download">डाउनलोड के लिए क्लासेज ढूंढें</string>
+    <string name="no_downloaded_videos_msg">लगता है आपने कोई क्लास डाउनलोड नहीं करा है अभी तक। कुछ डाउनलोड करने के लिए ढूंढे</string>
+    <string name="please_select_only_question_image">कृपया केवल प्रश्नों की छवियों का चयन करें</string>
+    <string name="demo_question">डेमो प्रश्न</string>
+    <string name="speak_doubt">बोल के पूछें</string>
+    <string name="show_more_similar_videos">इसी तरह के और वीडियो दिखाएं</string>
+    <string name="message">संदेश</string>
+    <string name="call">कॉल</string>
+    <string name="call_now">कॉल करें</string>
+    <string name="resend_otp_via">निम्न माध्यम से ओटीपी पुनः भेजें</string>
+    <string name="pip_mode_settings">PIP मोड सेटिंग्स</string>
+    <string name="ocr_edit_coachmark">अब आपके %1$s प्रश्न से हम क्या समझे, वो चेंज करके आप फिर से सर्च कर सकते हैं</string>
+    <string name="blur">धुंधला</string>
+    <string name="handwritten">हस्तलिखित</string>
+
+    <string name="ask_doubt">डाउट पूछें</string>
+    <string name="all_options">सभी विकल्प</string>
+
+    <string name="swipe_up_for_more">अधिक विकल्पों के लिए ऊपर की ओर स्वाइप करें</string>
+    <string name="swipe_down_to_ask_question">प्रश्न पूछने के लिए नीचे स्वाइप करें</string>
+    <string name="playlist_progress">%d/%d</string>
+
+    <string name="follow">फॉलो</string>
+    <string name="followers">फॉलोअर्स</string>
+    <string name="following">फॉलोइंग</string>
+    <string name="invite_to_study_group">Invite to Study Group</string>
+
+    <string name="match_page_back_press_title">आपके इस सवाल के लिए %s + बच्चे ये सलूशन देखते हैं!</string>
+    <string name="match_page_back_press_bottom_text_1">उपरोक्त समाधान सहायक नहीं है ?</string>
+    <string name="match_page_back_press_bottom_text_2">समाधान उपलब्ध होने पर मुझे सूचित करें</string>
+    <string name="match_page_back_press_notify_message">धन्यवाद! हम जल्द ही आपको अपडेट करेंगे</string>
+
+    <string name="starting_in">स्टार्टिंग इन</string>
+    <string name="you">आप</string>
+    <string name="players_online">%1$.1fk खिलाड़ी ऑनलाइन</string>
+    <string name="finding_an_opponent_for_you">अब आपके लिए एक खिलाड़ी ढूंढ रहे हैं…</string>
+    <string name="found_your_opponent">आपका प्रतिद्वंद्वी चुन लिया गया है</string>
+    <string name="quiz_score">%1$d अंक</string>
+    <string name="quiz_exit_dialog_info">क्या आप वाकई खेल छोड़ना चाहते हैं? यदि आप ऐसा करते हैं, तो प्रतिद्वंद्वी जीत जाएगा।</string>
+    <string name="wait_exit_dialog_info">आमंत्रित मित्र शामिल नहीं हुआ? \n कोई बात नहीं। अब अन्य प्रतिद्वंद्वी के साथ खेलें!</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="play_with_an_opponent">प्रतिद्वंद्वी के साथ खेलें</string>
+    <string name="quit">छोड़ना है</string>
+    <string name="i_will_play">खेलना है</string>
+    <string name="accuracy">सटीकता</string>
+    <string name="attempted">प्रयास किए गए</string>
+    <string name="your_stats">आपके आँकड़े</string>
+    <string name="your_score">आपके आँकड़े</string>
+    <string name="you_won">आप जीत गए!!</string>
+    <string name="oops_you_lost">क्षमा करें, आप हार गए!!</string>
+    <string name="quiz_draw">क्विज ड्रा</string>
+    <string name="play_again">दोबारा खेलना है</string>
+    <string name="better_luck_next_time">उम्मीद है कि आप अगली बार जीतेंगे</string>
+    <string name="you_quit_the_game">क्योंकि आपने खेल छोड़ दिया</string>
+    <string name="both_of_you_scored_equal_points">आप दोनों ने बराबर अंक अर्जित किये!</string>
+    <string name="ask_a_question">प्रश्न पूछें</string>
+    <string name="go_home">Home पे जायें</string>
+    <string name="opponent_stats">%1$s के आँकड़े</string>
+    <string name="opponent_score">%1$s के आँकड़े</string>
+    <string name="opponent">प्रतिद्वंद्वी</string>
+    <string name="solutions_of_quiz_questions">क्विज प्रश्नो के उत्तर</string>
+    <string name="quiz_question_number">क्विज प्रश्न %1$d</string>
+    <string name="correct">सही</string>
+    <string name="incorrect">गलत</string>
+    <string name="topic_booster_game_amount_added_in_dn_wallet">आपकी जीत पर डीएन वॉलेट में 1 रु जोड़ दिया गया है!</string>
+
+    <string name="top_doubt">टॉप डाउट</string>
+    <string name="top_doubt_all_comment">सभी टिप्पणियां</string>
+    <string name="top_doubt_doubts">डाऊट</string>
+    <string name="top_doubt_my_doubts">मेरे डाऊट</string>
+    <string name="top_doubt_filter_by">फिल्टर करें</string>
+    <string name="top_doubt_view_solution">जवाब देखें</string>
+    <string name="top_doubt_hide_solution">जवाब छुपाएं</string>
+    <string name="play_solution">सलूशन सुने</string>
+    <string name="sirf_teacher_can_answer">सिर्फ टीचर डाउट का उत्तर दे सकते हैं</string>
+    <string name="answer">उत्तर</string>
+
+    <string name="check_all_courses">सारे कोर्सेस देखें</string>
+    <string name="timetable">टाइमटेबल</string>
+    <string name="library">लाइब्रेरी</string>
+    <string name="daily_quiz">डेली क्विज़</string>
+    <string name="mock_test">मॉक टेस्ट्स</string>
+    <string name="my_course">मेरा कोर्स</string>
+    <string name="check_all_live_classes">सारी लाइव क्लासेज देखें</string>
+
+    <string name="day_number">दिन %1$d</string>
+    <string name="daily_attendance">दैनिक उपस्थिति</string>
+    <string name="level">स्तर %1$d</string>
+    <string name="copy">कॉपी</string>
+    <string name="delete">डिलीट</string>
+    <string name="rupees_amount">₹ %1$d</string>
+    <string name="mark_attendance">मार्क अटेंडेंस</string>
+    <string name="coupon_code_copied">कूपन कोड कॉपी किया गया</string>
+    <string name="daily_attendance_reward">दैनिक उपस्थिति पुरस्कार</string>
+    <string name="get_it_now">अभी पाएं</string>
+    <string name="ignore">रुचि नहीं</string>
+    <string name="explore">देखें</string>
+    <string name="see_more_text">और देखें</string>
+    <string name="see_less_text">कम देखें</string>
+    <string name="click_to_know_more">अधिक जानकारी क लिए क्लिक करे </string>
+    <string name="click_to_mark_attendance">क्लिक करो, अटेंडेंस लगाओ!</string>
+    <string name="mark_attendance_info">अपनी डेली अटेंडेंस अपनी स्ट्रीक के %1$dवें दिन मार्क करिये</string>
+    <string name="we_will_remind_you">हम आपको याद दिला देंगे</string>
+    <string name="reminder">रिमाइंडर</string>
+    <string name="remind_me">रिमाइंड कराएं</string>
+    <string name="today">आज</string>
+
+    <string name="chat_with_us">हमसे बात करें</string>
+    <string name="chat_message">कोर्स खरीदने से पहले कुछ सवाल हैं? Doubtnut से chat करें।.</string>
+    <string name="block">ब्लॉक और नए अध्ययन दोस्त का अनुरोध करें</string>
+    <string name="you_have_been_blocked">आपको ब्लॉक कर दिया गया है..</string>
+    <string name="you_have_blocked">आपने उपयोगकर्ता को सफलतापूर्वक ब्लॉक कर दिया है..</string>
+
+    <string name="next_video">अगला वीडियो:</string>
+    <string name="failed">असफल</string>
+    <string name="successful">सफल</string>
+    <string name="payment_history">पेमेंट हिस्ट्री</string>
+    <string name="aapney_abhi_tak_koi_payment_nhi_ki_hai">आपने अभी तक कोई पेमेंट नही की है</string>
+
+    <string name="title_wallet_recommend_courses">आप अपने वॉलेट मनी से ये चीज़ें खरीद सकते हैं</string>
+
+    <string name="khelo_and_jeeto">खेलो और जीतो</string>
+    <string name="comment_doubt_resolved">"आपके डाउट का जवाब दे दिया गया है"</string>
+    <string name="doubt_pe_charcha_title">सलूशन नहीं मिला ?</string>
+    <string name="doubt_pe_charcha_sub_title">सलूशन पर चर्चा करने के लिए अन्य छात्रों के साथ जुड़ें</string>
+    <string name="doubt_pe_charcha_button_title">अभी कनेक्ट करें </string>
+    <string name="doubt_pe_charcha_cancel_button_title">कैंसिल</string>
+    <string name="doubt_pe_charcha_feedback_title">क्या आपको सलूशन मिला?</string>
+    <string name="item_rate_peer_title">%s के साथ अपना एक्सपीरियंस बताएं</string>
+    <string name="error_doubt_pe_charcha_feedback">कृपया अपना चॉइस सेलेक्ट करें</string>
+    <string name="reason_title">अपने एक्सपीरियंस के बारे में और बताएं</string>
+    <string name="leave_group">लीव</string>
+    <string name="write_a_comment">कमेंट लिखें</string>
+    <string name="doubt_p2p_end_screen_title">डाउट सॉल्व करने में रूचि दिखने के लिए धन्यवाद्!</string>
+    <string name="p2p_animation_1_title">रेलेवेंट स्टूडेंट्स को शॉर्टलिस्ट कर रहे हैं</string>
+    <string name="p2p_animation_2_title">५०० रेलेवेंट स्टूडेंट्स ढूंढ लिए हैं </string>
+    <string name="p2p_animation_3_title">उनके नोटिफिकेशन भेज रहे हैं</string>
+    <string name="p2p_animation_4_title">कुछ स्टूडेंट्स ने आपका रिक्वेस्ट ऐक्सेप्ट कर लिया है</string>
+    <string name="p2p_animation_5_title">छात्र ज्वाइन कर रहे हैं</string>
+    <string name="back_press_helper_message">क्या आप सच में रूम लीव करना चाहते हैं? आप फिरसे रूम ज्वाइन नहीं कर पाएंगे!</string>
+    <string name="host_ask_question_title">मुझे इस समस्या को हल करने के लिए मदद चाहिए\n%s</string>
+    <string name="check_solution_video">चेक सलूशन वीडियो</string>
+
+    <string name="doubt_feed">डाउट फीड</string>
+    <string name="hrs_left">घंटे शेष है</string>
+    <string name="mins_left">मिनट शेष है</string>
+    <string name="daily_goal_done">हो गया</string>
+    <string name="your_completed_doubts">आपके पूरा हो चुका सवाल/डाउट</string>
+    <string name="view_leaderboard">लीडरबोर्ड देखें</string>
+
+    <!--    Study Group Start-->
+    <string name="create_group">ग्रुप बनाएँ</string>
+    <string name="upload_group_image">ग्रुप इमेज अपलोड करें</string>
+    <string name="group_name">ग्रुप का नाम*</string>
+    <string name="create_new_group">अपना ग्रुप बनाएं</string>
+    <string name="my_group">मेरा ग्रुप</string>
+    <string name="study_group">स्टडी ग्रुप</string>
+    <string name="select_the_group">ग्रुप का चयन करें</string>
+    <string name="group_info">ग्रुप जानकारी</string>
+    <string name="members">सदस्य</string>
+    <string name="block_member">%s को ब्लॉक करें</string>
+    <string name="invite_sent">आमंत्रण भेज दिया</string>
+    <string name="invite">आमंत्रित करें</string>
+    <string name="copy_invite_link">आमंत्रण लिंक कॉपी करें</string>
+    <string name="member">सदस्य</string>
+    <string name="slide_to_cancel">रद्द करने के लिए स्लाइड करें</string>
+    <string name="type_a_message_here">यहां संदेश टाइप करें</string>
+    <string name="left_the_group">%s ने ग्रुप छोड़ दिया</string>
+    <string name="checking_availability_of_the_group">हम ग्रुप की उपलब्धता की जांच कर रहे हैं</string>
+    <string name="welcome_to_study_group">डाउटनट स्टडी ग्रुप में आपका स्वागत है!</string>
+    <string name="request_for_study_group">स्टडी ग्रुप के लिए अनुरोध</string>
+    <string name="group_guidelines">ग्रुप गाइडलाइन्स</string>
+    <string name="document">दस्तावेज़</string>
+    <string name="audio">ऑडियो</string>
+    <string name="camera">कैमरा</string>
+    <string name="error_file_upload">फ़ाइल अपलोड करने में समस्या!!</string>
+    <string name="invited_link_copied">आमंत्रण लिंक सफलतापूर्वक कॉपी किया गया!</string>
+    <string name="profile_link_copied">प्रोफ़ाइल लिंक सफलतापूर्वक कॉपी किया गया!</string>
+    <string name="needs_record_audio_permissions">फोटो का चयन करने के लिए Doubtnut को आपके फ़ोन कैमरा / स्टोरेज तक पहुँचने की आवश्यकता है, कृपया कैमरा / गैलरी का उपयोग करने की अनुमति प्रदान करें</string>
+    <string name="invite_member">सदस्य को आमंत्रित करें</string>
+    <string name="faqs">पूछे जाने वाले प्रश्न</string>
+    <string name="mark_resolved">सम्पन्न करें</string>
+    <string name="group_guideline">ग्रुप गाइडलाइन्स</string>
+    <string name="visible_only_for_you">केवल आपके आपको दिखाई दे रहा है</string>
+    <string name="sent_by_doubtnut">डाउटनट द्वारा भेजा गया</string>
+    <string name="view_now">View Now</string>
+    <string name="leave_study_group">ग्रुप छोड़ दें</string>
+    <string name="view_member_profile">प्रोफ़ाइल देखें</string>
+    <string name="update_now">अपडेट करें</string>
+    <string name="study_group_feature_unavailable_message">%s सुविधा आपके लिए उपलब्ध नहीं है, इस सुविधा को प्राप्त करने के लिए अपने ऐप को अपडेट करें</string>
+    <string name="sg_block_title">क्या आप सच में %s को ब्लॉक करना चाहते हैं</string>
+    <string name="sg_block_subtitle">सदस्य फिर से इस ग्रुप में शामिल नहीं हो पाएंगे</string>
+    <string name="sg_leave_title">क्या आप सच में ग्रुप छोड़ना चाहते हैं?</string>
+    <string name="sg_leave_subtitle">आप आमंत्रण लिंक का उपयोग करके किसी भी समय फिर से ग्रुप में शामिल हो सकते हैं</string>
+    <string name="sg_mute_notification">अधिसूचना म्यूट करें</string>
+    <string name="sg_copy_profile_link">प्रोफाइल लिंक कॉपी करें</string>
+    <string name="sg_unmute_notification">अधिसूचना अनम्यूट करें</string>
+    <string name="sg_mute_notification_title">यह आमंत्रण सहित सभी स्टडी ग्रुप अधिसूचना को म्यूट कर देगा</string>
+    <string name="sg_notification_on">चालू</string>
+    <string name="sg_notification_off">बंद</string>
+    <string name="sg_notification_text">अधिसूचना</string>
+    <string name="sg_admin">एडमिन</string>
+    <string name="sg_group_admin">ग्रुप एडमिन</string>
+    <string name="sg_sub_admin">सहायक एडमिन</string>
+    <string name="make_sub_admin">सहायक एडमिन बनाओ</string>
+    <string name="remove_sub_admin">सहायक एडमिन हटाएं</string>
+    <string name="sg_action_block">ब्लॉक</string>
+    <string name="sg_action_cancel">रद्द करें</string>
+    <string name="sg_join_group">ग्रुप में शामिल हो</string>
+    <string name="err_upload_video_size">आप 10MB से अधिक का वीडियो अपलोड नहीं कर सकते</string>
+    <string name="video_shared_successfully">वीडियो सफलतापूर्वक साझा किया गया</string>
+    <string name="enter_new_group_name">नया ग्रुप नाम दर्ज करें</string>
+    <string name="sg_update_group_icon">ग्रुप इमेज</string>
+    <string name="sg_menu_unblock">अनब्लॉक करें</string>
+    <string name="report_group">ग्रुप को रिपोर्ट करें</string>
+    <string name="report_sg">रिपोर्ट करें</string>
+    <string name="sg_admin_dashboard_title">रिपोर्ट</string>
+    <string name="report_reason_title">रिपोर्ट करने का कारण चुनें-:t</string>
+    <string name="sg_send_report">रिपोर्ट भेजें</string>
+    <string name="hint_report_description">रिपोर्ट करने का कारण लिखें</string>
+    <string name="block_user">ब्लॉक करें</string>
+    <string name="delete_all_message">सभी संदेश हटाएं</string>
+    <string name="sg_delete_popup_title">क्या आप वाकई संदेश को हटाना चाहते हैं?</string>
+    <string name="sg_delete_popup_subtitle">आप बाद में हटाए गए संदेशों को पुनर्स्थापित नहीं कर पाएंगे</string>
+    <string name="sg_user_reported_screen_title">%s के सभी रिपोर्ट किए गए संदेश</string>
+    <string name="sg_no_reported_message_title">अभी तक कोई भी मैसेज रिपोर्ट नहीं किया गया है.</string>
+    <string name="sg_no_reported_message_subtitle">यहाँ आपको सारे रिपोर्ट किए गए मैसेज की लिस्ट दिखेगी</string>
+    <string name="sg_report_error_without_join">आप ग्रुप में शामिल हुए बिना रिपोर्ट नहीं कर सकते</string>
+    <string name="sg_delete_error_without_join">आप ग्रुप में शामिल हुए बिना डिलीट नहीं कर सकते</string>
+    <string name="sg_report_message_error_without_join">आप ग्रुप में शामिल हुए बिना संदेश की रिपोर्ट नहीं कर सकते</string>
+    <string name="sg_report_message_error_support_group">आप ग्रुप में संदेश की रिपोर्ट नहीं कर सकते</string>
+    <string name="sg_text_copied">टेक्स्ट कॉपी किया गया</string>
+    <string name="sg_copy_message_error_without_join">आप ग्रुप में शामिल हुए बिना टेक्स्ट को कॉपी नहीं कर सकते</string>
+    <string name="sg_block_error_without_join">आप ग्रुप में शामिल हुए बिना ब्लॉक नहीं कर सकते</string>
+    <string name="sg_copy_invite_link_error_without_join">आप ग्रुप में शामिल हुए बिना आमंत्रण लिंक को कॉपी नहीं कर सकते</string>
+    <string name="sg_share_invite_link_error_without_join">आप ग्रुप में शामिल हुए बिना आमंत्रण लिंक साझा नहीं कर सकते</string>
+    <string name="select_an_option">कृपया एक विकल्प चुनें</string>
+    <string name="sg_my_groups">मेरे ग्रुप्स</string>
+    <string name="sg_my_chats">मेरे चैट</string>
+    <string name="sg_new_groups">नए ग्रुप्स</string>
+    <string name="sg_join_new_groups">नए ग्रुप में शामिल हों</string>
+    <string name="sg_create_new_group">नया ग्रुप बनाएं</string>
+    <string name="press_and_hold">रिकॉर्डिंग के लिए बटन दबाए रखें</string>
+    <!--    Study Group End-->
+
+    <string name="my_bio_fill_class_board_exam_to_proceed">कृपया अपना बायो सेव करने के लिए कक्षा, बोर्ड और परीक्षा भरें</string>
+    <string name="my_bio_fill_class_exam_to_proceed">अपना बायो सेव करने के लिए कृपया अपनी कक्षा और परीक्षा भरें</string>
+
+    <string name="today_s_nspecial">आज के लिए\nख़ास</string>
+    <string name="today_s_special">आज के लिए ख़ास</string>
+
+    <string name="registered_mobile">पंजीकृत मोबाइल : </string>
+
+    <!--    Doubt Pe Charcha V2-->
+    <string name="doubt_pe_charcha">डाउट पे चर्चा</string>
+    <string name="doubt_pe_charcha_notification_setting_title">Give notification when someone need help in doubt solving</string>
+    <string name="doubt_p2p_end_screen_sub_title">अन्य छात्र पहले ही मदद के लिए कॉल में शामिल हो चुके हैं!</string>
+    <string name="doubt_p2p_bt_interested">हां, मेरी दिलचस्पी है</string>
+    <string name="p2p_connect_bt_title">अन्य छात्रों से मदद लें</string>
+    <string name="p2p_connect_now">ठीक है!अभी कनेक्ट करें</string>
+    <string name="how_to_seek_help">मदद कैसे लें</string>
+    <string name="how_to_help">मदद कैसे करें</string>
+    <string name="bt_solve_now_text">ठीक है!अभी हल करो</string>
+    <string name="question_image">Question Image</string>
+    <string name="helper_suggestion">You can solve doubt through multiple method</string>
+    <string name="no_helper_alert_message_1">अन्य छात्र डाउट समाधान में व्यस्त हैं। कृपया प्रतीक्षा करें हम आपको अन्य छात्रों से जोड़ रहे हैं</string>
+    <string name="no_helper_alert_message_2">इसमें अपेक्षा से अधिक समय लग रहा है। जब कोई चैट में शामिल होगा तो हम आपको सूचित करेंगे</string>
+    <string name="p2p_animation_timer_text">%2d sec</string>
+    <string name="back_press_host_message">जब कोई चैट में शामिल होगा तो हम आपको सूचित करेंगे</string>
+    <string name="asked_question_title">मुझे इस समस्या को हल करने के लिए मदद चाहिए</string>
+    <string name="select_your_language">अपनी भाषा चुनें</string>
+
+    <string name="request_a_call_back">मुझे कॉल बैक करें!</string>
+    <string name="chat">चैट</string>
+    <string name="chat_now">चैट करें</string>
+    <string name="select_a_book">नीचे लिस्ट से चुनें!</string>
+    <string name="ncert_book_bottomsheet_back_press_title">किसी और बुक से पढ़ना है?</string>
+    <string name="tbg_no_result_description">इस नाम के साथ कोई नहीं मिला, दूसरे दोस्त को खोजने की कोशिश करें</string>
+
+    <string name="music_on">संगीत चालू</string>
+    <string name="music_off">संगीत बंद</string>
+    <string name="waiting_for_opponent_to_join">आपके मित्र के शामिल होने की प्रतीक्षा में…..</string>
+
+    <!--Share video options-->
+    <string name="share_on_whatsapp">व्हाट्सएप पर शेयर करें</string>
+    <string name="share_on_study_grpup">स्टडी ग्रुप पर शेयर करें</string>
+    <string name="send">भेजें</string>
+
+    <string name="error_starting_camera">कैमरा स्टार्ट नहीं हो रहा? फ़ोन रीस्टार्ट करें एंड फिरसे कोशिश करें!</string>
+    <string name="hours_left">घंटे रह गए</string>
+
+    <string name="welcome_exam_corner">परीक्षा कॉर्नर में आपका स्वागत है</string>
+    <string name="exam_corner">परीक्षा कॉर्नर</string>
+    <string name="successfully_bookmarked">सफलतापूर्वक बुकमार्क किया गया</string>
+    <string name="removed_bookmarked">बुकमार्क से हटाया गया</string>
+    <string name="news">समाचार</string>
+    <string name="career">करियर</string>
+    <string name="bookmarks">बुकमार्क</string>
+    <string name="topics">टॉपिक्स</string>
+    <string name="no_data">No Data</string>
+    <string name="enter_amount_here">यहां राशि भरें</string>
+    <string name="free_classes">फ्री क्लासेस</string>
+    <string name="free_ncert">फ्री एनसीईआरटी</string>
+    <string name="ncert">एनसीईआरटी</string>
+    <string name="library_tab_teacher">लोकल शिक्षक</string>
+
+    <!--Dictionary-->
+    <string name="type_your_word">अपना शब्द टाइप करेंं</string>
+    <string name="recently_searched">हाल ही में खोजा गया</string>
+    <string name="dictionary_no_result_found">कोई परिणाम नहीं मिला\n कृपया कोई अन्य अंग्रेजी शब्द खोजें</string>
+    <string name="welcome_to_dictionary">डाउटनट डिक्शनरी में आपका स्वागत है!</string>
+    <string name="message_dictionary">अंग्रेजी में कोई भी शब्द खोजें और अंग्रेजी और क्षेत्रीय भाषाओं में उसका अर्थ प्राप्त करें!</string>
+    <string name="enter_vaild_english_word">कृपया खोजने के लिए एक वैध अंग्रेजी शब्द दर्ज करें</string>
+    <string name="select_language">भाषा चुने</string>
+
+    <!--    DNR Start-->
+    <string name="dnr_toolbar_title">Doubtnut Rupya</string>
+    <!--    DNR End-->
+
+    <!-- Rating -->
+    <string name="rating1">बहुत बुरी क्लास</string>
+    <string name="rating2">बुरी क्लास</string>
+    <string name="rating3">ठीक-ठाक क्लास</string>
+    <string name="rating4">अच्छी क्लास</string>
+    <string name="rating5">बहुत अच्छी क्लास</string>
+    <string name="submit_rating">रेटिंग दें</string>
+    <string name="please_select_a_rating">कृपया रेटिंग चुनें</string>
+
+    <!-- Guest Login Start -->
+    <string name="join_as_a_guest">Guest की तरह जुड़े</string>
+    <string name="guest_login_popup_title">हमारे सभी सुविधाएँ का उपयोग शुरू करने के लिए सबसे पहले डाउटनट पर लॉग इन करें</string>
+    <!-- Guest Login End -->
+
+    <!-- Match page uninstall experiment start -->
+    <string name="scroll_animation_text">अधिक वीडियो के लिए ऊपर स्क्रॉल करें</string>
+    <!-- Match page uninstall experiment end -->
+
+    <string name="added_to_bookmark">ये वीडियो आपने बुकमार्क कर लिया है</string>
+    <string name="removed_from_bookmark">ये वीडियो बुकमार्क से हट गया है</string>
+
+    <string name="d0_user_end_time">00 : 00 : 00</string>
+    <string name="d0_user_qa_ratio">%d/%d</string>
+    <string name="photos_auto_download">फ़ोटोज़ ऑटो-डाउनलोड</string>
+    <string name="photos_auto_download_on">फोटोज ऑटो -डाउनलोड ऑन</string>
+    <string name="photos_auto_download_off">फोटोज ऑटो -डाउनलोड ऑफ</string>
+</resources>

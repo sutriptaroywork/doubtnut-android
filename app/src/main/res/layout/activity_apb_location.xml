@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".payment.ApbLocationActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back_black">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Cash Payments"
+                android:textColor="@color/black" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_stores_available"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f6f6f6"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/coupon_code_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_24dp"
+                        android:layout_marginTop="@dimen/dimen_24dp"
+                        android:fontFamily="@font/lato"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="4.9sp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Your Coupon Code" />
+
+                    <TextView
+                        android:id="@+id/tvCouponCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="@dimen/dimen_24dp"
+                        android:fontFamily="@font/lato"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="4.9sp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@id/coupon_code_text"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="DFGHJY" />
+
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_24dp"
+                        android:layout_marginTop="@dimen/dimen_15dp"
+                        android:layout_marginRight="@dimen/dimen_24dp"
+                        android:layout_marginBottom="@dimen/dimen_24dp"
+                        android:fontFamily="@font/lato"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvCouponCode"
+                        tools:text="You have to deposit minimum Rs 50 . Ye amount aapke DN wallet mein jayega jisse aap courses aur PDF’s khareed sakte hai" />
+
+                    <com.doubtnutapp.widgets.typewriter.TypeWriterTextView
+                        android:id="@+id/searchBar"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="@dimen/dimen_24dp"
+                        android:layout_marginTop="@dimen/dimen_15dp"
+                        android:layout_marginRight="@dimen/dimen_15dp"
+                        android:layout_marginBottom="@dimen/dimen_15dp"
+                        android:background="@drawable/bg_capsule_search_home"
+                        android:drawableStart="@drawable/ic_bio_location"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="@color/greyBlack"
+                        android:elevation="0dp"
+                        android:ellipsize="end"
+                        android:gravity="start|center"
+                        android:maxLines="1"
+                        android:outlineProvider="none"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="6dp"
+                        android:text="Your nearest location here"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        app:cardPreventCornerOverlap="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/btnSearch"
+                        app:layout_constraintTop_toBottomOf="@id/description" />
+
+                    <Button
+                        android:id="@+id/btnSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="@dimen/dimen_15dp"
+                        android:layout_marginRight="@dimen/dimen_15dp"
+                        android:layout_marginBottom="@dimen/dimen_15dp"
+                        android:background="@drawable/rounded_corner_button_backgrond"
+                        android:fontFamily="@font/lato"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/searchBar"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+                        tools:text="SEARCH" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/tvPointsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_24dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:fontFamily="@font/lato"
+                    android:lineSpacingExtra="4.9sp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_head"
+                    tools:text="4 points near you" />
+
+                <TextView
+                    android:id="@+id/tvPointsDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_24dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_24dp"
+                    android:background="#e0eaff"
+                    android:fontFamily="@font/lato"
+                    android:lineSpacingExtra="4.9sp"
+                    android:padding="@dimen/dimen_16dp"
+                    android:textColor="#54138a"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPointsCount"
+                    tools:text="Please call the store for directions &amp; tell them how much you want to deposit in your doubtnut wallet" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/locationsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_12dp"
+                    android:layout_marginTop="@dimen/dimen_24dp"
+                    android:layout_marginRight="@dimen/dimen_12dp"
+                    android:layout_marginBottom="@dimen/dimen_24dp"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@id/tvPointsDescription"
+                    tools:listitem="@layout/apb_location_items" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_no_stores_available"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_bio_location" />
+
+                <TextView
+                    android:id="@+id/tvLocationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_20"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivLocation"
+                    tools:text="Find the nearest stores " />
+
+                <TextView
+                    android:id="@+id/tvLocationDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_20"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="4.9sp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvLocationTitle"
+                    tools:text="To find the nearest stores, please visit the Airtel Payment bank website or *Send SMS with the Pin Code on the number 8448200000 " />
+
+                <Button
+                    android:id="@+id/btnLocationUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_margin="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginRight="@dimen/dimen_15dp"
+                    android:layout_marginBottom="@dimen/dimen_15dp"
+                    android:background="@drawable/rounded_corner_button_backgrond"
+                    android:fontFamily="@font/lato"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvLocationDescription"
+                    tools:text="Go To Airtel Bank Website" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGetStoreList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/ic_message"
+                    android:fontFamily="@font/lato"
+                    android:textAllCaps="false"
+                    android:textColor="#eb532c"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnLocationUrl"
+                    app:strokeColor="@color/orange_ff612d"
+                    app:strokeWidth="2dp"
+                    tools:text="Get Store list by Sending Pin Code*" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="@dimen/dimen_16dp"
+        android:visibility="gone" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,1315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/color_fcfcfc">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/imageViewBack"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/dimen_8dp"
+			android:background="?attr/selectableItemBackgroundBorderless"
+			android:padding="8dp"
+			android:src="?attr/homeAsUpIndicator"
+			android:tint="@color/greyBlackDark"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/toolbarTitle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:ellipsize="end"
+			android:fontFamily="@font/lato"
+			android:lines="1"
+			android:paddingStart="6dp"
+			android:paddingTop="12dp"
+			android:paddingEnd="6dp"
+			android:paddingBottom="12dp"
+			android:text="Select a Payment Option"
+			android:textColor="@color/greyBlackDark"
+			android:textSize="16sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toStartOf="@+id/tvHelp"
+			app:layout_constraintStart_toEndOf="@+id/imageViewBack"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<com.google.android.material.textview.MaterialTextView
+			android:id="@+id/tvHelp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawableStart="@drawable/ic_icon_small_help"
+			android:drawablePadding="4dp"
+			android:drawableTint="@color/color_54138a"
+			android:fontFamily="@font/lato"
+			android:gravity="center_horizontal"
+			android:minWidth="60dp"
+			android:paddingStart="8dp"
+			android:paddingTop="8dp"
+			android:paddingEnd="8dp"
+			android:paddingBottom="8dp"
+			android:textColor="@color/color_54138a"
+			android:textSize="14sp"
+			android:textStyle="bold"
+			android:visibility="gone"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="Help" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<ScrollView
+		android:id="@+id/scrollView"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toTopOf="@+id/cardView"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/dimen_16dp">
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/textViewPackageName"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/lato_bold"
+				android:textColor="@color/blue_273DE9"
+				android:textSize="@dimen/font_16sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				tools:text="Package Name" />
+
+			<com.google.android.material.textview.MaterialTextView
+				android:id="@+id/btnVoiceInstructions"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="4dp"
+				android:drawableStart="@drawable/ic_volume"
+				android:drawablePadding="4dp"
+				android:drawableTint="@color/redTomato"
+				android:fontFamily="@font/lato"
+				android:textColor="@color/grey_808080"
+				android:textSize="13sp"
+				android:textStyle="normal"
+				android:visibility="gone"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textViewPackageName"
+				tools:text="Taught in Hindi, Notes in Hindi"
+				tools:visibility="visible" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/textViewEmiDetails"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/dimen_4dp"
+				android:fontFamily="@font/lato"
+				android:textColor="@color/grey_808080"
+				android:textSize="@dimen/dimen_13sp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/btnVoiceInstructions"
+				tools:text="EMI Installment 2 | " />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/textViewPackageDuration"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/lato"
+				android:textColor="@color/grey_808080"
+				android:textSize="@dimen/dimen_13sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@+id/textViewEmiDetails"
+				app:layout_constraintTop_toTopOf="@+id/textViewEmiDetails"
+				tools:text="5 Months" />
+
+			<androidx.constraintlayout.widget.Group
+				android:id="@+id/groupCoupon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:visibility="gone"
+				app:constraint_referenced_ids="textViewTitleCouponCode,layoutCoupon"
+				tools:visibility="visible" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/textViewTitleCouponCode"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/dimen_14dp"
+				android:paddingBottom="@dimen/dimen_8dp"
+				android:text="@string/coupon_code"
+				android:textColor="@color/warm_grey"
+				android:textSize="11sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textViewPackageDuration" />
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/layoutCoupon"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:background="@drawable/rectangle_stroke_grey_solid_white"
+				android:paddingTop="@dimen/dimen_4dp"
+				android:paddingBottom="@dimen/dimen_4dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textViewTitleCouponCode">
+
+				<ImageView
+					android:id="@+id/ivCoupon"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_marginLeft="16dp"
+					android:scaleType="fitXY"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					tools:src="@drawable/ic_wallet" />
+
+				<TextView
+					android:id="@+id/textViewReferral"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="8dp"
+					android:layout_marginRight="@dimen/dimen_12dp"
+					android:backgroundTint="#e2e2e2"
+					android:lines="1"
+					android:maxLines="1"
+					android:singleLine="true"
+					android:text="Apply Coupon"
+					android:textColor="@color/warm_grey"
+					android:textSize="14sp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toStartOf="@+id/textViewApply"
+					app:layout_constraintStart_toEndOf="@id/ivCoupon"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewApply"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="4dp"
+					android:fontFamily="@font/lato"
+					android:padding="8dp"
+					android:text="Select Coupon"
+					android:textColor="@color/orange_eb532c"
+					android:textSize="14sp"
+					android:textStyle="bold"
+					app:layout_constraintBottom_toBottomOf="@+id/textViewReferral"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="@+id/textViewReferral" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/layoutWallet"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="14dp"
+				android:visibility="gone"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/layoutCoupon"
+				tools:visibility="visible">
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/tvWalletTitle"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingTop="@dimen/dimen_8dp"
+					android:paddingBottom="@dimen/dimen_8dp"
+					android:textColor="@color/warm_grey"
+					android:textSize="11sp"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					tools:text="DN Wallet" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/tvWhatIsWallet"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="8dp"
+					android:drawableEnd="@drawable/ic_icon_small_help"
+					android:drawablePadding="4dp"
+					android:drawableTint="@color/purple"
+					android:paddingTop="@dimen/dimen_8dp"
+					android:paddingBottom="@dimen/dimen_8dp"
+					android:textColor="@color/purple"
+					android:textSize="11sp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0"
+					app:layout_constraintStart_toEndOf="@+id/tvWalletTitle"
+					app:layout_constraintTop_toTopOf="parent"
+					tools:text="Ye Kya Hai?" />
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:background="@drawable/rectangle_stroke_grey_solid_white"
+					android:paddingBottom="8dp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/tvWalletTitle">
+
+					<androidx.appcompat.widget.AppCompatTextView
+						android:id="@+id/tvWalletBalance"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:layout_marginTop="8dp"
+						android:textColor="@color/black"
+						android:textSize="16sp"
+						android:textStyle="normal"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						tools:text="Total Available Balance :" />
+
+
+					<androidx.appcompat.widget.AppCompatTextView
+						android:id="@+id/tvWalletBalanceValue"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="8dp"
+						android:layout_marginTop="@dimen/dimen_4dp"
+						android:layout_marginEnd="10dp"
+						android:fontFamily="@font/lato"
+						android:minWidth="100dp"
+						android:textAlignment="textEnd"
+						android:textColor="@color/black"
+						android:textSize="16sp"
+						android:textStyle="normal"
+						app:layout_constraintBottom_toBottomOf="@+id/tvWalletBalance"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintHorizontal_bias="0"
+						app:layout_constraintTop_toTopOf="@+id/tvWalletBalance"
+						tools:text=" ₹200.00 " />
+
+					<CheckBox
+						android:id="@+id/checkBoxCashBalance"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="8dp"
+						android:buttonTint="@color/redTomato"
+						android:checked="true"
+						android:foreground="?android:attr/selectableItemBackground"
+						android:minWidth="0dp"
+						android:minHeight="0dp"
+						android:textColor="@color/black_two"
+						android:textSize="13sp"
+						android:textStyle="normal"
+						android:visibility="gone"
+						app:layout_constraintHorizontal_bias="0.302"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/tvWalletBalance"
+						tools:text="Cash Balance"
+						tools:visibility="visible" />
+
+					<ImageView
+						android:id="@+id/ivCashBalance"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="4dp"
+						android:src="@drawable/ic_icon_small_help"
+						android:visibility="gone"
+						app:layout_constraintBottom_toBottomOf="@+id/checkBoxCashBalance"
+						app:layout_constraintStart_toEndOf="@+id/checkBoxCashBalance"
+						app:layout_constraintTop_toTopOf="@+id/checkBoxCashBalance"
+						tools:visibility="visible" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+						android:id="@+id/tvWalletCashBalanceValue"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="8dp"
+						android:layout_marginTop="@dimen/dimen_4dp"
+						android:layout_marginEnd="10dp"
+						android:fontFamily="@font/lato"
+						android:minWidth="100dp"
+						android:textAlignment="textEnd"
+						android:textColor="@color/black_two"
+						android:textSize="13sp"
+						android:textStyle="normal"
+						android:visibility="gone"
+						app:layout_constraintBottom_toBottomOf="@+id/checkBoxCashBalance"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintHorizontal_bias="0"
+						app:layout_constraintTop_toTopOf="@+id/checkBoxCashBalance"
+						tools:text=" ₹200.00 "
+						tools:visibility="visible" />
+
+					<androidx.appcompat.widget.AppCompatTextView
+						android:id="@+id/tvAddMoney"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="2dp"
+						android:fontFamily="@font/lato"
+						android:paddingStart="38dp"
+						android:paddingTop="8dp"
+						android:paddingEnd="12dp"
+						android:paddingBottom="8dp"
+						android:text="Add Money"
+						android:textColor="@color/tomato"
+						android:textSize="15sp"
+						android:textStyle="bold"
+						android:visibility="gone"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/checkBoxCashBalance" />
+
+
+					<androidx.constraintlayout.widget.ConstraintLayout
+						android:id="@+id/layoutReward"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/checkBoxCashBalance">
+
+						<CheckBox
+							android:id="@+id/checkBoxRewardBalance"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="8dp"
+							android:buttonTint="@color/redTomato"
+							android:checked="true"
+							android:foreground="?android:attr/selectableItemBackground"
+							android:minWidth="0dp"
+							android:minHeight="0dp"
+							android:text="DN Reward Cash :"
+							android:textColor="@color/black_two"
+							android:textSize="13sp"
+							android:textStyle="normal"
+							app:layout_constraintHorizontal_bias="0.302"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toTopOf="parent" />
+
+						<ImageView
+							android:id="@+id/ivRewardBalance"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="4dp"
+							android:src="@drawable/ic_icon_small_help"
+							app:layout_constraintBottom_toBottomOf="@+id/checkBoxRewardBalance"
+							app:layout_constraintStart_toEndOf="@+id/checkBoxRewardBalance"
+							app:layout_constraintTop_toTopOf="@+id/checkBoxRewardBalance" />
+
+
+						<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/tvWalletRewardBalanceValue"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="8dp"
+							android:layout_marginTop="@dimen/dimen_4dp"
+							android:layout_marginEnd="10dp"
+							android:fontFamily="@font/lato"
+							android:minWidth="100dp"
+							android:textAlignment="textEnd"
+							android:textColor="@color/black_two"
+							android:textSize="13sp"
+							android:textStyle="normal"
+							app:layout_constraintBottom_toBottomOf="@+id/checkBoxRewardBalance"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintHorizontal_bias="0"
+							app:layout_constraintTop_toTopOf="@+id/checkBoxRewardBalance"
+							tools:text=" ₹200.00 " />
+
+						<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/tvRewardTitle"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="2dp"
+							android:fontFamily="@font/lato"
+							android:paddingStart="38dp"
+							android:paddingTop="4dp"
+							android:paddingEnd="12dp"
+							android:paddingBottom="4dp"
+							android:textColor="#969696"
+							android:textSize="10sp"
+							android:textStyle="bold"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/checkBoxRewardBalance"
+							tools:text="Available Balance ₹187.00 " />
+
+						<androidx.appcompat.widget.AppCompatTextView
+							android:id="@+id/tvRewardDesc"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="2dp"
+							android:fontFamily="@font/lato"
+							android:paddingStart="38dp"
+							android:paddingTop="4dp"
+							android:paddingEnd="12dp"
+							android:paddingBottom="4dp"
+							android:textColor="#969696"
+							android:textSize="10sp"
+							android:textStyle="normal"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/tvRewardTitle"
+							tools:text="Available Balance ₹187.00 " />
+
+						<androidx.constraintlayout.widget.Group
+							android:id="@+id/groupToolTipReward"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:visibility="gone"
+							app:constraint_referenced_ids="textViewToolTipReward,layoutTooltipReward" />
+
+						<TextView
+							android:id="@+id/textViewToolTipReward"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="▲"
+							android:textColor="@color/text_black"
+							app:layout_constraintEnd_toEndOf="@+id/ivRewardBalance"
+							app:layout_constraintStart_toStartOf="@+id/ivRewardBalance"
+							app:layout_constraintTop_toBottomOf="@+id/ivRewardBalance" />
+
+						<androidx.constraintlayout.widget.ConstraintLayout
+							android:id="@+id/layoutTooltipReward"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="13dp"
+							android:layout_marginEnd="16dp"
+							android:background="@drawable/capsule_solid_black"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toBottomOf="@+id/ivRewardBalance"
+							app:layout_constraintWidth_percent="0.75">
+
+							<TextView
+								android:id="@+id/titleToolTipReward"
+								android:layout_width="0dp"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="6dp"
+								android:layout_marginTop="6dp"
+								android:layout_marginEnd="6dp"
+								android:layout_marginBottom="6dp"
+								android:gravity="center"
+								android:textColor="@color/white"
+								android:textSize="12sp"
+								android:textStyle="normal"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintEnd_toStartOf="@id/ivCloseTooltipReward"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toTopOf="parent"
+								tools:text="Payment ke tareeko ke baare mein jaane ke liye yahan click kariye" />
+
+							<ImageView
+								android:id="@+id/ivCloseTooltipReward"
+								android:layout_width="18dp"
+								android:layout_height="18dp"
+								android:layout_marginTop="6dp"
+								android:layout_marginEnd="6dp"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintTop_toTopOf="parent"
+								app:srcCompat="@drawable/ic_close_white" />
+
+						</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+					</androidx.constraintlayout.widget.ConstraintLayout>
+
+					<androidx.constraintlayout.widget.Group
+						android:id="@+id/groupToolTipCash"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:visibility="gone"
+						app:constraint_referenced_ids="textViewToolTipCash,layoutTooltipCash" />
+
+					<TextView
+						android:id="@+id/textViewToolTipCash"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="▲"
+						android:textColor="@color/text_black"
+						app:layout_constraintEnd_toEndOf="@+id/ivCashBalance"
+						app:layout_constraintStart_toStartOf="@+id/ivCashBalance"
+						app:layout_constraintTop_toBottomOf="@+id/ivCashBalance" />
+
+					<androidx.constraintlayout.widget.ConstraintLayout
+						android:id="@+id/layoutTooltipCash"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="13dp"
+						android:layout_marginEnd="16dp"
+						android:background="@drawable/capsule_solid_black"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/ivCashBalance"
+						app:layout_constraintWidth_percent="0.75">
+
+						<TextView
+							android:id="@+id/titleToolTipCash"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="6dp"
+							android:layout_marginTop="6dp"
+							android:layout_marginEnd="6dp"
+							android:layout_marginBottom="6dp"
+							android:gravity="center"
+							android:textColor="@color/white"
+							android:textSize="12sp"
+							android:textStyle="normal"
+							app:layout_constraintBottom_toBottomOf="parent"
+							app:layout_constraintEnd_toStartOf="@id/ivCloseTooltipCash"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toTopOf="parent"
+							tools:text="Payment ke tareeko ke baare mein jaane ke liye yahan click kariye" />
+
+						<ImageView
+							android:id="@+id/ivCloseTooltipCash"
+							android:layout_width="18dp"
+							android:layout_height="18dp"
+							android:layout_marginTop="6dp"
+							android:layout_marginEnd="6dp"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintTop_toTopOf="parent"
+							app:srcCompat="@drawable/ic_close_white" />
+
+					</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/apbBannerRecyclerView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/dimen_14dp"
+				android:nestedScrollingEnabled="false"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/layoutWallet"
+				tools:listitem="@layout/apb_banner_item" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/textViewTitlePaymentOptionPreferred"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/dimen_14dp"
+				android:paddingBottom="@dimen/dimen_8dp"
+				android:text="PREFERRED PAYMENT METHODS"
+				android:textColor="@color/warm_grey"
+				android:textSize="11sp"
+				android:visibility="gone"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/apbBannerRecyclerView"
+				tools:visibility="visible" />
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/paymentOptionRecyclerViewPreferred"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:background="@drawable/rectangle_stroke_grey_solid_white"
+				android:nestedScrollingEnabled="false"
+				android:scrollbars="none"
+				android:visibility="gone"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textViewTitlePaymentOptionPreferred"
+				tools:itemCount="1"
+				tools:listitem="@layout/payment_options_item"
+				tools:visibility="visible" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/textViewTitlePaymentOption"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/dimen_14dp"
+				android:paddingBottom="@dimen/dimen_8dp"
+				android:text="@string/payment_methods"
+				android:textColor="@color/warm_grey"
+				android:textSize="11sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/paymentOptionRecyclerViewPreferred" />
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/paymentOptionRecyclerView"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:background="@drawable/rectangle_stroke_grey_solid_white"
+				android:nestedScrollingEnabled="false"
+				android:scrollbars="none"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textViewTitlePaymentOption"
+				tools:itemCount="3"
+				tools:listitem="@layout/payment_options_item" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/textViewTitlePaymentLink"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/dimen_16dp"
+				android:paddingTop="@dimen/dimen_14dp"
+				android:paddingBottom="@dimen/dimen_8dp"
+				android:text="PAYMENT LINKS"
+				android:textColor="@color/warm_grey"
+				android:textSize="11sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/paymentOptionRecyclerView" />
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/layoutPaymentLink"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:background="@drawable/rectangle_stroke_grey_solid_white"
+				android:padding="@dimen/dimen_10dp"
+				android:visibility="gone"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textViewTitlePaymentLink"
+				tools:visibility="visible">
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewPaymentLinkInfoTitle"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/dimen_8dp"
+					android:text="@string/payment_link"
+					android:textColor="@color/black"
+					android:textSize="14sp"
+					android:textStyle="bold"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					tools:text="Payment karne me pareshani?" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewPaymentLinkDescription"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/dimen_4dp"
+					android:text="@string/payment_link"
+					android:textColor="@color/grey_504949"
+					android:textSize="14sp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/textViewPaymentLinkInfoTitle"
+					tools:text="Payment karne me pareshani?" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewPaymentLinkKnowMore"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="4dp"
+					android:gravity="center_vertical"
+					android:paddingRight="4dp"
+					android:paddingBottom="@dimen/dimen_18dp"
+					android:text="@string/know_more"
+					android:textColor="@color/color_eb532c"
+					android:textSize="12sp"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/textViewPaymentLinkDescription"
+					tools:text="@string/know_more"
+					tools:visibility="visible" />
+
+				<ImageView
+					android:id="@+id/ivDropDown"
+					android:layout_width="10dp"
+					android:layout_height="10dp"
+					android:layout_marginTop="@dimen/dimen_4dp"
+					android:src="@drawable/ic_arrow_down_filled"
+					app:layout_constraintLeft_toRightOf="@+id/textViewPaymentLinkKnowMore"
+					app:layout_constraintTop_toTopOf="@+id/textViewPaymentLinkKnowMore" />
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/tvShareViaTitle"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="4dp"
+					android:layout_marginEnd="12dp"
+					android:fontFamily="@font/lato_black"
+					android:textColor="@color/black"
+					android:textSize="14sp"
+					android:textStyle="normal"
+					app:layout_constraintEnd_toStartOf="@+id/layoutSharePaymentLink"
+					app:layout_constraintRight_toLeftOf="@id/layoutSharePaymentLink"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/textViewPaymentLinkKnowMore"
+					tools:text="Via WhatsApp" />
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/tvShareViaSubTitle"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:layout_marginEnd="12dp"
+					android:layout_marginBottom="@dimen/dimen_12dp"
+					android:fontFamily="@font/lato"
+					android:textColor="@color/grey_medium"
+					android:textSize="12sp"
+					android:textStyle="normal"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toStartOf="@+id/layoutSharePaymentLink"
+					app:layout_constraintRight_toLeftOf="@id/layoutSharePaymentLink"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/tvShareViaTitle"
+					tools:text="Pay Via Google Pay/ Bhim UPI/ Paytm UPI" />
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/layoutSharePaymentLink"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/dimen_36dp"
+					android:layout_marginEnd="12dp"
+					android:background="@drawable/bg_button_share_payment_link"
+					android:drawableStart="@drawable/ic_whatsapp_small"
+					android:drawablePadding="4dp"
+					android:fontFamily="@font/lato"
+					android:gravity="center"
+					android:paddingStart="8dp"
+					android:paddingTop="8dp"
+					android:paddingEnd="12dp"
+					android:paddingBottom="8dp"
+					android:textAllCaps="true"
+					android:textColor="@color/green"
+					android:textSize="14sp"
+					android:textStyle="bold"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toBottomOf="@id/textViewPaymentLinkKnowMore"
+					tools:text="Share Link" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/layoutQr"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:background="@drawable/rectangle_stroke_grey_solid_white"
+				android:visibility="gone"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/layoutPaymentLink"
+				tools:visibility="visible">
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/tvQrTitle"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="12dp"
+					android:layout_marginTop="12dp"
+					android:layout_marginEnd="12dp"
+					android:fontFamily="@font/lato_black"
+					android:textColor="@color/black"
+					android:textSize="14sp"
+					android:textStyle="normal"
+					app:layout_constraintEnd_toStartOf="@+id/buttonViewQr"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					tools:text="Via QR Code" />
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/tvQrSubTitle"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="12dp"
+					android:layout_marginTop="5dp"
+					android:layout_marginEnd="12dp"
+					android:layout_marginBottom="12dp"
+					android:fontFamily="@font/lato"
+					android:textColor="@color/grey_medium"
+					android:textSize="12sp"
+					android:textStyle="normal"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toStartOf="@+id/buttonViewQr"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/tvQrTitle"
+					tools:text="Pay Via Google Pay/ Bhim UPI/ Paytm UPI" />
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/buttonViewQr"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/dimen_36dp"
+					android:layout_marginEnd="12dp"
+					android:background="@drawable/capsule_stroke_tomato_solid_white"
+					android:drawableStart="@drawable/ic_qr_code"
+					android:drawablePadding="4dp"
+					android:fontFamily="@font/lato"
+					android:gravity="center"
+					android:paddingStart="8dp"
+					android:paddingTop="8dp"
+					android:paddingEnd="12dp"
+					android:paddingBottom="8dp"
+					android:textAllCaps="true"
+					android:textColor="@color/tomato"
+					android:textSize="14sp"
+					android:textStyle="bold"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					tools:text="View Qr" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/layoutBill"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:background="@drawable/rectangle_stroke_grey_solid_white"
+				android:visibility="gone"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/layoutQr"
+				tools:visibility="visible">
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/tvBillTitle"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="12dp"
+					android:layout_marginTop="12dp"
+					android:layout_marginEnd="12dp"
+					android:fontFamily="@font/lato_black"
+					android:textColor="@color/black"
+					android:textSize="14sp"
+					android:textStyle="normal"
+					app:layout_constraintEnd_toStartOf="@+id/buttonViewBill"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					tools:text="Via Bill Number" />
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/tvBillSubTitle"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="12dp"
+					android:layout_marginTop="5dp"
+					android:layout_marginEnd="12dp"
+					android:layout_marginBottom="12dp"
+					android:fontFamily="@font/lato"
+					android:textColor="@color/grey_medium"
+					android:textSize="12sp"
+					android:textStyle="normal"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toStartOf="@+id/buttonViewBill"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/tvBillTitle"
+					tools:text="Pay Via Google Pay/ Bhim UPI/ Paytm UPI" />
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/buttonViewBill"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/dimen_36dp"
+					android:layout_marginEnd="12dp"
+					android:background="@drawable/capsule_stroke_tomato_solid_white"
+					android:drawablePadding="4dp"
+					android:fontFamily="@font/lato"
+					android:gravity="center"
+					android:paddingStart="8dp"
+					android:paddingTop="8dp"
+					android:paddingEnd="12dp"
+					android:paddingBottom="8dp"
+					android:textAllCaps="true"
+					android:textColor="@color/tomato"
+					android:textSize="14sp"
+					android:textStyle="bold"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					tools:text="View Bill No" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/textViewTitle"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/dimen_16dp"
+				android:paddingBottom="@dimen/dimen_8dp"
+				android:text="@string/payment_details"
+				android:textColor="@color/warm_grey"
+				android:textSize="11sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/layoutBill" />
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/layoutPaymentDetail"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:background="@drawable/rectangle_stroke_grey_solid_white"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewOriginalLabel"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="4dp"
+					android:layout_marginTop="4dp"
+					android:layout_marginEnd="2dp"
+					android:fontFamily="@font/lato"
+					android:paddingStart="8dp"
+					android:paddingTop="4dp"
+					android:paddingEnd="8dp"
+					android:paddingBottom="4dp"
+					android:text="@string/original"
+					android:textColor="@color/black"
+					android:textSize="14sp"
+					app:layout_constraintEnd_toStartOf="@+id/textViewOriginalAmount"
+					app:layout_constraintHorizontal_bias="0.0"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewOriginalAmount"
+					android:layout_width="90dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="4dp"
+					android:layout_marginEnd="8dp"
+					android:layout_marginBottom="4dp"
+					android:fontFamily="@font/lato"
+					android:paddingTop="4dp"
+					android:paddingBottom="4dp"
+					android:textAlignment="textEnd"
+					android:textColor="@color/black"
+					android:textSize="14sp"
+					android:textStyle="bold"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					tools:text="₹2,763" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewDiscountLabel"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="4dp"
+					android:layout_marginTop="4dp"
+					android:layout_marginEnd="2dp"
+					android:layout_marginBottom="4dp"
+					android:fontFamily="@font/lato"
+					android:paddingStart="8dp"
+					android:paddingTop="4dp"
+					android:paddingEnd="8dp"
+					android:paddingBottom="4dp"
+					android:text="@string/discount"
+					android:textColor="@color/black"
+					android:textSize="14sp"
+					app:layout_constraintEnd_toStartOf="@+id/textViewDiscountAmount"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/textViewOriginalLabel" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewDiscountAmount"
+					android:layout_width="90dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="4dp"
+					android:layout_marginEnd="8dp"
+					android:layout_marginBottom="4dp"
+					android:fontFamily="@font/lato"
+					android:paddingTop="4dp"
+					android:paddingBottom="4dp"
+					android:textAlignment="textEnd"
+					android:textColor="@color/black"
+					android:textSize="14sp"
+					android:textStyle="bold"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/textViewOriginalLabel"
+					tools:text="-₹2,763" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewCouponDiscountLabel"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="4dp"
+					android:layout_marginTop="4dp"
+					android:layout_marginEnd="2dp"
+					android:layout_marginBottom="4dp"
+					android:fontFamily="@font/lato"
+					android:paddingStart="8dp"
+					android:paddingTop="4dp"
+					android:paddingEnd="8dp"
+					android:paddingBottom="4dp"
+					android:text="@string/coupon"
+					android:textColor="@color/black"
+					android:textSize="14sp"
+					app:layout_constraintEnd_toStartOf="@+id/textViewCouponDiscountAmount"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/textViewDiscountLabel"
+					tools:visibility="visible" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewCouponDiscountAmount"
+					android:layout_width="90dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="4dp"
+					android:layout_marginEnd="8dp"
+					android:layout_marginBottom="4dp"
+					android:fontFamily="@font/lato"
+					android:paddingTop="4dp"
+					android:paddingBottom="4dp"
+					android:textAlignment="textEnd"
+					android:textColor="@color/green"
+					android:textSize="14sp"
+					android:textStyle="bold"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/textViewDiscountLabel"
+					tools:text="-₹2,763"
+					tools:visibility="visible" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewWalletDiscountLabel"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="4dp"
+					android:layout_marginTop="4dp"
+					android:layout_marginEnd="2dp"
+					android:layout_marginBottom="4dp"
+					android:fontFamily="@font/lato"
+					android:paddingStart="8dp"
+					android:paddingTop="4dp"
+					android:paddingEnd="8dp"
+					android:paddingBottom="4dp"
+					android:text="DN Wallet"
+					android:textColor="@color/black"
+					android:textSize="14sp"
+					app:layout_constraintEnd_toStartOf="@+id/textViewCouponDiscountAmount"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/textViewCouponDiscountLabel"
+					tools:visibility="visible" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewWalletDiscountAmount"
+					android:layout_width="90dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="4dp"
+					android:layout_marginEnd="8dp"
+					android:layout_marginBottom="4dp"
+					android:fontFamily="@font/lato"
+					android:paddingTop="4dp"
+					android:paddingBottom="4dp"
+					android:textAlignment="textEnd"
+					android:textColor="@color/green"
+					android:textSize="14sp"
+					android:textStyle="bold"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/textViewCouponDiscountAmount"
+					tools:text="-₹2,763"
+					tools:visibility="visible" />
+
+				<View
+					android:id="@+id/divider"
+					android:layout_width="0dp"
+					android:layout_height="1dp"
+					android:layout_marginTop="4dp"
+					android:background="#dcdcdc"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/textViewWalletDiscountLabel" />
+
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewAmountToPayLabel"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="4dp"
+					android:layout_marginTop="4dp"
+					android:layout_marginEnd="2dp"
+					android:layout_marginBottom="4dp"
+					android:fontFamily="@font/lato"
+					android:paddingStart="8dp"
+					android:paddingTop="4dp"
+					android:paddingEnd="8dp"
+					android:paddingBottom="4dp"
+					android:text="@string/final_price"
+					android:textColor="@color/black"
+					android:textSize="14sp"
+					android:textStyle="bold"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toStartOf="@+id/textViewAmountToPay"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/textViewAmountToPay"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="4dp"
+					android:layout_marginEnd="8dp"
+					android:layout_marginBottom="4dp"
+					android:fontFamily="@font/lato"
+					android:paddingTop="4dp"
+					android:paddingBottom="4dp"
+					android:textAlignment="textEnd"
+					android:textColor="@color/blue_273de9"
+					android:textSize="16sp"
+					android:textStyle="bold"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/divider"
+					tools:text="₹2,763" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</ScrollView>
+
+	<androidx.constraintlayout.widget.Group
+		android:id="@+id/group"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		app:constraint_referenced_ids="textViewToolTip,layoutTooltip" />
+
+	<TextView
+		android:id="@+id/textViewToolTip"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="26dp"
+		android:layout_marginEnd="24dp"
+		android:text="▲"
+		android:textColor="@color/text_black"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/layoutTooltip"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="39dp"
+		android:layout_marginEnd="16dp"
+		android:background="@drawable/capsule_solid_black"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintWidth_percent="0.55">
+
+		<TextView
+			android:id="@+id/titleToolTip"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="6dp"
+			android:layout_marginTop="6dp"
+			android:layout_marginEnd="6dp"
+			android:layout_marginBottom="6dp"
+			android:gravity="center"
+			android:textColor="@color/white"
+			android:textSize="12sp"
+			android:textStyle="normal"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toStartOf="@id/ivClose"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="Payment ke tareeko ke baare mein jaane ke liye yahan click kariye" />
+
+		<ImageView
+			android:id="@+id/ivClose"
+			android:layout_width="18dp"
+			android:layout_height="18dp"
+			android:layout_marginTop="6dp"
+			android:layout_marginEnd="6dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:srcCompat="@drawable/ic_close_white" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/cardView"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:elevation="8dp"
+		app:cardElevation="8dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/textViewAmount"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/dimen_12dp"
+				android:layout_marginTop="@dimen/dimen_12dp"
+				android:fontFamily="@font/lato_bold"
+				android:padding="8dp"
+				android:textColor="@color/blue_273de9"
+				android:textSize="18sp"
+				app:layout_constraintBottom_toTopOf="@id/textViewDetails"
+				app:layout_constraintEnd_toStartOf="@+id/buttonPay"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				tools:text="₹6,999" />
+
+			<Button
+				android:id="@+id/buttonPay"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/dimen_12dp"
+				android:layout_marginEnd="12dp"
+				android:layout_marginBottom="@dimen/dimen_12dp"
+				android:fontFamily="@font/lato_bold"
+				android:paddingStart="50dp"
+				android:paddingEnd="50dp"
+				android:text="Pay"
+				android:textColor="@color/white"
+				android:textSize="14sp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<TextView
+				android:id="@+id/textViewDetails"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/dimen_16dp"
+				android:layout_marginBottom="@dimen/dimen_12dp"
+				android:fontFamily="@font/lato"
+				android:gravity="center_horizontal"
+				android:textColor="#54138a"
+				android:textSize="10sp"
+				android:textStyle="bold"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/textViewAmount"
+				tools:text="VIEW DETAILS" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<ProgressBar
+		android:id="@+id/progressBar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

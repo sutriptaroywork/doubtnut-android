@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rootWord"
+    android:background="@color/white"
+    android:maxHeight="350dp"
+    android:paddingStart="@dimen/dimen_15dp"
+    android:paddingEnd="@dimen/dimen_15dp">
+
+    <ImageView
+        android:id="@+id/headingIconQuizWord"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:src="@drawable/ic_missed_trending_class"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headingQuizWord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/lato_black"
+        android:textColor="#481a62"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconQuizWord"
+        app:layout_constraintEnd_toStartOf="@id/skipQuizWord"
+        app:layout_constraintStart_toEndOf="@id/headingIconQuizWord"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Kl ki trending chemistry ki klas" />
+
+    <TextView
+        android:id="@+id/skipQuizWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="@string/skip"
+        android:textColor="#481a62"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/headingIconQuizWord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/headingIconQuizWord" />
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:alpha="0.1"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headingIconQuizWord" />
+
+
+    <ImageView
+        android:id="@+id/thumbnailQuizWord"
+        android:layout_width="0dp"
+        android:scaleType="fitXY"
+        android:layout_height="0dp"
+        android:src="@drawable/placeholder_thumbnail_quiz"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        app:layout_constraintDimensionRatio="268:121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <com.doubtnutapp.widgets.mathview.MathViewSimilar
+        android:id="@+id/mathViewQuizWord"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:maxHeight="121dp"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="268:121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+
+    <TextView
+        android:id="@+id/titleQuizWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_9dp"
+        android:fontFamily="@font/lato"
+        android:textColor="#eb532c"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/thumbnailQuizWord"
+        app:layout_constraintTop_toBottomOf="@id/thumbnailQuizWord"
+        tools:text="Dekhe english ki latest topper’s choice videos >>" />
+
+    <Button
+        android:id="@+id/btnQuizWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_17dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        tools:text="PLAY QUIZ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleQuizWord" />
+</androidx.constraintlayout.widget.ConstraintLayout>

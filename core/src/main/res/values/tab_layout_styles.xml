@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="ScholarshipTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabSelectedTextColor">@color/color_eb532c</item>
+        <item name="tabTextColor">#272727</item>
+        <item name="tabTextAppearance">@style/ScholarshipTabTextAppearance</item>
+    </style>
+
+    <style name="ScholarshipTabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="RegisterTestTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabSelectedTextColor">@color/color_eb532c</item>
+        <item name="tabTextColor">#17181f</item>
+        <item name="tabTextAppearance">@style/RegisterTestTabTextAppearance</item>
+    </style>
+
+    <style name="RegisterTestTabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+</resources>

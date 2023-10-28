@@ -1,0 +1,111 @@
+package com.doubtnut.core.constant
+
+object CoreEventConstants {
+    const val WIDGET_TYPE = "widget_type"
+    const val EVENT_NAME_COMMON_WIDGET_CLICK = "common_widget_click"
+
+    const val SCREEN_NAME = "screen_name"
+    const val SCREEN_CROP = "crop"
+    const val AUDIO_MUTED = "audio_muted"
+    const val AUDIO_PLAYED = "audio_played"
+    const val WIDGET = "widget"
+    const val ID = "id"
+    const val STUDENT_ID = "student_id"
+    const val HAS_PERMISSION = "has_permission"
+    const val IS_WA_LAUNCHED = "is_wa_launched"
+    const val IS_PERMISSION_REQUESTED = "is_permission_requested"
+    const val IS_PERMISSION_GRANTED = "is_permission_granted"
+    const val IS_LOCKED = "is_locked"
+    const val IS_CALLED_AFTER_GRANT_PERMISSION = "is_called_after_grant_permission"
+
+    // Notice Board
+    const val PACKAGE_NAME = "package_name"
+    const val APP_NAME = "app_name"
+    const val CTA_TEXT = "cta_text"
+    const val CTA_TYPE = "cta_type"
+    const val DN_NB_ICON_VISIBLE = "dn_nb_icon_visible"
+    const val DN_NB_ICON_CLICKED = "dn_nb_icon_clicked"
+    const val DN_NB_STORY_VIEWED = "dn_nb_story_viewed"
+    const val DN_NB_CTA_CLICKED = "dn_nb_cta_clicked"
+    const val DN_NB_NO_STORY_VISIBLE = "dn_nb_no_story_visible"
+    const val DN_NB_PROFILE_SECTION_VISIBLE = "dn_nb_profile_section_visible"
+    const val DN_NB_PROFILE_ELEMENT_VIEWED = "dn_nb_profile_element_viewed"
+    const val DN_NB_PROFILE_ELEMENT_CLICKED = "dn_nb_profile_element_clicked"
+
+    const val VIEWED = "viewed"
+    const val CLICKED = "clicked"
+    const val CTA_CLICKED = "cta_clicked"
+    const val SCROLL = "scroll"
+    const val CARD_VIEWED = "card_viewed"
+    const val CARD_CLICKED = "card_clicked"
+    const val MORE_CLICKED = "more_clicked"
+    const val TAG_CLICKED = "tag_clicked"
+    const val TAB_CLICKED = "tab_clicked"
+    const val SHARE_CLICKED = "share_clicked"
+    const val CROSS_CLICKED = "cross_clicked"
+    const val BACK_CLICKED2 = "back_clicked"
+    const val DROP_DOWN_CLICKED = "drop_down_clicked"
+    const val PROFILE_CLICKED = "profile_clicked"
+    const val KNOW_MORE_CLICKED = "know_more_clicked"
+    const val EXPLORE_PROMO_CLICKED = "explore_promo_clicked"
+    const val CONTINUE_BUYING_CTA_CLICKED = "continue_buying_cta_clicked"
+    const val VIDEO_WIDGET_CLICKED = "video_widget_clicked"
+    const val WALLET_WIDGET_CLICKED = "wallet_widget_clicked"
+    const val WALLET_WIDGET_CTA_CLICKED = "wallet_widget_cta_clicked"
+    const val VIP_USER = "vip_user"
+    const val WHATSAPP_LAUNCHED = "whatsapp_launched"
+    const val WHATSAPP_ICON_CLICKED = "whatsapp_icon_clicked"
+    const val DICTIONARY_ICON_CLICKED = "whatsapp_icon_clicked"
+    const val RECOMMENDATION_WIDGET_CTA_CLICKED = "recommendation_widget_cta_clicked"
+
+    const val SOURCE = "source"
+    const val PAGE = "page"
+    const val TYPE = "type"
+
+    const val ITEM_POSITION = "position"
+    const val NETWORK_DATA_SENT = "network_data_sent"
+    const val VIDEO_BYTES = "network_bytes"
+    const val QUESTION_ID = "question_id"
+    const val VIDEO_NAME = "video_name"
+    const val VIDEO_URL = "video_url"
+
+    const val IS_FULL_SCREEN_INTENT = "is_full_screen_intent"
+    const val AUTO_REDIRECT = "auto_redirect"
+
+    // BadRequest Dialog
+    const val EVENT_NAME_REQUEST_TO_LOGIN_CLICK = "RequestToLoginClick"
+    const val PAGE_BAD_REQUEST = "PageBadRequestClick"
+    const val EVENT_NAME_BAD_ACCESS_TOKEN = "BadAccessToken"
+
+    const val VIDEO_QUALITY_BOTTOM_SHEET = "video_quality_bottom_sheet"
+    const val EXOPLAYER_SETTINGS_ICON_CLICKED = "exoplayer_settings_icon_clicked"
+    const val EXOPLAYER_SETTINGS_ICON_VISIBLE = "exoplayer_settings_icon_visible"
+    const val USER_CONTACTS_COUNT = "user_contacts_count"
+    const val COUNT = "count"
+    const val COUNT_ORIGINAL = "count_original"
+
+    // region start doubtSuggester events
+    const val FEEDBACK_YES = "yes_clicked"
+    const val FEEDBACK_NO = "no_clicked"
+    const val FEEDBACK_UNDO = "undo_clicked"
+    const val SUGGESTED_DOUBT_BOOKMARK = "bookmark_clicked"
+    const val SUGGESTED_DOUBT_VIEWED = "solution_clicked"
+    // region end doubtSuggester events
+
+    // ResultPage Events region start
+    const val PARENT_SCREEN_NAME = "parent_screen_name"
+    const val IMPRESSIONS = "impressions"
+    const val VIDEO_CLICK = "video_click"
+    const val TESTIMONIAL_VIDEO_MUTE_CLICK = "testimonial_video_mute_click"
+    const val TESTIMONIAL_VIDEO_AUTOPLAYED = "testimonial_video_autoplayed"
+    const val TESTIMONIAL_VIDEO_CLICKED = "testimonial_video_clicked"
+   // ResultPage Events region end
+
+    const val IMA_AD_STARTED = "ima_ad_started"
+    const val IMA_AD_COMPLETED = "ima_ad_completed"
+    const val IMA_AD_PAUSED = "ima_ad_paused"
+    const val IMA_AD_SKIPPED = "ima_ad_skipped"
+    const val IMA_AD_RESUMED = "ima_ad_resumed"
+    const val IMA_AD_TAPPED = "ima_ad_tapped"
+    const val IMA_AD_ERROR = "ima_ad_error"
+}

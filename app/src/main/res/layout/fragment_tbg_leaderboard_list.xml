@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".topicboostergame2.ui.TbgLeaderboardListFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivRank1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircularImageView"
+        app:strokeColor="@color/redTomato"
+        app:strokeWidth="6dp"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvRank1"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@drawable/ic_bg_rank_red"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@id/ivRank1"
+        app:layout_constraintTop_toTopOf="@id/ivRank1"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvNameRank1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato_black"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:textColor="@color/color_badge"
+        android:textSize="15sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/ivRank1"
+        app:layout_constraintStart_toStartOf="@id/ivRank1"
+        app:layout_constraintTop_toBottomOf="@id/ivRank1"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tvWinsRank1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/grey_555555"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/ivRank1"
+        app:layout_constraintStart_toStartOf="@id/ivRank1"
+        app:layout_constraintTop_toBottomOf="@id/tvNameRank1"
+        tools:text="20 Wins" />
+
+    <TextView
+        android:id="@+id/tvRewardRank1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_rounded_corner_white_fill_16dp"
+        android:backgroundTint="@color/tomato"
+        android:fontFamily="@font/lato"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/ivRank1"
+        app:layout_constraintStart_toStartOf="@id/ivRank1"
+        app:layout_constraintTop_toBottomOf="@id/tvWinsRank1"
+        tools:text="Won 15 Rs" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupWinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ivRank1,tvRank1,tvNameRank1,tvWinsRank1,tvRewardRank1"
+        tools:visibility="visible" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivRank2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="6dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintCircle="@id/ivRank1"
+        app:layout_constraintCircleAngle="255"
+        app:layout_constraintCircleRadius="130dp"
+        app:shapeAppearanceOverlay="@style/CircularImageView"
+        app:strokeColor="@color/yellow_fdca46"
+        app:strokeWidth="3dp"
+        tools:ignore="MissingConstraints"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvRank2"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@drawable/ic_bg_rank_yellow"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@id/ivRank2"
+        app:layout_constraintTop_toTopOf="@id/ivRank2"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvNameRank2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato_black"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:textColor="@color/color_badge"
+        android:textSize="15sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/ivRank2"
+        app:layout_constraintStart_toStartOf="@id/ivRank2"
+        app:layout_constraintTop_toBottomOf="@id/ivRank2"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tvWinsRank2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/grey_555555"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/ivRank2"
+        app:layout_constraintStart_toStartOf="@id/ivRank2"
+        app:layout_constraintTop_toBottomOf="@id/tvNameRank2"
+        tools:text="20 Wins" />
+
+    <TextView
+        android:id="@+id/tvRewardRank2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_rounded_corner_white_fill_16dp"
+        android:backgroundTint="@color/tomato"
+        android:fontFamily="@font/lato"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/ivRank2"
+        app:layout_constraintStart_toStartOf="@id/ivRank2"
+        app:layout_constraintTop_toBottomOf="@id/tvWinsRank2"
+        tools:text="Won 15 Rs" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupWinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ivRank2,tvRank2,tvNameRank2,tvWinsRank2,tvRewardRank2"
+        tools:visibility="visible" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivRank3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="6dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintCircle="@id/ivRank1"
+        app:layout_constraintCircleAngle="105"
+        app:layout_constraintCircleRadius="130dp"
+        app:shapeAppearanceOverlay="@style/CircularImageView"
+        app:strokeColor="@color/yellow_fdca46"
+        app:strokeWidth="3dp"
+        tools:ignore="MissingConstraints"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvRank3"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@drawable/ic_bg_rank_yellow"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@id/ivRank3"
+        app:layout_constraintTop_toTopOf="@id/ivRank3"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvNameRank3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato_black"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:textColor="@color/color_badge"
+        android:textSize="15sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/ivRank3"
+        app:layout_constraintStart_toStartOf="@id/ivRank3"
+        app:layout_constraintTop_toBottomOf="@id/ivRank3"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tvWinsRank3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/grey_555555"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/ivRank3"
+        app:layout_constraintStart_toStartOf="@id/ivRank3"
+        app:layout_constraintTop_toBottomOf="@id/tvNameRank3"
+        tools:text="20 Wins" />
+
+    <TextView
+        android:id="@+id/tvRewardRank3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_rounded_corner_white_fill_16dp"
+        android:backgroundTint="@color/tomato"
+        android:fontFamily="@font/lato"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/ivRank3"
+        app:layout_constraintStart_toStartOf="@id/ivRank3"
+        app:layout_constraintTop_toBottomOf="@id/tvWinsRank3"
+        tools:text="Won 15 Rs" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupWinner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ivRank3,tvRank3,tvNameRank3,tvWinsRank3,tvRewardRank3"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/separatorView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey_dcdcdc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRewardRank3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLeaderboard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="80dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separatorView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/containerStudentData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple"
+        android:visibility="gone"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/TopRoundCornerShapeAppearance"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSelfRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivSelf"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivSelf"
+                tools:text="200" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivSelf"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvSelfRank"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:shapeAppearanceOverlay="@style/CircularImageView"
+                app:srcCompat="@drawable/ic_sample"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvSelfName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/lato"
+                android:maxLines="3"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/ivSelf"
+                app:layout_constraintEnd_toStartOf="@+id/tvSelfWins"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ivSelf"
+                app:layout_constraintTop_toTopOf="@id/ivSelf"
+                tools:text="Shah Rukh Khan" />
+
+            <TextView
+                android:id="@+id/tvSelfWins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivSelf"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivSelf"
+                tools:text="3 Wins" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">d3cvwyf9ksu0h5.cloudfront.net</domain>
+        <domain includeSubdomains="true">d10lpgp6xz60nq.cloudfront.net</domain>
+        <domain includeSubdomains="true">staging.doubtnut.com</domain>
+        <domain includeSubdomains="true">test7.doubtnut.com</domain>
+        <domain includeSubdomains="true">micro-test.doubtnut.com</domain>
+        <domain includeSubdomains="true">f2af8b58.ngrok.io</domain>
+        <domain includeSubdomains="true">neil.doubtnut.com</domain>
+        <domain includeSubdomains="true">35.200.251.195</domain>
+        <domain includeSubdomains="true">52.230.70.47</domain>
+        <domain includeSubdomains="true">hook.doubtnut.com</domain>
+        <domain includeSubdomains="true">13.234.119.169</domain>
+        <domain includeSubdomains="true">mirrors.standaloneinstaller.com</domain>
+        <domain includeSubdomains="true">1301938931.vod2.myqcloud.com</domain>
+        <domain includeSubdomains="true">ts.doubtnut.com</domain>
+        <domain includeSubdomains="true">live.doubtnut.com</domain>
+    </domain-config>
+    <base-config>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>

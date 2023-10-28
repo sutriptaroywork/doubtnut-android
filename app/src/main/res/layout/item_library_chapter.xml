@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="chapter"
+            type="com.doubtnutapp.librarylisting.model.ChapterViewItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selectable_item_background"
+        android:minHeight="55dp">
+
+        <TextView
+            android:id="@+id/concept_videos_chapter_title"
+            style="@style/TitleTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:singleLine="true"
+            android:text="@{chapter.title}"
+            android:textColor="@color/text_black"
+            android:textSize="14sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toStartOf="@+id/btnDownloadPdf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="wrap"
+            tools:text="Chapter Name" />
+
+        <ImageView
+            android:id="@+id/concept_videos_trending"
+            android:layout_width="12dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="12dp"
+            android:paddingEnd="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/concept_videos_chapter_title"
+            app:layout_constraintTop_toBottomOf="@id/concept_videos_chapter_title"
+            tools:src="@drawable/ic_trending" />
+
+        <FrameLayout
+            android:id="@+id/btnDownloadPdf"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/bg_download_red" />
+
+        </FrameLayout>
+        <TextView
+            android:id="@+id/textViewDescription"
+            style="@style/DescriptionTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:maxLines="2"
+            android:text="@{chapter.subTitle}"
+            android:textColor="@color/warm_grey"
+            android:textSize="12sp"
+            app:capsuleBgVisibility='@{chapter.subTitle}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/concept_videos_trending"
+            app:layout_constraintTop_toBottomOf="@id/concept_videos_chapter_title"
+            app:layout_constraintWidth_default="wrap"
+            tools:text="Description " />
+
+        <TextView
+            android:id="@+id/concept_total_videos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/text_black"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="6" />
+
+        <TextView
+            android:id="@+id/textViewVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/concept_total_videos"
+            app:layout_constraintStart_toStartOf="@id/concept_total_videos"
+            app:layout_constraintTop_toBottomOf="@id/concept_total_videos" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

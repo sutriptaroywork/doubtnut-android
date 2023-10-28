@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dailyStreakBadge"
+            type="com.doubtnutapp.gamification.userProfileData.model.DailyAttendanceDataModel" />
+    </data>
+    
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="8dp"
+        android:elevation="10dp"
+        app:cardBackgroundColor="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="11dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:imageurl="@{dailyStreakBadge.itemIcon}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/contest" />
+
+            <ImageView
+                android:id="@+id/dailyStreakImageOverlay"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="7dp"
+                android:visibility="@{dailyStreakBadge.isAchieved ? View.GONE : View.VISIBLE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholder="@{@drawable/circle_test_question_attempted}"
+                app:srcCompat="@drawable/overlay_badge"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:visibility="@{dailyStreakBadge.isAchieved ? View.GONE : View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="@+id/dailyStreakImageOverlay"
+                app:layout_constraintEnd_toEndOf="@+id/dailyStreakImageOverlay"
+                app:srcCompat="@drawable/ic_lock"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxEms="5"
+                android:maxLines="1"
+                android:layout_marginStart="2dp"
+                android:textColor="@color/app_black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dailyStreakImageOverlay"
+                app:text="@{dailyStreakBadge.title}"
+                tools:text="Vikas Gup..." />
+
+            <ImageView
+                android:id="@+id/ivDailyStreakBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_points_badge"
+                app:layout_constraintEnd_toStartOf="@+id/textView45"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="4357"
+                android:textColor="#541488"
+                android:textSize="12sp"
+                android:layout_marginStart="2dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivDailyStreakBadge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/ivDailyStreakBadge"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                app:layout_constraintTop_toTopOf="@+id/ivDailyStreakBadge" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

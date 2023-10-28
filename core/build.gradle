@@ -1,0 +1,290 @@
+/**
+ * We have added a core module which contains shared dependency utilities, extensions, common views etc.
+ * This is our first step toward multi-module architecture.
+ *
+ * Advantage.
+ * 1. Parallel build of module and caching
+ * 2. Promote modularity
+ * 3. Dynamic feature support which in long run can help in APK size reduction.
+ */
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+
+repositories {
+
+    maven {
+        url "https://maven.snplow.com/releases"
+    }
+}
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        minSdkVersion 21
+        //noinspection OldTargetApi
+        targetSdkVersion 30
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    viewBinding {
+        enabled = true
+    }
+    
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            buildConfigField("Boolean", "ENABLE_ADMIN_OPTIONS", "true")
+        }
+        debugRelease {
+            buildConfigField("Boolean", "ENABLE_ADMIN_OPTIONS", "true")
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField("Boolean", "ENABLE_ADMIN_OPTIONS", "false")
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+}
+
+dependencies {
+
+    // kotlin
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api 'androidx.core:core-ktx:1.7.0'
+
+    // Androidx - UI
+    api 'androidx.appcompat:appcompat:1.4.1'
+    api 'com.google.android.material:material:1.4.0'
+    api 'androidx.constraintlayout:constraintlayout:2.1.3'
+    api "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
+    api "androidx.recyclerview:recyclerview:1.2.1"
+    api "androidx.cardview:cardview:1.0.0"
+    api "androidx.fragment:fragment-ktx:1.4.0"
+    api "androidx.palette:palette-ktx:1.0.0"
+    api 'androidx.gridlayout:gridlayout:1.0.0'
+    api 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // Lifecycle
+    api 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    api "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    api "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    api "androidx.lifecycle:lifecycle-common-java8:2.4.0"
+    api "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+
+    // Dagger
+    implementation 'com.google.dagger:dagger:2.35.1'
+    implementation 'com.google.dagger:dagger-android:2.35.1'
+    implementation 'com.google.dagger:dagger-android-support:2.24'
+    kapt 'com.google.dagger:dagger-compiler:2.24'
+    kapt 'com.google.dagger:dagger-android-processor:2.24'
+
+    def camerax_version = "1.0.0-rc01"
+    api "androidx.camera:camera-camera2:${camerax_version}"
+    // If you want to additionally use the CameraX Lifecycle library
+    api "androidx.camera:camera-lifecycle:${camerax_version}"
+    // If you want to additionally use the CameraX View class
+    api('androidx.camera:camera-view:1.0.0-alpha21') {
+        exclude group: 'androidx.appcompat'
+    }
+    // If you want to additionally use the CameraX Extensions library
+    api "androidx.camera:camera-extensions:1.0.0-alpha21"
+
+    // Navigation
+    api "androidx.navigation:navigation-fragment-ktx:$rootProject.nav_version"
+    api "androidx.navigation:navigation-ui-ktx:$rootProject.nav_version"
+
+    // Kotlin + coroutines
+    api "androidx.work:work-runtime-ktx:2.7.1"
+    // optional - RxJava2 support
+    api "androidx.work:work-rxjava2:2.7.1"
+
+    // RX
+    api 'io.reactivex.rxjava2:rxjava:2.2.9'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+
+    // Retrofit, Okhttp
+    api 'com.squareup.retrofit2:retrofit:2.7.1'
+    api 'com.squareup.retrofit2:converter-gson:2.7.1'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+    api 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+
+    // Google Play Core & GMS
+    api 'com.google.android.play:core:1.10.3'
+    api 'com.google.android.play:core-ktx:1.8.1'
+
+    api 'com.google.android.gms:play-services-location:19.0.1'
+    api 'com.google.android.gms:play-services-gcm:17.0.0'
+    api 'com.google.android.gms:play-services-base:18.0.1'
+    api 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+    api 'com.google.android.gms:play-services-identity:18.0.1'
+    api 'com.google.android.gms:play-services-auth:20.0.1'
+    //Use dynamically downloaded MLKit Face Detection model in Google Play Service
+    api 'com.google.android.gms:play-services-mlkit-face-detection:16.2.1'
+    // Recognize text in images with ML Kit on Android
+    api 'com.google.android.gms:play-services-mlkit-text-recognition:17.0.1'
+    api "com.google.android.gms:play-services-safetynet:18.0.1"
+
+    // Paging 2
+    def paging_version = "2.1.2"
+    api "androidx.paging:paging-runtime-ktx:$paging_version"
+
+    // Firebase
+    api 'com.google.firebase:firebase-messaging:23.0.0'
+    api 'com.google.firebase:firebase-analytics-ktx:20.0.2'
+    api 'com.google.firebase:firebase-crashlytics:18.2.6'
+    api 'com.google.firebase:firebase-appindexing:20.0.0'
+    api 'com.google.firebase:firebase-auth:21.0.1'
+    api 'com.google.firebase:firebase-config:21.0.1'
+    api 'com.google.firebase:firebase-database-ktx:20.0.3'
+
+    // Facebook
+    api 'com.facebook.android:facebook-core:12.2.0'
+    api 'com.facebook.android:facebook-login:12.2.0'
+    api 'com.facebook.android:facebook-applinks:12.2.0'
+    api 'com.facebook.shimmer:shimmer:0.5.0'
+
+    // Stetho
+    debugApi 'com.facebook.stetho:stetho-okhttp3:1.6.0'
+    debugReleaseApi 'com.facebook.stetho:stetho-okhttp3:1.6.0'
+
+    // Freshwork Freshchat SDK
+    api 'com.github.freshworks:freshchat-android:4.3.3'
+
+    // Conviva dependencies
+//    api 'com.conviva.sdk:conviva-core-sdk:4.0.16.187'
+//    api 'com.conviva.sdk:conviva-exoplayer-sdk:4.0.7.61'
+
+    // Download Manager
+    api 'com.mindorks.android:prdownloader:0.6.0'
+
+    // TrueCaller
+    api "com.truecaller.android.sdk:truecaller-sdk:2.6.0"
+
+    // Image loading
+    api 'com.github.bumptech.glide:glide:4.12.0'
+    api 'com.github.bumptech.glide:okhttp3-integration:4.12.0'
+
+    // MoEngage
+    api "com.moengage:moe-android-sdk:11.4.01"
+    api "com.moengage:push-amp-plus:3.2.00"
+    api "com.moengage:inbox-core:1.0.00"
+    api "com.moengage:rich-notification:2.3.00"
+
+    // Start Apxor Dependencies
+    api 'com.apxor.androidx:apxor-android-sdk-core:2.8.1@aar'
+    api 'com.apxor.androidx:apxor-android-sdk-qe:1.5.0@aar'
+    api('com.apxor.android:apxor-android-sdk-push:1.2.7@aar') {
+        exclude group: 'com.google.firebase'
+    }
+    api 'com.apxor.androidx:apxor-android-sdk-rtm:1.8.7@aar'
+    api 'com.apxor.androidx:apxor-android-crash-reporter:1.0.5@aar'
+    api 'com.apxor.androidx:surveys:1.3.5@aar'
+    api 'com.apxor.androidx:wysiwyg:1.2.4@aar'
+    // End Apxor Dependencies
+
+    // Lottie Animation
+    api 'com.airbnb.android:lottie:3.7.0'
+
+    api 'com.snowplowanalytics:snowplow-android-tracker:3.0.0'
+
+    // Android Link Preview
+    api 'org.jsoup:jsoup:1.11.3'
+
+    // Flex Layout
+    api 'com.google.android:flexbox:2.0.1'
+
+    // Circular progress bar
+    api 'com.mikhaellopez:circularprogressbar:3.0.3'
+
+
+    // Seekbar
+    api 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+
+    // Lightweight Confetti Particle System
+    api 'nl.dionsegijn:konfetti:1.3.2'
+
+    // Other Utilities
+    api 'me.relex:circleindicator:2.1.4'
+    api 'com.github.rbro112:Android-Indefinite-Pager-Indicator:1.4'
+    api 'io.github.chaosleung:pinview:1.4.4'
+    api 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.4'
+
+    api 'com.github.instacart.truetime-android:library-extension-rx:3.4'
+    api 'com.evernote:android-job:1.4.2'
+    api 'com.google.code.gson:gson:2.8.6'
+    api 'de.hdodenhof:circleimageview:3.1.0'
+    api 'com.android.installreferrer:installreferrer:2.2'
+    api 'com.github.chrisbanes:PhotoView:2.0.0'
+    api 'com.github.nisrulz:sensey:1.8.0'
+    api 'id.zelory:compressor:2.1.0'
+    api 'me.saket:better-link-movement-method:2.2.0'
+    api 'com.beloo.widget:ChipsLayoutManager:0.3.7@aar'
+    api 'com.akexorcist:round-corner-progress-bar:2.1.1'
+    api 'com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtplibrary:1.8.4'
+    api('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    api("com.google.guava:guava:29.0-android")
+    api 'com.google.zxing:core:3.3.3'
+    api 'com.otaliastudios:nestedscrollcoordinatorlayout:1.0.3'
+    api 'io.github.ponnamkarthik:richlinkpreview:1.0.9'
+    api 'me.zhanghai.android.materialratingbar:library:1.3.1'
+    api 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
+    api 'me.drakeet.support:toastcompat:1.1.0'
+    api 'com.github.anrwatchdog:anrwatchdog:1.4.0'
+    api 'androidx.startup:startup-runtime:1.1.0'
+
+    api "com.googlecode.mp4parser:isoparser:1.0.6"
+
+    // Jetpack Datastore Preferences
+    api 'androidx.datastore:datastore-core:1.0.0'
+    api "androidx.datastore:datastore-preferences:1.0.0"
+
+    api 'androidx.multidex:multidex:2.0.1'
+
+    // Conviva analytics integration
+//    api 'com.conviva.sdk:conviva-android-tracker:0.2.2'
+
+    if (project.hasProperty("enable-leak-canary")) {
+        debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    }
+
+    // Fragment view binding delegate
+    api 'com.github.Zhuinden:fragmentviewbindingdelegate-kt:1.0.0'
+
+    // handle keyboard visibility change
+    api 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC3'
+
+    // Testing (This should be last code block)
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // google's library for making assertions in tests
+    testImplementation "com.google.truth:truth:1.0.1"
+    androidTestImplementation "com.google.truth:truth:1.0.1"
+
+    //Mockito
+    testImplementation 'org.mockito:mockito-core:3.3.3'
+}

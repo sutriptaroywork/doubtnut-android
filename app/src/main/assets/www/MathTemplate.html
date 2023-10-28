@@ -1,0 +1,33 @@
+<!doctypehtml>
+<meta charset=UTF-8>
+<meta content="width=device-width,height=device-height,initial-scale=1,user-scalable=0"
+      name=viewport><title>MathJax AsciiMath Template</title>
+<script src=min.js></script>
+<script type=text/x-mathjax-config><!--MathJax.Hub.Config({-->
+    <!--showProcessingMessages: false-->
+    <!--})-->
+  MathJax.Hub.Config({
+  messageStyle: "none",
+  /*styles: {
+    "#MathJax_Message": {left: "", right: 0},
+    "#MathJax_MSIE_Frame": {left: "", right: 0}
+  },*/
+  showProcessingMessages: false,
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] },
+    asciimath2jax: {
+      delimiters: [['`','`'], ['$','$']]
+    },
+    "fast-preview": {
+    Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+    color: "inherit!important",
+    updateTime: 30, updateDelay: 6,
+    messageStyle: "none",
+    disabled: false
+  }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    function showFormula(u){$("#ascii_output").html(""),$("#ascii_output").append(u),MathJax.Hub.queue.Push(["Typeset",MathJax.Hub])}!function(){MathJax.Hub.queue;MathJax.Hub.processSectionDelay=0}()
+</script>
+<body style=text-align:center;vertical-align:middle;font-size:13px><span id=ascii_output></span>

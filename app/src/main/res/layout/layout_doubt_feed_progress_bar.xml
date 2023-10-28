@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:enabled="false"
+        android:stepSize="1"
+        android:value="2"
+        android:valueFrom="1"
+        android:valueTo="5"
+        app:labelBehavior="gone"
+        app:layout_constraintBottom_toBottomOf="@id/flowDailyGoals"
+        app:thumbColor="@color/colorTransparent"
+        app:thumbRadius="0dp"
+        app:trackColorActive="@color/green_15a9a6"
+        app:trackColorInactive="@color/green_b3e2e8"
+        app:trackHeight="10dp" />
+
+    <include
+        android:id="@+id/viewDailyGoal1"
+        layout="@layout/item_doubt_feed_daily_goal_progress" />
+
+    <include
+        android:id="@+id/viewDailyGoal2"
+        layout="@layout/item_doubt_feed_daily_goal_progress" />
+
+    <include
+        android:id="@+id/viewDailyGoal3"
+        layout="@layout/item_doubt_feed_daily_goal_progress" />
+
+    <include
+        android:id="@+id/viewDailyGoal4"
+        layout="@layout/item_doubt_feed_daily_goal_progress" />
+
+    <include
+        android:id="@+id/viewDailyGoal5"
+        layout="@layout/item_doubt_feed_daily_goal_progress" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flowDailyGoals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="viewDailyGoal1,viewDailyGoal2,viewDailyGoal3,viewDailyGoal4,viewDailyGoal5"
+        app:flow_horizontalStyle="spread_inside"
+        app:flow_wrapMode="chain"
+        app:layout_constraintEnd_toEndOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="@id/progressBar"
+        app:layout_constraintTop_toBottomOf="@id/barrierAboveProgressLayout" />
+
+</merge>

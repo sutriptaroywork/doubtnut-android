@@ -1,0 +1,7 @@
+<com.doubtnutapp.widgets.mathview.MathViewSimilar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mathView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:gravity="center"
+    android:scrollbars="none" />

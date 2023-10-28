@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.userstatus.StatusDetailActivity">
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        tools:src="@tools:sample/backgrounds/scenic" />-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivClose"
+        android:background="@drawable/bottom_shadow_gradient_black" />
+
+    <FrameLayout
+        android:id="@+id/ll_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="@dimen/dimen_60dp"
+        android:layout_height="@dimen/dimen_60dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_video_play_transparent"
+        app:srcCompat="@drawable/ic_video_play_transparent" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dimen_8dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:background="#68FFFFFF"
+        android:orientation="horizontal" />
+
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_progress_bar"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginRight="@dimen/dimen_16dp"
+        android:src="@drawable/ic_close_white" />
+
+    <LinearLayout
+        android:id="@+id/ll_userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_shadow_gradient_black"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:paddingBottom="@dimen/dimen_16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_12dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/userImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                tools:src="@drawable/ic_day_streak" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/userImage"
+                android:layout_toRightOf="@+id/userImage"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="left"
+                    android:maxLines="3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16dp"
+                    android:textStyle="bold"
+                    tools:text="User Name" />
+
+                <TextView
+                    android:id="@+id/tvStatusCreationTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvUserName"
+                    android:layout_alignLeft="@+id/tvUserName"
+                    android:layout_marginBottom="@dimen/dimen_8dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_12dp"
+                    tools:text="3 hours ago" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userImage"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:drawablePadding="@dimen/dimen_8dp"
+                android:gravity="left"
+                android:maxLines="3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_14dp"
+                tools:text="@string/live_price_setitngs_info" />
+
+            <TextView
+                android:id="@+id/tvViewCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCaption"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:drawableLeft="@drawable/icon_small_view"
+                android:drawablePadding="@dimen/dimen_8dp"
+                android:gravity="center"
+                android:maxLines="3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_14dp"
+                android:visibility="gone"
+                tools:text="40 Views" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_48dp"
+                app:cornerRadius="@dimen/dimen_8dp"
+                android:layout_below="@+id/tvViewCount"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:background="@color/orange_ff612d"
+                android:textColor="@color/white"
+                tools:text="CTA" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

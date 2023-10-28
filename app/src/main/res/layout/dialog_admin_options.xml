@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/time_picker_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Admin Options"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txt_build_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Build type"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/txt_version_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Version code"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/txt_branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Branch"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey" />
+
+        <EditText
+            android:id="@+id/etDeeplink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="doubtnut://"
+            tools:ignore="HardcodedText,LabelFor,TextFields" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnLaunchDeeplink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Launch Deeplink"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnLaunchDeeplinkFromClipboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Launch Deeplink From Clipboard"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text_input_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="api url:"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etBaseUrl"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:hint="api"
+                tools:ignore="HardcodedText,TextFields" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=".doubtnut.com"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text_input_complete_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="api url:"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etCompleteBaseUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:hint="api.doubtnut.com"
+                tools:ignore="HardcodedText,TextFields" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text_input_socket_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="socket url:"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etCompleteSocketUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:hint="socket.doubtnut.com"
+                tools:ignore="HardcodedText,TextFields" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="server: "
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/rgServerOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMicro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="micro"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/rbMicroTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="micro-stg"
+                    tools:ignore="HardcodedText" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etMicroUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:hint="micro: https base url"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            tools:ignore="HardcodedText,TextFields" />
+
+        <CheckBox
+            android:id="@+id/debugLogCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:gravity="center_vertical"
+            android:text="Enable debug logs"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnDownloadVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="Download Video"
+            android:visibility="gone"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:text="Save"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnTestExo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:text="Test Video"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/toggleFeature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Toggle A/B"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/featureTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="ON"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etStartHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:hint="STARTING HOUR = 20"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                tools:ignore="HardcodedText,TextFields" />
+
+            <EditText
+                android:id="@+id/etStartMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:hint="STARTING MIN = 0"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                tools:ignore="HardcodedText,TextFields" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etEndHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:hint="ENDING HOUR = 20"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                tools:ignore="HardcodedText,TextFields" />
+
+            <EditText
+                android:id="@+id/etEndMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:hint="FINISHING MIN = 20"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                tools:ignore="HardcodedText,TextFields" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/launchTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:text="LAUNCH"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/testNotif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="TEST NOTIFICATION"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/launchCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="SET ALARM"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/apiTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="TEST API"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/typeYourDoubt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:text="Type Your Doubt"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

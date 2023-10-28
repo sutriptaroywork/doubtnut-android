@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:text="All Filter"
+        android:textAlignment="center"
+        android:textColor="@color/tomato"
+        android:textSize="@dimen/dimen_13sp"
+        tools:text="All Filter" />
+</FrameLayout>

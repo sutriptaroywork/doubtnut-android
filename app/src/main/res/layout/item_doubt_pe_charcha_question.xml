@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootContainer"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#feede1"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewDoubt"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:layout_marginBottom="@dimen/dimen_12dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardLayoutConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topStrip"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#ff7310"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutTag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/imageViewShare"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/lato_bold"
+                        android:padding="@dimen/dimen_4dp"
+                        android:textColor="@color/grey_504949"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutTag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/layoutTag1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTag2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:textSize="10sp"
+                        android:padding="@dimen/dimen_4dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:textColor="@color/grey_504949"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvSubject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/layoutTag2"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/imageViewShare"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="@dimen/dimen_6dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_share_bounty"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <ImageView
+                android:id="@+id/imageViewQuestion"
+                android:layout_width="match_parent"
+                android:padding="@dimen/dimen_8dp"
+                android:layout_height="80dp"
+                android:src="@drawable/khelo_or_jeeto_header"
+                app:layout_constraintTop_toBottomOf="@+id/topStrip" />
+
+            <TextView
+                android:id="@+id/textViewQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingTop="2.5dp"
+                android:paddingBottom="2.5dp"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:src="@drawable/khelo_or_jeeto_header"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                app:layout_constraintTop_toBottomOf="@+id/topStrip" />
+
+            <TextView
+                android:id="@+id/tvQuestionAskedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16dp"
+                app:layout_goneMarginTop="100dp"
+                android:text="21/05/21, 12:10 PM"
+                android:textColor="#7a7a7a"
+                android:textSize="@dimen/text_10sp"
+                android:layout_marginTop="92dp"
+                android:fontFamily="@font/lato"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topStrip" />
+
+
+            <TextView
+                android:id="@+id/buttonAction"
+                android:layout_width="110dp"
+                android:layout_height="24dp"
+                android:maxWidth="@dimen/dimen_150dp"
+                android:layout_marginTop="87dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:paddingStart="@dimen/dimen_8dp"
+                android:paddingEnd="@dimen/dimen_8dp"
+                android:background="@drawable/border_reward_notes"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:text="View"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topStrip"/>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvFeaturedTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/tvQuestionAskedTime"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                app:layout_constraintStart_toStartOf="@+id/imageViewQuestion"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:textColor="@color/white"
+                android:background="#c7a453"
+                android:fontFamily="@font/lato_bold"
+                android:textSize="10.5sp"
+                tools:text="Solve this &amp; Earn More"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

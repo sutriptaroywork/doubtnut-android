@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.doubtnutapp.home.HomeFeedFragmentV2"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home_v2" />
+
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.doubtnutapp.libraryhome.library.LibraryFragmentHome"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library">
+        <argument
+            android:name="library_fragment_level_page"
+            android:defaultValue="1"
+            app:argType="integer" />
+        <argument
+            android:name="library_fragment_level_playlist_Id"
+            android:defaultValue='""'
+            app:argType="string" />
+        <argument
+            android:name="library_fragment_level_playlist_Title"
+            android:defaultValue='""'
+            app:argType="string" />
+        <argument
+            android:name="library_fragment_level"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+        <argument
+            android:name="library_screen_selected_Tab"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="course_id"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forumFragment"
+        android:name="com.doubtnutapp.feed.view.FeedFragment"
+        android:label="fragment_forum"
+        tools:layout="@layout/fragment_feed">
+        <argument
+            android:name="filter"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="show_create_post"
+            android:defaultValue="true"
+            app:argType="boolean"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.doubtnutapp.profile.userprofile.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/user_profile_fragment" />
+
+    <fragment
+        android:id="@+id/doubtFeedFragment"
+        android:name="com.doubtnutapp.doubtfeed.ui.DoubtFeedFragment"
+        android:label="fragment_doubt_feed"
+        tools:layout="@layout/fragment_doubt_feed" />
+    <fragment
+        android:id="@+id/freeTrialCourseFragment"
+        android:name="com.doubtnutapp.freeTrialCourse.ui.FreeTrialCourseFragment"
+        tools:layout="@layout/activity_free_trial_course"
+        android:label="FreeTrialCourseFragment" />
+</navigation>

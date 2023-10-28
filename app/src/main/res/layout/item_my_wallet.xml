@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myWalletCard"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_margin="15dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0px"
+        android:elevation="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/openMyOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginEnd="9dp"
+                android:backgroundTint="@color/green"
+                android:text="@string/activity_store_my_order"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/my_wallet" />
+
+            <ImageView
+                android:id="@+id/my_wallet_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/ic_cash"
+                app:layout_constraintStart_toStartOf="@id/my_wallet"
+                app:layout_constraintTop_toBottomOf="@id/badges_jeeten_text"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/my_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/my_dn_cash_title"
+                android:textColor="@color/app_black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/badges_jeeten_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:text="@string/tenPointsEquals"
+                android:textColor="@color/warm_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/my_wallet"
+                app:layout_constraintTop_toBottomOf="@id/my_wallet" />
+
+            <TextView
+                android:id="@+id/my_wallet_cash_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:textColor="@color/purple"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/my_wallet_cash"
+                app:layout_constraintStart_toEndOf="@id/my_wallet_cash"
+                app:layout_constraintTop_toTopOf="@id/my_wallet_cash"
+                tools:text="150" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/dn_cash"
+                android:textColor="@color/purple"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/my_wallet_cash_text"
+                app:layout_constraintEnd_toStartOf="@+id/buyBooksButton"
+                app:layout_constraintStart_toEndOf="@id/my_wallet_cash_text"
+                app:layout_constraintTop_toTopOf="@+id/my_wallet_cash_text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buyBooksButton"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginEnd="9dp"
+                android:backgroundTint="@color/tomato"
+                android:text="@string/shop_with_dn_cash"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/my_wallet_cash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/my_wallet_cash" />
+
+            <TextView
+                android:id="@+id/pointsDescriptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/dn_points_description"
+                android:textColor="@color/warm_grey"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

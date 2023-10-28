@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.doubtnutapp.gamification.gamepoints.ui.viewmodel.GamePointsViewModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:title="@string/my_earned_points"
+                    android:theme="@style/Theme.Doubtnut.Toolbar"
+                    app:titleTextAppearance="@style/TextAppearance.Toolbar"
+                    />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".gamification.gamepoints.ui.GamePointsActivity"
+            android:layout_marginBottom="50dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+            <include
+                android:id="@+id/pointsEarnedCardDetailsLayout"
+                layout="@layout/item_my_earned_points_card_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_my_earned_points_card_details"
+                app:gamePointsData = "@{viewmodel.gamePointsData}"
+                />
+            <TextView
+                android:id="@+id/howToReachTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="20dp"
+                tools:text="How to reach level 3 ?"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="@{@string/how_to_reach(viewmodel.gamePointsData.heading)}"
+                app:layout_constraintBottom_toTopOf="@+id/gamepointsList"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pointsEarnedCardDetailsLayout"
+                />
+
+            <TextView
+                android:id="@+id/viewHistoryTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginEnd="20dp"
+                tools:text="View History "
+                android:textColor="#027aff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/gamepointsList"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pointsEarnedCardDetailsLayout"
+                />
+
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/gamepointsList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/howToReachTextView"
+                tools:listitem="@layout/item_game_point" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <fragment
+            android:id="@+id/filter_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="48dp"
+            app:behavior_skipCollapsed="true"
+            app:layout_behavior="com.doubtnutapp.widgets.BottomSheetBehavior"
+            tools:layout="@layout/fragment_view_level_information"
+            class="com.doubtnutapp.gamification.gamepoints.ui.ViewLevelInformationFragment"
+            />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

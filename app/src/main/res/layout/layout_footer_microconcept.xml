@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/root11"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="7dp"
+        android:background="@color/colorAccent"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewMore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:clickable="false"
+            android:gravity="center"
+            android:saveEnabled="false"
+            android:scrollbars="none"
+            android:text="@string/viewall"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,358 @@
+<resources>
+
+    <style name="ChannelFilterTab">
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.Doubtnut.Toolbar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="fontFamily">@font/lato</item>
+    </style>
+
+    <style name="AppTheme.TextInputLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextAppearance">@style/TextAppearance.Subtitle1</item>
+        <item name="tabIndicatorColor">@color/redTomato</item>
+        <item name="tabTextColor">@color/black</item>
+    </style>
+
+    <style name="FlatButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:theme">@style/Theme.FlatButton</item>
+    </style>
+
+    <style name="RadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:buttonTint">@android:color/white</item>
+        <item name="fontFamily">@font/lato</item>
+    </style>
+
+    <style name="Like.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableTop">@drawable/selector_itemtimeline_likedrawableleft</item>
+        <item name="android:theme">@style/Theme.FlatButton</item>
+        <item name="android:text">@string/string_itemtimeline_like</item>
+        <item name="android:textColor">@color/selector_itemtimeline_likedcolor</item>
+    </style>
+
+    <style name="Like.Button.Horizontal" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableLeft">@drawable/selector_like_small</item>
+        <item name="android:theme">@style/Theme.FlatButton</item>
+        <item name="android:text">@string/string_itemtimeline_like</item>
+        <item name="android:textColor">@color/selector_itemtimeline_likedcolor</item>
+    </style>
+
+    <style name="Like.Button.Light" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableTop">@drawable/selector_itemtimeline_likedrawableleft_light
+        </item>
+        <item name="android:theme">@style/Theme.FlatButton</item>
+        <item name="android:text">@string/string_itemtimeline_like</item>
+        <item name="android:textColor">@color/selector_itemtimeline_likedcolor_light</item>
+    </style>
+
+    <style name="Comment.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableTop">@drawable/ic_comment_blue_24dp</item>
+        <item name="android:text">@string/string_itemtimeline_comment</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="Comment.Button.Horizontal" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableLeft">@drawable/ic_comment_grey_small</item>
+        <item name="android:text">@string/comment</item>
+    </style>
+
+    <style name="Share.Button.Horizontal" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableLeft">@drawable/ic_share_arrow_small</item>
+        <item name="android:text">@string/text_share</item>
+    </style>
+
+    <style name="Comment.Button.Light" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableTop">@drawable/selector_itemtimeline_commentdrawabletop_light
+        </item>
+        <item name="android:theme">@style/Theme.FlatButton</item>
+        <item name="android:text">@string/string_itemtimeline_comment</item>
+        <item name="android:textColor">@color/selector_itemtimeline_likedcolor_light</item>
+    </style>
+
+    <style name="Star.Button.Horizontal" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableLeft">@drawable/selector_star_button</item>
+        <item name="android:text">@string/favourite</item>
+    </style>
+
+    <style name="Like.TextView" parent="TextAppearance.Button">
+        <item name="android:text">@string/string_itemtimeline_like</item>
+        <item name="android:textColor">@color/selector_itemtimeline_likedcolor</item>
+    </style>
+
+    <style name="MaterialDatePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/redTomato</item>
+        <item name="android:positiveButtonText">okk</item>
+        <item name="android:negativeButtonText">okk</item>
+        <item name="android:buttonBarButtonStyle">@style/BaseButtonBarStyle</item>
+    </style>
+
+    <style name="ExoMediaButton.Doubtnut">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:layout_width">@dimen/exo_media_button_width</item>
+        <item name="android:layout_height">@dimen/exo_media_button_height</item>
+    </style>
+
+    <style name="AlertTextAppearance.Title">
+        <item name="android:textSize">@dimen/alerter_text_medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LikeYes.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableTop">@drawable/ic_thumbs_up</item>
+        <item name="android:text">@string/string_yes</item>
+        <item name="android:textColor">@color/redTomato</item>
+    </style>
+
+    <style name="LikeNo.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableTop">@drawable/ic_thumbs_down</item>
+        <item name="android:text">@string/string_no</item>
+        <item name="android:textColor">@color/redTomato</item>
+    </style>
+
+    <style name="pdf.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableTop">@drawable/ic_mypdf</item>
+        <item name="android:theme">@style/Theme.FlatButton</item>
+        <item name="android:text">@string/myPdf</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textColor">@color/Black</item>
+
+    </style>
+
+    <style name="myplaylist.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableTop">@drawable/ic_myplaylist</item>
+        <item name="android:text">@string/my_playlist</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:drawablePadding">14dp</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+    <style name="videoWatched.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:drawableTop">@drawable/ic_watched_video</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:text">@string/video_watched</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+    <style name="TextLabel" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/Secondary</item>
+        <item name="colorControlNormal">@color/buttonColor</item>
+        <item name="colorControlActivated">@color/buttonColor</item>
+    </style>
+
+    <style name="TabTextStyle" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="SgTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="claimDnCashButtonStyle" parent="Theme.AppCompat.Light">
+        <item name="backgroundTint">@color/selector_button_dn_cash_background</item>
+        <item name="android:textColor">@color/selector_button_dn_cash_text</item>
+    </style>
+
+    <style name="ProfileTextStyle" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="CommentBottomSheetDialog" parent="BaseBottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="mock_test_tab" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/dimen_12sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="VideoPageTabsStyle" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextAppearance">@style/VideoPageTabTextAppearance</item>
+        <item name="tabIndicatorColor">@color/tomato</item>
+        <item name="tabSelectedTextColor">@color/tomato</item>
+        <item name="tabTextColor">@color/black</item>
+    </style>
+
+    <style name="VideoPageTabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="VideoPageLiveClassChipTextAppearance" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="LeaderboardTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabIndicator">@null</item>
+        <item name="tabSelectedTextColor">@color/color_eb532c</item>
+        <item name="tabTextColor">@color/grey_504949</item>
+        <item name="tabBackground">@drawable/bg_leaderboard_tab</item>
+        <item name="tabTextAppearance">@style/LeaderboardTabTextAppearance</item>
+        <item name="android:selectableItemBackground">@drawable/bg_rounded_corner_white_fill_24dp
+        </item>
+    </style>
+
+    <style name="LeaderboardTabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="LeaderboardTabLayout2" parent="Widget.Design.TabLayout">
+        <item name="tabSelectedTextColor">#292929</item>
+        <item name="tabTextColor">#969696</item>
+        <item name="tabTextAppearance">@style/LeaderboardTabTextAppearance2</item>
+    </style>
+
+    <style name="LeaderboardTabTextAppearance2" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="WidgetParentAutoPlayTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabSelectedTextColor">@color/color_eb532c</item>
+        <item name="tabTextColor">#969696</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabTextAppearance">@style/WidgetParentAutoPlayTabTextAppearance</item>
+        <item name="tabPaddingTop">0dp</item>
+        <item name="tabPaddingBottom">0dp</item>
+    </style>
+
+    <style name="WidgetParentAutoPlayTabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="SelectMediumTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/color_eb532c</item>
+        <item name="tabSelectedTextColor">@color/color_eb532c</item>
+        <item name="tabTextColor">#73000000</item>
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabTextAppearance">@style/SelectMediumTabTextAppearance</item>
+        <item name="tabMode">auto</item>
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+    </style>
+
+    <style name="SelectMediumTabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="ParentTabWidgetTabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="TabTextAppearance.TopicBoosterGameLeaderboard">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TabTextAppearance.TopicBoosterGameInviteFriend">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="myRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:maxHeight">@dimen/dimen_18dp</item>
+    </style>
+
+    <style name="TooltipTextAppearance">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="SgNotificationSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/black</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">@color/white</item>
+    </style>
+
+    <style name="VideoTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabIndicator">@null</item>
+        <item name="tabSelectedTextColor">@color/color_eb532c</item>
+        <item name="tabTextColor">@color/grey_dark</item>
+        <item name="tabBackground">@drawable/video_tab_selector</item>
+        <item name="tabTextAppearance">@style/LeaderboardTabTextAppearance</item>
+        <item name="android:background">@drawable/bg_rounded_corner_grey
+        </item>
+        <item name="android:textAppearance">@style/videoTextAppearance</item>
+        <item name="paddingStart">@dimen/dimen_12dp</item>
+    </style>
+
+    <style name="videoTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+
+    <style name="CustomCornersCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">24dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">24dp</item>
+        <item name="cornerSizeBottomLeft">24dp</item>
+    </style>
+
+    <style name="CustomTabTextAppearanceTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="BottomSheetButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rect_round_corner_4dp</item>
+        <item name="backgroundTint">@color/tomato</item>
+        <item name="android:text">@string/save</item>
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+</resources>

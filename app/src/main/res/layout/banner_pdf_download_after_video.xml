@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/similarCard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvPdfDescriptionBannerAfterVideo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".52">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey_dcdcdc"
+                android:paddingBottom="4dp">
+
+                <com.doubtnutapp.widgets.mathview.MathView
+                    android:id="@+id/mathViewPdfBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    app:layout_constraintDimensionRatio="2.2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivPdfBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    android:importantForAccessibility="no"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:layout_constraintDimensionRatio="2.2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSimilarText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/similar_video"
+                    android:textColor="@color/grey_303030"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toTopOf="@id/tvViewsInBanner"
+                    app:layout_constraintStart_toStartOf="@id/mathViewPdfBanner"
+                    app:layout_constraintTop_toBottomOf="@id/mathViewPdfBanner"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/tvViewsInBanner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/lato"
+                    android:textSize="10sp"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvCountSeparatorDot"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSimilarText"
+                    tools:ignore="SmallSp"
+                    tools:text="50000 views" />
+
+                <TextView
+                    android:id="@+id/tvCountSeparatorDot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="\u25CF"
+                    android:textColor="@color/grey_303030"
+                    android:textSize="10sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvViewsInBanner"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <TextView
+                    android:id="@+id/tvLikesInBanner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/lato"
+                    android:textSize="10sp"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toEndOf="@id/tvCountSeparatorDot"
+                    app:layout_constraintTop_toTopOf="@id/tvViewsInBanner"
+                    app:layout_constraintVertical_bias="0"
+                    tools:ignore="SmallSp"
+                    tools:text="50000 likes" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvPdfDescriptionBannerAfterVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@id/ivPdfIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/similarCard"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            tools:ignore="SmallSp"
+            tools:text="Similar quetion set sample to practice with video links" />
+
+        <ImageView
+            android:id="@+id/ivPdfIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_pdf_page"
+            app:layout_constraintBottom_toBottomOf="@id/buttonPdfDownload"
+            app:layout_constraintStart_toStartOf="@id/tvPdfDescriptionBannerAfterVideo"
+            app:layout_constraintTop_toTopOf="@id/buttonPdfDownload" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonPdfDownload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/structured_course_button"
+            android:elevation="4dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/tvPdfDescriptionBannerAfterVideo"
+            app:layout_constraintStart_toEndOf="@id/ivPdfIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvPdfDescriptionBannerAfterVideo"
+            tools:ignore="UnusedAttribute">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/iconDownloadPdf"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@id/tvDownloadPdf"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="download.json"
+                app:lottie_loop="true"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvDownloadPdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/download_small"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iconDownloadPdf"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SmallSp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/ivPdfBannerAutoplayPlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:importantForAccessibility="no"
+            android:padding="6dp"
+            android:src="@drawable/ic_play_arrow_black_24dp"
+            android:translationZ="12dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/progressBarPdfBannerAutoplay"
+            app:layout_constraintEnd_toEndOf="@id/progressBarPdfBannerAutoplay"
+            app:layout_constraintStart_toStartOf="@id/progressBarPdfBannerAutoplay"
+            app:layout_constraintTop_toTopOf="@id/progressBarPdfBannerAutoplay"
+            app:tint="@color/white" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressBarPdfBannerAutoplay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_autoplay_loader_video_page"
+            android:elevation="10dp"
+            app:cpb_background_progressbar_color="@color/colorTransparent"
+            app:cpb_progress="50"
+            app:cpb_progressbar_color="@color/redTomato"
+            app:cpb_progressbar_width="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/similarCard"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/similarCard"
+            app:layout_constraintStart_toStartOf="@id/similarCard"
+            app:layout_constraintTop_toTopOf="@id/similarCard"
+            app:layout_constraintWidth_percent=".13" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

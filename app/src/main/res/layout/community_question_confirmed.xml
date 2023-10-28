@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="@color/darkOcean"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_above="@+id/see_in_community"
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_community_shape">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/tick"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:padding="5dp"
+        android:textSize="20dp"
+        android:text="@string/ask_community_confirmation_text1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:padding="5dp"
+        android:textSize="20dp"
+        android:text="@string/ask_community_confirmation_text2"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:padding="5dp"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:text="@string/ask_community_confirmation_text3"
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/community"
+        android:layout_gravity="center"
+        />
+    </LinearLayout>
+
+
+
+</LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_margin="10dp"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+    android:id="@+id/see_in_community"
+    android:layout_alignParentBottom="true"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_margin="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llshare"
+    android:clickable="true"
+    >
+    <ImageView
+        android:id="@+id/btnShare"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/whatsapp"
+        android:layout_marginHorizontal="20dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/greyBlackDark"
+        android:padding="5dp"
+        android:textSize="18dp"
+        android:text="@string/ask_community_confirmation_text5"
+        />
+</LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_margin="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llfeed"
+    android:clickable="true"
+    >
+    <ImageView
+        android:id="@+id/comm_feed"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/forum_icon_blue"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/greyBlackDark"
+        android:padding="5dp"
+        android:textSize="18dp"
+        android:text="@string/ask_community_confirmation_text6"
+        />
+</LinearLayout>
+
+</LinearLayout>
+</RelativeLayout>

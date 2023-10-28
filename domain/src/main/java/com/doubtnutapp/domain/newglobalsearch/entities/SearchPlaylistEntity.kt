@@ -1,0 +1,53 @@
+package com.doubtnutapp.domain.newglobalsearch.entities
+
+import androidx.annotation.Keep
+import com.google.gson.annotations.SerializedName
+
+@Keep
+data class SearchPlaylistEntity(
+    val id: String,
+    val display: String,
+    val resourceType: String,
+    val isLast: String,
+    val resourcesPath: String,
+    val type: String,
+    val tabType: String,
+    val subData: String,
+    val page: String,
+    val imageUrl: String?,
+    val bgColor: String,
+    val isVip: Boolean?,
+    val isLiveClassPdf: Boolean?,
+    val isBooksPdf: Boolean?,
+    val chapter: String?,
+    val chapterId: Int?,
+    val facultyId: Int?,
+    val ecmId: Int?,
+    val isRecommended: Boolean,
+    val isLiveClass: Boolean,
+    val resourceReference: String?,
+    val playerType: String?,
+    val liveClassTitle: String?,
+    @SerializedName("live_at") val liveAt: String?,
+    val liveLengthMin: Long?,
+    val currentTime: String?,
+    val language: String?,
+    val subject: String?,
+    val views: Long?,
+    val duration: Long?,
+    val imageFullWidth: Boolean?,
+    val imageInfo: SearchImageInfo?,
+    val facultyName: String?,
+    val lectureCount: Int?,
+    val deeplinkUrl: String?,
+    val className: String?,
+    val paymentDeeplink: String?,
+    @SerializedName("premium_meta_content") val premiumMetaContent: PremiumMetaContent?,
+    @SerializedName("button_details") val buttonDetails: ButtonDetails?,
+    @SerializedName("course_price") val coursePrice: String?,
+    @SerializedName("assortment_id") val assortmentId: Int?,
+    @SerializedName("vip_content_lock") val vipContentLock: String?,
+    @SerializedName("view_type") val viewTypeUi: String?,
+    @SerializedName("teacher_name") val teacherName: String?,
+    @SerializedName("teacher_details") val teacherDetails: List<SearchFilterItem>?
+) : SearchListItem

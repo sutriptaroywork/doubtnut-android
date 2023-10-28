@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_refer_and_earn_landing_page"
+    app:startDestination="@id/referAndEarnHomeFragment">
+
+
+    <fragment
+        android:id="@+id/referAndEarnHomeFragment"
+        android:name="com.doubtnut.referral.ui.ReferAndEarnHomeFragment"
+        android:label="ReferAndEarnHomeFragment" >
+        <action
+            android:id="@+id/action_referAndEarnHomeFragment_to_referAndEarnFAQFragment"
+            app:destination="@id/referAndEarnFAQFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/referAndEarnFAQFragment"
+        android:name="com.doubtnut.referral.ui.ReferAndEarnFAQFragment"
+        android:label="ReferAndEarnFAQFragment" />
+</navigation>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_topic_booster_game"
+    app:startDestination="@id/topicBoosterOpponentSearchFragment">
+
+    <fragment
+        android:id="@+id/topicBoosterOpponentSearchFragment"
+        android:name="com.doubtnutapp.topicboostergame.ui.TopicBoosterGameOpponentSearchFragment"
+        tools:layout="@layout/fragment_topic_booster_game_opponent_search">
+        <action
+            android:id="@+id/actionStartQuiz"
+            app:destination="@id/topicBoosterGameQuizFragment"
+            app:popUpTo="@id/topicBoosterOpponentSearchFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/topicBoosterGameQuizFragment"
+        android:name="com.doubtnutapp.topicboostergame.ui.TopicBoosterGameQuizFragment"
+        android:label="TopicBoosterGameQuizFragment"
+        tools:layout="@layout/fragment_topic_booster_game_quiz">
+        <action
+            android:id="@+id/actionShowExitDialog"
+            app:destination="@id/topicBoosterGameQuizExitDialogFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/actionShowResult"
+        app:destination="@id/topicBoosterGameResultFragment"
+        app:popUpTo="@id/topicBoosterGameQuizFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/topicBoosterGameResultFragment"
+        android:name="com.doubtnutapp.topicboostergame.ui.TopicBoosterGameResultFragment"
+        android:label="TopicBoosterGameResultFragment"
+        tools:layout="@layout/fragment_topic_booster_game_result">
+        <action
+            android:id="@+id/actionPlayAgain"
+            app:destination="@id/topicBoosterOpponentSearchFragment"
+            app:popUpTo="@id/topicBoosterGameResultFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <dialog
+        android:id="@+id/topicBoosterGameQuizExitDialogFragment"
+        android:name="com.doubtnutapp.topicboostergame.ui.TopicBoosterGameQuizExitDialogFragment"
+        android:label="TopicBoosterGameQuizExitDialogFragment" />
+
+</navigation>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_study_group"
+    app:startDestination="@id/sgHomeFragment">
+    <fragment
+        android:id="@+id/sgHomeFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgHomeFragment"
+        android:label="SgHomeFragment"
+        tools:layout="@layout/fragment_sg_home">
+        <argument
+            android:name="groupId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="initialMessageInfo"
+            android:defaultValue="@null"
+            app:argType="com.doubtnutapp.studygroup.model.InitialMessageData"
+            app:nullable="true" />
+        <action
+            android:id="@+id/actionChatFragment"
+            app:destination="@id/sgChatFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/actionOpenSgSettingFragment"
+            app:destination="@id/sgSettingFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <argument
+            android:name="tabPosition"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <deepLink app:uri="doubtnutapp://study_group/list?tab_position={tabPosition}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sgChatFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgChatFragment"
+        android:label="SgChatFragment"
+        tools:layout="@layout/fragment_sg_chat">
+        <argument
+            android:name="groupId"
+            app:argType="string" />
+        <argument
+            android:name="isFaq"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="inviter"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="initialMessageInfo"
+            android:defaultValue="@null"
+            app:argType="com.doubtnutapp.studygroup.model.InitialMessageData"
+            app:nullable="true" />
+        <argument
+            android:name="isSupport"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/actionDashboardFragment"
+            app:destination="@id/sgAdminDashboardFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/actionInfoFragment"
+            app:destination="@id/sgInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/actionOpenSgJoinGroupDialogFragment"
+            app:destination="@id/sgJoinGroupDialogFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <deepLink app:uri="doubtnutapp://study_group/chat?group_id={groupId}&amp;is_faq={isFaq}&amp;inviter={inviter}&amp;is_support={isSupport}" />
+        <deepLink app:uri="doubtnutapp://study_group_chat?group_id={groupId}&amp;is_faq={isFaq}&amp;inviter={inviter}&amp;is_support={isSupport}" />
+    </fragment>
+    <fragment
+        android:id="@+id/sgxOneOneChatFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgPersonalChatFragment"
+        android:label="SgChatFragment"
+        tools:layout="@layout/fragment_sg_chat">
+        <argument
+            android:name="chatId"
+            app:argType="string" />
+        <argument
+            android:name="otherStudentId"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionSgChatRequestBottomSheetFragment"
+            app:destination="@id/sgChatRequestBottomSheetFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <deepLink app:uri="doubtnutapp://study_group/personal_chat?chat_id={chatId}&amp;other_student_id={otherStudentId}" />
+    </fragment>
+    <fragment
+        android:id="@+id/sgInfoFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgInfoFragment"
+        android:label="SgInfoFragment"
+        tools:layout="@layout/fragment_sg_info">
+        <argument
+            android:name="groupId"
+            app:argType="string" />
+        <deepLink app:uri="doubtnutapp://study_group/info?group_id={groupId}" />
+    </fragment>
+    <fragment
+        android:id="@+id/sgAdminDashboardFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgAdminDashboardFragment"
+        android:label="SgAdminDashboardFragment"
+        tools:layout="@layout/fragment_sg_admin_dashboard">
+        <argument
+            android:name="groupId"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionSgUserReportedMessageFragment"
+            app:destination="@id/sgUserReportedMessageFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <deepLink app:uri="doubtnutapp://study_group/dashboard?group_id={groupId}" />
+    </fragment>
+    <fragment
+        android:id="@+id/sgUserReportedMessageFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgUserReportedMessageFragment"
+        android:label="SgUserReportedMessageFragment"
+        tools:layout="@layout/fragment_sg_users_reported_messages">
+        <argument
+            android:name="groupId"
+            app:argType="string" />
+        <argument
+            android:name="reportedStudentId"
+            app:argType="string" />
+        <argument
+            android:name="reportedStudentName"
+            app:argType="string" />
+        <deepLink app:uri="doubtnutapp://study_group/student_reported_message?group_id={groupId}&amp;reported_student_id={reportedStudentId}&amp;reported_student_name={reportedStudentName}" />
+    </fragment>
+    <dialog
+        android:id="@+id/sgJoinGroupDialogFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgJoinGroupDialogFragment"
+        android:label="SgJoinGroupDialogFragment"
+        tools:layout="@layout/fragment_invitation_entry_dialog">
+        <argument
+            android:name="inviter"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="groupId"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/actionOpenSgHomeFragment"
+            app:destination="@id/sgHomeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/sgHomeFragment"
+            app:popUpToInclusive="true" />
+        <deepLink app:uri="doubtnutapp://study_group/join_group?group_id={groupId}&amp;inviter={inviter}" />
+    </dialog>
+    <dialog
+        android:id="@+id/createGroupBottomSheetFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgCreateBottomSheetFragment"
+        android:label="CreateGroupBottomSheetFragment"
+        tools:layout="@layout/fragment_sg_create">
+        <deepLink app:uri="doubtnutapp://study_group/create_group" />
+        <action
+            android:id="@+id/actionSgCreateBottomSheetFragmentToSgChatFragment"
+            app:destination="@id/sgChatFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/sgHomeFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/sgSelectFriendFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgSelectFriendFragment"
+        android:label="SgSelectFriendFragment"
+        tools:layout="@layout/fragment_sg_select_friend">
+        <deepLink app:uri="doubtnutapp://study_group/select_friend" />
+    </fragment>
+    <fragment
+        android:id="@+id/sgSettingFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgSettingFragment"
+        android:label="SgSettingFragment"
+        tools:layout="@layout/fragment_sg_setting">
+        <deepLink app:uri="doubtnutapp://study_group/setting" />
+    </fragment>
+    <dialog
+        android:id="@+id/sgChatRequestBottomSheetFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgChatRequestBottomSheetFragment"
+        android:label="SgChatRequestBottomSheetFragment"
+        tools:layout="@layout/fragment_sg_chat_request">
+        <argument
+            android:name="sgChatRequestConfig"
+            app:argType="com.doubtnutapp.studygroup.model.SgChatRequestDialogConfig" />
+        <argument
+            android:name="chatId"
+            app:argType="string" />
+    </dialog>
+
+    <!--    This fragment is used for group_invites, public_groups, popular_groups, chat_requests, blocked_users-->
+    <fragment
+        android:id="@+id/sgExtraInfoFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgExtraInfoFragment"
+        android:label="SgExtraInfoFragment">
+        <argument
+            android:name="screen"
+            android:defaultValue="public_groups"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink app:uri="doubtnutapp://study_group?screen={screen}" />
+    </fragment>
+    <fragment
+        android:id="@+id/sgProfanityFragment"
+        android:name="com.doubtnutapp.studygroup.ui.fragment.SgUserBannedStatusBottomSheetFragment"
+        android:label="SgProfanityBottomSheetFragment"
+        tools:layout="@layout/fragment_sg_user_banned_status">
+        <deepLink app:uri="doubtnutapp://study_group/user_banned_status" />
+    </fragment>
+    <action
+        android:id="@+id/actionOpenSgSelectFriendFragment"
+        app:destination="@id/sgSelectFriendFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+</navigation>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.doubtnutapp.ui.groupChat.LiveChatItemViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        tools:context=".ui.groupChat.LiveChatActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_comment_chatbubble"
+            android:padding="10dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewUserName"
+                style="@style/TextAppearance.Subtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.studentUserName}"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textViewMessage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Aamir" />
+
+            <TextView
+                android:id="@+id/textViewMessage"
+                style="@style/TextAppearance.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.message}"
+                android:visibility="@{(viewmodel.audio == null || viewmodel.audio.empty) &amp;&amp; (viewmodel.message != null) ? View.VISIBLE : View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUserName"
+                tools:text="Aamir sdfbhshdfsdfsdhfjsdjfhjsdjfgdfgjdfjgjdfgjdfgjdfjgjdfjgjdfjgjdfjgjdfgjdfjgjdjjfdjfdjgjdjgjdjjdjjdjfhsdjfhdsjhfjsdhfdsjfjdsfjsfdjsfjdjshfhshfsfhsfhshfsdfhsdfsdfsdfsfsdfsdfsdfdsfdsfdfsfsdfdsfsfsfsdfsdfsfsdf" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMessage"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/ll_audio_in_comment"
+                android:visibility="@{viewmodel.audio.empty || viewmodel.audio==null ? View.GONE : View.VISIBLE}"
+                >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivPlayAudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{view -> viewmodel.onPlayButtonClicked(view)}"
+                        android:padding="2dp"
+                        android:layout_marginTop="10dp"
+                        app:srcCompat="@drawable/ic_play_arrow_black_24dp"
+                        android:textColor="@color/blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:visibility="@{viewmodel.audio.empty || viewmodel.audio==null || viewmodel.isPlaying ? View.GONE : View.VISIBLE}"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView_itemtimeline_cover" />
+
+
+                    <ImageView
+                        android:id="@+id/ivPauseAudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:onClick="@{view -> viewmodel.onStopButtonClicked()}"
+                        android:padding="2dp"
+                        app:srcCompat="@drawable/ic_pause_black_24dp"
+                        android:textColor="@color/blue"
+                        android:visibility="@{viewmodel.isPlaying ? View.VISIBLE : View.GONE}"
+
+                        />
+                </FrameLayout>
+                <SeekBar
+                    android:id="@+id/viewSeekbar"
+                    android:layout_width="218dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="12dp"
+                    android:max="@{viewmodel.max}"
+                    android:minWidth="200dp"
+                    android:padding="2dp"
+                    android:progress="@{viewmodel.progress}"
+                    android:textColor="@color/blue"
+                    app:layout_constraintBottom_toBottomOf="@+id/dummyview"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toEndOf="@+id/guideline19"
+                    app:layout_constraintTop_toTopOf="@+id/dummyview" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewTime"
+                style="@style/TextAppearance.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewUserName"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewUserName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:time="@{viewmodel.createdAt}"
+                tools:text="Todat at 00:00" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageViewComment"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:hideIfEmpty="@{viewmodel.image}"
+            app:imageurl="@{viewmodel.image}"
+            android:onClick="@{(view) -> viewmodel.onCommentImageClicked(view)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+        <ImageButton
+            android:id="@+id/imageButton_comment_play"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="75dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_play_circle_outline_pink_24"
+            android:visibility="gone"
+            android:onClick="@{(view) -> viewmodel.onCommentPlayImageClicked(view)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewComment"
+            app:layout_constraintTop_toTopOf="@+id/imageViewComment" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

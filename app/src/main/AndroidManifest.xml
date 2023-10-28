@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.doubtnutapp">
+
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        tools:node="replace" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <permission
+        android:name="${applicationId}.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"
+        tools:replace="required" />
+
+    <uses-permission
+        android:name="android.permission.RECEIVE_SMS"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.READ_SMS"
+        tools:node="remove" />
+
+    <queries>
+        <package android:name="com.whatsapp" />
+    </queries>
+    <queries>
+        <package android:name="net.one97.paytm" />
+    </queries>
+    <queries>
+        <package android:name="com.google.android.apps.nbu.paisa.user" />
+    </queries>
+    <queries>
+        <package android:name="in.org.npci.upiapp" />
+    </queries>
+    <queries>
+        <package android:name="in.amazon.mShop.android.shopping" />
+    </queries>
+    <queries>
+        <package android:name="com.phonepe.app" />
+    </queries>
+
+    <application
+        android:name=".DoubtnutApp"
+        android:allowBackup="false"
+        android:configChanges="locale"
+        android:fullBackupContent="@xml/moengage_backup_descriptor"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".resultpage.ui.ResultPageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".networkstats.ui.NetworkStatsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".liveclass.ui.practice_english.PracticeEnglishActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".teacherchannel.TeacherChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".dictionary.DictionaryActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".widgettest.ui.ApiTestActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".studygroup.ui.activity.StudyGroupActivity"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".revisioncorner.ui.RevisionCornerActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".dnr.ui.activity.DnrActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".doubtfeed2.ui.DoubtFeedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".doubtfeed2.reward.receiver.RewardNotificationHandlerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".whatsappadmin.WhatsappAdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".doubtpecharcha.ui.activity.P2PDoubtCollectionActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feed.view.UnbannedRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".transactionhistory.TransactionHistoryActivityV2" />
+        <activity android:name=".fallbackquiz.ui.FallbackActionHandlerActivity" />
+        <activity
+            android:name=".reward.ui.RewardActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".fallbackquiz.ui.QuizFallbackActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transparent" />
+        <activity android:name=".CategorySearchActivity" />
+        <activity
+            android:name=".scheduledquiz.ui.ScheduledQuizNotificationActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".ui.userstatus.CreateStatusActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity android:name=".ui.userstatus.StatusDetailActivity" />
+        <activity android:name=".payment.ApbLocationActivity" />
+        <activity android:name=".payment.ApbCashPaymentActivity" />
+        <activity
+            android:name=".downloadedVideos.DownloadedVideosActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/DownloadedVideoScreenTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".matchquestion.ui.activity.NoInternetRetryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".newglobalsearch.ui.TypeYourDoubtActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="LockedOrientationActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <activity
+            android:name=".topicboostergame.ui.TopicBoosterGameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".topicboostergame2.ui.TopicBoosterGameActivity2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".gamification.dailyattendance.ui.DailyAttendanceActivity" />
+        <activity
+            android:name=".store.ui.ConvertCoinsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".store.ui.StoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".gamification.mybio.ui.MyBioActivity"
+            android:label="@string/title_activity_my_bio"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".newglobalsearch.ui.InAppSearchActivity"
+            android:label="@string/title_activity_in_app_search"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".pcmunlockpopup.ui.PCMUnlockPopActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".gamification.otheruserprofile.ui.OthersProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".gamification.leaderboard.ui.GameLeaderBoardActivity" />
+        <activity android:name=".gamification.gamepoints.ui.GamePointsActivity" />
+        <activity android:name=".gamification.badgesscreen.ui.BadgesActivity" />
+        <activity
+            android:name=".gamification.settings.profilesetting.ui.ProfileSettingActivity"
+            android:label="@string/profile_settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faq.ui.FaqActivity"
+            android:label="@string/faq"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".gamification.settings.settingdetail.ui.SettingDetailActivity"
+            android:label="@string/detail_setting" />
+        <activity android:name=".profile.uservideohistroy.ui.UserWatchedVideoActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            android:windowSoftInputMode="adjustPan" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="df5c210bdbfd8682448023b94758fc5285efca40" />
+
+        <receiver
+            android:name=".ui.onboarding.SMSBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver> <!-- use CTBackgroundIntentService to target users below Android 21 (Lollipop) -->
+        <receiver
+            android:name=".ui.ask.receiver.OnMatchNotificationDismissReceiver"
+            android:exported="true" />
+        <receiver
+            android:name=".fcm.NotificationActionReceiver"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="com.doubtnut.splash.default" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Branch URI Scheme -->
+            <intent-filter>
+                <data android:scheme="doubtnutapp" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!-- Branch App Links (optional) -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="doubtnut.app.link"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="doubtnut-alternate.app.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.FragmentHolderActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:configChanges="locale"
+            android:screenOrientation="locked"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <service
+            android:name=".fcm.FCMMessagingService"
+            android:enabled="true"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- <service android:name="com.moengage.firebase.MoEFireBaseMessagingService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <activity
+            android:name=".ui.course.microconcept.MicroconceptsActivity"
+            android:configChanges="locale"
+            android:label="@string/title_activity_microconcepts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActionHandlerActivity"
+            android:configChanges="locale"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_live_cbx3cYpK30NM7Ph4H3OX7ihpqsn9tgQ4" /> <!-- Branch install referrer tracking (optional) -->
+        <!-- <receiver -->
+        <!-- android:name="io.branch.referral.InstallListener" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.android.vending.INSTALL_REFERRER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> &lt;!&ndash; This is to enable for sharing thumbnail images to different platforms &ndash;&gt; -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="@string/authority"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_path" />
+        </provider>
+
+        <activity
+            android:name=".ui.base.BaseActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".ui.TransparentActivity"
+            android:configChanges="locale"
+            android:theme="@style/Theme.Transparent">
+            <intent-filter android:autoVerify="true">
+                <action android:name="inDeepLink" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="doubtnut.app.link"
+                    android:scheme="https" />
+                <data
+                    android:host="doubtnut-alternate.app.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.dailyPrize.DailyPrizeActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".ui.contest.ContestListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.forum.comments.CommentsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="behind"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".ui.forum.comments.CommentImageFullView"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.downloadPdf.DownloadNShareActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.downloadPdf.DownloadNShareLevelOneActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.downloadPdf.DownloadNShareLevelTwoActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.browser.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.quiz.QuizNotificationActivity"
+            android:theme="@style/Theme.Transparent" />
+
+        <service
+            android:name="com.evernote.android.job.gcm.PlatformGcmService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE"
+            tools:replace="android:enabled">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ui.likeuserlist.LikedUserListActivity"
+            android:label="@string/title_likedBy" />
+        <activity
+            android:name=".ui.test.QuizActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.test.TestQuestionActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".ui.mypdf.MyPdfActivity"
+            android:configChanges="locale"
+            android:label="@string/myPdf"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.pdfviewer.PdfViewerActivity"
+            android:configChanges="locale" />
+        <activity
+            android:name=".ui.cameraGuide.CameraGuideActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraGuideActivityTheme" />
+        <activity
+            android:name=".ui.formulaSheet.FormulaSheetChapterActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.formulaSheet.FormulaSheetTopicActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.formulaSheet.FormulaSheetFormulasActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.formulaSheet.FormulaSheetGlobalSearchActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.formulaSheet.GlobalSearchFormulasActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.formulaSheet.CheatSheetActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.formulaSheet.CheatSheetFormulaListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.groupChat.GroupChatActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.groupChat.LiveChatActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mockTest.MockTestActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mockTest.MockTestSectionActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".ui.mockTest.MockTestSyllabusActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mockTest.MockTestListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".gamification.friendbadgesscreen.ui.FriendBadgesActivity"
+            android:label="@string/activity_badges_label" />
+        <activity
+            android:name=".gamification.earnedPointsHistory.ui.EarnedPointsHistoryActivity"
+            android:label="@string/earned_points_history" />
+        <activity
+            android:name=".videoPage.ui.VideoPageActivity"
+            android:configChanges="locale|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:showOnLockScreen="true"
+            android:supportsPictureInPicture="true"
+            android:taskAffinity=".VideoPageActivity"
+            android:theme="@style/VideoViewTheme"
+            android:windowSoftInputMode="adjustResize">
+            <tools:validation testUrl="https://doubtnut.com/question-answer/find-sets-a-b-and-c-such-that-annb-bnnc-and-annc-are-non-empty-sets-and-annbnncphi--2" />
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="doubtnut.com" />
+                <data android:host="www.doubtnut.com" />
+                <data android:pathPrefix="/question-answer/" />
+                <data android:pathPrefix="/question-answer-" />
+                <data android:pathPrefix="/qa-" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".video.VideoImageSummaryActivityDialog"
+            android:label="@string/text_solution"
+            android:screenOrientation="behind"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".videoPage.ui.FullScreenVideoPageActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".textsolution.ui.TextSolutionActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".store.ui.MyOrderActivity" />
+        <activity
+            android:name=".librarylisting.ui.LibraryListingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".paymentv2.ui.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".inappupdate.ui.ImmediateUpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".payment.ui.PaymentStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.ui.PaymentHelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".matchquestion.ui.activity.MatchQuestionActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity android:name=".quicksearch.QuickSearchSettingActivity" />
+        <activity android:name=".ImageIntentHandlerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".libraryhome.coursev3.ui.CourseActivityV3"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".libraryhome.coursev3.ui.CourseActivityBottomSheet"
+            android:theme="@style/Theme.BottomSheetTransparent" />
+        <activity
+            android:name=".libraryhome.course.ui.VipDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vipplan.ui.VipPlanActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".feed.view.CreatePostActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".common.FragmentWrapperActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feed.view.ImagesPagerActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feed.view.PostDetailActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feed.view.TopicFeedActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feed.view.LiveFeedActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ImageViewerActivity"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.games.DnGamesActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.games.GamePlayerActivity"
+            android:configChanges="locale"
+            android:screenOrientation="fullUser"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.onboarding.OnBoardingStepsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".login.ui.activity.LanguageActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".login.ui.activity.StudentLoginActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".liveclass.ui.LiveClassActivity"
+            android:configChanges="locale|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:showOnLockScreen="true"
+            android:supportsPictureInPicture="true"
+            android:taskAffinity=".LiveClassActivity" />
+        <activity
+            android:name=".live.ui.LiveActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".live.ui.VerifyProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.mockTest.MockTestSubscriptionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.topperStudyPlan.TopperStudyPlanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.topperStudyPlan.ChapterDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.main.demoanimation.DemoAnimationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".camera.ui.CameraActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".notification.NotificationCenterActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".liveclass.ui.HomeWorkActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".liveclass.ui.HomeWorkSolutionActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.questionAskedHistory.QuestionAskedHistoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".profile.social.UserRelationshipsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.social.ReportUserActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.social.CommunityGuidelinesActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".matchquestion.ui.activity.FullImageViewActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".liveclassreminder.LiveClassReminderActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".libraryhome.coursev3.ui.CourseDetailActivityV3"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".libraryhome.coursev3.ui.TimetableActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vipplan.ui.MyPlanActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".camera.ui.CropQuestionActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".liveclass.ui.LiveClassChatActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".liveclass.ui.ImageCaptionActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".doubtplan.DoubtPackageActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".liveclass.ui.ResourceListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".liveclass.ui.CourseCategoryActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".matchquestion.ui.activity.TYDActivity"
+            android:configChanges="locale"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".matchquestion.ui.activity.OcrEditActivity"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".wallet.WalletActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity android:name=".dummy.ui.DummyActivity" />
+        <activity
+            android:name=".feed.view.TopIconsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feed.view.OneTapPostsListActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".qrpayment.QrPaymentActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity android:name=".reward.receiver.RewardNotificationHandlerActivity" />
+        <activity
+            android:name=".liveclass.ui.StoryDetailActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".libraryhome.coursev3.ui.SubjectDetailActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice" />
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pushservice" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+        <service
+            android:name=".ui.mediahelper.ExoDownloadService"
+            android:exported="false">
+
+            <!-- This is needed for Scheduler -->
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.downloadService.action.RESTART" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver> <!-- To let MoEngage SDK handle token registration and push notification -->
+        <receiver
+            android:name="com.moengage.mi.MoEMiPushReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".VideoTestActivity" />
+        <activity
+            android:name=".liveclass.ui.AudioPlayerActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".liveclass.ui.BundleActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".libraryhome.coursev3.ui.VideoHolderActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".libraryhome.coursev3.ui.VideoDialogActivity"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".liveclass.ui.MyHomeWorkActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".libraryhome.coursev3.ui.CourseSelectionActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".vipplan.ui.PaymentHelpActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".bottomsheetholder.BottomSheetHolderActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".mathview.MathViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".leaderboard.ui.activity.LeaderboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".icons.ui.IconsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name=".doubtpecharcha.ui.activity.DoubtP2pActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".doubtpecharcha.ui.activity.DoubtP2pHelperEntryActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".liveclass.ui.NudgeActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".dialogHolder.DialogHolderActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".ui.browser.HandleActionWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+
+        <meta-data
+            android:name="com.truecaller.android.sdk.PartnerKey"
+            android:value="@string/partnerKey" />
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="@string/RAZORPAY_API_KEY" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" /> <!-- To use multiple models: android:value="ocr,model2,model3" -->
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="face,ocr" />
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+
+        <receiver
+            android:name=".fallbackquiz.fallbackjob.FallbackReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".reward.receiver.RewardRepeatedNotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".reward.receiver.RewardNotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".reward.receiver.LoginRewardReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".reward.receiver.AttendanceMarkedReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".doubtfeed2.reward.receiver.RewardNotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".liveclass.ui.CourseSelectActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".libraryhome.coursev3.ui.RecommendedCourseActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".libraryhome.coursev3.ui.CourseSwitchActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".login.ui.activity.AnonymousLoginActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".libraryhome.coursev3.ui.CourseRecommendationActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transparent2" />
+        <activity
+            android:name=".studygroup.ui.activity.UpdateSgNameActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".studygroup.ui.activity.UpdateSgImageActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".examcorner.ExamCornerActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".examcorner.ExamCornerBookmarkActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".quiztfs.ui.QuizTfsActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".quiztfs.ui.DailyPracticeActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".quiztfs.ui.QuizTfsSelectionActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".quiztfs.ui.QuizTfsSolutionActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".quiztfs.ui.QuizTfsAnalysisActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".quiztfs.ui.MyRewardsActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".quiztfs.ui.HistoryActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.mockTest.MockTestAnalysisActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".studygroup.ui.fragment.SgShareActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".paymentplan.ui.PaymentPlanActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".auth.ui.GoogleAuthActivity"
+            android:configChanges="locale"
+            android:theme="@style/Theme.BottomSheetTransparent" />
+        <activity
+            android:name=".newlibrary.ui.LibraryPreviousYearPapersActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".course.SchedulerListingActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".login.ui.activity.FailedGuestLoginActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".videoPage.ui.YoutubeTypeVideoActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.doubtnut.referral.ui.ReferAndEarnActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.doubtnutapp.notificationmanager.TimerService" />
+
+        <activity
+            android:name=".doubtpecharcha.ui.activity.DoubtPeCharchaRewardsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".doubtpecharcha.ui.activity.UserFeedbackActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

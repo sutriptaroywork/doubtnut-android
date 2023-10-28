@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		style="@style/BaseBottomSheetDialog"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="20dp">
+
+				<TextView
+						android:id="@+id/tvTitle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:fontFamily="@font/lato"
+						android:gravity="center"
+						android:letterSpacing="0.02"
+						android:text="Login with Phone Number to Continue"
+						android:textColor="#000000"
+						android:textSize="18sp"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent" />
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+						android:id="@+id/phoneLayout"
+						android:layout_width="match_parent"
+						android:layout_height="50dp"
+						android:layout_marginTop="14dp"
+						android:background="@drawable/background_selected_filter"
+						android:orientation="horizontal"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+						<TextView
+								android:id="@+id/countryCodePicker"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginStart="12dp"
+								android:drawablePadding="4dp"
+								android:text="@string/country_code_india"
+								android:textColor="@color/black"
+								android:textSize="18sp"
+								android:visibility="visible"
+								app:drawableEndCompat="@drawable/ic_arrow_down_filled"
+								app:drawableTint="@color/black"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintEnd_toStartOf="@id/divider"
+								app:layout_constraintStart_toStartOf="parent"
+								app:layout_constraintTop_toTopOf="parent" />
+
+						<View
+								android:id="@+id/divider"
+								android:layout_width="2dp"
+								android:layout_height="match_parent"
+								android:layout_margin="4dp"
+								android:background="@color/light_grey"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintStart_toEndOf="@+id/countryCodePicker"
+								app:layout_constraintTop_toTopOf="parent" />
+
+						<com.google.android.material.textview.MaterialTextView
+								android:id="@+id/tvPhone"
+								android:layout_width="0dp"
+								android:layout_height="50dp"
+								android:layout_marginStart="10dp"
+								android:backgroundTint="@color/white"
+								android:drawableBottom="@drawable/background_selected_filter"
+								android:ellipsize="end"
+								android:gravity="center_vertical"
+								android:singleLine="true"
+								android:text="Enter Mobile Number "
+								android:textColorHint="#969696"
+								app:layout_constraintBottom_toBottomOf="parent"
+								app:layout_constraintEnd_toEndOf="parent"
+								app:layout_constraintStart_toStartOf="@+id/divider"
+								app:layout_constraintTop_toTopOf="parent" />
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+				<com.google.android.material.textview.MaterialTextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="12dp"
+						android:gravity="center"
+						android:text="Ask Free Unlimited Question \n Watch Unlimited free solution videos"
+						android:textColor="@color/black"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/phoneLayout" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

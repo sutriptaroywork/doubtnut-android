@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/itemViewProfile"
+        android:enabled="true"
+        android:title="@string/view_profile"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/itemMakeSubAdmin"
+        android:enabled="true"
+        android:title="@string/make_sub_admin"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/itemRemoveSubAdmin"
+        android:enabled="true"
+        android:title="@string/remove_sub_admin"
+        app:showAsAction="never" />
+
+</menu>

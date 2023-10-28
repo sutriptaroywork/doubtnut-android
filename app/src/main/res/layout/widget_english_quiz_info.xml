@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="#273de9"
+        android:textSize="@dimen/font_24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="English Seekho Game" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginEnd="@dimen/dimen_60dp"
+        android:fontFamily="@font/lato"
+        android:lineSpacingExtra="4dp"
+        android:textSize="@dimen/font_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="Bano english ke master ab game khelte khelte.\n
+Roz 15 mins khelo aur dekho apni english better hote hue!" />
+
+
+    <TextView
+        android:id="@+id/tvCta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:layout_marginTop="@dimen/dimen_18dp"
+        android:layout_marginEnd="@dimen/dimen_60dp"
+        android:fontFamily="@font/lato_bold"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/color_eb532c"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintStart_toEndOf="@+id/ivPlay"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+        tools:text="Dekho Kaise" />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="@dimen/dimen_16dp"
+        android:layout_height="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCta"
+        app:layout_constraintStart_toStartOf="@+id/tvSubtitle"
+        app:layout_constraintTop_toTopOf="@+id/tvCta" />
+
+    <ImageView
+        android:id="@+id/ivBottom"
+        android:layout_width="175dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

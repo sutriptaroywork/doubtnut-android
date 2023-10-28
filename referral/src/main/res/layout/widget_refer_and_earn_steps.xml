@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvLabelHowItWorks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#424242"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        tools:text="How it works"/>
+
+    <View
+        android:layout_width="23dp"
+        android:layout_height="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelHowItWorks"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="@+id/tvLabelHowItWorks"
+        android:background="@color/colorPrimary">
+    </View>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReferralSteps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelHowItWorks"
+        tools:itemCount="3"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/item_refer_and_earn_step" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
